@@ -1,0 +1,2020 @@
+[
+  {
+    "skillId": "v-collocations",
+    "why": "El siguiente paso es reconocer que las colocaciones también expresan relaciones: cumplir un plazo, asumir una responsabilidad o plantear una preocupación. Un verbo correcto cambia el mensaje aunque el sustantivo permanezca. Antes de variar una expresión, decide qué acción concreta necesitas y conserva también su complemento; así evitas frases fluidas que comunican una obligación distinta.",
+    "decisions": [
+      {
+        "cue": "El equipo termina dentro del plazo.",
+        "action": "Usa meet a deadline para cumplirlo.",
+        "en": "We met the deadline for submitting the report.",
+        "reason": "Meet expresa cumplimiento; set expresa fijación del plazo."
+      },
+      {
+        "cue": "La responsable decide cuándo entregar.",
+        "action": "Usa set a deadline para establecerlo.",
+        "en": "The manager set a deadline for Friday.",
+        "reason": "La persona crea la fecha límite; todavía no afirma que nadie la cumpla."
+      }
+    ],
+    "worked": {
+      "scenario": "Your neighbourhood group promised to send its funding application by Thursday. You coordinated the work, but two volunteers sent their figures late. The application was still delivered on time. Write a short update that distinguishes your responsibility from the volunteers' delay and avoids blaming everyone.",
+      "task": "Redacta un párrafo profesional de 40–60 palabras. Usa take responsibility, meet the deadline y raise concerns con sus complementos.",
+      "model": "I took responsibility for checking the application and asked the volunteers to confirm their figures. Although some information arrived late, we met the deadline for submitting the documents. Several members raised concerns about the process, so I proposed an earlier internal deadline for our next application.",
+      "reasoning": [
+        {
+          "quote": "took responsibility for checking",
+          "explanation": "El núcleo se conserva en pasado y for introduce la actividad asumida."
+        },
+        {
+          "quote": "met the deadline for submitting",
+          "explanation": "Meet indica cumplimiento; el complemento aclara qué debía entregarse."
+        },
+        {
+          "quote": "raised concerns about the process",
+          "explanation": "Raise concerns comunica preocupación; no significa provocar el problema."
+        }
+      ],
+      "alternative": {
+        "text": "We set the deadline on Thursday.",
+        "why": "Dice que fijamos una fecha, no que entregamos a tiempo. On Thursday puede indicar cuándo se fijó sin identificar la fecha límite."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Why is “met the deadline” appropriate when a report arrived on time?",
+        "options": [
+          "It states that the deadline was created.",
+          "It states that the time requirement was fulfilled.",
+          "It states that the deadline was postponed."
+        ],
+        "answer": 1,
+        "explanation": "Meet a deadline expresa cumplirlo. Set y extend describen otras acciones."
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Completa con meet, set o raise: We need to ___ concerns about the missing safety information. Escribe solo el verbo.",
+        "accepted": [
+          "raise"
+        ],
+        "explanation": "Raise concerns es comunicar o plantear preocupaciones."
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "You are deciding the final submission date today. Which update fits?",
+        "options": [
+          "We met a deadline for next month.",
+          "We raised a deadline for next month.",
+          "We set a deadline for next month."
+        ],
+        "answer": 2,
+        "explanation": "Set corresponde a establecer una fecha; meet exigiría haber cumplido ya el requisito."
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Your team delivered a newsletter late because nobody checked the printing date. Write a short paragraph accepting responsibility, explaining the missed deadline and proposing one practical change. Use natural combinations with responsibility and deadline.",
+      "explanation": "Recupera expresiones completas y adapta el tiempo verbal al retraso; explica la solución.",
+      "model": "I take responsibility for checking the printing schedule too late. As a result, we missed the deadline for distributing the newsletter before the event. Next time, I will set an internal deadline two days earlier and ask one colleague to confirm that the printer has received the final version.",
+      "checklist": [
+        "Distingo fijar, cumplir e incumplir un plazo.",
+        "Uso responsibility for + actividad.",
+        "Relaciono problema, responsabilidad y cambio concreto."
+      ]
+    },
+    "sources": [
+      {
+        "title": "Cambridge: deadline",
+        "url": "https://dictionary.cambridge.org/dictionary/english/deadline"
+      },
+      {
+        "title": "Cambridge: responsibility",
+        "url": "https://dictionary.cambridge.org/dictionary/english/responsibility"
+      }
+    ]
+  },
+  {
+    "skillId": "v-word-families",
+    "why": "Cambiar de categoría no conserva automáticamente el patrón de la frase. Un verbo puede llevar objeto directo, mientras su nombre derivado necesita una preposición; además, algunas formas admiten plural y otras se usan como conceptos incontables. Practica transformaciones completas para mantener quién actúa, qué cambia y cómo se relacionan las ideas, sin limitarte a añadir un sufijo.",
+    "decisions": [
+      {
+        "cue": "Expresas la acción sobre algo.",
+        "action": "Construye improve + objeto.",
+        "en": "The new signs improved access to the clinic.",
+        "reason": "El verbo admite access como objeto; no necesita of."
+      },
+      {
+        "cue": "Nombras el cambio como resultado.",
+        "action": "Construye an improvement in + aspecto.",
+        "en": "There was an improvement in access to the clinic.",
+        "reason": "El nombre requiere una estructura distinta; el artículo presenta una mejora concreta."
+      }
+    ],
+    "worked": {
+      "scenario": "You are reporting on a community course. At first, participants struggled to understand the registration instructions. The organisers replaced them with shorter sentences and clearer examples. More people then completed the form without help. Describe the improvement without claiming that every participant now understands every instruction perfectly.",
+      "task": "Redacta un párrafo de 40–60 palabras que use improve, improvement y clear o clearly con funciones diferentes.",
+      "model": "The organisers improved the registration instructions by using shorter sentences. This improvement in clarity helped more participants complete the form independently. The examples now explain each step clearly, although some learners still need support. The change made the process easier to follow without removing the need for individual guidance.",
+      "reasoning": [
+        {
+          "quote": "improved the registration instructions",
+          "explanation": "Improved es verbo en pasado y lleva un objeto directo."
+        },
+        {
+          "quote": "improvement in clarity",
+          "explanation": "Improvement nombra el cambio y clarity la cualidad; la relación se expresa con in."
+        },
+        {
+          "quote": "explain each step clearly",
+          "explanation": "Clearly modifica explain; no describe el sustantivo step."
+        }
+      ],
+      "alternative": {
+        "text": "The instructions became clearly.",
+        "why": "Become enlaza aquí el sujeto con una cualidad: clearer o clear. Clearly indica cómo se realiza una acción."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Why does “an improvement in clarity” use clarity rather than clearly?",
+        "options": [
+          "The preposition introduces the quality that improved.",
+          "Every word after in must end in -ity.",
+          "Clearly is always incorrect after a verb."
+        ],
+        "answer": 0,
+        "explanation": "Aquí se necesita el nombre de una cualidad. La terminación por sí sola no es una regla general."
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Corrige solo la palabra entre corchetes: The new instructions explain the process [clear].",
+        "accepted": [
+          "clearly"
+        ],
+        "explanation": "Explain requiere aquí un adverbio de manera."
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Choose the accurate report of a change in access.",
+        "options": [
+          "The ramp improved access.",
+          "The ramp made an improve in access.",
+          "The ramp improved in access the building."
+        ],
+        "answer": 0,
+        "explanation": "Improve lleva access como objeto. Con el nombre sería an improvement in access."
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "A library replaced a confusing booking page with a simpler one. Fewer users now ask for help, but some still struggle. Write a short paragraph using improve, improvement and a suitable form of clear. Keep the remaining difficulty.",
+      "explanation": "Reformula una situación con funciones diferentes y conserva su limitación.",
+      "model": "The library improved its booking page by replacing long instructions with clear examples. This improvement in clarity reduced the number of requests for help. Users can now identify the next step more easily, although some still find the payment section confusing and need support from a member of staff.",
+      "checklist": [
+        "Uso improve como verbo e improvement como nombre.",
+        "Elijo clear o clearly según su función.",
+        "Conservo que algunas personas necesitan ayuda."
+      ]
+    },
+    "sources": [
+      {
+        "title": "Cambridge: improve",
+        "url": "https://dictionary.cambridge.org/dictionary/english/improve"
+      },
+      {
+        "title": "Cambridge: improvement",
+        "url": "https://dictionary.cambridge.org/dictionary/english/improvement"
+      }
+    ]
+  },
+  {
+    "skillId": "v-patterns",
+    "why": "Los verbos próximos en significado pueden necesitar construcciones diferentes. Suggest y advise permiten aconsejar, pero no aceptan necesariamente los mismos complementos. Cambiar uno por otro exige reconstruir la frase y decidir si nombras a la persona que actuará. Este control te permite proponer soluciones en una carta sin trasladar literalmente la estructura española ni memorizar una regla demasiado amplia.",
+    "decisions": [
+      {
+        "cue": "Propones una acción sin señalar quién la realizará.",
+        "action": "Usa suggest + forma en ing.",
+        "en": "I suggest checking the booking system.",
+        "reason": "La propuesta se centra en la acción."
+      },
+      {
+        "cue": "Indicas quién debería actuar.",
+        "action": "Usa advise + persona + to + verbo.",
+        "en": "I advise customers to keep their confirmation emails.",
+        "reason": "La persona aconsejada aparece como objeto; no transfieras este patrón a suggest."
+      }
+    ],
+    "worked": {
+      "scenario": "You booked a training room, but the reception team could not find your reservation. A confirmation email resolved the problem. You want to suggest a change to the manager and give practical advice to future customers. Both messages should explain who needs to act and what they should do.",
+      "task": "Escribe un párrafo de 40–60 palabras con suggest + ing y advise + persona + to. Mantén destinatario y acción claros.",
+      "model": "I suggest reviewing the booking system because reception could not find my reservation. Staff eventually located it after reading my confirmation email. Until the system is improved, I would advise customers to keep a copy of that email and bring it with them when they arrive for their booking.",
+      "reasoning": [
+        {
+          "quote": "suggest reviewing",
+          "explanation": "Suggest introduce directamente la acción en ing."
+        },
+        {
+          "quote": "advise customers to keep",
+          "explanation": "Advise admite persona + infinitivo con to; customers identifica a quien recibe el consejo."
+        },
+        {
+          "quote": "Until the system is improved",
+          "explanation": "La solución provisional tiene una condición temporal; guardar el correo no repara el sistema."
+        }
+      ],
+      "alternative": {
+        "text": "I suggest customers to keep their emails.",
+        "why": "Suggest no admite persona + to-infinitivo. Puedes escribir I suggest that customers keep their emails."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Why is “I suggest checking the records” well formed?",
+        "options": [
+          "Suggest must always be followed by to.",
+          "Suggest can take an -ing form describing the proposed action.",
+          "Checking is the person receiving advice."
+        ],
+        "answer": 1,
+        "explanation": "Suggest + ing propone una acción sin añadir un objeto personal."
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Corrige solo [to review]: I suggest [to review] the timetable. Escribe una palabra.",
+        "accepted": [
+          "reviewing"
+        ],
+        "explanation": "Con este patrón se usa suggest reviewing."
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "You want to name the person receiving advice. Choose the correct sentence.",
+        "options": [
+          "I advise the tenant to keep the receipt.",
+          "I advise to the tenant keep the receipt.",
+          "I suggest the tenant to keep the receipt."
+        ],
+        "answer": 0,
+        "explanation": "Advise admite objeto personal + to-infinitivo. Suggest necesita otra construcción."
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "A colleague often loses access to online files. Recommend a practical action to the team, then give that colleague direct advice. Write a short paragraph using suggest and advise with two different correct patterns.",
+      "explanation": "Puedes usar suggest doing o suggest that + oración; con advise deja claro quién recibe el consejo.",
+      "model": "I suggest saving an offline copy of essential documents before each trip. This would allow the team to continue working when the connection fails. I also advise my colleague to check that the files open correctly before leaving the office, rather than discovering a problem during a client meeting.",
+      "checklist": [
+        "Uso un patrón válido con suggest.",
+        "Uso advise + persona + to-infinitivo si nombro al destinatario.",
+        "Las dos acciones responden al problema de acceso."
+      ]
+    },
+    "sources": [
+      {
+        "title": "Cambridge: suggest",
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/suggest"
+      },
+      {
+        "title": "Cambridge: advise",
+        "url": "https://dictionary.cambridge.org/dictionary/english/advise"
+      }
+    ]
+  },
+  {
+    "skillId": "v-paraphrase",
+    "why": "Una paráfrasis puede mantener todas las palabras importantes y aun así alterar la relación lógica. Only if introduce una condición necesaria; if puede presentar una condición suficiente. También debes conservar qué hecho causa otro y quién recibe un beneficio. Comprueba estas relaciones antes de valorar la variedad léxica: una reformulación elegante que cambia una condición deja de ser fiel.",
+    "decisions": [
+      {
+        "cue": "La política impone un requisito necesario.",
+        "action": "Conserva only if mediante must o una negación equivalente.",
+        "en": "You can join only if you are over eighteen.",
+        "reason": "Ser mayor de dieciocho es necesario; la frase no garantiza que sea el único requisito."
+      },
+      {
+        "cue": "La política garantiza algo bajo una condición.",
+        "action": "Conserva la consecuencia afirmada por if.",
+        "en": "If a session is cancelled, the fee will be refunded.",
+        "reason": "Se promete el reembolso cuando ocurre la cancelación descrita."
+      }
+    ],
+    "worked": {
+      "scenario": "A club notice says that applicants can join only if they provide proof of address. Staff also check whether places are available. You need to explain the policy to a neighbour who thinks that bringing a utility bill guarantees membership. Preserve the difference between a requirement and a promise.",
+      "task": "Escribe un párrafo de 40–60 palabras que reformule la condición y corrija la interpretación sin añadir requisitos.",
+      "model": "Applicants must provide proof of address to be considered for membership. However, submitting that document does not guarantee a place, because staff also check availability. Your utility bill may meet the address requirement, but the club still needs to confirm whether it can accept another member at the time you apply.",
+      "reasoning": [
+        {
+          "quote": "only if they provide proof of address",
+          "explanation": "Only if marca una condición necesaria, no una garantía."
+        },
+        {
+          "quote": "must provide proof of address",
+          "explanation": "Must conserva la obligación documental sin prometer admisión."
+        },
+        {
+          "quote": "does not guarantee a place",
+          "explanation": "El límite se desprende de la comprobación adicional de plazas."
+        }
+      ],
+      "alternative": {
+        "text": "Anyone who provides proof of address will be accepted.",
+        "why": "Convierte un requisito necesario en una garantía suficiente e ignora la disponibilidad."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Original: “Visitors may enter only if they have a pass.” Why is “A pass guarantees entry” unsafe?",
+        "options": [
+          "It changes a necessary condition into a guarantee.",
+          "Pass cannot refer to permission.",
+          "May always means must."
+        ],
+        "answer": 0,
+        "explanation": "Only if establece un requisito; no demuestra que sea suficiente."
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Completa con must o might: Proof of age is required. Applicants ___ provide proof of age.",
+        "accepted": [
+          "must"
+        ],
+        "explanation": "Required establece una obligación, no una posibilidad."
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Text: “If the organiser cancels, participants receive a refund.” Which reformulation is faithful?",
+        "options": [
+          "Every cancellation by a participant is refundable.",
+          "Participants get their money back when the organiser cancels.",
+          "Participants receive a refund only when they complain."
+        ],
+        "answer": 1,
+        "explanation": "Se mantienen quién cancela y la consecuencia prometida."
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Notice: “A fee waiver is available only to residents aged sixty or over. Eligible residents must apply; approval depends on the available budget.” Explain this notice in a short paragraph for a sixty-five-year-old neighbour. Preserve eligibility, the application requirement and uncertainty.",
+      "explanation": "Distingue ser elegible de recibir automáticamente la ayuda.",
+      "model": "As a resident aged sixty-five, you meet the age requirement for the fee waiver. You still need to submit an application, and being eligible does not guarantee approval. The council will also consider the money available, so you should wait for confirmation before assuming that the fee has been waived.",
+      "checklist": [
+        "Conservo edad y residencia.",
+        "No elimino la solicitud obligatoria.",
+        "No prometo aprobación ni añado condiciones."
+      ]
+    },
+    "sources": [
+      {
+        "title": "Cambridge: if — only if",
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/if"
+      },
+      {
+        "title": "Cambridge: conditionals — other expressions",
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/conditionals-other"
+      }
+    ]
+  },
+  {
+    "skillId": "v-register",
+    "why": "El tono también depende de cuánto impones al lector. Una petición cortés identifica la acción y permite responder; demasiadas fórmulas indirectas pueden ocultar lo que necesitas. Cuando reclamas, separar hechos verificables, efecto y solución solicitada reduce acusaciones innecesarias. Ajusta cercanía y firmeza al destinatario, conservando una petición concreta en lugar de confundir formalidad con vaguedad.",
+    "decisions": [
+      {
+        "cue": "Escribes por primera vez a una empresa.",
+        "action": "Describe el hecho y formula una petición directa y cortés.",
+        "en": "Could you confirm when the replacement will arrive?",
+        "reason": "El lector sabe qué dato debe proporcionar."
+      },
+      {
+        "cue": "Escribes a una amiga que conoce el problema.",
+        "action": "Puedes usar una petición cercana con contexto compartido.",
+        "en": "Could you let me know when you are free to collect it?",
+        "reason": "La expresión encaja en una relación personal sin volverse brusca."
+      }
+    ],
+    "worked": {
+      "scenario": "A furniture company delivered a damaged desk three days ago. You sent photographs but have not received a reply. You need the desk for work next week. Write a firm message that states the problem and asks for a practical solution without accusing individual staff members of deliberate wrongdoing.",
+      "task": "Redacta un párrafo de 40–60 palabras para la empresa: hecho, consecuencia y petición cortés y concreta.",
+      "model": "The desk delivered on Monday has a cracked surface, as shown in the photographs I sent that afternoon. I need a usable desk for work next week. Could you please confirm by Friday whether you can arrange a replacement? If this is not possible, I would like to request a refund.",
+      "reasoning": [
+        {
+          "quote": "has a cracked surface",
+          "explanation": "Describe un defecto observable sin atribuir intenciones."
+        },
+        {
+          "quote": "confirm by Friday",
+          "explanation": "La petición especifica qué respuesta se necesita y cuándo."
+        },
+        {
+          "quote": "I would like to request a refund",
+          "explanation": "Propone una solución alternativa con firmeza y cortesía."
+        }
+      ],
+      "alternative": {
+        "text": "You obviously do not care about your customers, so sort this mess out!",
+        "why": "La acusación no aporta evidencia y la acción solicitada es imprecisa."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Why does a formal complaint benefit from a specific request?",
+        "options": [
+          "It guarantees compensation.",
+          "It tells the reader what action would resolve the problem.",
+          "It removes the need to explain the problem."
+        ],
+        "answer": 1,
+        "explanation": "La petición orienta la respuesta; no garantiza un resultado."
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Quieres que la empresa confirme su fecha de entrega. Completa con confirm o complain: Could you please ___ the delivery date?",
+        "accepted": [
+          "confirm"
+        ],
+        "explanation": "Confirm admite la fecha como objeto directo y expresa confirmar; complain no funciona con esa estructura."
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "You are writing a first complaint to a course provider. Which sentence is appropriately firm?",
+        "options": [
+          "Give me my cash right now!",
+          "I would be grateful if you could review the charge and explain why it was added.",
+          "Hey mate, what is going on with this fee?"
+        ],
+        "answer": 1,
+        "explanation": "Identifica acción y motivo con un tono adecuado a una relación institucional."
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "A neighbour you know well borrowed your ladder two weeks ago. You need it on Saturday. Write a short friendly message asking for its return and proposing a convenient arrangement. Make the request unmistakable.",
+      "explanation": "El contexto pide cercanía; adapta las fórmulas al destinatario.",
+      "model": "Hi Sam, I hope the painting is going well. Could you bring my ladder back before Saturday? I need it to clear the gutters that morning. I will be home on Friday evening if that suits you, or I can collect it after work. Let me know what works best.",
+      "checklist": [
+        "Indico qué necesito y para cuándo.",
+        "El tono corresponde a una persona conocida.",
+        "Ofrezco una forma concreta de devolverla."
+      ]
+    },
+    "sources": [
+      {
+        "title": "Cambridge: requests",
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/requests"
+      },
+      {
+        "title": "Cambridge: formal and informal language",
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/formal-and-informal-language"
+      }
+    ]
+  },
+  {
+    "skillId": "v-everyday",
+    "why": "En documentos cotidianos, palabras próximas nombran operaciones distintas: refund devuelve dinero, replacement cambia el producto y credit puede dejar un saldo para una compra futura. Conocer esa diferencia evita solicitar una solución equivocada o interpretar un anuncio como más favorable de lo que dice. Vincula cada término con quién entrega qué y bajo qué condiciones concretas.",
+    "decisions": [
+      {
+        "cue": "Quieres recuperar el dinero pagado.",
+        "action": "Solicita un refund y comprueba las condiciones.",
+        "en": "I would like a refund to my original payment method.",
+        "reason": "El resultado es recuperar dinero."
+      },
+      {
+        "cue": "Quieres otro artículo que funcione.",
+        "action": "Solicita un replacement.",
+        "en": "Could you send a replacement for the damaged kettle?",
+        "reason": "El comercio entrega otro producto; no necesariamente devuelve el importe."
+      }
+    ],
+    "worked": {
+      "scenario": "You bought a kettle online, but it arrived with a broken lid. The shop offers either another kettle or store credit. You do not want to buy anything else there, and you need the money returned to your bank card. Explain which option you want and why the alternatives differ.",
+      "task": "Escribe un párrafo de 40–60 palabras que distinga refund, replacement y store credit y formule tu petición.",
+      "model": "The kettle arrived with a broken lid, so I would like a refund to the card I used for payment. A replacement would provide another kettle, while store credit would require me to shop with you again. Neither option meets my needs, as I have already bought a suitable kettle elsewhere.",
+      "reasoning": [
+        {
+          "quote": "refund to the card",
+          "explanation": "Identifica una devolución de dinero y su destino."
+        },
+        {
+          "quote": "A replacement would provide another kettle",
+          "explanation": "Replacement cambia el artículo; no describe un reembolso."
+        },
+        {
+          "quote": "store credit would require me to shop with you again",
+          "explanation": "El saldo queda vinculado al comercio."
+        }
+      ],
+      "alternative": {
+        "text": "Please give me a replacement to my bank card.",
+        "why": "Replacement es un artículo sustituto. Para recuperar dinero necesitas refund."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "A shop offers store credit. Why is this different from a refund to your card?",
+        "options": [
+          "It can only mean a new bank card.",
+          "It usually provides value to spend with the shop rather than returning money to the card.",
+          "It means the original product has been repaired."
+        ],
+        "answer": 1,
+        "explanation": "El crédito se utiliza en compras del comercio; revisa sus condiciones."
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Elige refund o replacement: The shoes were too small, so the shop sent a larger pair as a ___.",
+        "accepted": [
+          "replacement"
+        ],
+        "explanation": "Recibiste un producto sustituto."
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "You have bought another phone and want the original payment returned. Which request fits?",
+        "options": [
+          "Could I receive a refund?",
+          "Could you provide a replacement phone?",
+          "Could you book an appointment?"
+        ],
+        "answer": 0,
+        "explanation": "La acción pedida es devolver el dinero."
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Your gym cancelled a paid workshop. It offers credit for a future class, but you are moving away. Write a short message explaining why you want a refund rather than credit. Include the cancelled service and your practical reason.",
+      "explanation": "Distingue resultados económicos sin inventar una política de devolución.",
+      "model": "The workshop I paid for on Sunday was cancelled. Thank you for offering credit towards another class, but I am moving away next week and will not be able to use it. Could you please consider refunding the fee to my original payment method instead? I can provide my booking confirmation.",
+      "checklist": [
+        "Identifico el servicio cancelado.",
+        "Distingo crédito y devolución de dinero.",
+        "Pido una solución concreta sin inventar condiciones."
+      ]
+    },
+    "sources": [
+      {
+        "title": "Cambridge: refund",
+        "url": "https://dictionary.cambridge.org/dictionary/english/refund"
+      },
+      {
+        "title": "Cambridge: replacement",
+        "url": "https://dictionary.cambridge.org/dictionary/english/replacement"
+      },
+      {
+        "title": "Cambridge: store credit",
+        "url": "https://dictionary.cambridge.org/dictionary/english/store-credit"
+      }
+    ]
+  },
+  {
+    "skillId": "v-workplace",
+    "why": "El vocabulario laboral no solo describe tareas; distribuye autoridad y obligaciones. Request, approve y notify representan pasos diferentes, y pending indica que una decisión todavía no está tomada. Si los confundes, puedes interpretar una solicitud como permiso. Al leer o escribir, sigue el estado del trámite y nombra a quien debe realizar la siguiente acción.",
+    "decisions": [
+      {
+        "cue": "Has enviado una solicitud sin respuesta.",
+        "action": "Describe el estado como pending.",
+        "en": "My leave request is still pending.",
+        "reason": "Presentar una petición no establece que el permiso se haya concedido."
+      },
+      {
+        "cue": "El responsable ya ha autorizado las fechas.",
+        "action": "Usa approved y concreta qué autorizó.",
+        "en": "My manager approved my leave for 12–14 June.",
+        "reason": "Approved informa de una decisión favorable, no de haber recibido el formulario."
+      }
+    ],
+    "worked": {
+      "scenario": "You requested two days of annual leave through the staff portal. The portal confirms that the request was submitted, but the status remains pending. A colleague assumes that you can book travel now. Explain the current position and the next step without treating a receipt notification as managerial approval.",
+      "task": "Redacta un párrafo de 40–60 palabras que use submitted, pending y approval de forma precisa.",
+      "model": "I submitted my annual leave request yesterday, and the system confirmed receipt. However, the request is still pending, so I have not booked my travel. I will ask my manager when I can expect a decision and wait for written approval before making arrangements that depend on those dates.",
+      "reasoning": [
+        {
+          "quote": "submitted my annual leave request",
+          "explanation": "Submitted describe la entrega, no el resultado."
+        },
+        {
+          "quote": "still pending",
+          "explanation": "Pending sitúa el trámite antes de una decisión definitiva."
+        },
+        {
+          "quote": "wait for written approval",
+          "explanation": "Approval nombra la autorización y written concreta la evidencia esperada."
+        }
+      ],
+      "alternative": {
+        "text": "The portal approved my holiday because it received my request.",
+        "why": "Recibir una solicitud no equivale a autorizarla. El estado pending impide esta conclusión."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Why does “request submitted” not necessarily mean “leave approved”?",
+        "options": [
+          "Submitting and authorising are different actions.",
+          "Annual leave is always unpaid.",
+          "A portal cannot record dates."
+        ],
+        "answer": 0,
+        "explanation": "La decisión posterior determina el estado, no solo el envío."
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Completa con pending o approved: Your request has been received, but no decision has been made. Status: ___.",
+        "accepted": [
+          "pending"
+        ],
+        "explanation": "Pending indica que falta una decisión."
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Your manager has authorised the dates in writing. Which update is accurate?",
+        "options": [
+          "My leave has been approved.",
+          "My leave has only been requested and no decision exists.",
+          "My leave was rejected."
+        ],
+        "answer": 0,
+        "explanation": "La autorización escrita justifica approved."
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "A worker submitted a shift swap request. The supervisor has not decided, and the original rota still applies. Write a short message explaining the status, the current responsibility and what must happen before the swap.",
+      "explanation": "No conviertas una propuesta entre compañeros en autorización del supervisor.",
+      "model": "I have submitted our shift swap request, but it is still pending. Until the supervisor approves it, we need to follow the original rota, so I am still responsible for Friday evening. I will let you know as soon as we receive a decision and the schedule is updated.",
+      "checklist": [
+        "Distingo solicitud y aprobación.",
+        "Conservo la obligación del turno original.",
+        "Identifico qué decisión falta y quién debe tomarla."
+      ]
+    },
+    "sources": [
+      {
+        "title": "Cambridge: pending",
+        "url": "https://dictionary.cambridge.org/dictionary/english/pending"
+      },
+      {
+        "title": "Cambridge: approve",
+        "url": "https://dictionary.cambridge.org/dictionary/english/approve"
+      }
+    ]
+  },
+  {
+    "skillId": "v-essay-topics",
+    "why": "El vocabulario temático resulta más útil cuando permite explicar un mecanismo. Affordable, accessible y available describen barreras distintas: precio, posibilidad de uso y existencia de un recurso. Si los intercambias, puedes proponer una solución que no responde al problema. Define primero la barrera, después el grupo afectado y finalmente cómo tu medida podría modificar esa situación.",
+    "decisions": [
+      {
+        "cue": "El servicio existe pero resulta demasiado caro.",
+        "action": "Usa affordable para hablar del precio relativo a los recursos.",
+        "en": "Subsidies could make childcare more affordable for low-income families.",
+        "reason": "Reducir una barrera económica no demuestra que haya más plazas."
+      },
+      {
+        "cue": "Hay plazas pero el horario impide utilizarlas.",
+        "action": "Explica acceso práctico mediante horarios o ubicación.",
+        "en": "Evening appointments could improve access for shift workers.",
+        "reason": "El cambio facilita usar el servicio; no necesariamente reduce su precio."
+      }
+    ],
+    "worked": {
+      "scenario": "A town has a training centre with empty places on daytime courses. Many local employees cannot attend because they work during those hours. The council is considering reducing course fees. Write a short argument identifying the main barrier and proposing a measure that directly addresses it, with an appropriate limitation.",
+      "task": "Redacta un párrafo de 40–60 palabras que distinga precio, disponibilidad y acceso, y explique una relación causal concreta.",
+      "model": "Lower fees would make training more affordable, but they would not remove the scheduling barrier faced by employees. Places are already available during the day. Offering evening sessions could improve access for these workers, provided that tutors and transport are also available at the times when the courses finish.",
+      "reasoning": [
+        {
+          "quote": "more affordable",
+          "explanation": "Affordable se refiere a poder pagar, no al horario."
+        },
+        {
+          "quote": "Places are already available",
+          "explanation": "Existen plazas, pero eso no garantiza poder utilizarlas."
+        },
+        {
+          "quote": "provided that tutors and transport are also available",
+          "explanation": "La condición explica qué necesita la propuesta para funcionar."
+        }
+      ],
+      "alternative": {
+        "text": "Making every course cheaper will allow all employees to attend.",
+        "why": "Ignora el horario y convierte una ayuda económica posible en solución universal."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Why might “affordable” be insufficient when discussing a distant clinic?",
+        "options": [
+          "It concerns cost and does not by itself show that people can reach the clinic.",
+          "It always means nearby.",
+          "It means that no appointments exist."
+        ],
+        "answer": 0,
+        "explanation": "Precio y acceso físico son dimensiones diferentes."
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Completa con affordable o available: The class is free, but there are no places ___.",
+        "accepted": [
+          "available"
+        ],
+        "explanation": "El problema es la ausencia de plazas."
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Residents can pay the bus fare, but the last bus leaves before their shift ends. Which measure directly addresses this barrier?",
+        "options": [
+          "A later bus service.",
+          "A cheaper daytime fare only.",
+          "A new slogan about transport."
+        ],
+        "answer": 0,
+        "explanation": "La barrera descrita es el horario."
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "A public library provides free internet, but it closes before many workers finish their shifts. Write a short argument proposing one change. Distinguish affordability from access, explain who benefits and acknowledge one practical condition.",
+      "explanation": "Desarrolla problema, medida y efecto; no basta con introducir palabras temáticas.",
+      "model": "Free internet is affordable, but the library's opening hours limit access for people who work late. Extending the evening service could allow these residents to complete online applications after their shifts. The proposal would be more practical if the council also funded sufficient staff to keep the building open safely.",
+      "checklist": [
+        "Distingo coste y horario.",
+        "Explico cómo la medida beneficia a un grupo concreto.",
+        "Incluyo una condición práctica."
+      ]
+    },
+    "sources": [
+      {
+        "title": "Cambridge: affordable",
+        "url": "https://dictionary.cambridge.org/dictionary/english/affordable"
+      },
+      {
+        "title": "Cambridge: available",
+        "url": "https://dictionary.cambridge.org/dictionary/english/available"
+      },
+      {
+        "title": "Cambridge: access",
+        "url": "https://dictionary.cambridge.org/dictionary/english/access"
+      }
+    ]
+  },
+  {
+    "skillId": "v-accuracy",
+    "why": "La precisión exige distinguir función, significado y forma escrita al mismo tiempo. Advice y advise comparten una idea, pero uno nombra la orientación y otro expresa la acción de aconsejar; además, advice suele ser incontable. Una revisión eficaz identifica qué función falta antes de corregir letras. Así evitas sustituir un error ortográfico por una frase todavía incorrecta.",
+    "decisions": [
+      {
+        "cue": "Nombras la orientación recibida.",
+        "action": "Usa advice sin artículo indefinido o a piece of advice.",
+        "en": "The tutor gave me some useful advice.",
+        "reason": "Advice es incontable; no se convierte en advices para varias recomendaciones."
+      },
+      {
+        "cue": "Expresas la acción y su destinatario.",
+        "action": "Usa advise + persona + to + verbo.",
+        "en": "The tutor advised me to practise every morning.",
+        "reason": "El verbo marca la acción y el infinitivo expresa el contenido del consejo."
+      }
+    ],
+    "worked": {
+      "scenario": "Your tutor reviewed a job application and recommended shortening the opening paragraph. You followed that recommendation and found the letter clearer. Explain what the tutor did, what you received and how you acted on it. Check both the spelling and the grammatical role of the words advice and advise.",
+      "task": "Redacta un párrafo de 40–60 palabras con advice, advised y un resultado preciso, sin garantizar que conseguirás el puesto.",
+      "model": "My tutor advised me to shorten the opening paragraph of my application. I followed her advice and removed information that repeated my CV. The letter is now clearer and focuses on the skills required for the role. This revision should help the employer understand my experience, although it cannot guarantee an interview.",
+      "reasoning": [
+        {
+          "quote": "advised me to shorten",
+          "explanation": "Advised es verbo en pasado y nombra una acción dirigida a una persona."
+        },
+        {
+          "quote": "followed her advice",
+          "explanation": "Advice es el nombre de la orientación recibida; no lleva plural."
+        },
+        {
+          "quote": "cannot guarantee an interview",
+          "explanation": "La revisión mejora la comunicación sin inventar un resultado de selección."
+        }
+      ],
+      "alternative": {
+        "text": "She gave me an advise.",
+        "why": "Se necesita un nombre: some advice o a piece of advice. Cambiar solo advise dejaría incorrecto an advice."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Why is “some advice” correct when several suggestions were given?",
+        "options": [
+          "Advice is uncountable in this use.",
+          "Advice is a plural verb.",
+          "Some always requires a singular countable noun."
+        ],
+        "answer": 0,
+        "explanation": "La cantidad puede expresarse con some advice o several pieces of advice."
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Completa con advice o advise: Could you ___ me on my application?",
+        "accepted": [
+          "advise"
+        ],
+        "explanation": "Después del modal se necesita el verbo base."
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Choose a complete correction of “She gave me an advise.”",
+        "options": [
+          "She gave me an advice.",
+          "She gave me some advice.",
+          "She gave me some advises."
+        ],
+        "answer": 1,
+        "explanation": "Se corrigen categoría y artículo; advice no admite an en este uso."
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "A colleague recommended checking a rental agreement before paying the deposit. Write a short paragraph explaining what they advised you to do, whether you followed the advice and why. Use both words accurately; simply describe your actions.",
+      "explanation": "Comprueba la distinción lingüística en un contexto nuevo.",
+      "model": "My colleague advised me to read the rental agreement before paying the deposit. I followed that advice and checked the payment dates and contact details carefully. When I noticed that one date was unclear, I asked the agent to confirm it in writing before I continued with the booking.",
+      "checklist": [
+        "Uso advised como verbo y advice como nombre.",
+        "No escribo an advice ni advices.",
+        "Describo acción y motivo con precisión."
+      ]
+    },
+    "sources": [
+      {
+        "title": "Cambridge: advice or advise",
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/advice-or-advise"
+      }
+    ]
+  },
+  {
+    "skillId": "r-skimming",
+    "why": "Leer globalmente también consiste en reconocer la función de cada parte: presentar una situación, explicar una modificación o limitar su alcance. Esa estructura te orienta cuando una pregunta pide propósito, no un dato. Un giro final puede cambiar la lectura inicial; vuelve sobre tu primera impresión y comprueba qué papel desempeñan los ejemplos antes de resumir el conjunto.",
+    "decisions": [
+      {
+        "cue": "El comienzo anuncia una ventaja y el final añade una condición.",
+        "action": "Incluye ambas partes en la visión global.",
+        "en": "The scheme offers longer access, subject to a trial period.",
+        "reason": "La limitación modifica el alcance de la ventaja."
+      },
+      {
+        "cue": "Un párrafo enumera horarios para ejecutar una medida.",
+        "action": "Trátalo como información práctica, no como el propósito completo.",
+        "en": "The timetable explains how the change will operate.",
+        "reason": "Los horarios apoyan el anuncio; no necesariamente son su mensaje central."
+      }
+    ],
+    "worked": {
+      "scenario": "A. Riverside Library will test an evening collection service after residents said they could not visit during working hours. The aim is to help existing members collect reserved books after the main building closes.\n\nB. A staffed collection window will operate on Tuesdays and Thursdays until eight. Members must reserve books online before midday and bring their membership card. Browsing the shelves will not be possible.\n\nC. The trial will run for six weeks. Staff will record demand and discuss the results with users before deciding whether to continue. The daytime opening hours will remain unchanged throughout the trial.",
+      "task": "Choose the best overall description. A: A permanent replacement for daytime opening. B: A limited trial of an additional collection service. C: Instructions for borrowing books without membership. D: An argument against evening access. Explain how sections A–C contribute.",
+      "model": "B. A introduces the access problem and proposed service; B explains how members will use it; C defines the trial and future decision. The notice adds a restricted evening service while retaining daytime opening.",
+      "reasoning": [
+        {
+          "quote": "will test an evening collection service",
+          "explanation": "Test introduce una prueba; todavía no es un cambio permanente."
+        },
+        {
+          "quote": "Browsing the shelves will not be possible",
+          "explanation": "El servicio permite recoger reservas, no usar toda la biblioteca."
+        },
+        {
+          "quote": "before deciding whether to continue",
+          "explanation": "El final confirma que la continuidad está pendiente."
+        }
+      ],
+      "alternative": {
+        "text": "A: A permanent replacement for daytime opening.",
+        "why": "Permanent contradice la decisión pendiente y replacement contradice que el horario diurno siga igual. El comienzo por sí solo no revela esos límites."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "A notice introduces a trial, lists collection times and ends with an evaluation date. Why read the ending during skimming?",
+        "options": [
+          "It may establish whether the change is temporary.",
+          "It makes every earlier sentence irrelevant.",
+          "It always contains the answer to every detail question."
+        ],
+        "answer": 0,
+        "explanation": "El cierre puede limitar o matizar el anuncio inicial."
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Text: “The café will test Sunday opening for one month before deciding whether to continue.” Is the change definitely permanent? Write yes or no.",
+        "accepted": [
+          "no"
+        ],
+        "explanation": "Trial y la decisión futura excluyen afirmar permanencia."
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "A notice explains a problem, describes a trial and asks for feedback. What is the best global summary?",
+        "options": [
+          "A list of every opening time.",
+          "An invitation to help evaluate a possible service improvement.",
+          "Proof that the service has permanently closed."
+        ],
+        "answer": 1,
+        "explanation": "La síntesis integra propósito y organización sin convertir un detalle en el todo."
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Text: “The sports centre plans a quiet swimming hour for people who find busy sessions uncomfortable. The first four sessions will have fewer swimmers and no background music. Standard sessions will continue at other times. Afterwards, the centre will ask participants whether the arrangement helped before setting any future dates.” State the overall purpose and identify the roles of the first and final sentences. Support your answer with wording from the text.",
+      "explanation": "La respuesta debe mostrar estructura y límites, no extraer solamente el tema swimming.",
+      "model": "The text announces a trial designed to make swimming more comfortable for some users. The first sentence explains the need: “find busy sessions uncomfortable”. The final sentence describes evaluation “before setting any future dates”, so continuation is undecided. Standard sessions remain available.",
+      "checklist": [
+        "Identifico propósito y público.",
+        "Explico dos funciones del texto.",
+        "Cito evidencia y conservo la incertidumbre."
+      ]
+    },
+    "sources": [
+      {
+        "title": "IELTS: Reading General Training, formato y habilidades",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-reading"
+      }
+    ]
+  },
+  {
+    "skillId": "r-scanning",
+    "why": "Cuando una cifra aparece varias veces, localizarla deja de ser suficiente. Debes enlazarla con su categoría, periodo y excepción: precio por persona, por grupo o por curso completo. Construye mentalmente una ficha del dato antes de copiarlo. Este paso evita responder con una cifra visible que pertenece al mismo tema, pero a un participante o momento diferente.",
+    "decisions": [
+      {
+        "cue": "La pregunta especifica un grupo y un horario.",
+        "action": "Comprueba simultáneamente las dos etiquetas del precio.",
+        "en": "Adult evening tickets cost £9; student evening tickets cost £6.",
+        "reason": "Encontrar evening no basta si la pregunta pide el precio de estudiante."
+      },
+      {
+        "cue": "Una excepción empieza con however o except.",
+        "action": "Lee hasta determinar a quién sustituye el dato habitual.",
+        "en": "Standard delivery takes five days; island orders take eight.",
+        "reason": "La excepción cambia el plazo para el grupo mencionado."
+      }
+    ],
+    "worked": {
+      "scenario": "Hillford Museum offers a Saturday photography workshop. The standard adult fee is £28, while full-time students pay £18 when they show a current student card. Both fees include equipment hire. A separate evening talk costs £7 for everyone and does not require workshop attendance. Workshop bookings received by 12 May include a free printed guide; later bookings can purchase the guide for £4. The workshop takes place on 24 May, and the last day for booking is 20 May. Student discounts apply to the workshop only. Anyone requesting a refund must contact reception at least three days before the workshop.",
+      "task": "Answer using NO MORE THAN TWO WORDS AND/OR A NUMBER from the text. 1: How much does a full-time student pay for the workshop? 2: What is the final booking date? 3: How much does a student pay for the evening talk?",
+      "model": "1: £18. 2: 20 May. 3: £7. The student workshop rate, the booking deadline and the separate talk price belong to different conditions; the free-guide date is not the final booking date.",
+      "reasoning": [
+        {
+          "quote": "full-time students pay £18",
+          "explanation": "La categoría requerida es estudiante del taller."
+        },
+        {
+          "quote": "the last day for booking is 20 May",
+          "explanation": "Esta es la fecha de cierre; 12 May corresponde a una ventaja adicional."
+        },
+        {
+          "quote": "A separate evening talk costs £7 for everyone",
+          "explanation": "Everyone incluye estudiantes y la tarifa se refiere al acto distinto."
+        }
+      ],
+      "alternative": {
+        "text": "2: 12 May.",
+        "why": "12 May es el límite para recibir la guía gratis. Todavía se admiten reservas después, hasta 20 May."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Text: “Members pay £12 per month. A day pass costs £5.” Why is £12 unsuitable for a one-day visitor?",
+        "options": [
+          "It refers to a different payment period and category.",
+          "It is the larger number.",
+          "Numbers above ten cannot answer price questions."
+        ],
+        "answer": 0,
+        "explanation": "La correspondencia depende del tipo de entrada y la unidad temporal."
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Text: “Applications open on 3 June and close on 19 June. Interviews are on 27 June.” Write the closing date using a number and month.",
+        "accepted": [
+          "19 June",
+          "June 19"
+        ],
+        "explanation": "Close identifica el plazo solicitado; las otras fechas cumplen otra función."
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Text: “Children enter free on weekdays. On Saturdays, all visitors pay £4.” What does a child pay on Saturday?",
+        "options": [
+          "£0",
+          "£4",
+          "The text does not say."
+        ],
+        "answer": 1,
+        "explanation": "La condición Saturday sustituye la entrada gratuita entre semana."
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Text: “A cycle tour costs £22 for adults and £14 for under-sixteens. Helmets are included. Booking by 8 August gives a free map; reservations remain open until 15 August. An optional repair class costs £6 per person, with no age discount.” A fourteen-year-old books on 10 August and attends the repair class. State the total price, whether a map is free and the final reservation date. Cite the condition supporting each answer.",
+      "explanation": "Calcula solo a partir de precios aplicables y distingue promoción de plazo final.",
+      "model": "The total is £20: £14 for an under-sixteen plus £6 for the repair class, which has “no age discount”. The map is not free because the free-map condition is “Booking by 8 August”. The final reservation date is 15 August, since reservations “remain open” until then.",
+      "checklist": [
+        "Relaciono edad y tarifa.",
+        "Distingo fecha promocional y cierre.",
+        "Cito evidencia para los tres datos."
+      ]
+    },
+    "sources": [
+      {
+        "title": "IELTS: Reading General Training, formato y habilidades",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-reading"
+      }
+    ]
+  },
+  {
+    "skillId": "r-main-ideas",
+    "why": "Un buen título conserva la relación que organiza el párrafo, por ejemplo una solución inicial que genera un problema nuevo. Un detalle verdadero puede ser un distractor si no representa esa relación. Compara los títulos mediante dos pruebas: qué parte explican y qué parte dejan fuera. La mejor opción cubre el desarrollo sin introducir una valoración que el autor no sostiene.",
+    "decisions": [
+      {
+        "cue": "Varias medidas persiguen el mismo resultado.",
+        "action": "Busca un título que nombre ese objetivo compartido.",
+        "en": "Lower fees and later classes both reduce barriers to participation.",
+        "reason": "El horario es un ejemplo; el acceso agrupa las medidas."
+      },
+      {
+        "cue": "El párrafo gira mediante yet y desarrolla un efecto adverso.",
+        "action": "Incluye el contraste en el título.",
+        "en": "A convenient system creates an unexpected difficulty.",
+        "reason": "Un título que solo diga convenience dejaría fuera la conclusión."
+      }
+    ],
+    "worked": {
+      "scenario": "When the town archive introduced online appointments, staff expected shorter queues at reception. Visitors could select a time from home, and reminders reduced the number of missed visits. Yet the system created a new difficulty: people without internet access could no longer reserve a slot independently. Some began arriving without appointments and were turned away when the reading room was full. Rather than abandon the website, the archive added telephone booking and trained volunteers to help visitors use it. The original improvement therefore worked best once a second route was available for people it had initially excluded.",
+      "task": "Choose the best heading. i: Why archives should remove all technology. ii: Combining booking methods to address exclusion. iii: The history of the archive building. iv: Reducing missed appointments through reminders. Justify the scope of your choice.",
+      "model": "ii. The paragraph moves from the benefits of online booking to exclusion, then to an additional telephone route. The heading covers both the problem and the response. iv names a real benefit but covers only one supporting detail.",
+      "reasoning": [
+        {
+          "quote": "Yet the system created a new difficulty",
+          "explanation": "El contraste abre el problema que organiza la segunda parte."
+        },
+        {
+          "quote": "added telephone booking",
+          "explanation": "La respuesta complementa el sistema en lugar de abandonarlo."
+        },
+        {
+          "quote": "once a second route was available",
+          "explanation": "La conclusión vincula el éxito con combinar formas de acceso."
+        }
+      ],
+      "alternative": {
+        "text": "iv: Reducing missed appointments through reminders.",
+        "why": "Los recordatorios aparecen, pero no resumen la exclusión y la respuesta posterior. Un dato cierto no equivale a la idea principal."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Why can a heading that repeats a true detail still be wrong?",
+        "options": [
+          "Headings must use identical wording.",
+          "It may cover only an example rather than the paragraph’s main relationship.",
+          "Every detail contradicts the main idea."
+        ],
+        "answer": 1,
+        "explanation": "El título debe representar el desarrollo completo."
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Paragraph: “Discounts attracted new members, but crowded sessions reduced satisfaction. Smaller classes later improved retention.” Heading i: Advertising methods. Heading ii: Managing the consequences of growth. Write i or ii.",
+        "accepted": [
+          "ii"
+        ],
+        "explanation": "El párrafo enlaza crecimiento, problema y ajuste; no trata de publicidad."
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "A paragraph explains that cheap equipment required frequent repairs, so the club bought fewer, more reliable items. Which heading fits?",
+        "options": [
+          "The cheapest purchase is always best.",
+          "Choosing reliability after a costly saving.",
+          "A complete history of club membership."
+        ],
+        "answer": 1,
+        "explanation": "La aparente economía inicial produjo costes; el título conserva ese contraste."
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Text: “The park replaced paper maps with an app to reduce printing. Regular visitors welcomed the live route updates, but tourists sometimes arrived with flat batteries or no signal. Staff kept the app and installed simple signs at major junctions. Visitors could then follow routes even when their phones failed.” Propose one heading and explain why “Live updates for regular visitors” is too narrow. Quote evidence for the problem and response.",
+      "explanation": "El título puede variar; debe abarcar ventaja, límite y medida complementaria.",
+      "model": "A suitable heading is “Supporting a digital guide with reliable physical signs”. “Live updates for regular visitors” covers only an early benefit. The problem is that tourists had “flat batteries or no signal”; the response was to install “simple signs at major junctions”. The paragraph describes making the system usable when technology fails.",
+      "checklist": [
+        "Propongo un título con alcance suficiente.",
+        "Diferencio detalle e idea central.",
+        "Uso evidencia del problema y de la respuesta."
+      ]
+    },
+    "sources": [
+      {
+        "title": "IELTS: Reading General Training, formato y habilidades",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-reading"
+      }
+    ]
+  },
+  {
+    "skillId": "r-paraphrase",
+    "why": "Para reconocer una reformulación, además de identificar sinónimos necesitas reconstruir la dirección de la relación. Una pasiva cambia el sujeto gramatical, pero conserva quién actúa; una condición puede desplazarse al comienzo sin cambiar su efecto. Dibuja mentalmente actor, acción y límite. Esta comparación evita aceptar una opción que conserva vocabulario y a la vez intercambia responsabilidades o invierte una excepción.",
+    "decisions": [
+      {
+        "cue": "La pregunta cambia activa por pasiva.",
+        "action": "Recupera agente y receptor antes de decidir.",
+        "en": "The manager checks applications. Applications are checked by the manager.",
+        "reason": "El sujeto cambia; la responsabilidad permanece en manager."
+      },
+      {
+        "cue": "La opción cambia una excepción por una regla general.",
+        "action": "Compara qué grupo conserva la obligación.",
+        "en": "Members need a card unless staff can verify their identity.",
+        "reason": "Unless introduce una excepción; no permite afirmar que nadie necesita tarjeta."
+      }
+    ],
+    "worked": {
+      "scenario": "Applications for the community garden are reviewed by a volunteer committee, not by the reception staff who collect the forms. Residents normally provide proof of address when applying. However, current members renewing their place do not need to submit it again unless their address has changed. The committee meets on the first Monday of each month and emails decisions within a week. A receipt from reception confirms only that the form has arrived. Applicants should wait for the committee's decision before paying the annual charge, as sending payment early does not give an application priority over others.",
+      "task": "Choose the statement that accurately restates the policy. A: Reception decides which applicants receive a place. B: All renewing members must submit new address evidence. C: Current members with unchanged addresses are exempt from resubmitting address evidence. D: Early payment makes acceptance more likely. Explain the actor and exception.",
+      "model": "C. The exemption concerns current members renewing at the same address. Reception receives forms, while the committee makes decisions. The early-payment option introduces an advantage that the notice explicitly excludes.",
+      "reasoning": [
+        {
+          "quote": "reviewed by a volunteer committee",
+          "explanation": "La pasiva identifica al comité como responsable de revisar."
+        },
+        {
+          "quote": "unless their address has changed",
+          "explanation": "Esta condición limita la exención a quienes mantienen la dirección."
+        },
+        {
+          "quote": "does not give an application priority",
+          "explanation": "La negación excluye la ventaja atribuida al pago temprano."
+        }
+      ],
+      "alternative": {
+        "text": "B: All renewing members must submit new address evidence.",
+        "why": "All elimina la exención. El texto exige repetir la prueba únicamente si ha cambiado la dirección de un miembro que renueva."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Text: “The forms are checked by the coordinator.” Why is “The coordinator checks the forms” faithful?",
+        "options": [
+          "The grammatical subject changes but the actor and action remain.",
+          "All passive clauses have no actor.",
+          "Checks means receives in every context."
+        ],
+        "answer": 0,
+        "explanation": "Activa y pasiva mantienen la relación entre coordinador y formularios."
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Text: “Only the supervisor can authorise refunds.” Complete with ONE WORD from the text: Refunds can be authorised only by the ___.",
+        "accepted": [
+          "supervisor"
+        ],
+        "explanation": "La pasiva conserva la autoridad y exige la palabra original."
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Text: “Returning customers need identification only if their details have changed.” Which statement matches?",
+        "options": [
+          "Every returning customer must show new identification.",
+          "Returning customers whose details have not changed do not need identification.",
+          "No returning customer ever needs identification."
+        ],
+        "answer": 1,
+        "explanation": "Only if hace del cambio un requisito necesario para pedir identificación. Sin cambio, no se necesita; no afirma que todo cambio baste para exigirla."
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Text: “Requests are approved by the building manager. Reception records them but cannot approve access. Contractors already holding a valid pass need no new application for ordinary areas, but they must submit one before entering a restricted area.” Explain who approves requests and when an existing pass is insufficient. Support your answer and reject the claim that reception approval is enough.",
+      "explanation": "Reconstruye responsabilidades y excepción; la coincidencia de access o requests no basta.",
+      "model": "The building manager approves requests, as shown by “approved by the building manager”. Reception only records them and “cannot approve access”, so its receipt is insufficient. A valid pass removes the need for a new application except when contractors will enter “a restricted area”. That exception makes an additional application necessary.",
+      "checklist": [
+        "Mantengo el agente de la pasiva.",
+        "Distingo registro y autorización.",
+        "Explico la excepción con evidencia."
+      ]
+    },
+    "sources": [
+      {
+        "title": "IELTS: Reading General Training, formato y habilidades",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-reading"
+      }
+    ]
+  },
+  {
+    "skillId": "r-inference",
+    "why": "Una inferencia sólida necesita una cadena corta de pistas y un límite claro. La cercanía entre dos hechos no demuestra causalidad, y una valoración citada no pertenece automáticamente al narrador. Resuelve primero los referentes; después identifica la voz que evalúa y decide qué conclusión se sigue realmente. Puedes aceptar una conclusión moderada sin inventar emociones, intenciones o resultados futuros.",
+    "decisions": [
+      {
+        "cue": "Un pronombre retoma una medida compuesta.",
+        "action": "Sustitúyelo por la idea completa y comprueba el sentido.",
+        "en": "Longer opening and phone bookings were introduced. These changes improved access.",
+        "reason": "These changes remite a ambas medidas, no al último sustantivo aislado."
+      },
+      {
+        "cue": "El texto registra un cambio sin aislar su causa.",
+        "action": "Describe la asociación y limita la conclusión causal.",
+        "en": "Attendance rose after the changes, but several factors may explain it.",
+        "reason": "La secuencia temporal no prueba por sí sola qué medida causó el aumento."
+      }
+    ],
+    "worked": {
+      "scenario": "The district museum introduced free entry and later opening on the same weekend. These changes were followed by a rise in visitors, although a popular exhibition also began that week. Some councillors called the increase proof that free entry worked. The curator was more cautious: without separate figures for each session, she said, the museum could not tell which change mattered most. Still, she described the broader range of visitors as encouraging. The report recommends collecting more detailed attendance data before deciding which arrangement to retain. It does not record how much the new timetable cost or whether visitors preferred evening sessions.",
+      "task": "Answer in your own words: 1: What does “These changes” refer to? 2: Is the curator wholly negative about the results? 3: Can free entry alone be identified as the cause of the increase? Give evidence.",
+      "model": "1: Free entry and later opening. 2: No; the curator is cautious about causation but positive about a broader visitor range. 3: No; both changes and an exhibition began together, and the figures do not separate their effects.",
+      "reasoning": [
+        {
+          "quote": "free entry and later opening",
+          "explanation": "El plural These changes retoma las dos medidas."
+        },
+        {
+          "quote": "described the broader range of visitors as encouraging",
+          "explanation": "La valoración positiva impide atribuir una postura completamente negativa."
+        },
+        {
+          "quote": "could not tell which change mattered most",
+          "explanation": "El límite de los datos bloquea una conclusión causal única."
+        }
+      ],
+      "alternative": {
+        "text": "Free entry alone caused the increase because councillors said it worked.",
+        "why": "La afirmación pertenece a algunos concejales. La conservadora señala variables simultáneas y ausencia de datos separados; atribuirle esa certeza mezcla voces e ignora límites."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Text: “Staff added signs and widened the doorway. These changes reduced confusion.” Why does these changes refer to both measures?",
+        "options": [
+          "It always means the closest singular noun.",
+          "The plural expression summarises the two preceding actions.",
+          "It refers to every future change."
+        ],
+        "answer": 1,
+        "explanation": "Concordancia y sentido permiten recuperar el referente completo."
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Text: “Critics called the trial wasteful. The director, however, called it promising.” Who used the positive judgement? Write director or critics.",
+        "accepted": [
+          "director",
+          "the director"
+        ],
+        "explanation": "Promising es la valoración del director; however marca contraste de voces."
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Text: “Sales rose after prices fell and a new branch opened. The report cannot separate the effects.” What is justified?",
+        "options": [
+          "The price reduction alone caused the rise.",
+          "The new branch had no effect.",
+          "Sales rose, but the individual cause is not established."
+        ],
+        "answer": 2,
+        "explanation": "La evidencia confirma el resultado y limita la atribución causal."
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Text: “The café added outdoor tables and introduced a breakfast discount in June. These measures coincided with higher morning sales. The owner welcomed the result but noted that warmer weather might also have helped. She wants another month of figures before choosing a permanent offer.” Identify the reference of these measures, describe the owner’s attitude and state one causal conclusion the text does not justify. Support each point.",
+      "explanation": "Distingue entusiasmo moderado, referente plural y límites causales; no necesitas adivinar el beneficio económico exacto.",
+      "model": "“These measures” refers to outdoor tables and the breakfast discount. The owner is pleased but cautious: she “welcomed the result” yet wants more figures. The text does not justify saying that the discount alone caused the increase, because “warmer weather might also have helped” and both measures began together.",
+      "checklist": [
+        "Resuelvo el referente completo.",
+        "Atribuyo la actitud a la persona correcta.",
+        "Cito un límite que impide una causa única."
+      ]
+    },
+    "sources": [
+      {
+        "title": "IELTS: Reading General Training, formato y habilidades",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-reading"
+      }
+    ]
+  },
+  {
+    "skillId": "r-true-false-ng",
+    "why": "La dificultad aumenta cuando la afirmación combina dos datos o introduce una comparación ausente. TRUE necesita apoyo para todas las partes; FALSE requiere una incompatibilidad concreta. Si solo falta saber qué servicio era más barato, no puedes fabricar esa comparación a partir de un precio aislado. Formula qué información necesitarías para decidir y verifica si el texto realmente la aporta.",
+    "decisions": [
+      {
+        "cue": "El texto permite acceso con una condición y la afirmación lo prohíbe totalmente.",
+        "action": "Elige FALSE y cita el permiso condicionado.",
+        "en": "Under-sixteens may attend with an adult. Children cannot attend.",
+        "reason": "La condición no elimina el permiso; existe contradicción."
+      },
+      {
+        "cue": "El texto da un precio actual, pero la afirmación compara con el pasado.",
+        "action": "Busca ambos precios antes de juzgar; si falta el anterior, usa NOT GIVEN.",
+        "en": "The annual fee is £30. The fee is lower than last year.",
+        "reason": "Un precio aislado no permite confirmar ni negar una evolución."
+      }
+    ],
+    "worked": {
+      "scenario": "The Oak Lane tool library lends equipment to registered members. Membership currently costs £30 a year. Most hand tools can be borrowed without an additional charge, but specialist machines carry a daily fee. Members under sixteen may use hand tools during supervised workshops when accompanied by an adult. They cannot borrow equipment to take home. New members must attend a short safety introduction before their first loan, even if they have used similar tools elsewhere. The introduction is held twice each month. The notice does not give last year's membership charge, and the daily machine fees are listed on a separate sheet at reception.",
+      "task": "Write TRUE, FALSE or NOT GIVEN. 1: Every new member must attend the safety introduction before borrowing. 2: All equipment can be borrowed without an extra payment. 3: Annual membership is cheaper than it was last year.",
+      "model": "1: TRUE. 2: FALSE. 3: NOT GIVEN. The introduction applies to all new members; specialist machines contradict the claim about all equipment. A current membership price alone cannot establish the comparison with last year.",
+      "reasoning": [
+        {
+          "quote": "even if they have used similar tools elsewhere",
+          "explanation": "La experiencia previa no exceptúa a los nuevos miembros de la introducción."
+        },
+        {
+          "quote": "specialist machines carry a daily fee",
+          "explanation": "Es evidencia incompatible con que todo el equipo carezca de cargo adicional."
+        },
+        {
+          "quote": "does not give last year's membership charge",
+          "explanation": "Falta un término necesario de la comparación temporal."
+        }
+      ],
+      "alternative": {
+        "text": "3: FALSE because only the current price is given.",
+        "why": "Faltar el precio anterior no demuestra que la cuota no haya bajado. No puedes confirmar ni negar esa comparación: NOT GIVEN."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Text: “The centre has twelve computers.” Statement: “Its computers are newer than the library’s.” Why is NOT GIVEN appropriate?",
+        "options": [
+          "A comparison requires information not provided.",
+          "Twelve means older.",
+          "Every comparison is automatically false."
+        ],
+        "answer": 0,
+        "explanation": "No se aporta antigüedad de los equipos de ninguno de los dos lugares."
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Text: “All visitors, including members, must book.” Statement: “Members can enter without booking.” Write TRUE, FALSE or NOT GIVEN.",
+        "accepted": [
+          "FALSE",
+          "F"
+        ],
+        "explanation": "Including members contradice explícitamente la excepción propuesta."
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Text: “The pool opens on Sundays, but swimming lessons run only on weekdays.” Statement: “Sunday lessons are available.” Choose the label.",
+        "options": [
+          "TRUE",
+          "FALSE",
+          "NOT GIVEN"
+        ],
+        "answer": 1,
+        "explanation": "La apertura del edificio no implica clases; only on weekdays las excluye los domingos."
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Text: “The repair club meets every Thursday. Tools are provided, but participants must bring any replacement parts. First-time visitors attend a safety briefing before using the tools. The notice lists the current entry fee as £4.” Label each statement TRUE, FALSE or NOT GIVEN and justify it: 1: First-time visitors receive safety information before using tools. 2: The club supplies every replacement part. 3: Entry costs more than last year.",
+      "explanation": "Da respuesta y evidencia para cada afirmación; en NOT GIVEN identifica exactamente qué información falta.",
+      "model": "1 TRUE: first-time visitors attend a “safety briefing before using the tools”. 2 FALSE: participants “must bring any replacement parts”, so the club does not supply every part. 3 NOT GIVEN: £4 is the current fee, but last year’s fee is absent, so the comparison cannot be decided.",
+      "checklist": [
+        "Compruebo toda la afirmación.",
+        "Uso contradicción para FALSE.",
+        "Explico el dato que falta para NOT GIVEN."
+      ]
+    },
+    "sources": [
+      {
+        "title": "IELTS: Reading General Training, formato y habilidades",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-reading"
+      }
+    ]
+  },
+  {
+    "skillId": "r-yes-no-ng",
+    "why": "Esta ampliación practica lectura de posturas como habilidad complementaria: la página oficial consultada describe YES/NO/NOT GIVEN dentro del formato Academic. El trabajo útil aquí consiste en distinguir concesión y conclusión del autor. Reconocer una ventaja no implica apoyar toda una propuesta; busca la recomendación final y no confundas una crítica parcial con rechazo absoluto del proyecto.",
+    "decisions": [
+      {
+        "cue": "El autor acepta una ventaja y después recomienda una alternativa.",
+        "action": "Sigue su conclusión, no solo la concesión inicial.",
+        "en": "Self-service is convenient, but staffed help should remain available.",
+        "reason": "Reconoce comodidad sin apoyar eliminar toda ayuda personal."
+      },
+      {
+        "cue": "El autor no compara costes.",
+        "action": "No deduzcas qué opción considera más barata.",
+        "en": "The writer discusses access but gives no cost comparison.",
+        "reason": "Una preferencia de servicio no establece una valoración económica."
+      }
+    ],
+    "worked": {
+      "scenario": "It is easy to see why some library managers favour replacing every service desk with a self-service kiosk. Machines can handle routine loans quickly, and I welcome anything that shortens queues. But convenience for confident users is not a reason to remove human help entirely. New members and people with complex enquiries still need someone who can explain their options. Libraries should keep staffed support alongside the machines, even if its hours differ from the main opening times. That combination would preserve the useful speed of self-service without treating every visitor as equally confident. The purchase price of kiosks is outside the scope of this discussion.",
+      "task": "Do these statements agree with the writer’s views? Write YES, NO or NOT GIVEN. 1: Shorter queues are a welcome benefit. 2: Libraries should remove human assistance completely. 3: Kiosks are cheaper to operate than staffed desks.",
+      "model": "1: YES. 2: NO. 3: NOT GIVEN. The writer welcomes speed but recommends retaining staffed support. The text does not compare operating costs, so support for a mixed service cannot answer the cost claim.",
+      "reasoning": [
+        {
+          "quote": "I welcome anything that shortens queues",
+          "explanation": "La valoración positiva pertenece explícitamente al autor."
+        },
+        {
+          "quote": "Libraries should keep staffed support alongside the machines",
+          "explanation": "Esta recomendación contradice eliminar por completo la ayuda humana."
+        },
+        {
+          "quote": "The purchase price of kiosks is outside the scope",
+          "explanation": "No se presenta una comparación de costes; tampoco aparecen costes operativos."
+        }
+      ],
+      "alternative": {
+        "text": "2: YES because managers favour replacing every desk.",
+        "why": "Esa propuesta pertenece a algunos gestores. El autor la presenta y luego recomienda conservar atención personal: su postura contradice la eliminación total."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Text: “Some managers want only machines. I believe staff must remain available.” Why is “The writer supports removing all staff” NO?",
+        "options": [
+          "The writer explicitly recommends keeping staff.",
+          "Managers and writers always agree.",
+          "The writer gives no opinion about staff."
+        ],
+        "answer": 0,
+        "explanation": "Hay una postura incompatible, no una simple ausencia de opinión."
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Text: “The author welcomes online booking but does not compare its cost with telephone booking.” Statement: “The author thinks online booking is cheaper.” Write YES, NO or NOT GIVEN.",
+        "accepted": [
+          "NOT GIVEN",
+          "NG"
+        ],
+        "explanation": "Falta la comparación económica; valorar una utilidad no implica valorar el precio."
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Text: “The pilot is worthwhile, but it should remain optional.” Which claim agrees with the writer?",
+        "options": [
+          "Participation should be compulsory.",
+          "The pilot has value without requiring everyone to participate.",
+          "The pilot should be abandoned immediately."
+        ],
+        "answer": 1,
+        "explanation": "La opción conserva tanto la evaluación positiva como el límite."
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Text: “Some employers regard home working as a complete replacement for the office. I disagree: shared meetings still have value. However, allowing staff to work at home on suitable tasks can save unnecessary journeys. Employers should offer a mixed arrangement rather than insist on one location for every activity.” Label and justify: 1: The writer supports a mixed arrangement. 2: The writer believes offices have no value. 3: The writer thinks home equipment costs less than office equipment.",
+      "explanation": "Separa las opiniones ajenas de la recomendación del autor. Para NOT GIVEN, identifica la comparación ausente.",
+      "model": "1 YES: the writer says employers “should offer a mixed arrangement”. 2 NO: “shared meetings still have value” contradicts the claim that offices have no value. 3 NOT GIVEN: the text discusses location and journeys but does not compare equipment costs. An overall preference cannot supply that missing opinion.",
+      "checklist": [
+        "Atribuyo cada postura a su voz.",
+        "Distingo contradicción de ausencia.",
+        "Cito evidencia y explico la comparación no tratada."
+      ]
+    },
+    "sources": [
+      {
+        "title": "IELTS: Academic Reading — identifying writer’s views/claims (habilidad complementaria)",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading"
+      }
+    ]
+  },
+  {
+    "skillId": "r-multiple-choice",
+    "why": "Cuando se piden varias respuestas, cada opción necesita apoyo independiente; una opción parcialmente cierta sigue sin quedar demostrada. Examina también si la pregunta pide medidas ya decididas o propuestas futuras. El vocabulario del texto puede aparecer en ambas. Distinguir estado y finalidad permite descartar una opción verdadera sobre el tema que no responde al momento o al objetivo preguntado.",
+    "decisions": [
+      {
+        "cue": "La pregunta pide medidas confirmadas.",
+        "action": "Separa will de is considering antes de elegir.",
+        "en": "The centre will add signs but is considering a new entrance.",
+        "reason": "Solo la señalización está decidida."
+      },
+      {
+        "cue": "Una opción mezcla un hecho respaldado y una garantía ausente.",
+        "action": "Comprueba cada cláusula de la opción.",
+        "en": "The route is shorter and every visitor will arrive on time.",
+        "reason": "La primera parte puede estar apoyada sin que lo esté la promesa universal."
+      }
+    ],
+    "worked": {
+      "scenario": "After several visitors missed the start of the orchard tour, the organisers reviewed their arrival instructions. They will send a simplified map with every booking confirmation and move the afternoon meeting point from the café to the main gate. Morning tours will continue to meet at the café. A later afternoon departure has been discussed, but no decision has been made. The organisers will not add a shuttle bus this season because no vehicle is available. These changes are intended to reduce confusion before the tour; the route through the orchard and the ticket price will stay the same as before.",
+      "task": "Choose TWO letters. Which TWO actions are confirmed? A: Introducing a later afternoon departure. B: Sending a simpler map with confirmations. C: Moving every tour’s meeting point to the gate. D: Moving the afternoon meeting point to the gate. E: Adding a shuttle bus. Give evidence for both choices.",
+      "model": "B and D. The map and afternoon meeting-point change are confirmed. A remains undecided, C extends the change to morning tours, and E contradicts the decision not to provide a bus this season.",
+      "reasoning": [
+        {
+          "quote": "will send a simplified map",
+          "explanation": "Will marks the confirmed map action."
+        },
+        {
+          "quote": "move the afternoon meeting point",
+          "explanation": "La decisión afecta al grupo de tarde; no a todas las visitas."
+        },
+        {
+          "quote": "no decision has been made",
+          "explanation": "La salida posterior sigue en discusión, por lo que A no responde a acciones confirmadas."
+        }
+      ],
+      "alternative": {
+        "text": "A and C.",
+        "why": "A convierte una propuesta en decisión. C contiene parte de una medida real, pero every contradice que las visitas matutinas sigan en el café."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Why must every clause of a multiple-choice option be checked?",
+        "options": [
+          "One true phrase guarantees the whole option.",
+          "An option can combine a supported detail with an unsupported extension.",
+          "Longer options are always correct."
+        ],
+        "answer": 1,
+        "explanation": "La evidencia debe respaldar el significado completo."
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Text: “The café will add outdoor seats. Home delivery is only being considered.” Options A: outdoor seats; B: home delivery. Write the letter of the confirmed change.",
+        "accepted": [
+          "A"
+        ],
+        "explanation": "Will add confirma A; being considered no confirma B."
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Question: Why was the start moved indoors? Text: “Rain damaged the sound equipment, so organisers chose the hall. Its rent was unchanged.” Which option answers the reason?",
+        "options": [
+          "To protect the equipment from rain.",
+          "To obtain a lower rental price.",
+          "Because every outdoor event is forbidden."
+        ],
+        "answer": 0,
+        "explanation": "La pregunta pide causa; el precio es un dato real pero irrelevante y no implica ahorro."
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Text: “The repair fair will add a bicycle station and require advance bookings for electrical items. Organisers may offer evening sessions next year, but this is undecided. Tool hire will remain free.” Which two changes are confirmed? Explain your choices and explain why evening sessions should be excluded. Use evidence for all three decisions.",
+      "explanation": "Comprueba de forma independiente las dos decisiones confirmadas y el estado de la propuesta.",
+      "model": "The confirmed changes are a bicycle station, supported by “will add a bicycle station”, and advance booking for electrical items, supported by “require advance bookings”. Evening sessions are excluded because they are “undecided” and relate to next year. Free tool hire remains unchanged, so it is not a new measure.",
+      "checklist": [
+        "Identifico dos cambios diferentes.",
+        "Cito apoyo para cada elección.",
+        "Distingo propuesta, decisión y condición sin cambio."
+      ]
+    },
+    "sources": [
+      {
+        "title": "IELTS: Reading General Training, formato y habilidades",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-reading"
+      }
+    ]
+  },
+  {
+    "skillId": "r-matching",
+    "why": "En matching, la unidad de búsqueda depende de la relación solicitada. Un mismo párrafo puede contener dos detalles válidos si la consigna permite repetir letras, mientras otro queda sin usar. No fuerces una distribución equilibrada. Comprueba el vínculo completo entre persona, medida y resultado; la presencia de una palabra temática puede corresponder a una propuesta descartada y no a la acción realizada.",
+    "decisions": [
+      {
+        "cue": "Buscas el párrafo que contiene un detalle concreto.",
+        "action": "Acepta repetir una letra únicamente si lo permite la consigna.",
+        "en": "Paragraph C may support two different information items.",
+        "reason": "La cobertura del texto no obliga a usar todos los párrafos."
+      },
+      {
+        "cue": "Buscas un heading para cada párrafo.",
+        "action": "Compara el mensaje central y respeta que los títulos no se reutilizan.",
+        "en": "A detail about fares may support a broader heading about access.",
+        "reason": "Este formato usa una regla y un nivel de lectura diferentes."
+      }
+    ],
+    "worked": {
+      "scenario": "A. The village hall first tried reducing room charges to attract new groups. Bookings rose slightly, but evening users still struggled because the last bus left before their meetings ended. Volunteers recorded these complaints.\n\nB. A proposal to buy a community minibus was rejected after the committee calculated the maintenance costs. Members preferred an arrangement that would not require the hall to own or repair a vehicle.\n\nC. The committee negotiated with a taxi firm instead. Groups can now reserve a shared ride after late meetings. The hall will review passenger numbers after three months before deciding whether to renew the agreement.",
+      "task": "Which paragraph contains each item? Write A, B or C. You may use any letter more than once. 1: A planned review before continuing an arrangement. 2: An earlier measure that did not remove a transport barrier. 3: The transport solution now in use.",
+      "model": "1: C. 2: A. 3: C. C contains both the current shared-ride arrangement and its future review. B explains a rejected proposal and is not needed for these three items.",
+      "reasoning": [
+        {
+          "quote": "review passenger numbers after three months",
+          "explanation": "Identifica la revisión futura de C."
+        },
+        {
+          "quote": "evening users still struggled",
+          "explanation": "En A, reducir tarifas no elimina el obstáculo del último autobús."
+        },
+        {
+          "quote": "Groups can now reserve a shared ride",
+          "explanation": "Now confirma la solución vigente en C, frente a la propuesta descartada en B."
+        }
+      ],
+      "alternative": {
+        "text": "1 C, 2 A, 3 B, because each paragraph must be used once.",
+        "why": "La consigna permite repetir letras. B trata del minibús rechazado, no del servicio actual; usarlo para equilibrar las respuestas sacrifica la evidencia."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Why can one paragraph answer two matching-information items?",
+        "options": [
+          "Every matching task requires repetition.",
+          "Different details may appear together, and repetition is allowed when stated.",
+          "Headings can always be reused."
+        ],
+        "answer": 1,
+        "explanation": "Comprueba la consigna y la relación buscada; no generalices a headings."
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Text: “Applicants receive an email only after the interview.” Ending A: before any interview. Ending B: after being interviewed. Complete “Applicants receive an email…” with A or B.",
+        "accepted": [
+          "B"
+        ],
+        "explanation": "El final B mantiene la secuencia; ambos fragmentos pueden parecer gramaticales, pero solo uno coincide."
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Text A discusses a lower fee and a new evening class, both helping more people attend. Which task asks for the overall point?",
+        "options": [
+          "Find a paragraph mentioning a price.",
+          "Match the heading “Removing barriers to participation”.",
+          "Identify the person who set the fee."
+        ],
+        "answer": 1,
+        "explanation": "Un heading integra medidas; information o features buscarían otra unidad."
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Text: “Asha proposed lower fees. Ben warned that buses stopped too early. Cara arranged shared taxis after late classes and later checked passenger numbers.” Match the statements to Asha, Ben or Cara: 1: Identified a timetable barrier. 2: Organised an alternative journey. 3: Evaluated use of a service. You may use a name more than once. Explain each link with evidence.",
+      "explanation": "Este ejercicio cambia a features: relaciona cada acción con su persona y no distribuyas nombres por intuición.",
+      "model": "1 Ben: he “warned that buses stopped too early”. 2 Cara: she “arranged shared taxis after late classes”. 3 Cara: she “checked passenger numbers”. Reusing Cara is permitted and supported by two different actions. Asha’s fee proposal does not match any of these statements.",
+      "checklist": [
+        "Relaciono cada acción con la persona correcta.",
+        "Respeto la repetición permitida.",
+        "Cito una evidencia distinta por relación."
+      ]
+    },
+    "sources": [
+      {
+        "title": "IELTS: Reading General Training, formato y habilidades",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-reading"
+      }
+    ]
+  },
+  {
+    "skillId": "r-completion",
+    "why": "Completar una tabla o un proceso requiere seguir relaciones, no copiar nombres próximos al hueco. El orden visual puede reorganizar el texto y una pasiva puede ocultar al actor que buscas. Identifica primero qué representa cada columna o etapa; después inserta la palabra y relee la estructura completa. Conserva la forma del texto cuando así se exige, aunque conozcas un sinónimo adecuado.",
+    "decisions": [
+      {
+        "cue": "La tabla pregunta quién realiza una acción expresada en pasiva.",
+        "action": "Busca el agente introducido por by o su equivalente.",
+        "en": "Returns are checked by the supervisor. Checked by: supervisor.",
+        "reason": "El objeto revisado y la persona que revisa ocupan papeles diferentes."
+      },
+      {
+        "cue": "El hueco ya contiene la unidad o la preposición.",
+        "action": "Añade solo el dato que falta.",
+        "en": "Equipment stays in a container. Stored in a: container.",
+        "reason": "Copiar in a duplicaría la estructura proporcionada."
+      }
+    ],
+    "worked": {
+      "scenario": "At the end of each shift, returned tools are left on the inspection bench rather than taken straight to storage. The supervisor checks each item against the loan record and marks its condition on a checklist. Damaged equipment goes into a labelled container beside the bench so that it cannot be borrowed again accidentally. Working tools are cleaned before being placed on the shelves. The supervisor signs the checklist after the inspection, and the office keeps it for one month. Borrowers do not sign this document, although they must report any fault when returning an item. Repairs are arranged separately by the maintenance team.",
+      "task": "Complete these notes with ONE WORD from the text for each answer. 1: Inspection carried out by the ___. 2: Damaged equipment placed in a labelled ___. 3: Document signed after inspection: ___. Explain how the surrounding words determine each answer.",
+      "model": "1: supervisor. 2: container. 3: checklist. The notes ask for an actor, a storage object and a signed document. The loan record is used during checking but is not identified as the document signed afterwards.",
+      "reasoning": [
+        {
+          "quote": "The supervisor checks each item",
+          "explanation": "The supervisor es el agente requerido en la reformulación pasiva."
+        },
+        {
+          "quote": "goes into a labelled container",
+          "explanation": "El hueco ya incluye a labelled; solo falta container."
+        },
+        {
+          "quote": "signs the checklist after the inspection",
+          "explanation": "Checklist responde tanto al tipo de dato como al momento y la acción."
+        }
+      ],
+      "alternative": {
+        "text": "3: record.",
+        "why": "El loan record se consulta al comprobar los artículos, pero el documento firmado después es el checklist. Ambos son documentos y caben gramaticalmente; decide la relación completa."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Text: “The assistant reads the register; the manager signs the certificate.” Gap: “Document signed by the manager: ___.” Why is register wrong?",
+        "options": [
+          "It is not a real word.",
+          "It names a document but not the one linked to the required action and actor.",
+          "It is too short."
+        ],
+        "answer": 1,
+        "explanation": "La categoría gramatical orienta, pero no sustituye el vínculo semántico."
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Text: “The technician stores samples in sealed boxes.” Complete with ONE WORD from the text: “Samples are kept in sealed ___.”",
+        "accepted": [
+          "boxes"
+        ],
+        "explanation": "El plural boxes conserva la estructura y procede del texto."
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Instruction: ONE WORD FROM THE TEXT. Text: “Visitors leave valuables in lockers.” Which answer completes “Valuables are stored in ___”?",
+        "options": [
+          "lockers",
+          "secure cupboards",
+          "in lockers"
+        ],
+        "answer": 0,
+        "explanation": "Lockers procede del texto, encaja y respeta una palabra; el sinónimo no cumple la instrucción."
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Text: “Staff leave completed forms in a tray. The coordinator checks the signatures, then scans the forms. Paper copies go into a cabinet after scanning. Incomplete forms are returned to applicants.” Complete with ONE WORD from the text: 1: Signatures checked by the ___. 2: Paper forms stored in a ___ after scanning. 3: Incomplete forms sent back to ___. Give each answer and quote its evidence.",
+      "explanation": "Relee los resultados completos y distingue etapas; el orden de las notas no sustituye la comprobación.",
+      "model": "1 coordinator: “The coordinator checks the signatures”. 2 cabinet: “Paper copies go into a cabinet after scanning”. 3 applicants: incomplete forms “are returned to applicants”. Tray is an earlier holding place, not the final storage location after scanning.",
+      "checklist": [
+        "Uso palabras exactas del texto.",
+        "Distingo actor, lugar y destinatario.",
+        "Respeto una palabra y justifico cada hueco."
+      ]
+    },
+    "sources": [
+      {
+        "title": "IELTS: Reading General Training, formato y habilidades",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-reading"
+      }
+    ]
+  },
+  {
+    "skillId": "r-diagrams-short",
+    "why": "Un esquema aporta un punto de vista que debes mantener estable. Derecha e izquierda pueden depender de hacia dónde miras, mientras norte y sur siguen una orientación fija. Conecta cada etiqueta con su referencia explícita antes de responder. En preguntas cortas, conserva además la categoría solicitada: lugar, objeto o persona. No conviertas una ubicación cercana en la parte realmente señalada.",
+    "decisions": [
+      {
+        "cue": "El plano fija el norte arriba y la entrada al sur.",
+        "action": "Convierte las direcciones en posiciones del plano.",
+        "en": "Walking north from the entrance, the workshop is on your left: west.",
+        "reason": "La izquierda de quien mira al norte corresponde al oeste."
+      },
+      {
+        "cue": "La pregunta pide dónde se guarda un objeto dentro de una sala.",
+        "action": "Sigue la segunda relación y nombra el contenedor.",
+        "en": "The keys are in a cupboard inside the workshop.",
+        "reason": "Workshop ubica la sala; cupboard responde al almacenamiento específico."
+      }
+    ],
+    "worked": {
+      "scenario": "The arts centre entrance is on the south side of the building. Visitors walk north from the entrance to reception. From there, the workshop is on the left and the office is on the right. The archive is directly beyond reception, further north; it can be entered only with a staff member. Spare keys are kept in a cupboard inside the workshop, not at the reception desk. A notice outside the office gives telephone numbers for course enquiries. All these rooms are on the ground floor, so visitors following this route do not need to use the stairs.",
+      "task": "Plan: NORTH at top. North of reception: [B]. West of reception: [A]. East: office. South: entrance. Complete A and B with ONE WORD from the text. Then answer with ONE WORD: Where inside the workshop are spare keys kept? Justify each answer.",
+      "model": "A: workshop. B: archive. Short answer: cupboard. From the south entrance a visitor faces north, so left maps to west. Beyond reception is further north. The final question asks for the container inside the room, not the room itself.",
+      "reasoning": [
+        {
+          "quote": "the workshop is on the left",
+          "explanation": "Al caminar hacia el norte, la izquierda corresponde al oeste del plano."
+        },
+        {
+          "quote": "The archive is directly beyond reception, further north",
+          "explanation": "Dos referencias coincidentes sitúan archive al norte."
+        },
+        {
+          "quote": "Spare keys are kept in a cupboard inside the workshop",
+          "explanation": "La pregunta interior requiere cupboard, aunque workshop también sea una ubicación verdadera."
+        }
+      ],
+      "alternative": {
+        "text": "A: office; short answer: workshop.",
+        "why": "Office está a la derecha, es decir, al este desde la orientación dada. Workshop identifica la sala, pero la pregunta pide el lugar dentro de ella: cupboard."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "A plan has north at the top. You face north at reception. Why does a room on your left appear west of reception?",
+        "options": [
+          "Left and west match from that stated viewpoint.",
+          "Left always means east on every plan.",
+          "Reception changes the direction of north."
+        ],
+        "answer": 0,
+        "explanation": "La correspondencia depende de la orientación explícita."
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Text: “The pump is below the tank.” Diagram from top to bottom: [tank] / [___]. Write ONE WORD from the text.",
+        "accepted": [
+          "pump"
+        ],
+        "explanation": "Below sitúa pump en la posición inferior."
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Text: “The spare batteries are in a drawer inside the office.” Question: “Where inside the office are the batteries kept?” ONE WORD.",
+        "options": [
+          "office",
+          "drawer",
+          "batteries"
+        ],
+        "answer": 1,
+        "explanation": "Inside the office ya fija la sala; falta el contenedor solicitado."
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Text: “Enter the gallery from the west and walk east to the information desk. Facing east, the studio is on your right. The café is on your left. Spare brushes are in a cabinet inside the studio.” With north at the top, identify which room is south of the desk and where the spare brushes are kept. Give the two answers and explain the orientation using evidence.",
+      "explanation": "No reutilices automáticamente izquierda=oeste: ahora el visitante mira al este.",
+      "model": "The studio is south of the desk: visitors face east, and the studio is “on your right”, which points south from that viewpoint. The brushes are in a cabinet, supported by “in a cabinet inside the studio”. Studio answers the room-position question; cabinet answers the storage question.",
+      "checklist": [
+        "Mantengo la orientación hacia el este.",
+        "Distingo sala y contenedor.",
+        "Doy respuestas y evidencia para ambas relaciones."
+      ]
+    },
+    "sources": [
+      {
+        "title": "IELTS: Reading General Training, formato y habilidades",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-reading"
+      }
+    ]
+  },
+  {
+    "skillId": "r-time-instructions",
+    "why": "Una revisión eficaz localiza primero qué respuestas pueden corregirse con evidencia disponible y qué dudas necesitan otra lectura. Evita gastar todo el margen en una comparación incierta mientras quedan casillas vacías o errores claros de formato. El orden de revisión debe adaptarse a tus intentos registrados. Separa el dato correcto de su presentación: puedes comprenderlo y todavía escribir una respuesta inválida.",
+    "decisions": [
+      {
+        "cue": "Ya tienes evidencia y la respuesta excede el límite.",
+        "action": "Reduce la respuesta sin perder el dato solicitado.",
+        "en": "Applications close on 17 September. Closing date: 17 September.",
+        "reason": "La preposición está fuera del dato necesario y cuenta como palabra si la escribes."
+      },
+      {
+        "cue": "Una pregunta sigue sin evidencia tras releer la zona relevante.",
+        "action": "Marca una respuesta provisional y distribuye el tiempo restante.",
+        "en": "Return to uncertain items after completing the remaining questions.",
+        "reason": "Es una estrategia adaptable de práctica; no demuestra que la respuesta provisional sea correcta."
+      }
+    ],
+    "worked": {
+      "scenario": "The skills centre is accepting applications for its autumn workshop. Forms must arrive by 17 September; the course begins on 2 October. Participants should collect a confirmation email before attending. Gloves are provided, but everyone must bring suitable shoes. No registration fee is charged. On arrival, participants must show a photograph that matches the name on their application; a home address is not requested at the door. Anyone unable to attend should email reception as soon as possible so that the place can be offered to someone on the waiting list. The centre cannot accept visitors who have not registered.",
+      "task": "Review these answers. 1: Closing date? NO MORE THAN TWO WORDS AND/OR A NUMBER. Student: “2 October”. 2: What equipment is provided? ONE WORD FROM THE TEXT. Student: “protective gloves”. 3: What must participants show on arrival? Choose ONE letter: A registration fee; B photograph; C home address. Student: “photograph”. Write the corrected answers and classify each error.",
+      "model": "1: 17 September — the original confused the course start with the application deadline. 2: gloves — two words exceed ONE WORD, and protective was added. 3: B — the content was understood, but the instruction requires a letter.",
+      "reasoning": [
+        {
+          "quote": "Forms must arrive by 17 September",
+          "explanation": "El plazo es 17 September; 2 October corresponde al inicio del curso. Se necesita comprobar la función de cada fecha."
+        },
+        {
+          "quote": "Gloves are provided",
+          "explanation": "Gloves procede del texto y tiene una palabra; protective añade contenido."
+        },
+        {
+          "quote": "Choose ONE letter",
+          "explanation": "Esta instrucción exige B aunque photograph identifique correctamente el objeto."
+        }
+      ],
+      "alternative": {
+        "text": "1: 2 October; 2: protective gloves; 3: photograph.",
+        "why": "La primera confunde inicio y cierre. La segunda incumple el límite y añade una palabra ausente. La tercera no utiliza el código solicitado."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Why should a review separate comprehension errors from formatting errors?",
+        "options": [
+          "They call for different fixes and different follow-up practice.",
+          "Formatting is always more important than meaning.",
+          "A correct meaning guarantees a valid answer."
+        ],
+        "answer": 0,
+        "explanation": "Una confusión de fecha necesita releer relaciones; un código equivocado necesita ejecutar la consigna."
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Instruction: ONE WORD FROM THE TEXT. Text: “Visitors receive badges.” Student: “visitor badges”. Correct the answer.",
+        "accepted": [
+          "badges"
+        ],
+        "explanation": "Badges es la palabra del texto; visitor excede el límite y modifica el dato."
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "You have three minutes left, one blank item and two answers with clear word-limit errors. What is a reasonable review decision?",
+        "options": [
+          "Spend all three minutes rereading one uncertain paragraph.",
+          "Correct the known format errors, attempt the blank item, then revisit the remaining uncertainty.",
+          "Delete every uncertain answer."
+        ],
+        "answer": 1,
+        "explanation": "Prioriza correcciones sustentadas y casillas pendientes; ajusta después a la dificultad y el tiempo real."
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Text: “The walking tour starts on 6 November. Bookings close on 1 November. Visitors receive maps at the entrance. No food is provided.” Review: 1 Closing date? NO MORE THAN TWO WORDS AND/OR A NUMBER: “6 November”. 2 What is given out? ONE WORD: “printed maps”. Give corrected answers with evidence, classify the two errors and state which concrete check would prevent each.",
+      "explanation": "Primero responde y justifica; después usa la causa del error para proponer una revisión específica.",
+      "model": "1: 1 November, supported by “Bookings close on 1 November”. This is a comprehension error: the original answer confuses start and deadline. Check the role of each date. 2: maps, supported by “Visitors receive maps”. This is a format and added-word error: check ONE WORD and copy only the text word.",
+      "checklist": [
+        "Corrijo ambas respuestas con evidencia.",
+        "Distingo fecha equivocada y formato.",
+        "Propongo una comprobación concreta para cada causa."
+      ]
+    },
+    "sources": [
+      {
+        "title": "IELTS: Reading General Training, formato y habilidades",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-reading"
+      }
+    ]
+  }
+]

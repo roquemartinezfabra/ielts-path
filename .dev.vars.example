@@ -1,0 +1,5 @@
+# Optional: guest access works without GitHub OAuth.
+# Copy to .dev.vars for local testing only; never commit .dev.vars.
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+APP_ORIGIN=http://127.0.0.1:5174

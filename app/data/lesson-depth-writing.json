@@ -1,0 +1,1690 @@
+[
+  {
+    "skillId": "t1-purpose",
+    "why": "El propósito orienta la selección de detalles: una misma avería puede justificar una reclamación, una solicitud de información o una disculpa. Antes de redactar, define qué necesita saber el lector para actuar. Una apertura concreta evita que el destinatario tenga que adivinar el motivo y permite comprobar después si el cierre solicita un resultado compatible.",
+    "decisions": [
+      {
+        "cue": "El problema requiere una acción de alguien que no te conoce.",
+        "action": "Identifica el alquiler y pide una solución concreta.",
+        "en": "I am writing to request a replacement key for locker 18.",
+        "reason": "El lector conoce el objeto y la acción esperada desde el comienzo."
+      },
+      {
+        "cue": "Escribes a una amiga que ya conoce el plan.",
+        "action": "Reconoce el contexto compartido y anuncia el cambio.",
+        "en": "I am sorry, but I need to change our moving date.",
+        "reason": "La relación permite una apertura personal; el propósito sigue siendo preciso."
+      }
+    ],
+    "worked": {
+      "scenario": "Has alquilado un instrumento a una tienda y necesitas sustituir una pieza antes de una actuación.",
+      "task": "Escribe solo el fragmento de apertura y petición, no una carta IELTS completa: explain that the hired keyboard has a damaged power cable and ask for a replacement before Friday.",
+      "model": "I am writing about the keyboard I hired from your shop on Monday. The power cable has a split near the plug, so I have stopped using it. I need the instrument for a performance on Friday evening. Could you arrange a replacement cable by Thursday, or let me know whether I can exchange the keyboard at your shop?",
+      "reasoning": [
+        {
+          "quote": "I hired from your shop on Monday",
+          "explanation": "Identifica la operación para que la tienda localice el alquiler."
+        },
+        {
+          "quote": "so I have stopped using it",
+          "explanation": "Explica una consecuencia pertinente y justifica la urgencia sin dramatizar."
+        },
+        {
+          "quote": "by Thursday",
+          "explanation": "La petición tiene un plazo útil, anterior a la actuación."
+        }
+      ],
+      "alternative": {
+        "text": "I would be happy to collect the replacement cable on Thursday afternoon if that is easier.",
+        "why": "Añade flexibilidad logística que ayuda a conseguir el mismo resultado."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Reclamas la sustitución del cable de un teclado alquilado antes de una actuación. ¿Qué apertura orienta mejor al lector?",
+        "explanation": "La primera identifica alquiler, problema implícito y resultado esperado; las otras retrasan o dejan vago el propósito.",
+        "options": [
+          "I am writing about the keyboard hired on Monday and need a replacement cable before Friday.",
+          "I am writing because music has been important to me since I was a child.",
+          "I am writing about an issue and hope you can provide some assistance."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "El jueves es el plazo final para recibir el cable. Escribe solo by o until: Please deliver the replacement cable ___ Thursday.",
+        "explanation": "By introduce el plazo para completar la entrega; until expresa duración.",
+        "accepted": [
+          "by"
+        ]
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "El cuerpo demuestra que solo está dañado el cable y pide una sustitución antes del viernes. ¿Qué cierre conserva una petición precisa?",
+        "explanation": "Confirmar si el cable puede recogerse el jueves concreta el siguiente paso del mismo propósito. Pedir algo sin fecha deja la solución vaga; cancelar todo el alquiler cambia el resultado solicitado.",
+        "options": [
+          "Please send something suitable whenever it becomes available.",
+          "Please confirm whether the cable can be collected on Thursday.",
+          "Please cancel my entire booking and refund it, aunque deseas conservar el teclado."
+        ],
+        "answer": 1
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Nueva situación. Escribe un fragmento de 50–80 palabras dirigido a una empresa: pagaste un curso de cocina presencial, pero tu confirmación muestra acceso online. Identifica la reserva, aclara el error y pide que lo corrijan antes del sábado. No escribas una carta completa.",
+      "explanation": "Compara el efecto de tus frases sobre el lector, no si repites las palabras del modelo. Se practica propósito en un fragmento, sin asignar una banda.",
+      "model": "I am writing about my booking for the cooking course this Saturday, reference CK42. I selected the class at your training kitchen, but the confirmation gives me an online access link. As I want to practise with the tutor in person, could you check my booking and confirm a place in the kitchen? Please let me know before Friday so that I can arrange my journey.",
+      "checklist": [
+        "Identifico la reserva y el error con datos útiles.",
+        "Relaciono el tipo de curso con mi necesidad.",
+        "Pido una corrección y un plazo coherentes."
+      ],
+      "minWords": 50
+    },
+    "sources": [
+      {
+        "title": "IELTS: formato de Writing General Training",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-writing"
+      },
+      {
+        "title": "British Council: descriptores públicos de Writing",
+        "url": "https://takeielts.britishcouncil.org/sites/default/files/ielts_writing_band_descriptors.pdf"
+      }
+    ]
+  },
+  {
+    "skillId": "t1-tone",
+    "why": "El tono depende tanto de la relación como de lo que intentas conseguir. Una petición firme puede seguir siendo respetuosa, y una carta informal también necesita claridad. Revisa las palabras que expresan cercanía, autoridad o molestia: si una frase contradice el resto, el lector recibe señales incompatibles aunque todas las frases sean gramaticalmente correctas.",
+    "decisions": [
+      {
+        "cue": "Reclamas a una responsable desconocida.",
+        "action": "Describe el hecho y formula una petición cortés y directa.",
+        "en": "Could you confirm when the refund will be processed?",
+        "reason": "La cortesía no impide precisar la información que necesitas."
+      },
+      {
+        "cue": "Pides ayuda a un amigo cercano.",
+        "action": "Usa una petición conversacional y reconoce el favor.",
+        "en": "Could you give me a hand with the boxes on Saturday?",
+        "reason": "La expresión encaja con la cercanía; una fórmula administrativa sonaría distante."
+      }
+    ],
+    "worked": {
+      "scenario": "Conoces a tu supervisor Daniel, pero necesitas tratar un cambio de turno de manera profesional.",
+      "task": "Escribe un párrafo de 40–80 palabras, no una carta completa, a tu supervisor: explain a timetable clash and request a different shift.",
+      "model": "I wanted to ask whether I could swap my Tuesday evening shift next week. My college has moved a practical assessment to that afternoon, and it may finish after my shift begins. I have checked with Nora, who is willing to exchange her Wednesday shift with mine. Would this arrangement work for the team?",
+      "reasoning": [
+        {
+          "quote": "I wanted to ask whether",
+          "explanation": "Introduce una solicitud profesional sin sonar autoritario."
+        },
+        {
+          "quote": "a practical assessment",
+          "explanation": "El motivo es específico y suficiente."
+        },
+        {
+          "quote": "Would this arrangement work for the team?",
+          "explanation": "Reconoce que el supervisor debe considerar las necesidades del equipo."
+        }
+      ],
+      "alternative": {
+        "text": "Can we swap shifts next week? I have a college assessment on Tuesday, and I could cover your Wednesday evening instead.",
+        "why": "Sería adecuado para un compañero cercano que puede aceptar el intercambio; el supervisor todavía debe aprobarlo."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Pides a tu supervisor conocido Daniel cambiar un turno, sujeto a su autorización. ¿Qué frase encaja mejor?",
+        "explanation": "Would it be possible solicita autorización de forma natural. I have decided presupone una decisión que corresponde al supervisor, mientras que beseech your esteemed office introduce solemnidad innecesaria.",
+        "options": [
+          "I have decided that Nora will cover Tuesday, so please update the rota.",
+          "Would it be possible to exchange my Tuesday shift with Nora’s Wednesday shift?",
+          "I respectfully beseech your esteemed office to grant this extraordinary privilege."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "El supervisor aún debe autorizarlo. Completa solo could o will: ___ I swap my shift with Nora, if that works for the team?",
+        "explanation": "Could I presenta una petición de permiso; Will I pregunta por un hecho futuro.",
+        "accepted": [
+          "could"
+        ]
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Explicas un problema a una responsable desconocida. ¿Qué frase conserva firmeza profesional?",
+        "explanation": "Could you confirm when the additional charge will be refunded? pide una respuesta concreta sin renunciar a reclamar ni introducir una amenaza.",
+        "options": [
+          "I suppose it may be all my fault, so please ignore the charge if you wish.",
+          "You had better send my money back today.",
+          "Could you confirm when the additional charge will be refunded?"
+        ],
+        "answer": 2
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Nueva situación. Escribe un fragmento de 50–80 palabras a la profesora de idiomas que conoces desde hace meses. No podrás asistir al taller del viernes; explica el motivo, discúlpate y pregunta si puedes recuperar la práctica. Usa un tono cordial y profesional, no una carta completa.",
+      "explanation": "El modelo muestra una posibilidad de tono semiformal; otras peticiones naturales sirven si respetan la relación y el propósito.",
+      "model": "I am sorry, but I will miss Friday’s workshop because I have a medical appointment that I could not move. I know we will be practising interview questions, and I would like to keep up with the group. Would it be possible to attend the same activity with your Monday class? I can also complete any preparation beforehand if that would help.",
+      "checklist": [
+        "Explico la ausencia con un motivo suficiente.",
+        "Mantengo cercanía respetuosa en todo el fragmento.",
+        "La petición reconoce que la profesora debe autorizar la alternativa."
+      ],
+      "minWords": 50
+    },
+    "sources": [
+      {
+        "title": "IELTS: formato de Writing General Training",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-writing"
+      },
+      {
+        "title": "British Council: descriptores públicos de Writing",
+        "url": "https://takeielts.britishcouncil.org/sites/default/files/ielts_writing_band_descriptors.pdf"
+      }
+    ]
+  },
+  {
+    "skillId": "t1-bullet-development",
+    "why": "Cubrir un punto no consiste en incluir una palabra del enunciado. Debes cumplir su verbo: describir aporta rasgos, explicar muestra causas o consecuencias y sugerir propone una acción viable. Reparte el espacio según la información necesaria. Un punto complejo puede requerir más desarrollo que otro; contar frases por apartado no demuestra que el destinatario entienda la situación.",
+    "decisions": [
+      {
+        "cue": "El punto pide explicar cómo te afectó un cambio.",
+        "action": "Conecta el cambio con una consecuencia específica.",
+        "en": "The earlier departure means I can no longer catch the connecting train.",
+        "reason": "La consecuencia desarrolla affected en vez de repetir que el cambio fue malo."
+      },
+      {
+        "cue": "El punto pide sugerir una mejora.",
+        "action": "Propón una medida que responda al problema descrito.",
+        "en": "Please keep one evening appointment each week for people who work during the day.",
+        "reason": "La propuesta identifica destinatarios y una solución realizable."
+      }
+    ],
+    "worked": {
+      "scenario": "Una asociación ha cambiado el horario de un taller de bicicletas. Trabajas el punto que pide explicar el efecto sobre tu asistencia.",
+      "task": "Escribe solo el párrafo que desarrolla el efecto, no una carta completa: explain how moving the workshop from Saturday morning to Wednesday afternoon affects you.",
+      "model": "The new Wednesday afternoon session clashes with my working hours. I finish at five, whereas the workshop ends at four, so arriving late would not solve the problem. I joined to learn how to maintain my bicycle for my daily journey, and missing the practical sessions would prevent me from gaining those skills.",
+      "reasoning": [
+        {
+          "quote": "I finish at five, whereas the workshop ends at four",
+          "explanation": "Los horarios explican por qué no basta con llegar tarde."
+        },
+        {
+          "quote": "maintain my bicycle for my daily journey",
+          "explanation": "Conecta la pérdida del taller con una necesidad pertinente."
+        },
+        {
+          "quote": "missing the practical sessions would prevent me",
+          "explanation": "Explica la consecuencia en lugar de limitarse a mencionar el cambio."
+        }
+      ],
+      "alternative": {
+        "text": "I could attend a Wednesday session if it started after six, but I cannot leave work during the afternoon.",
+        "why": "La condición añade información útil si también quieres proponer un ajuste; la carta completa aún debe desarrollar sus otros puntos."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "El punto exige explicar el efecto del horario nuevo sobre tu asistencia. ¿Qué detalle lo desarrolla mejor?",
+        "explanation": "Comparar la hora de salida del trabajo con la de finalización del taller explica por qué no puedes asistir. Repetir los días del cambio solo describe el problema; pedir otro taller propone una solución.",
+        "options": [
+          "The workshop was moved from Saturday to Wednesday.",
+          "Could you arrange a different workshop in the future?",
+          "I finish work at five, one hour after the workshop ends."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Indica una consecuencia, no una condición: The workshop ends before I finish work, ___ I cannot attend. Escribe so o unless.",
+        "explanation": "So relaciona la incompatibilidad con su efecto; unless introduciría una condición.",
+        "accepted": [
+          "so"
+        ]
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Debes describir un objeto perdido y pedir ayuda para recuperarlo. Ya tienes una descripción clara. ¿Qué añade desarrollo útil?",
+        "explanation": "Ubicación y contacto ayudan al destinatario a ejecutar la petición sin repetir la descripción.",
+        "options": [
+          "Decir dónde crees que quedó y cómo pueden avisarte si aparece.",
+          "Repetir el color del objeto con dos sinónimos.",
+          "Explicar durante un párrafo por qué te gusta ese color."
+        ],
+        "answer": 0
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Nueva situación. Escribe un fragmento de 55–85 palabras para un casero, no una carta completa. Desarrolla dos puntos: explain how repeated power cuts affect your work from home; suggest a practical temporary arrangement. Usa detalles plausibles y conecta propuesta y efecto.",
+      "explanation": "Puedes inventar detalles coherentes. Comprueba que cada detalle desarrolla uno de los dos puntos indicados.",
+      "model": "The repeated power cuts interrupt my online appointments, so I have had to cancel two meetings with clients this week. Using my phone is not a reliable alternative because the signal inside the flat is weak. Until an electrician can inspect the wiring, could you arrange access to the small office in the neighbouring building? It has a separate electricity supply and would allow me to continue working nearby.",
+      "checklist": [
+        "Explico al menos una consecuencia concreta.",
+        "La propuesta responde a la dificultad explicada.",
+        "Uso el espacio según la información necesaria, sin una regla fija de frases."
+      ],
+      "minWords": 55
+    },
+    "sources": [
+      {
+        "title": "IELTS: formato de Writing General Training",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-writing"
+      },
+      {
+        "title": "British Council: descriptores públicos de Writing",
+        "url": "https://takeielts.britishcouncil.org/sites/default/files/ielts_writing_band_descriptors.pdf"
+      }
+    ]
+  },
+  {
+    "skillId": "t1-paragraphs",
+    "why": "Los párrafos ayudan al destinatario a reconocer qué está pasando y qué debe hacer después. El criterio útil es la función comunicativa, no una cantidad fija de líneas. Agrupa detalles que expliquen el mismo asunto y separa un cambio real de propósito. Después revisa referencias como this o it para que la conexión no dependa de adivinar el antecedente.",
+    "decisions": [
+      {
+        "cue": "Varias frases explican una avería y sus consecuencias inmediatas.",
+        "action": "Agrúpalas si forman una explicación fácil de seguir.",
+        "en": "The screen freezes after ten minutes, which prevents me from completing the exercises.",
+        "reason": "Problema y efecto pueden pertenecer a una misma unidad funcional."
+      },
+      {
+        "cue": "Pasas de relatar lo ocurrido a pedir una compensación.",
+        "action": "Abre un párrafo para destacar la acción esperada.",
+        "en": "I would therefore like to request a replacement lesson.",
+        "reason": "El cambio de función merece visibilidad; therefore expresa una consecuencia real."
+      }
+    ],
+    "worked": {
+      "scenario": "Organizas una carta a una academia sobre una clase cancelada sin aviso.",
+      "task": "Escribe dos párrafos conectados de 45–85 palabras en total: first explain the inconvenience, then request a practical remedy. Es un fragmento, no una carta completa.",
+      "model": "I travelled to the academy on Thursday evening, but reception told me that the photography class had been cancelled. As no message had reached me, I had already paid for a taxi and arranged childcare for the evening.\n\nCould you please offer me a place in another session this month? A Saturday morning class would suit me best, since I could travel by bus and would not need childcare.",
+      "reasoning": [
+        {
+          "quote": "As no message had reached me",
+          "explanation": "Conecta la falta de aviso con los gastos del primer párrafo."
+        },
+        {
+          "quote": "Could you please offer me a place",
+          "explanation": "El segundo párrafo cambia de explicación a petición."
+        },
+        {
+          "quote": "A Saturday morning class",
+          "explanation": "Desarrolla la solución con información relacionada."
+        }
+      ],
+      "alternative": {
+        "text": "Could you please offer me a place in another session this month, preferably on a Saturday morning?",
+        "why": "Combina dos frases si no necesitas explicar la preferencia. Ambas organizaciones funcionan si la carta completa resulta clara."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Carta: primer párrafo narra un daño y sus consecuencias; después pides recogida y sustitución. ¿Qué organización facilita actuar?",
+        "explanation": "Separar el cambio de función destaca la petición sin fragmentar innecesariamente los detalles.",
+        "options": [
+          "Agrupar el relato y abrir otro párrafo para las dos acciones solicitadas.",
+          "Abrir un párrafo nuevo después de cada oración, aunque continúe la misma idea.",
+          "Mantener todo seguido porque los hechos y peticiones tratan del mismo paquete."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Evita it, que podría referirse a la mudanza: Three boxes remain at the old flat. These ___ contain my cooking equipment. Escribe solo el sustantivo plural necesario.",
+        "explanation": "Boxes identifica el antecedente concreto de la información siguiente.",
+        "accepted": [
+          "boxes"
+        ]
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "El párrafo ya pide recoger cajas mañana. ¿Qué frase pertenece mejor al mismo párrafo funcional?",
+        "explanation": "La franja de acceso desarrolla la logística de la petición; los otros detalles explican el incidente y encajan mejor con ese relato.",
+        "options": [
+          "Two of the boxes were damaged during last year’s move.",
+          "I can provide access between eight and ten.",
+          "I noticed the missing boxes after your van had left."
+        ],
+        "answer": 1
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Nueva situación. Escribe dos párrafos, 55–85 palabras en total, para una empresa de mudanzas: explica que dejaron varias cajas en la dirección anterior y cómo te afecta; después pide una recogida y entrega con una franja horaria viable. Es un fragmento de carta.",
+      "explanation": "Comprueba si el orden facilita actuar al lector. El mismo contenido puede admitir otra distribución lógica.",
+      "model": "Three boxes were left in the hallway of my old flat after yesterday’s move. They contain my cooking equipment, so I cannot prepare meals in the new flat. The former landlord also needs the hallway cleared before the next tenant arrives.\n\nCould your team collect the boxes tomorrow morning and deliver them before midday? I will be at the old flat between eight and ten to provide access.",
+      "checklist": [
+        "Agrupo los hechos y efectos relacionados.",
+        "El nuevo párrafo hace visible la petición.",
+        "Cada referencia permite identificar cajas, lugar o personas."
+      ],
+      "minWords": 55
+    },
+    "sources": [
+      {
+        "title": "IELTS: formato de Writing General Training",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-writing"
+      },
+      {
+        "title": "British Council: descriptores públicos de Writing",
+        "url": "https://takeielts.britishcouncil.org/sites/default/files/ielts_writing_band_descriptors.pdf"
+      }
+    ]
+  },
+  {
+    "skillId": "t1-open-close",
+    "why": "El saludo y la despedida enmarcan la relación, pero la apertura también debe cumplir una función real: indicar por qué escribes. La última frase puede concretar la respuesta que esperas sin repetir todo el mensaje. Respeta cualquier comienzo proporcionado por la consigna y ajusta las convenciones al destinatario; las fórmulas no compensan un cuerpo incompleto o un tono incoherente.",
+    "decisions": [
+      {
+        "cue": "La consigna da Dear Ms Evans y escribes una solicitud formal.",
+        "action": "Conserva ese saludo y usa una despedida profesional compatible.",
+        "en": "Yours sincerely,",
+        "reason": "Es una combinación convencional con nombre, no una regla para cartas a amigos."
+      },
+      {
+        "cue": "Escribes a un amigo para agradecerle alojamiento.",
+        "action": "Empieza con el agradecimiento específico y cierra de forma cercana.",
+        "en": "Thanks again for letting me stay last weekend.",
+        "reason": "La función y la relación justifican la expresión sencilla."
+      }
+    ],
+    "worked": {
+      "scenario": "La consigna exige empezar Dear Mr Shah. Escribes a un responsable de formación sobre un curso que necesitas cambiar.",
+      "task": "Escribe apertura y cierre unidos en un fragmento de 40–80 palabras; no completes una carta IELTS. State why you need to change courses and request confirmation of the next step.",
+      "model": "Dear Mr Shah,\n\nI am writing to ask whether I can move from the Tuesday accounting course to the Saturday group, as my employer has changed my working hours. I would appreciate confirmation of whether a place is available and whether I need to complete a transfer form.\n\nYours sincerely,\nAlex Green",
+      "reasoning": [
+        {
+          "quote": "Dear Mr Shah",
+          "explanation": "Respeta el comienzo indicado y reconoce al destinatario por su nombre."
+        },
+        {
+          "quote": "move from the Tuesday accounting course to the Saturday group",
+          "explanation": "La apertura define el cambio concreto."
+        },
+        {
+          "quote": "Yours sincerely",
+          "explanation": "Mantiene una despedida formal compatible con el saludo nominal."
+        }
+      ],
+      "alternative": {
+        "text": "Please let me know whether the transfer is possible before the next Tuesday session.",
+        "why": "Añade un plazo funcional si importa para la situación; no requiere memorizar una frase fija."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "La consigna proporciona Dear Mr Shah y pide solicitar un cambio de curso. ¿Qué apertura cumple ambas condiciones?",
+        "explanation": "Dear Mr Shah seguido de la solicitud de traslado conserva el comienzo indicado y expresa el propósito. Dear Sir or Madam cambia el saludo dado; desear un año exitoso aplaza el motivo de la carta.",
+        "options": [
+          "Dear Sir or Madam, I am writing to ask whether I can transfer to the Saturday group.",
+          "Dear Mr Shah, I am writing to ask whether I can transfer to the Saturday group.",
+          "Dear Mr Shah, I hope your institution continues to enjoy a successful year."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Carta formal dirigida a una persona nombrada, Dear Ms Okafor. Completa la despedida convencional británica: Yours ___.",
+        "explanation": "Yours sincerely es la combinación habitual con un nombre conocido.",
+        "accepted": [
+          "sincerely"
+        ]
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Solicitas un traslado de curso y necesitas respuesta antes del martes. ¿Qué cierre aporta el siguiente paso más útil?",
+        "explanation": "Pedir confirmación del traslado antes de la sesión del martes especifica qué debe responder el lector y cuándo. Agradecer la lectura o comentar el disfrute del grupo no aclara la acción pendiente.",
+        "options": [
+          "Thank you for reading my detailed letter about the course.",
+          "I hope the Saturday group has been enjoyable for everyone.",
+          "Please confirm whether the transfer is possible before Tuesday’s session."
+        ],
+        "answer": 2
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Nueva situación. Escribe un fragmento de 45–75 palabras con saludo y despedida para tu amigo Ben. Agradécele que te enseñara la ciudad y dile cómo te gustaría devolver el favor cuando te visite. No es una carta completa de examen.",
+      "explanation": "Puedes usar otra despedida cercana adecuada. Compara la relación que expresa tu texto, sin exigir coincidencia literal.",
+      "model": "Dear Ben,\n\nThanks for showing me around your city last weekend. I would never have found that riverside market on my own, and it was lovely to meet your friends. When you come here in December, I would love to take you walking in the hills and cook dinner afterwards. Let me know which weekend suits you.\n\nBest wishes,\nSam",
+      "checklist": [
+        "El saludo y la despedida encajan con un amigo.",
+        "El agradecimiento menciona algo específico.",
+        "La propuesta y la petición final mantienen el mismo propósito."
+      ],
+      "minWords": 45
+    },
+    "sources": [
+      {
+        "title": "IELTS: formato de Writing General Training",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-writing"
+      },
+      {
+        "title": "British Council: descriptores públicos de Writing",
+        "url": "https://takeielts.britishcouncil.org/sites/default/files/ielts_writing_band_descriptors.pdf"
+      }
+    ]
+  },
+  {
+    "skillId": "t1-time-review",
+    "why": "La revisión funciona mejor cuando busca problemas capaces de cambiar el mensaje. Primero comprueba propósito y cobertura; después corrige errores frecuentes que ya sabes detectar. Reescribir una frase correcta para que parezca más sofisticada puede consumir el tiempo necesario para completar otro punto. Practica una secuencia breve y adapta el reparto a tu velocidad, manteniendo el tiempo disponible para ambas tareas.",
+    "decisions": [
+      {
+        "cue": "El borrador cubre los requisitos, pero ves un error de concordancia.",
+        "action": "Haz una corrección localizada y comprueba el sentido.",
+        "en": "The replacement tickets arrive on Monday.",
+        "reason": "Corregir el verbo mejora precisión sin rehacer un párrafo completo."
+      },
+      {
+        "cue": "Falta un punto obligatorio cuando queda poco tiempo.",
+        "action": "Añade información pertinente antes de pulir adornos léxicos.",
+        "en": "Please send the replacement to my work address, where someone can receive it.",
+        "reason": "La cobertura necesita prioridad sobre cambios cosméticos."
+      }
+    ],
+    "worked": {
+      "scenario": "Revisas una carta sobre un pase de transporte defectuoso. Has explicado el problema y su efecto, pero falta la solución.",
+      "task": "Lee este párrafo corregido de 40–80 palabras como fragmento, no como carta completa. Observe how the request makes the letter actionable without adding an unrelated story.",
+      "model": "Could you please replace the faulty travel card before my next weekly pass begins on Monday? I use the bus to reach work every morning, so an electronic ticket would also be a suitable temporary solution. Please send any confirmation to my email address, as I can check it while travelling.",
+      "reasoning": [
+        {
+          "quote": "replace the faulty travel card",
+          "explanation": "Añade la acción que faltaba, una mejora de contenido."
+        },
+        {
+          "quote": "before my next weekly pass begins on Monday",
+          "explanation": "Precisa un plazo relacionado con el servicio."
+        },
+        {
+          "quote": "an electronic ticket would also be a suitable temporary solution",
+          "explanation": "Ofrece una alternativa coherente sin desviar la reclamación."
+        }
+      ],
+      "alternative": {
+        "text": "I would appreciate a replacement before Monday. An electronic ticket would be acceptable until the new card arrives.",
+        "why": "Versión más breve si necesitas tiempo o espacio; conserva la información esencial."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "El borrador describe la avería y solicita reparación, pero omite el efecto requerido por la consigna. Quedan tres minutos. ¿Qué haces primero?",
+        "explanation": "La información ausente afecta directamente a la cobertura; las otras revisiones pueden consumir tiempo sin resolverla.",
+        "options": [
+          "Sustituir cada palabra repetida por un sinónimo para mostrar variedad.",
+          "Reescribir la apertura completa aunque su propósito ya sea claro.",
+          "Añadir la consecuencia concreta y comprobar que la petición sigue respondiendo a ella."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Corrige solo means: The new opening hours means I cannot attend.",
+        "explanation": "Hours es plural; una revisión dirigida identifica el sujeto antes de elegir el verbo.",
+        "accepted": [
+          "mean"
+        ]
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Al revisar cambias Please deliver it by Friday por Please deliver it until Friday. ¿Qué debes comprobar?",
+        "explanation": "Una revisión debe conservar el sentido: by Friday marca el límite para completar una entrega.",
+        "options": [
+          "Si has cambiado un plazo de entrega por una duración y necesitas restaurar by.",
+          "Si until resulta más formal, aunque cambie la relación temporal.",
+          "Si la frase contiene ahora suficientes palabras para el mínimo."
+        ],
+        "answer": 0
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Nueva situación. Revisa en 50–80 palabras este fragmento para una biblioteca: The computers is unavailable every evening. This is bad. Please help. Añade un efecto concreto sobre tus estudios y una petición realizable. Es solo un fragmento; no asignes una banda.",
+      "explanation": "La revisión combina contenido y precisión. Explica qué cambiaste y por qué antes de practicar otra carta.",
+      "model": "The library computers are unavailable every evening because the study room closes at five. I attend college during the day and need a computer to prepare my assignments afterwards. Could you keep a small number of computers available until seven on two weekdays? This would allow students with daytime classes to complete their work without requiring the whole building to remain open.",
+      "checklist": [
+        "Corrijo la concordancia de computers y are.",
+        "Sustituyo la valoración vaga por una consecuencia concreta.",
+        "La petición responde a esa consecuencia y resulta comprensible."
+      ],
+      "minWords": 50
+    },
+    "sources": [
+      {
+        "title": "IELTS: formato de Writing General Training",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-writing"
+      },
+      {
+        "title": "British Council: descriptores públicos de Writing",
+        "url": "https://takeielts.britishcouncil.org/sites/default/files/ielts_writing_band_descriptors.pdf"
+      }
+    ]
+  },
+  {
+    "skillId": "t2-question",
+    "why": "Una respuesta relevante empieza por distinguir el asunto general de la operación solicitada. Hablar de transporte no basta si debes explicar por qué disminuye su uso y qué efectos produce. Marca restricciones y preguntas antes de elegir ideas. Después comprueba que cada párrafo aporta una parte de esa respuesta; una introducción prometedora no compensa una obligación que desaparece del desarrollo.",
+    "decisions": [
+      {
+        "cue": "La pregunta pide causas y efectos de un cambio.",
+        "action": "Planifica por qué ocurre y qué consecuencias tiene.",
+        "en": "Longer journeys may discourage bus use; fewer passengers may then lead to reduced services.",
+        "reason": "Causa y efecto forman direcciones distintas del razonamiento."
+      },
+      {
+        "cue": "La pregunta pide soluciones para un problema.",
+        "action": "Explica cómo una medida reduce ese problema.",
+        "en": "Giving buses priority at junctions could make journey times more predictable.",
+        "reason": "Una medida debe mostrar su mecanismo, no limitarse a nombrar una autoridad."
+      }
+    ],
+    "worked": {
+      "scenario": "Practicas con una consigna original de dos preguntas sobre servicios urbanos.",
+      "task": "Consigna de referencia: In some towns, fewer residents use local buses. Why might this happen? What effects could this have on people who cannot drive? Escribe solo una introducción de 40–70 palabras que oriente ambas respuestas; no es un ensayo completo.",
+      "model": "Falling bus use can reflect a service that no longer fits residents’ daily routines. Infrequent departures and unreliable connections may encourage those with cars to drive instead. This change can be particularly serious for people who cannot drive, since declining demand may lead to fewer routes and make essential journeys harder.",
+      "reasoning": [
+        {
+          "quote": "Why might this happen?",
+          "explanation": "Exige causas, que el modelo relaciona con frecuencia y conexiones."
+        },
+        {
+          "quote": "people who cannot drive",
+          "explanation": "Limita los efectos al grupo indicado, no a toda consecuencia ambiental posible."
+        },
+        {
+          "quote": "declining demand may lead to fewer routes",
+          "explanation": "Anticipa un efecto pertinente sin responder a una pregunta diferente sobre soluciones."
+        }
+      ],
+      "alternative": {
+        "text": "Unreliable services may help explain falling bus use, while reduced demand can leave non-drivers with fewer travel options.",
+        "why": "Versión más breve que conserva las dos obligaciones; necesitaría desarrollo en el cuerpo de un ensayo."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Pregunta: Why are fewer older residents using local shops, and how could this affect them? ¿Qué plan responde mejor?",
+        "explanation": "La primera mantiene las dos obligaciones y el grupo. La segunda podría tratar el tema general sin responder las preguntas concretas.",
+        "options": [
+          "Causas de ese menor uso; efectos sobre esos residentes.",
+          "Ventajas de tiendas grandes; inconvenientes para cualquier comerciante.",
+          "Causas del menor uso; soluciones para atraer de nuevo a esos residentes."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Completa con una de estas expresiones: older residents / all shoppers. En una pregunta limitada a older residents, los efectos deben centrarse en ___.",
+        "explanation": "El grupo específico forma parte del alcance de la tarea, aunque otros compradores también puedan verse afectados.",
+        "accepted": [
+          "older residents"
+        ]
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "El enunciado pregunta causas y efectos sobre personas sin coche. ¿Qué frase se aparta más de ese alcance?",
+        "explanation": "Rediseñar todas las paradas propone una solución. La consigna pide causas del menor uso y efectos sobre personas sin coche; los otros enunciados pueden desarrollar esas dos obligaciones.",
+        "options": [
+          "A reduced bus service may make hospital appointments harder to reach.",
+          "The council should redesign every bus stop to solve the problem.",
+          "Infrequent departures may encourage residents with cars to stop using buses."
+        ],
+        "answer": 1
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Nueva consigna: Many adults stop attending evening courses before the end. Why might this happen? How could this affect their future learning? Escribe solo una introducción de 45–75 palabras que oriente ambas respuestas. No desarrolles soluciones ni escribas un ensayo completo.",
+      "explanation": "Tu introducción puede anticipar otras causas y efectos pertinentes. Comprueba cobertura y alcance, sin exigir las mismas ideas del modelo.",
+      "model": "Adults may leave evening courses when study becomes difficult to combine with employment or family responsibilities. Although some can resume later, repeated interruptions may reduce their confidence and leave gaps in the skills needed for more advanced classes. Explaining both these practical pressures and their longer-term effects helps show why leaving a course can matter beyond a single missed qualification.",
+      "checklist": [
+        "Identifico causas y efectos como obligaciones distintas.",
+        "Los efectos se refieren al aprendizaje futuro.",
+        "Cada idea conserva el foco en adultos que abandonan cursos."
+      ],
+      "minWords": 45
+    },
+    "sources": [
+      {
+        "title": "IELTS: formato de Writing General Training",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-writing"
+      },
+      {
+        "title": "British Council: descriptores públicos de Writing",
+        "url": "https://takeielts.britishcouncil.org/sites/default/files/ielts_writing_band_descriptors.pdf"
+      }
+    ]
+  },
+  {
+    "skillId": "t2-position",
+    "why": "Una postura clara responde a la afirmación exacta y permite entender sus límites. El acuerdo parcial funciona cuando explicas qué aceptas y bajo qué condiciones, no cuando alternas opiniones incompatibles. Al revisar, compara los verbos y cuantificadores de tesis y conclusión: apoyar algunas medidas no equivale a aprobar cualquier intervención. El desarrollo debe justificar el alcance que has elegido.",
+    "decisions": [
+      {
+        "cue": "La propuesta contiene always, all u only.",
+        "action": "Decide si aceptas su alcance absoluto.",
+        "en": "Schools should teach financial skills, but these lessons should not replace every creative subject.",
+        "reason": "Aceptar la utilidad de algo no obliga a aceptar que sustituya todo lo demás."
+      },
+      {
+        "cue": "Tu acuerdo depende de una condición concreta.",
+        "action": "Expresa esa condición y úsala en el razonamiento.",
+        "en": "I support later opening hours where enough residents need evening access.",
+        "reason": "La condición define una postura evaluable; no es una evasión genérica."
+      }
+    ],
+    "worked": {
+      "scenario": "La afirmación sostiene que todo el dinero municipal para ocio debe destinarse a instalaciones deportivas.",
+      "task": "Escribe un párrafo introductorio de 40–75 palabras que exprese acuerdo parcial y su límite. Es un fragmento de Task 2, no un ensayo completo.",
+      "model": "Sports facilities deserve public support because they can make exercise affordable. However, I disagree that they should receive the entire leisure budget. Residents also need inexpensive opportunities to read, make music or meet other people. Councils should therefore fund sport alongside other activities, with spending guided by local needs rather than a single priority for every community.",
+      "reasoning": [
+        {
+          "quote": "the entire leisure budget",
+          "explanation": "Responde al alcance absoluto de la propuesta."
+        },
+        {
+          "quote": "fund sport alongside other activities",
+          "explanation": "Formula una alternativa consistente con el desacuerdo parcial."
+        },
+        {
+          "quote": "guided by local needs",
+          "explanation": "Añade una condición que el desarrollo debería justificar con ejemplos."
+        }
+      ],
+      "alternative": {
+        "text": "I disagree with giving sport exclusive priority, although I support investment in affordable exercise facilities.",
+        "why": "Puede expresar el mismo grado de acuerdo con menos detalle; el cuerpo tendrá que explicar ambas partes."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Tesis: las clases online deberían ampliar el acceso, sin sustituir toda la formación presencial. ¿Qué desarrollo mantiene su alcance?",
+        "explanation": "Explicar el acceso remoto y la necesidad de supervisión en algunas prácticas apoya beneficio y límite. Declarar que una modalidad nunca tiene utilidad o siempre es inferior convierte la postura parcial en un absoluto.",
+        "options": [
+          "Defender que la enseñanza presencial nunca tiene utilidad.",
+          "Explicar acceso remoto y por qué algunas prácticas necesitan supervisión directa.",
+          "Explicar que cualquier curso digital es necesariamente inferior."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Responde al carácter obligatorio: I support home working as an option, but I oppose making it ___. Escribe compulsory o flexible.",
+        "explanation": "Compulsory nombra la obligación que se rechaza; flexible cambiaría el sentido de la postura.",
+        "accepted": [
+          "compulsory"
+        ]
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Caso crítico: la tesis apoya una prueba limitada, pero la conclusión exige implantar la medida en todas partes. ¿Qué revisión es mejor?",
+        "explanation": "La consistencia requiere que el alcance de la conclusión se derive del desarrollo; un adverbio no aporta apoyo.",
+        "options": [
+          "Añadir probably a la última frase y conservar la ampliación sin apoyo.",
+          "Eliminar la tesis para que la contradicción sea menos visible.",
+          "Alinear el alcance de tesis, razones y cierre, justificando cualquier ampliación."
+        ],
+        "answer": 2
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Nueva consigna: Employers should require all staff to work from home. To what extent do you agree or disagree? Escribe un párrafo de 50–80 palabras con una postura clara, una razón y un límite o condición pertinente. Es solo un fragmento, no un ensayo completo.",
+      "explanation": "Hay otras posturas defendibles. Evalúa la consistencia entre tu afirmación y su apoyo, no la coincidencia política con el modelo.",
+      "model": "I support allowing employees to work from home when their duties can be completed independently, but I disagree with making it compulsory for everyone. Some workers lack a quiet space, while others need direct access to equipment or colleagues. Employers should assess the work and the employee’s circumstances before agreeing on a suitable arrangement. This would preserve flexibility without treating very different jobs as if they were identical.",
+      "checklist": [
+        "Respondo al carácter obligatorio y universal de la propuesta.",
+        "La razón apoya el grado de acuerdo elegido.",
+        "El límite precisa la postura y no la contradice."
+      ],
+      "minWords": 50
+    },
+    "sources": [
+      {
+        "title": "IELTS: formato de Writing General Training",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-writing"
+      },
+      {
+        "title": "British Council: descriptores públicos de Writing",
+        "url": "https://takeielts.britishcouncil.org/sites/default/files/ielts_writing_band_descriptors.pdf"
+      }
+    ]
+  },
+  {
+    "skillId": "t2-paragraph",
+    "why": "Desarrollar una idea implica hacer visible una relación que el lector no debería tener que inventar. Tras una afirmación, explica un mecanismo, una consecuencia o una condición y usa apoyo concreto si ayuda. No todas las ideas necesitan una historia personal. Al releer, pregunta qué aporta cada oración: repetir que algo es beneficioso con otro adjetivo no hace avanzar el argumento.",
+    "decisions": [
+      {
+        "cue": "La afirmación describe un beneficio sin explicar su origen.",
+        "action": "Añade el paso intermedio que lo produce.",
+        "en": "A shared workshop spreads the cost of tools across many users, making occasional repairs cheaper.",
+        "reason": "El mecanismo une instalaciones compartidas y ahorro."
+      },
+      {
+        "cue": "El ejemplo ocupa mucho espacio sin apoyar la idea central.",
+        "action": "Conserva solo el detalle que demuestra el argumento.",
+        "en": "A resident repairing one chair need not buy a drill used only once.",
+        "reason": "El caso ilustra el ahorro; una biografía del residente no lo desarrollaría."
+      }
+    ],
+    "worked": {
+      "scenario": "Argumentas que los municipios podrían facilitar talleres comunitarios de reparación.",
+      "task": "Escribe un párrafo de 55–85 palabras que desarrolle un beneficio económico de los talleres compartidos. Es un fragmento argumentativo, no un ensayo completo.",
+      "model": "Community repair workshops can make occasional repairs more affordable. Buying a drill or a sewing machine is expensive if a household needs it for only one small job. A shared workshop allows many residents to use the same equipment, spreading that cost across the community. For example, someone repairing a loose chair could borrow the appropriate tools and receive basic guidance instead of replacing the chair. The saving therefore comes from shared resources and longer use of existing possessions.",
+      "reasoning": [
+        {
+          "quote": "Buying a drill or a sewing machine is expensive",
+          "explanation": "Introduce el obstáculo que explica el beneficio económico."
+        },
+        {
+          "quote": "spreading that cost across the community",
+          "explanation": "Hace visible el mecanismo de ahorro."
+        },
+        {
+          "quote": "instead of replacing the chair",
+          "explanation": "El ejemplo demuestra cómo se evita un gasto concreto."
+        }
+      ],
+      "alternative": {
+        "text": "Shared equipment can reduce costs, particularly when residents need expensive tools for a single repair.",
+        "why": "Síntesis útil para una idea central, pero aún necesitaría explicación o apoyo para formar un párrafo desarrollado."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Párrafo: Free classes are useful. They offer important benefits. They improve life. ¿Qué continuación lo desarrolla?",
+        "explanation": "La solicitud de empleo que el principiante puede completar sin ayuda introduce una capacidad concreta y explica el beneficio. Calificar las clases como valiosas o repetir que tienen ventajas no desarrolla el mecanismo.",
+        "options": [
+          "Such classes are also very valuable and beneficial.",
+          "In conclusion, these classes have many significant advantages.",
+          "A beginner who learns to complete an online application can apply for jobs without assistance."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Expresa el mecanismo, no contraste: Shared workshops lower costs ___ residents can use tools without buying them. Escribe because o although.",
+        "explanation": "Because introduce la explicación causal que sostiene la afirmación.",
+        "accepted": [
+          "because"
+        ]
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "La idea central es reducir gastos mediante reparaciones compartidas. ¿Qué oración conviene retirar o justificar mejor?",
+        "explanation": "Las exposiciones podrían ser otra ventaja, pero no desarrollan por sí solas el ahorro mediante reparaciones.",
+        "options": [
+          "The workshop could also host monthly art exhibitions.",
+          "Using a borrowed drill can avoid buying equipment for one small repair.",
+          "Repairing a loose handle can delay the need to replace a cupboard."
+        ],
+        "answer": 0
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Nueva consigna parcial: explica cómo un horario laboral flexible puede ayudar a empleados que cuidan de familiares. Escribe un párrafo de 60–90 palabras con una idea central, un mecanismo y un ejemplo o consecuencia. No es un ensayo completo.",
+      "explanation": "Comprueba que cada frase aporta un paso al razonamiento. Puedes reorganizar los elementos si la progresión sigue siendo clara.",
+      "model": "Flexible working hours can help employees combine paid work with caring responsibilities. If staff can start earlier or later, they may arrange their working day around an appointment without losing a whole day’s income. For instance, an employee could accompany a parent to a morning medical visit and complete the remaining work that afternoon. This flexibility reduces the conflict between two responsibilities, provided that the employer and employee agree on when essential tasks must be completed.",
+      "checklist": [
+        "Desarrollo una idea central reconocible.",
+        "Explico cómo el horario reduce una dificultad concreta.",
+        "El ejemplo y la condición apoyan esa misma idea."
+      ],
+      "minWords": 60
+    },
+    "sources": [
+      {
+        "title": "IELTS: formato de Writing General Training",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-writing"
+      },
+      {
+        "title": "British Council: descriptores públicos de Writing",
+        "url": "https://takeielts.britishcouncil.org/sites/default/files/ielts_writing_band_descriptors.pdf"
+      }
+    ]
+  },
+  {
+    "skillId": "t2-support",
+    "why": "El apoyo convence cuando permite comprender por qué una afirmación resulta plausible dentro del alcance de la pregunta. Un ejemplo inventado para ilustrar una situación puede ser útil; atribuir estadísticas a un estudio inexistente presenta una evidencia que no tienes. Ajusta además la certeza: mostrar que una medida puede ayudar a algunas personas no demuestra que resolverá el problema para todas.",
+    "decisions": [
+      {
+        "cue": "Solo necesitas ilustrar un mecanismo cotidiano.",
+        "action": "Presenta un caso plausible sin atribuirlo a investigación.",
+        "en": "A parent working late could collect a reserved book from an evening locker.",
+        "reason": "El caso muestra cómo funcionaría una opción; no finge demostrar una frecuencia estadística."
+      },
+      {
+        "cue": "La afirmación afirma que una medida beneficia a todo el mundo.",
+        "action": "Limita el grupo o explica una excepción relevante.",
+        "en": "Extended opening hours may help shift workers, although transport home must also be available.",
+        "reason": "La precisión sobre beneficiarios hace el argumento más defendible."
+      }
+    ],
+    "worked": {
+      "scenario": "Argumentas a favor de mantener abierto un centro comunitario algunas tardes.",
+      "task": "Escribe un párrafo de 50–85 palabras que ilustre el acceso de trabajadores y reconozca un límite práctico. Es un fragmento de ensayo; no inventes investigaciones.",
+      "model": "Evening opening hours could make a community centre accessible to residents who work during the day. A shop assistant finishing at six, for example, might attend a class at seven but could never reach a session held at three. However, longer hours alone would not guarantee access. If the last bus leaves before the class ends, residents without cars may still be excluded. The timetable should therefore be considered alongside local transport.",
+      "reasoning": [
+        {
+          "quote": "A shop assistant finishing at six",
+          "explanation": "Caso plausible y específico que ilustra un mecanismo."
+        },
+        {
+          "quote": "could never reach a session held at three",
+          "explanation": "La comparación explica el beneficio del cambio de horario."
+        },
+        {
+          "quote": "If the last bus leaves before the class ends",
+          "explanation": "Identifica una condición que limita la conclusión sin negar el beneficio."
+        }
+      ],
+      "alternative": {
+        "text": "Evening opening hours will allow every resident to attend every class.",
+        "why": "Esta alternativa exagera el alcance. El horario no elimina problemas de transporte, coste o responsabilidades familiares."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "No conoces estadísticas sobre horarios de centros comunitarios. ¿Qué apoyo es defendible?",
+        "explanation": "El caso plausible ilustra acceso sin inventar evidencia ni generalizar a todos.",
+        "options": [
+          "A worker finishing at six could attend a seven o’clock class but not an afternoon session.",
+          "Research proves that exactly 94% of residents prefer seven o’clock classes.",
+          "Everyone who works during the day will attend the evening class."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Expresa posibilidad, sin prometer el resultado: Later opening hours ___ help workers with similar schedules. Escribe may o will.",
+        "explanation": "May marca posibilidad; will presentaría el beneficio como una predicción más segura que el ejemplo por sí solo no demuestra.",
+        "accepted": [
+          "may"
+        ]
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "El ejemplo muestra que una clase más tarde ayudaría a una dependienta. ¿Qué conclusión conserva un alcance justificado?",
+        "explanation": "Un caso muestra un mecanismo posible para un grupo, no la eliminación de toda barrera.",
+        "options": [
+          "All residents will have equal access if every class starts at seven.",
+          "Later sessions could improve access for workers with similar schedules.",
+          "Transport, cost and childcare no longer matter once classes begin later."
+        ],
+        "answer": 1
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Nueva consigna parcial: evalúa la idea de dar gratuitamente bicicletas a estudiantes. Escribe un párrafo de 55–85 palabras que explique un posible beneficio con un ejemplo plausible y una condición que limite ese beneficio. No inventes cifras o estudios; no escribas un ensayo completo.",
+      "explanation": "El apoyo puede proceder de conocimiento o experiencia pertinente. El modelo es una ilustración original, no una prueba estadística.",
+      "model": "Free bicycles could reduce travel costs for students who live within cycling distance of college. Someone making a short journey each day would no longer need to buy a bus ticket simply to reach class. However, providing a bicycle is useful only if the route is reasonably safe and the student can store it securely. The scheme would therefore work better alongside protected routes and bicycle parking than as an isolated gift.",
+      "checklist": [
+        "El ejemplo demuestra el beneficio afirmado.",
+        "No atribuyo cifras ni estudios que no conozco.",
+        "La condición explica un límite pertinente sin cambiar de tema."
+      ],
+      "minWords": 55
+    },
+    "sources": [
+      {
+        "title": "IELTS: formato de Writing General Training",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-writing"
+      },
+      {
+        "title": "British Council: descriptores públicos de Writing",
+        "url": "https://takeielts.britishcouncil.org/sites/default/files/ielts_writing_band_descriptors.pdf"
+      }
+    ]
+  },
+  {
+    "skillId": "t2-structure",
+    "why": "La cohesión permite seguir el razonamiento y no depende de acumular conectores. Una referencia debe tener un antecedente claro y cada relación lógica debe ser real: contraste, consecuencia o ampliación. La conclusión recupera la respuesta ya apoyada. Si necesitas explicar una razón nueva para que el cierre resulte convincente, esa razón probablemente pertenece al desarrollo y debe integrarse antes.",
+    "decisions": [
+      {
+        "cue": "La segunda idea limita una ventaja que acabas de explicar.",
+        "action": "Usa contraste y muestra qué se limita.",
+        "en": "However, these savings may disappear if maintenance costs are ignored.",
+        "reason": "These savings recupera una idea identificable y however anuncia una limitación."
+      },
+      {
+        "cue": "La conclusión depende de un argumento nuevo.",
+        "action": "Desarrolla ese argumento antes o retíralo del cierre.",
+        "en": "Councils should therefore assess demand before extending the service.",
+        "reason": "El cierre debe derivarse del razonamiento que el lector ya ha visto."
+      }
+    ],
+    "worked": {
+      "scenario": "Un párrafo anterior ha explicado que reservar online reduce colas en un centro deportivo. Ahora introduces un límite y una conclusión parcial.",
+      "task": "Escribe un fragmento de 50–85 palabras con un párrafo de limitación y un cierre breve. No es un ensayo completo.",
+      "model": "However, shorter queues do not justify removing every other way to book. Some residents have no reliable internet connection and would be unable to reserve a session from home. Keeping telephone reservations would allow these users to participate while most bookings moved online.\n\nThe centre should therefore introduce online reservations alongside a practical alternative. This approach preserves the convenience of the new system without making access depend entirely on a resident’s technology.",
+      "reasoning": [
+        {
+          "quote": "However, shorter queues",
+          "explanation": "Recupera el beneficio previo y anuncia que se limitará su alcance."
+        },
+        {
+          "quote": "these users",
+          "explanation": "Tiene un antecedente identificable: residentes sin conexión fiable."
+        },
+        {
+          "quote": "This approach",
+          "explanation": "Recupera combinar reservas online y alternativa, no una idea nueva."
+        }
+      ],
+      "alternative": {
+        "text": "The centre should therefore offer both online and telephone reservations.",
+        "why": "El cierre puede nombrar directamente la propuesta si un pronombre pudiera crear ambigüedad."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "¿Qué enlace expresa la relación? Online booking reduces queues. ___, removing phone booking may exclude residents without internet.",
+        "explanation": "La segunda idea limita la primera; no es un ejemplo de reducción de colas ni una similitud.",
+        "options": [
+          "Similarly",
+          "However",
+          "For instance"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Completa solo access o delay: Phone reservations let people without internet book a session. This ___ matters when online booking becomes the main option.",
+        "explanation": "Access recupera la posibilidad de reservar; no se ha descrito una demora.",
+        "accepted": [
+          "access"
+        ]
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "El cuerpo compara reservas online y telefónicas para conservar acceso. ¿Qué conclusión deriva de ese argumento?",
+        "explanation": "Combinar los canales conserva la conveniencia y el acceso explicados; elegir un único canal requiere justificar sus consecuencias.",
+        "options": [
+          "Retain telephone booking only because every user will prefer it.",
+          "Remove telephone booking completely because online systems are newer.",
+          "Introduce online booking while retaining a workable telephone option."
+        ],
+        "answer": 2
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Nueva situación. Un párrafo anterior afirma que los cursos grabados permiten estudiar a cualquier hora. Escribe un fragmento de 55–85 palabras que introduzca una limitación relacionada con la interacción y termine con una propuesta coherente. No escribas un ensayo completo.",
+      "explanation": "Comprueba las relaciones entre ideas antes de contar conectores. Otra redacción puede ser igual de coherente.",
+      "model": "However, studying at any time does not replace the opportunity to ask a question when a difficult point arises. A learner who misunderstands the first stage of a calculation may repeat the same mistake throughout the lesson. A weekly live discussion could address this weakness without removing the flexibility of the recordings. Courses should therefore combine materials that students can watch independently with regular opportunities to receive a tutor’s response.",
+      "checklist": [
+        "La limitación se relaciona con el beneficio previo.",
+        "Los referentes permiten identificar alumnos, materiales e interacción.",
+        "La propuesta final responde al límite desarrollado."
+      ],
+      "minWords": 55
+    },
+    "sources": [
+      {
+        "title": "IELTS: formato de Writing General Training",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-writing"
+      },
+      {
+        "title": "British Council: descriptores públicos de Writing",
+        "url": "https://takeielts.britishcouncil.org/sites/default/files/ielts_writing_band_descriptors.pdf"
+      }
+    ]
+  },
+  {
+    "skillId": "t2-opinion-discussion",
+    "why": "Discutir una postura exige reconstruir un motivo que sus defensores podrían aceptar, no presentar una versión débil para descartarla. Tu opinión puede aparecer durante la evaluación y debe responder a la pregunta. En cambio, una tarea de grado de acuerdo no obliga a dedicar un párrafo idéntico a cada lado: el espacio debe servir a la postura y al alcance reales.",
+    "decisions": [
+      {
+        "cue": "La consigna pide discutir ambas posturas y dar tu opinión.",
+        "action": "Explica una razón de cada lado y justifica tu valoración.",
+        "en": "Supporters value direct contact, while others prioritise access for people who live far away.",
+        "reason": "Presentar motivos reconocibles permite una discusión real."
+      },
+      {
+        "cue": "La consigna pregunta hasta qué punto estás de acuerdo.",
+        "action": "Organiza razones y límites según el grado de acuerdo elegido.",
+        "en": "I largely agree, although practical subjects still require supervised sessions.",
+        "reason": "El matiz necesita apoyo, pero no impone una estructura equilibrada por número de frases."
+      }
+    ],
+    "worked": {
+      "scenario": "Consigna original: Some people think adult training should be entirely online; others prefer all courses to be taught in person. Discuss both views and give your own opinion.",
+      "task": "Escribe solo un párrafo comparativo de 55–85 palabras que explique un motivo de cada postura y tu valoración. No constituye un ensayo completo.",
+      "model": "Those who favour online training may value the access it provides to adults living far from a college. By contrast, supporters of classroom teaching can reasonably argue that immediate feedback is essential when learners practise unfamiliar physical skills. I would therefore choose the format according to the course rather than require one method for everything. An introductory history class could work online, while learning to operate workshop machinery would need direct supervision.",
+      "reasoning": [
+        {
+          "quote": "adults living far from a college",
+          "explanation": "Explica una razón pertinente a favor de la modalidad online."
+        },
+        {
+          "quote": "immediate feedback is essential",
+          "explanation": "Presenta una razón defendible de la otra postura."
+        },
+        {
+          "quote": "choose the format according to the course",
+          "explanation": "La opinión evalúa ambas razones y se concreta con dos tipos de curso."
+        }
+      ],
+      "alternative": {
+        "text": "People who prefer classroom learning hate technology.",
+        "why": "Esta alternativa atribuye una motivación simplista y no explica el valor pedagógico que podrían defender."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "¿Qué frase explica mejor por qué algunas personas prefieren clases presenciales?",
+        "explanation": "Valorar la orientación inmediata durante prácticas físicas reconstruye una razón evaluable y pertinente. Atribuir rechazo a la vida moderna descalifica al grupo; presentar la preferencia como inexplicable evita discutirla.",
+        "options": [
+          "They dislike online learning because they do not understand modern life.",
+          "Their preference is personal, so there is no need to explain it.",
+          "They value immediate guidance when practising unfamiliar physical skills."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Expresa contraste entre razones: Some learners value flexibility, ___ others prioritise direct feedback. Escribe whereas o therefore.",
+        "explanation": "Whereas contrasta preferencias; therefore afirmaría una consecuencia que no se desprende de la primera parte.",
+        "accepted": [
+          "whereas"
+        ]
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Consigna: Discuss both views and give your opinion. ¿Qué plan cubre mejor las obligaciones?",
+        "explanation": "La tarea combina discusión y opinión; nombrar una postura o omitir la opinión deja obligaciones sin desarrollar.",
+        "options": [
+          "Explicar una razón de cada postura y evaluar ambas para justificar mi opinión.",
+          "Desarrollar solo mi postura preferida y nombrar la otra en una palabra.",
+          "Explicar ambas posturas, evitando cualquier valoración propia."
+        ],
+        "answer": 0
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Nueva consigna: Some people think neighbourhood events should be organised by the council; others think residents should organise them. Discuss both views and give your opinion. Escribe solo un párrafo comparativo de 60–90 palabras: presenta una razón de cada postura y una valoración propia. No es la tarea completa.",
+      "explanation": "Puedes defender otra distribución de responsabilidades. La recuperación comprueba discusión y justificación, no que adoptes la opinión del modelo.",
+      "model": "Council organisers may be better placed to arrange safety checks and make sure a public event is accessible to residents with different needs. Those who favour resident-led events, however, may argue that neighbours understand local interests and can encourage people who rarely attend official activities to participate. I favour residents choosing the programme with practical support from the council. This division would combine local knowledge with the expertise needed to run a safe, accessible event.",
+      "checklist": [
+        "Explico motivos reconocibles de ambas posturas.",
+        "Mi valoración responde a quién organiza y por qué.",
+        "La conclusión parcial deriva de las razones comparadas."
+      ],
+      "minWords": 60
+    },
+    "sources": [
+      {
+        "title": "IELTS: formato de Writing General Training",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-writing"
+      },
+      {
+        "title": "British Council: descriptores públicos de Writing",
+        "url": "https://takeielts.britishcouncil.org/sites/default/files/ielts_writing_band_descriptors.pdf"
+      }
+    ]
+  },
+  {
+    "skillId": "t2-evaluation-problems",
+    "why": "Evaluar exige explicar qué consecuencias pesan más y para quién, no contar argumentos. Una ventaja pequeña y frecuente puede compararse con un perjuicio grave para un grupo concreto. En problemas y soluciones, identifica el obstáculo y el mecanismo de la medida. Usa estas distinciones para leer la consigna real: una pregunta de causas no se responde automáticamente con un catálogo de soluciones.",
+    "decisions": [
+      {
+        "cue": "La pregunta pide si las ventajas superan las desventajas.",
+        "action": "Compara importancia, alcance y condiciones de los efectos.",
+        "en": "A shorter queue is useful, but losing access to essential care is a more serious cost.",
+        "reason": "La valoración explica el peso relativo, no el número de puntos."
+      },
+      {
+        "cue": "La pregunta pide una solución a una dificultad identificada.",
+        "action": "Conecta la medida con el obstáculo concreto.",
+        "en": "Keeping telephone appointments would let patients without internet access book a consultation.",
+        "reason": "El mecanismo de acceso justifica la propuesta."
+      }
+    ],
+    "worked": {
+      "scenario": "Una clínica propone ofrecer todas las citas por videollamada para reducir desplazamientos.",
+      "task": "Escribe un párrafo evaluativo de 55–85 palabras: compare one benefit with one drawback and decide which is more important. Es un fragmento de ensayo, no una respuesta completa.",
+      "model": "Video appointments could save patients a long journey for a routine conversation with a doctor. However, using them for every consultation would create a more serious difficulty when a physical examination is needed. A patient describing persistent pain may require checks that cannot be completed through a screen. I would therefore regard complete replacement as a disadvantage, while supporting video calls for suitable follow-up conversations. The value depends on matching the format to the medical need.",
+      "reasoning": [
+        {
+          "quote": "save patients a long journey",
+          "explanation": "Identifica un beneficio concreto."
+        },
+        {
+          "quote": "a physical examination is needed",
+          "explanation": "Explica un perjuicio cualitativamente importante, relacionado con la propuesta universal."
+        },
+        {
+          "quote": "while supporting video calls for suitable follow-up conversations",
+          "explanation": "La condición distingue un uso útil del reemplazo completo que se evalúa."
+        }
+      ],
+      "alternative": {
+        "text": "There are two advantages and one disadvantage, so the change is positive.",
+        "why": "Contar efectos no compara su importancia; una sola consecuencia grave puede pesar más que varias ventajas menores."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Dos beneficios son menores y un perjuicio impediría acceso a un servicio esencial. ¿Qué razonamiento responde a outweigh?",
+        "explanation": "La comparación debe justificar el peso relativo; ni contar ni afirmar sin apoyo lo demuestra.",
+        "options": [
+          "Comparar gravedad, alcance y posibles alternativas antes de valorar.",
+          "Concluir a favor porque hay dos argumentos frente a uno.",
+          "Concluir en contra sin explicar por qué el perjuicio importa más."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Completa solo importance o number: To decide whether benefits outweigh costs, compare their ___, not simply how many you list.",
+        "explanation": "Outweigh exige valorar importancia relativa, no contar elementos.",
+        "accepted": [
+          "importance"
+        ]
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Problema: el último autobús sale antes de terminar la clase nocturna. ¿Qué solución tiene el mecanismo más directo?",
+        "explanation": "Coordinar horarios elimina la incompatibilidad; publicidad o más duración no la resuelven.",
+        "options": [
+          "Publicar más anuncios sobre las ventajas generales del aprendizaje.",
+          "Coordinar la hora final de la clase con una salida de autobús utilizable.",
+          "Ofrecer una clase más larga sin modificar la salida del autobús."
+        ],
+        "answer": 1
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Nueva consigna parcial: un museo quiere cobrar entrada a todas sus salas para financiar reparaciones. Escribe un párrafo de 60–90 palabras que compare un beneficio y un perjuicio, decida cuál pesa más y explique una condición que podría modificar tu valoración. No es un ensayo completo.",
+      "explanation": "Puedes llegar a otra valoración si explicas el peso relativo y haces pertinente la condición.",
+      "model": "Charging every visitor could provide more reliable funding for repairs, helping the museum protect its collection. However, it might also prevent families with little spare money from visiting regularly. Without safeguards, I consider this loss of public access more serious than the funding benefit, because a public museum should serve the whole community. The change would be easier to justify if some sessions remained free and the extra income was clearly directed towards necessary repairs. That would reduce the conflict between preservation and access.",
+      "checklist": [
+        "Comparo consecuencias concretas con un criterio reconocible.",
+        "Justifico cuál pesa más sin limitarme a contarlas.",
+        "La condición responde al perjuicio identificado."
+      ],
+      "minWords": 60
+    },
+    "sources": [
+      {
+        "title": "IELTS: formato de Writing General Training",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-writing"
+      },
+      {
+        "title": "British Council: descriptores públicos de Writing",
+        "url": "https://takeielts.britishcouncil.org/sites/default/files/ielts_writing_band_descriptors.pdf"
+      }
+    ]
+  },
+  {
+    "skillId": "t2-plan-revision",
+    "why": "Un plan útil reduce decisiones durante la redacción: define respuesta, razones desarrollables y apoyo pertinente. La revisión posterior comprueba primero si ese contenido realmente llegó al texto. Después busca patrones de error propios, no cualquier cambio imaginable. La transferencia se observa al responder una consigna nueva de forma independiente; una reescritura guiada muestra aprendizaje, pero no demuestra por sí sola rendimiento estable de examen.",
+    "decisions": [
+      {
+        "cue": "Tu plan contiene muchas ideas sin apoyo.",
+        "action": "Selecciona las que puedes explicar y conectar con la pregunta.",
+        "en": "A reliable evening service helps shift workers because they cannot use the last afternoon bus.",
+        "reason": "Una idea con mecanismo permite más desarrollo que una lista extensa."
+      },
+      {
+        "cue": "El borrador cambia el alcance elegido en el plan.",
+        "action": "Revisa tesis, argumentos y conclusión como conjunto.",
+        "en": "I support a limited trial, rather than an immediate city-wide replacement.",
+        "reason": "La revisión de contenido puede necesitar varios cambios coordinados."
+      }
+    ],
+    "worked": {
+      "scenario": "Revisas un ensayo cuya tesis propone probar autobuses gratuitos en una ruta; un borrador de conclusión pide hacer gratuito todo el transporte inmediatamente.",
+      "task": "Lee un párrafo final revisado de 40–80 palabras que conserve el alcance del plan y explique su criterio de evaluación. Es un fragmento, no un ensayo completo.",
+      "model": "The council should begin with a free evening bus on one route rather than remove fares across the whole network immediately. A limited trial would show whether the service attracts passengers who currently struggle to travel after work. If demand is strong and the cost can be sustained, the council could then consider extending it to other routes.",
+      "reasoning": [
+        {
+          "quote": "on one route",
+          "explanation": "Conserva el alcance limitado de la tesis."
+        },
+        {
+          "quote": "would show whether the service attracts passengers",
+          "explanation": "Explica para qué sirve el periodo de prueba."
+        },
+        {
+          "quote": "If demand is strong and the cost can be sustained",
+          "explanation": "La extensión depende de condiciones explícitas, no de una conclusión nueva sin apoyo."
+        }
+      ],
+      "alternative": {
+        "text": "All transport should be free tomorrow because my trial would be useful.",
+        "why": "La utilidad de una prueba limitada no justifica por sí sola una sustitución inmediata y universal."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "El plan responde causas y efectos; el borrador contiene dos causas desarrolladas y ningún efecto. ¿Qué haces primero?",
+        "explanation": "El problema es una obligación ausente, no una falta de variedad superficial.",
+        "options": [
+          "Añadir una tercera causa para ampliar el rango de ideas.",
+          "Desarrollar el efecto solicitado y revisar el equilibrio de cobertura.",
+          "Cambiar conectores manteniendo el mismo contenido."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Corrige solo depend: Whether the trial succeeds depend on reliable services.",
+        "explanation": "La cláusula Whether the trial succeeds funciona como sujeto singular.",
+        "accepted": [
+          "depends"
+        ]
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Tras una reescritura guiada, ¿qué evidencia comprueba mejor si aprendiste a desarrollar razones?",
+        "explanation": "La nueva consigna exige transferir decisiones y permite explicar el mecanismo por cuenta propia.",
+        "options": [
+          "Otra copia de la misma reescritura con los nombres cambiados.",
+          "Una lista de las palabras poco comunes que aparecían en el modelo.",
+          "Un párrafo sobre otra consigna, escrito sin modelo y explicado por ti."
+        ],
+        "answer": 2
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Nueva consigna parcial: Should councils provide free bicycle parking near railway stations? Escribe un párrafo de 60–90 palabras con una postura, una razón desarrollada y un límite pertinente. Revisa cobertura y concordancia antes de guardar. No es un ensayo completo; al final, explica fuera del párrafo una corrección que hayas considerado.",
+      "explanation": "El párrafo aplica la postura a una consigna nueva. La reflexión posterior muestra decisiones de revisión y queda fuera del texto argumentativo; tu explicación debe referirse a decisiones reales de tu versión.",
+      "model": "I support free bicycle parking near railway stations when it is secure and well maintained. Cyclists could leave their bicycles before continuing a longer journey by train, making it easier to travel without a car. However, empty racks alone would not solve the problem if theft remained common. Councils should therefore prioritise safe locations and regular maintenance before expanding the number of spaces. The aim should be a usable connection between cycling and rail travel.\n\nReflexión fuera del párrafo: Conservé The aim should be porque el sujeto aim es singular. También comprobé que la condición sobre seguridad desarrolla la misma propuesta de aparcamiento gratuito.",
+      "checklist": [
+        "La postura responde a la propuesta concreta.",
+        "La razón explica cómo funciona el beneficio.",
+        "El límite orienta una decisión y no abre un tema ajeno.",
+        "Puedo explicar una corrección o decisión de revisión concreta."
+      ],
+      "minWords": 60
+    },
+    "sources": [
+      {
+        "title": "IELTS: formato de Writing General Training",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-writing"
+      },
+      {
+        "title": "British Council: descriptores públicos de Writing",
+        "url": "https://takeielts.britishcouncil.org/sites/default/files/ielts_writing_band_descriptors.pdf"
+      }
+    ]
+  },
+  {
+    "skillId": "t2-assessment-evidence",
+    "why": "Relacionar una mejora con evidencia concreta enseña más que afirmar que un texto suena avanzado. Un apoyo más desarrollado puede mejorar Task Response; un referente inequívoco facilita la cohesión; una combinación natural de palabras aporta precisión léxica. Estos efectos pueden coincidir. Los descriptores orientan la revisión de respuestas completas: no conviertas un fragmento correcto ni varios aciertos de cuestionario en una banda.",
+    "decisions": [
+      {
+        "cue": "La crítica dice que falta desarrollo.",
+        "action": "Señala qué afirmación necesita mecanismo o apoyo y añádelo.",
+        "en": "Shared tools reduce the cost of occasional repairs because residents need not buy equipment for one job.",
+        "reason": "La mejora aporta contenido explicativo, no solo otra palabra."
+      },
+      {
+        "cue": "La crítica dice que el vocabulario es poco preciso.",
+        "action": "Sustituye una expresión vaga por una relación adecuada al sentido.",
+        "en": "The scheme could reduce travel costs.",
+        "reason": "Reduce travel costs expresa un efecto económico concreto sin buscar rareza."
+      }
+    ],
+    "worked": {
+      "scenario": "Un borrador afirma: Training is good. It improves things. They can do this. La tarea trata de formación digital para trabajadores mayores.",
+      "task": "Escribe un párrafo revisado de 45–85 palabras que desarrolle un beneficio y aclare los referentes. Es un fragmento para revisar por criterios, no una muestra a la que asignar banda.",
+      "model": "Digital training can help older workers complete routine tasks with greater independence. For example, an employee who learns to share a document securely may no longer need a colleague’s help each time a client requests a file. This practical skill can reduce delays and make the employee more confident when dealing with unfamiliar software. The benefit comes from learning a relevant procedure rather than simply attending a course.",
+      "reasoning": [
+        {
+          "quote": "share a document securely",
+          "explanation": "La colocación y el objeto precisan la habilidad; se relaciona con recurso léxico."
+        },
+        {
+          "quote": "may no longer need a colleague’s help",
+          "explanation": "Explica cómo la formación produce independencia; desarrolla la respuesta."
+        },
+        {
+          "quote": "This practical skill",
+          "explanation": "Tiene un antecedente identificable y ayuda a la cohesión."
+        }
+      ],
+      "alternative": {
+        "text": "Digital tuition engenders unparalleled technological magnificence.",
+        "why": "Las palabras poco habituales no aportan una explicación precisa; su combinación resulta artificial para el argumento."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Revisión: Training is good pasa a explicar cómo enviar archivos sin ayuda evita retrasos. ¿Qué justificación es más precisa?",
+        "explanation": "Identificar la capacidad adquirida y su efecto señala evidencia de desarrollo. Tener un ejemplo o añadir palabras no demuestra por sí solo una banda.",
+        "options": [
+          "La respuesta ya demuestra una banda 8 porque tiene un ejemplo.",
+          "La mejora principal es que se han añadido varias palabras.",
+          "El beneficio deja de ser genérico y se desarrolla mediante una capacidad y su efecto."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Elige solo reduce o decline para esta colocación transitiva: Relevant training can ___ delays in routine tasks.",
+        "explanation": "Reduce puede llevar delays como objeto; decline no expresa aquí reducir algo.",
+        "accepted": [
+          "reduce"
+        ]
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "Caso crítico: un fragmento usa lenguaje correcto y un ejemplo, pero el ensayo completo omite una pregunta. ¿Qué valoración es válida?",
+        "explanation": "La evidencia local no sustituye una respuesta completa evaluada por los cuatro criterios.",
+        "options": [
+          "El fragmento aporta evidencia local, pero hay que reparar la cobertura de la respuesta completa.",
+          "El fragmento compensa automáticamente cualquier obligación ausente.",
+          "Solo deben contarse errores gramaticales porque el contenido ya no importa."
+        ],
+        "answer": 0
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Nueva situación. Borrador sobre zonas peatonales: The change is good. It helps people. This makes it better. Escribe un párrafo revisado de 55–85 palabras que explique un beneficio concreto y aclare referencias. Después identifica dos frases de tu texto y explica en español qué criterio intentas mejorar. No asignes una banda.",
+      "explanation": "El modelo incluye párrafo y reflexión por separado. Cita frases de tu propia respuesta al justificar mejoras; la reflexión no convierte el fragmento en una banda.",
+      "model": "Pedestrian areas can make short journeys safer for people walking through a busy shopping street. If delivery vehicles use a separate access period, shoppers can cross between shops without repeatedly stepping into moving traffic. Parents accompanying young children may find this particularly helpful because they would cross fewer traffic lanes and spend less time waiting beside vehicles. The benefit depends on a clear layout and appropriate access for people who cannot walk far; simply placing a sign at the entrance is insufficient.\n\nReflexión fuera del párrafo: «shoppers can cross between shops without repeatedly stepping into moving traffic» desarrolla el mecanismo de seguridad y aborda Task Response. «The benefit depends on a clear layout» recupera el beneficio ya explicado y aclara una condición, trabajando la cohesión y el alcance de la afirmación.",
+      "checklist": [
+        "La mejora desarrolla una relación concreta y pertinente.",
+        "Puedo señalar referentes inequívocos en mi texto.",
+        "Justifico dos decisiones mediante frases exactas.",
+        "Evito atribuir una banda al fragmento."
+      ],
+      "minWords": 55
+    },
+    "sources": [
+      {
+        "title": "IELTS: formato de Writing General Training",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-writing"
+      },
+      {
+        "title": "British Council: descriptores públicos de Writing",
+        "url": "https://takeielts.britishcouncil.org/sites/default/files/ielts_writing_band_descriptors.pdf"
+      }
+    ]
+  },
+  {
+    "skillId": "t1-integrated-letter",
+    "why": "Integrar una carta exige comprobar que las decisiones locales producen un mensaje completo. No basta con escribir tres párrafos: cada requisito necesita información suficiente, el tono debe servir a la relación y la petición debe derivarse de lo sucedido. En este caso crítico de preparación hacia 7.5+, compara cobertura, precisión y viabilidad del cierre; ninguna de esas comprobaciones asigna por sí sola una banda.",
+    "decisions": [
+      {
+        "cue": "El destinatario es un responsable desconocido y necesitas una reparación del servicio.",
+        "action": "Mantén una petición profesional, específica y proporcionada.",
+        "en": "Could you refund the equipment charge and confirm that the projector has been checked?",
+        "reason": "La firmeza se apoya en el incumplimiento descrito, sin agresividad."
+      },
+      {
+        "cue": "El destinatario es un amigo y necesitas cambiar un compromiso.",
+        "action": "Explica el cambio, reconoce su efecto y ofrece alternativas viables.",
+        "en": "I know you have already arranged your work around the move, so I would like to help find another driver.",
+        "reason": "La cercanía no elimina la necesidad de desarrollar el inconveniente y la solución."
+      }
+    ],
+    "worked": {
+      "scenario": "Organizaste una charla de fotografía en una sala alquilada. La reserva incluía un proyector que no funcionó.",
+      "task": "Consigna original completa. Write at least 150 words. You hired a room at a community arts centre for a photography talk. The projector included in your booking did not work. Write a letter to the centre manager. In your letter:\n• describe your booking and the equipment problem\n• explain how the problem affected your event\n• say what you would like the manager to do.\nBegin your letter: Dear Centre Manager, Do not write a postal address.",
+      "model": "Dear Centre Manager,\n\nI am writing about the room I hired for our photography club’s talk last Saturday afternoon. My booking included a projector, which was essential because the speaker planned to explain the lighting in a series of photographs.\n\nAlthough we arrived half an hour early, the projector would not connect to either of the two laptops we brought. Your receptionist tried another cable but was unable to resolve the problem. As no replacement was available, the speaker had to show the photographs on a small laptop screen.\n\nThis meant that the twenty participants could not see important details from their seats. We moved into smaller groups around the laptop, but the process took much longer than planned and left little time for questions. Several participants had travelled specifically to discuss their own photographs with the speaker.\n\nCould you please refund the additional equipment charge and confirm that the projector has been checked before our next booking? I would also appreciate the use of the room for a short follow-up session without another hire fee, so that participants can ask the questions we could not cover.\n\nYours faithfully,\nAlex Bennett",
+      "reasoning": [
+        {
+          "quote": "My booking included a projector",
+          "explanation": "El primer punto queda situado en una reserva concreta; no se reduce a una queja genérica."
+        },
+        {
+          "quote": "left little time for questions",
+          "explanation": "Desarrolla el efecto sobre la actividad, además del problema técnico."
+        },
+        {
+          "quote": "without another hire fee",
+          "explanation": "Precisa una solución proporcionada al tiempo perdido; el lector puede decidir sobre ella."
+        }
+      ],
+      "alternative": {
+        "text": "Could you offer a credit towards another session if a refund of the equipment charge is not possible?",
+        "why": "Alternativa coherente si aceptas compensación en forma de crédito. No cambia silenciosamente lo que ocurrió ni exige una compensación sin relación con ello."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Caso crítico: la carta relata bien la avería, pero solo añade The event was affected. ¿Qué revisión desarrolla mejor el segundo punto?",
+        "explanation": "El efecto debe mostrar qué cambió para la actividad o sus participantes.",
+        "options": [
+          "Explicar que los asistentes no veían las imágenes y se perdió el turno de preguntas.",
+          "Añadir más detalles sobre la marca y el color del cable.",
+          "Repetir The event was seriously affected con un adverbio."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "La sala debe estar disponible el viernes; el jueves es el plazo final para responder. Completa solo by o until: Please confirm the new booking ___ Thursday.",
+        "explanation": "By marca el límite para que llegue una confirmación; until indicaría duración.",
+        "accepted": [
+          "by"
+        ]
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "¿Qué petición se apoya mejor en el problema descrito?",
+        "explanation": "Reembolsar el cargo del equipo y ofrecer una forma de recuperar las preguntas responde al servicio incumplido y al efecto real. Financiar toda actividad futura resulta desproporcionado; disculparse por una cancelación total contradice lo ocurrido.",
+        "options": [
+          "Financiación de todas las actividades futuras del club.",
+          "Reembolso del cargo del equipo y una opción para recuperar las preguntas pendientes.",
+          "Una disculpa por la cancelación total, aunque la charla sí se celebró."
+        ],
+        "answer": 1
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Nueva consigna original completa. Write at least 150 words. You promised to help a friend move to a new flat next Saturday, but you can no longer come that day. Write a letter to your friend. In your letter:\n• explain why your plans have changed\n• apologise and explain how you understand this may affect the move\n• suggest another practical way you can help.\nBegin your letter: Dear Jamie, Do not write a postal address. Guarda tu primera versión antes de mirar el modelo.",
+      "explanation": "Compara propósito, desarrollo y tono con tu versión original. No es una respuesta oficial calificada; una carta distinta puede cumplir igualmente los criterios.",
+      "model": "Dear Jamie,\n\nI’m really sorry, but I won’t be able to help with your move next Saturday as we arranged. My manager has asked me to cover an emergency shift at the care home because two colleagues are ill. I tried to swap with someone else, but nobody is available that morning.\n\nI know you were counting on me to drive the van and carry the heavier furniture. You have already organised the collection time around my availability, so I realise this leaves you with a difficult change to make at short notice. I wanted to tell you as soon as I heard, so that we would have time to find another arrangement.\n\nI can still help you pack on Friday evening, and my brother has offered to drive the van on Saturday if you are comfortable with that. He has moved several times himself, so he knows how to secure furniture properly. I could also come over on Sunday to unpack boxes and put the shelves together.\n\nLet me know which of those options would help most. I’m sorry again for making the move more complicated.\n\nBest wishes,\nSam",
+      "checklist": [
+        "Desarrollo los tres puntos de la consigna con detalles coherentes.",
+        "El tono cercano incluye una disculpa y reconoce el efecto sobre el amigo.",
+        "La alternativa responde a la ayuda que ya no puedo prestar.",
+        "Escribo al menos 150 palabras en una carta conectada y revisada."
+      ],
+      "minWords": 150
+    },
+    "sources": [
+      {
+        "title": "IELTS: formato de Writing General Training",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-writing"
+      },
+      {
+        "title": "British Council: descriptores públicos de Writing",
+        "url": "https://takeielts.britishcouncil.org/sites/default/files/ielts_writing_band_descriptors.pdf"
+      }
+    ]
+  },
+  {
+    "skillId": "t2-integrated-essay",
+    "why": "Un ensayo completo permite comprobar si la postura que parecía clara en una introducción resiste el desarrollo y las objeciones. Las ideas deben responder a todas las obligaciones, avanzar mediante razones y apoyo, y terminar en una conclusión compatible. Este caso crítico de preparación hacia 7.5+ exige valorar alcance, relevancia y precisión conjuntamente; ni la longitud ni una estructura concreta garantizan una banda.",
+    "decisions": [
+      {
+        "cue": "La consigna exige discutir ambas posturas y opinar.",
+        "action": "Explica el argumento fuerte de cada lado antes de valorar condiciones.",
+        "en": "Pedestrian streets can improve safety, but essential vehicle access still needs planning.",
+        "reason": "Una valoración matizada puede integrar razones de ambas posturas."
+      },
+      {
+        "cue": "La consigna pregunta si las ventajas superan las desventajas.",
+        "action": "Compara sus efectos y justifica cuál tiene mayor peso.",
+        "en": "The benefit depends on reducing hours without expecting the same work to be done faster.",
+        "reason": "Evaluar condiciones evita tratar una etiqueta como garantía de beneficio."
+      }
+    ],
+    "worked": {
+      "scenario": "Practicas una discusión original sobre el acceso de vehículos a las calles comerciales.",
+      "task": "Consigna original completa. Write at least 250 words. Some people think all cars should be banned from town-centre shopping streets. Others believe these streets should remain open to cars. Discuss both views and give your own opinion. Give reasons and relevant examples to support your answer.",
+      "model": "Whether cars should be allowed in town-centre shopping streets depends on how people use those streets. Supporters of a ban value safer, quieter public spaces, while opponents emphasise convenient access. I favour reducing ordinary traffic, but essential access should be maintained rather than treating every car journey in the same way.\n\nRemoving through traffic could make shopping areas more comfortable for pedestrians. People would be able to move between shops without repeatedly waiting to cross a busy road, and cafés could provide outdoor seating away from exhaust fumes. For example, a parent shopping with young children could concentrate on the children and the shops instead of constantly looking for approaching vehicles. These benefits are particularly valuable on narrow streets where there is little room to separate traffic from people.\n\nHowever, keeping some vehicle access has a reasonable justification. A customer with limited mobility may be unable to carry purchases from a distant car park, and small businesses need deliveries that cannot always be brought in by hand. If a ban ignores these needs, it could make the centre less accessible despite improving conditions for many walkers. Supporters of continued access are therefore right to question a policy that simply closes every entrance without offering alternatives.\n\nIn my view, councils should prevent unnecessary through journeys while allowing controlled access for people who need it. Delivery periods outside the busiest shopping hours, accessible drop-off points and reliable public transport could address the main objections. The precise arrangement should reflect local street layouts rather than copy another town automatically.\n\nOverall, a calmer shopping centre is a worthwhile aim, but a complete ban without practical exceptions would be too rigid. Restricting traffic while protecting essential access offers a more balanced response to the needs of shoppers and businesses.",
+      "reasoning": [
+        {
+          "quote": "Supporters of a ban value safer, quieter public spaces",
+          "explanation": "Anuncia una postura de la discusión y su razón, no solo su existencia."
+        },
+        {
+          "quote": "A customer with limited mobility",
+          "explanation": "Desarrolla una objeción concreta a la prohibición universal."
+        },
+        {
+          "quote": "prevent unnecessary through journeys while allowing controlled access",
+          "explanation": "La opinión responde a la propuesta y se mantiene en la conclusión."
+        }
+      ],
+      "alternative": {
+        "text": "Cars should be banned because pedestrians matter; cars should also be allowed because businesses matter.",
+        "why": "Nombrar dos intereses sin explicar su relación ni decidir cómo valorarlos deja la discusión y la postura incompletas."
+      }
+    },
+    "checks": [
+      {
+        "id": "deepen-1",
+        "type": "choice",
+        "prompt": "Caso crítico: tu ensayo explica seguridad peatonal, pero presenta la otra postura como Drivers are lazy. ¿Qué mejora responde a la tarea?",
+        "explanation": "Discutir ambas posturas exige razones pertinentes, no una caricatura.",
+        "options": [
+          "Cambiar lazy por un sinónimo más formal manteniendo la misma afirmación.",
+          "Explicar una necesidad real de acceso y valorar cómo afecta a la prohibición.",
+          "Eliminar toda referencia a la segunda postura."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "deepen-2",
+        "type": "input",
+        "prompt": "Tu postura mantiene excepciones para entregas. Completa solo unnecessary o all: Councils should restrict ___ car journeys while preserving essential access.",
+        "explanation": "All contradiría preserving essential access; unnecessary conserva el alcance limitado.",
+        "accepted": [
+          "unnecessary"
+        ]
+      },
+      {
+        "id": "deepen-3",
+        "type": "choice",
+        "prompt": "El cuerpo justifica restricciones con excepciones. ¿Qué conclusión mantiene la postura?",
+        "explanation": "Limitar el tráfico habitual y mantener acceso esencial conserva el beneficio buscado y el límite desarrollado. Prohibir sin excepciones o negar toda desventaja del tráfico contradice el argumento.",
+        "options": [
+          "Ban every vehicle immediately, with no exceptions.",
+          "Keep every street unchanged because traffic has no disadvantages.",
+          "Limit ordinary traffic while retaining planned access for essential journeys."
+        ],
+        "answer": 2
+      }
+    ],
+    "retrieval": {
+      "id": "stretch",
+      "type": "open",
+      "prompt": "Nueva consigna original completa. Write at least 250 words. Some employers are considering a four-day working week with fewer total working hours and no reduction in pay. Do the advantages of this change outweigh the disadvantages? Give reasons and relevant examples to support your answer. Define el alcance de tu valoración y compara efectos, sin contar simplemente argumentos.",
+      "explanation": "Modelo original sin banda asignada. El ejemplo valora condiciones y compara efectos; otra postura puede funcionar si la sostienes con desarrollo relevante.",
+      "model": "A four-day working week with fewer hours and unchanged pay could improve employees’ lives, but it also raises a practical question about how essential work will be completed. I believe the advantages can outweigh the disadvantages where employers reorganise work carefully. Introducing the change without considering workload and staffing would be much less convincing.\n\nThe main benefit is additional time away from work. An extra free day could allow employees to attend appointments, care for relatives or rest without sacrificing their income. This may be particularly helpful for people who currently use much of the weekend catching up on tasks that cannot be done during working hours. A less pressured routine could also make it easier to return to work ready to concentrate. The advantage therefore concerns a meaningful reduction in competing demands, rather than simply the attraction of a longer weekend.\n\nHowever, fewer working hours can create serious difficulties for organisations that need continuous coverage. A small repair business, for example, may still receive calls throughout the week. If the same employees are absent for an additional day, customers could wait longer or the employer might need to hire more staff. Moreover, expecting workers to complete exactly the same workload in less time could increase stress and undermine the intended benefit.\n\nThese disadvantages deserve attention, but they do not make the proposal unsuitable everywhere. Employers could test staggered days off, remove unnecessary meetings and check whether service quality remains acceptable. In jobs where output depends mainly on being present for a fixed number of hours, additional staffing costs may make the change harder to justify.\n\nOverall, I favour the shorter week when the reduction in hours is real and the organisation can maintain its service. Better personal time is a substantial advantage, but it outweighs the costs only when employees and customers are not expected to absorb those costs invisibly.",
+      "checklist": [
+        "Respondo a outweigh con una comparación y valoración explícitas.",
+        "Respeto fewer total working hours y no describo solo comprimir las mismas horas.",
+        "Desarrollo beneficios y perjuicios con mecanismos y ejemplos pertinentes.",
+        "Mi condición de apoyo permanece consistente en introducción y conclusión.",
+        "Escribo al menos 250 palabras con referencias claras y lengua revisada."
+      ],
+      "minWords": 250
+    },
+    "sources": [
+      {
+        "title": "IELTS: formato de Writing General Training",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-writing"
+      },
+      {
+        "title": "British Council: descriptores públicos de Writing",
+        "url": "https://takeielts.britishcouncil.org/sites/default/files/ielts_writing_band_descriptors.pdf"
+      }
+    ]
+  }
+]

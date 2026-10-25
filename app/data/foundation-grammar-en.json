@@ -1,0 +1,1953 @@
+[
+  {
+    "skillId": "g-word-order",
+    "title": "Build statements and questions",
+    "goal": "Put each part of a sentence in the right place and choose the correct verb form.",
+    "explanation": "Word order tells the reader who does something and what happens. In a normal statement, put the subject before the verb. A frequency word usually goes before the main verb, but after be. Questions need more care: with do, does or did, the main verb stays in its base form. However, when who is the subject, a neutral question normally needs no do. Inside a longer question, use statement order again: the office is, not is the office. Build the basic sentence first, then add details. Finally, check the whole verb group: a helping verb does not make every following verb an -ing form.",
+    "explanationEs": "Construye primero sujeto + verbo. Distingue cuatro casos: afirmación, pregunta con auxiliar, who como sujeto y pregunta dentro de otra frase. Después de does va el verbo base; dentro de una pregunta indirecta se recupera sujeto + verbo.",
+    "uses": [
+      {
+        "title": "Statements and frequency",
+        "when": "Use this order to describe a routine or a usual situation.",
+        "form": "Subject + frequency word + main verb; subject + be + frequency word.",
+        "why": "The subject identifies the person or thing. The position of usually or often depends on whether the verb is be.",
+        "es": "Los adverbios de frecuencia suelen ir antes del verbo principal, pero después de be.",
+        "examples": [
+          {
+            "en": "The café usually serves lunch at noon.",
+            "es": "La cafetería suele servir el almuerzo al mediodía.",
+            "note": "Usually comes before serves; at noon adds the time."
+          },
+          {
+            "en": "The café is usually quiet before noon.",
+            "es": "La cafetería suele estar tranquila antes del mediodía.",
+            "note": "Usually follows is because be is the main verb here."
+          }
+        ]
+      },
+      {
+        "title": "Questions with do, does and did",
+        "when": "Use do-support in simple present or past questions when the main verb is not be and there is no other auxiliary.",
+        "form": "Question word, if needed + do/does/did + subject + base verb.",
+        "why": "Does carries the present third-person form, and did carries the past. The main verb does not carry that marking again.",
+        "es": "Does lleva la marca de tercera persona; el verbo siguiente vuelve a la base. Have to también necesita una base después de to.",
+        "examples": [
+          {
+            "en": "Does the café typically serve cheese with this dish?",
+            "es": "¿La cafetería suele servir queso con este plato?",
+            "note": "After does, use serve, not serves or serving. Typically fits before the main verb."
+          },
+          {
+            "en": "Do applicants have to make a booking?",
+            "es": "¿Los solicitantes tienen que hacer una reserva?",
+            "note": "Do forms the question; have to is followed by make, not making."
+          }
+        ]
+      },
+      {
+        "title": "Who as the subject",
+        "when": "Use this pattern when you want to discover who performs the action.",
+        "form": "Who + verb + remaining information.",
+        "why": "Who replaces the missing subject. There is no neutral do-support unless who is the object instead.",
+        "es": "Si who significa quién realiza la acción, ocupa el lugar del sujeto. Si preguntas por el objeto, sí puedes necesitar do/does/did.",
+        "examples": [
+          {
+            "en": "Who checks the applications?",
+            "es": "¿Quién revisa las solicitudes?",
+            "note": "Who is the person doing the checking; checks is a present simple verb."
+          },
+          {
+            "en": "Who did the manager contact?",
+            "es": "¿Con quién se puso en contacto el gerente?",
+            "note": "The manager is the subject; who is the person contacted, so use did + contact."
+          }
+        ]
+      },
+      {
+        "title": "A question inside a question",
+        "when": "Use this structure for a polite request for information.",
+        "form": "Could you tell me + question word + subject + verb? For a yes/no question, use if or whether.",
+        "why": "Only the outer question uses question order. Its information clause uses statement order.",
+        "es": "La parte inicial pregunta; la subordinada mantiene el orden de una afirmación. No conserves la inversión de la pregunta directa.",
+        "examples": [
+          {
+            "en": "Could you tell me where the office is?",
+            "es": "¿Podría decirme dónde está la oficina?",
+            "note": "The direct question is Where is the office? Inside this request, use the office is."
+          },
+          {
+            "en": "Do you know whether the course includes lunch?",
+            "es": "¿Sabes si el curso incluye el almuerzo?",
+            "note": "Whether introduces a yes/no question; includes follows its subject the course."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Subject",
+        "definition": "The person, thing or idea that the clause says something about.",
+        "es": "Sujeto: de quién o de qué habla la oración."
+      },
+      {
+        "term": "Base form",
+        "definition": "The verb form used in a dictionary: make, serve, be.",
+        "es": "Forma base: verbo sin marcas como -s, -ed o -ing."
+      }
+    ],
+    "takeaway": "Find the subject, identify the question type, and then check the complete verb group.",
+    "writingBridge": {
+      "prompt": "Write four sentences to a course organiser: describe your usual schedule, ask a question with does, ask who runs an activity, and request the office location politely.",
+      "checklist": [
+        "The statement has a clear subject and a correctly placed frequency word.",
+        "The does-question uses a base verb; the who-subject question needs no do.",
+        "The question about the office uses subject + verb inside the request."
+      ]
+    },
+    "sources": [
+      {
+        "title": "British Council: Present simple",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/present-simple"
+      },
+      {
+        "title": "Cambridge: Questions",
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/questions"
+      },
+      {
+        "title": "Cambridge: Reported speech and indirect questions",
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-indirect-speech"
+      }
+    ]
+  },
+  {
+    "skillId": "g-be-auxiliaries",
+    "title": "Choose be, have and do",
+    "goal": "Distinguish a main verb from a helping verb and form clear questions and negatives.",
+    "explanation": "Be, have and do can have their own meaning or help another verb. Be can connect a subject to a description: the room is small. It also helps form continuous verbs and passive verbs. Have can mean possession, or it can help form a perfect tense. Do can describe an activity, but it also helps ordinary present and past verbs form questions and negatives. Look at the job of each word before choosing a form. Do not add do when be already forms the question. When introducing something that exists, use there is or there are; there is not the person or thing doing an action.",
+    "explanationEs": "Be, have y do pueden ser verbos principales o auxiliares. Identifica su función antes de preguntar o negar. Con be se invierte directamente; con un verbo común en presente o pasado simple suele hacer falta do. There is/are introduce existencia.",
+    "uses": [
+      {
+        "title": "Be: description or helping verb",
+        "when": "Use be for identity, location and description, and as part of continuous or passive verb groups.",
+        "form": "Subject + am/is/are/was/were + description; be + -ing; be + past participle.",
+        "why": "The word after be tells you whether it links to a description or helps another verb. Questions move be before the subject.",
+        "es": "Be puede describir o formar una estructura verbal. Para preguntar, no añadas do.",
+        "examples": [
+          {
+            "en": "Is the meeting room available?",
+            "es": "¿Está disponible la sala de reuniones?",
+            "note": "Available is a description. Is moves before the subject without do."
+          },
+          {
+            "en": "The technician is checking the projector.",
+            "es": "El técnico está comprobando el proyector.",
+            "note": "Is helps checking describe an action in progress."
+          }
+        ]
+      },
+      {
+        "title": "Have: possession or a perfect tense",
+        "when": "Use have for something someone owns; use have + participle to connect an action to another time.",
+        "form": "Possession: have/has + noun, with do/does for these questions. Perfect: have/has/had + past participle.",
+        "why": "An ordinary ownership question and a perfect question use different verb groups. Avoid choosing the structure from Spanish alone.",
+        "es": "Have de posesión y have auxiliar funcionan de forma distinta: Does it have…? frente a Has it arrived?",
+        "examples": [
+          {
+            "en": "Does the apartment have a balcony?",
+            "es": "¿Tiene balcón el apartamento?",
+            "note": "Have means possession; does forms the question and have stays in the base form."
+          },
+          {
+            "en": "Has the owner confirmed the booking?",
+            "es": "¿Ha confirmado la reserva el propietario?",
+            "note": "Has is already the perfect auxiliary, so no does is needed."
+          }
+        ]
+      },
+      {
+        "title": "Do-support and there is/are",
+        "when": "Use do for questions and negatives with ordinary simple verbs; use there is/are to introduce existence.",
+        "form": "Do/does/did + subject + base verb; there is + singular/uncountable noun; there are + plural noun.",
+        "why": "Do supports an action verb. There is/are introduces something present in a place or situation and agrees with that noun.",
+        "es": "Usa do para preguntar por acciones. Usa there is/are para decir que algo existe o está disponible.",
+        "examples": [
+          {
+            "en": "Does the library open on Sundays?",
+            "es": "¿Abre la biblioteca los domingos?",
+            "note": "Open is an ordinary verb; the question needs does."
+          },
+          {
+            "en": "There are two computers upstairs, but there is no printer.",
+            "es": "Hay dos ordenadores arriba, pero no hay impresora.",
+            "note": "Use are with two computers and is with the singular printer."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Main verb",
+        "definition": "The verb that carries the central meaning of the action or state.",
+        "es": "Verbo principal: expresa la acción o el estado."
+      },
+      {
+        "term": "Auxiliary",
+        "definition": "A helping verb used to build a tense, question, negative or passive.",
+        "es": "Auxiliar: ayuda a construir el grupo verbal."
+      }
+    ],
+    "takeaway": "Ask what each verb is doing before you choose the question or negative.",
+    "writingBridge": {
+      "prompt": "Write four sentences asking about a rented workspace: describe a room, ask about a facility, ask whether a booking has been confirmed, and say which equipment exists.",
+      "checklist": [
+        "A question with be contains no extra do.",
+        "The possession question and the perfect question use different structures.",
+        "There is/are agrees with the equipment noun."
+      ]
+    },
+    "sources": [
+      {
+        "title": "Cambridge: Types of verbs",
+        "url": "https://dictionary.cambridge.org/us/grammar/british-grammar/verbs-types"
+      },
+      {
+        "title": "British Council: Present simple",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/present-simple"
+      }
+    ]
+  },
+  {
+    "skillId": "g-agreement-pronouns",
+    "title": "Match subjects, verbs and pronouns",
+    "goal": "Make verb agreement accurate and keep every pronoun's meaning clear.",
+    "explanation": "A reader needs to know who acts and which person or thing each later word refers to. Start by finding the main noun in the subject. Words added after it do not normally change whether the verb is singular or plural. Then choose a pronoun for its job: she can be a subject, while her can be an object. Possessive words show a connection or ownership and follow different patterns: their office, but the office is theirs. Finally, check reference across sentences. A grammatically correct pronoun can still be unclear if two people could be its meaning. Repeating a name is better than making the reader guess.",
+    "explanationEs": "La concordancia depende del núcleo del sujeto, no del sustantivo más cercano. Distingue sujeto, objeto y posesión. Después revisa a quién remite cada pronombre: si puede referirse a dos personas, repite el nombre o el cargo.",
+    "uses": [
+      {
+        "title": "Agree with the main subject",
+        "when": "Use singular or plural verbs according to the subject's main noun.",
+        "form": "Singular present subject + verb-s or is/has; plural subject + base verb or are/have.",
+        "why": "A phrase such as of the rooms gives extra information; it does not replace the subject. Each and every normally select singular agreement.",
+        "es": "Busca el núcleo y aparta mentalmente los complementos. Each/every llevan normalmente singular.",
+        "examples": [
+          {
+            "en": "The list of available rooms is on the website.",
+            "es": "La lista de salas disponibles está en la web.",
+            "note": "List is singular, even though rooms is plural."
+          },
+          {
+            "en": "Each participant receives a certificate.",
+            "es": "Cada participante recibe un certificado.",
+            "note": "Each treats the participants individually, so receives is singular."
+          }
+        ]
+      },
+      {
+        "title": "Choose subject and object forms",
+        "when": "Use a subject pronoun for the actor and an object pronoun after a verb or preposition.",
+        "form": "I/he/she/we/they + verb; verb or preposition + me/him/her/us/them.",
+        "why": "The same person takes a different pronoun form depending on the position and role.",
+        "es": "El pronombre cambia según sea sujeto u objeto: they sent it to us.",
+        "examples": [
+          {
+            "en": "They sent us the revised timetable.",
+            "es": "Nos enviaron el horario revisado.",
+            "note": "They performs the action; us receives something."
+          },
+          {
+            "en": "The tutor spoke to her after the session.",
+            "es": "El tutor habló con ella después de la sesión.",
+            "note": "To is a preposition, so the following pronoun is her, not she."
+          }
+        ]
+      },
+      {
+        "title": "Show possession and keep reference clear",
+        "when": "Use a possessive determiner before a noun and a possessive pronoun in place of the noun phrase.",
+        "form": "Their + noun; theirs without a following noun. Its shows possession; it's means it is or it has.",
+        "why": "Possession does not need an apostrophe in its. If a pronoun has two possible meanings, name the person or thing.",
+        "es": "Distingue their/theirs e its/it's. La claridad importa más que evitar toda repetición.",
+        "examples": [
+          {
+            "en": "The company changed its policy because it's expanding.",
+            "es": "La empresa cambió su política porque se está expandiendo.",
+            "note": "Its belongs with policy; it's is the contraction of it is."
+          },
+          {
+            "en": "The manager spoke to the receptionist. The receptionist will email me.",
+            "es": "El gerente habló con la recepcionista. La recepcionista me enviará un correo.",
+            "note": "Repeating the receptionist avoids an unclear she or he."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Agreement",
+        "definition": "The matching of a verb form to its subject, for example the room is and the rooms are.",
+        "es": "Concordancia: coincidencia entre sujeto y verbo."
+      },
+      {
+        "term": "Reference",
+        "definition": "The person or thing a word such as it, they or this points to.",
+        "es": "Referencia: aquello a lo que remite una palabra."
+      }
+    ],
+    "takeaway": "Match the verb to the real subject, then make every pronoun easy to identify.",
+    "writingBridge": {
+      "prompt": "Write four sentences explaining how a club processes applications. Include a subject with of, each, an object pronoun and a possessive form.",
+      "checklist": [
+        "The main subject controls the verb, including after each.",
+        "Pronouns have the correct subject or object form.",
+        "Every pronoun has one clear referent; its and it's are distinguished."
+      ]
+    },
+    "sources": [
+      {
+        "title": "British Council: Present simple",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/present-simple"
+      },
+      {
+        "title": "Cambridge: Personal pronouns",
+        "url": "https://dictionary.cambridge.org/us/grammar/british-grammar/pronouns-personal-i-me-you-him-it-they-"
+      }
+    ]
+  },
+  {
+    "skillId": "g-countability",
+    "title": "Count things and describe amounts",
+    "goal": "Choose noun forms and quantity words that match the meaning.",
+    "explanation": "Countable nouns present things as separate units: one ticket, two tickets. Uncountable nouns present material, information or an activity as a whole. This is an English pattern, so a noun may behave differently from its Spanish translation. Advice, equipment and information are normally uncountable in these meanings. To count them, name a unit such as a piece of advice. Quantity words depend on the noun: many tickets but much information. They also express attitude: a few places means some places exist, while few places emphasises a shortage. Some nouns change meaning when their countability changes. Check the intended meaning before adding an article, a number or a plural ending.",
+    "explanationEs": "No traduzcas la contabilidad desde el español. Advice, equipment e information son normalmente incontables. Usa una unidad para contarlos. Many/few acompañan plurales contables; much/little, incontables. A few/a little destacan que hay algo; few/little, que hay poco.",
+    "uses": [
+      {
+        "title": "Choose a countable unit",
+        "when": "Use a singular or plural countable noun for separate items; use a unit phrase to count an uncountable noun.",
+        "form": "A ticket / two tickets; some equipment / two pieces of equipment.",
+        "why": "The unit, such as piece, carries the number and plural ending. The uncountable noun stays unchanged.",
+        "es": "Cuenta la unidad: two pieces of advice, no two advices.",
+        "examples": [
+          {
+            "en": "The office bought three desks and some equipment.",
+            "es": "La oficina compró tres escritorios y equipamiento.",
+            "note": "Desks can be counted directly; equipment is uncountable here."
+          },
+          {
+            "en": "Could you give me two pieces of advice about the interview?",
+            "es": "¿Podría darme dos consejos sobre la entrevista?",
+            "note": "Pieces is the plural unit; advice has no plural -s."
+          }
+        ]
+      },
+      {
+        "title": "Express amount and shortage",
+        "when": "Use many/few with plural countable nouns and much/little with uncountable nouns.",
+        "form": "Many/few/a few + plural noun; much/little/a little + uncountable noun; a lot of works with both.",
+        "why": "A few or a little presents a small positive amount. Without a, few or little often stresses that the amount is insufficient.",
+        "es": "A few/a little significa que sí queda algo; few/little subraya escasez. A lot of es habitual en afirmaciones.",
+        "examples": [
+          {
+            "en": "We have a few seats left, so you can still join.",
+            "es": "Quedan algunas plazas, así que aún puedes apuntarte.",
+            "note": "A few supports the positive message that places are available."
+          },
+          {
+            "en": "We have little time left, so we must decide now.",
+            "es": "Nos queda poco tiempo, así que debemos decidir ya.",
+            "note": "Little highlights a shortage; time is uncountable in this meaning."
+          }
+        ]
+      },
+      {
+        "title": "Use some and any in context",
+        "when": "Use some for an unspecified amount; use any commonly in neutral questions and negatives.",
+        "form": "Some/any + plural or uncountable noun; would you like some…? for an offer.",
+        "why": "Questions do not always require any. An offer with some treats the item as available and invites acceptance.",
+        "es": "Any es frecuente en preguntas neutras y negativas; some también aparece en ofertas o peticiones con expectativa de disponibilidad.",
+        "examples": [
+          {
+            "en": "Do you have any information about evening courses?",
+            "es": "¿Tiene información sobre cursos nocturnos?",
+            "note": "Any asks neutrally whether information is available."
+          },
+          {
+            "en": "Would you like some water while you wait?",
+            "es": "¿Le gustaría un poco de agua mientras espera?",
+            "note": "Some is natural in an offer; water is uncountable here."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Countable noun",
+        "definition": "A noun that can represent separate units with singular and plural forms.",
+        "es": "Sustantivo contable: admite unidades y plural."
+      },
+      {
+        "term": "Quantifier",
+        "definition": "A word or phrase showing an amount, such as some, many or a little.",
+        "es": "Cuantificador: expresa cantidad."
+      }
+    ],
+    "takeaway": "Choose the noun's meaning first, then its unit and quantity word.",
+    "writingBridge": {
+      "prompt": "Write four sentences requesting supplies for a workshop. Mention countable items, an uncountable resource, a small available amount and a shortage.",
+      "checklist": [
+        "Countable items have suitable singular/plural forms.",
+        "An uncountable noun is not used directly with a/an or a number.",
+        "A few/a little and few/little express the intended positive amount or shortage."
+      ]
+    },
+    "sources": [
+      {
+        "title": "British Council: Countable and uncountable nouns",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/nouns-countable-uncountable"
+      },
+      {
+        "title": "British Council: Common countability problems",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/common-problems-count-uncount-nouns"
+      }
+    ]
+  },
+  {
+    "skillId": "g-articles",
+    "title": "Choose a, an, the or no article",
+    "goal": "Show whether you mean one example, an identifiable thing or a general category.",
+    "explanation": "An article helps the reader understand which thing you mean. A or an introduces one singular countable example that the reader does not need to identify already. The means the reader can identify the intended thing from previous words, shared knowledge or the situation. Therefore, a first mention does not automatically need a: please close the door can refer to the obvious door. For general plural and uncountable nouns, no article is often the right choice. Choose a or an by the next sound, not the next written letter. Before deciding, ask two questions: is this noun countable in this meaning, and can the reader identify the thing I mean?",
+    "explanationEs": "A/an presenta un singular contable no identificado para el lector; the señala algo identificable por contexto o conocimiento compartido. Primera mención no significa siempre a/an. Para plurales e incontables generales suele omitirse el artículo. A/an depende del sonido siguiente.",
+    "uses": [
+      {
+        "title": "Introduce one countable example",
+        "when": "Use a/an for one member of a category when the reader does not need to know which one.",
+        "form": "A + consonant sound; an + vowel sound; both require a singular countable noun.",
+        "why": "Listen to the next spoken sound, including an adjective if one comes before the noun.",
+        "es": "La pronunciación decide: a university, an hour. No uses a/an directamente con advice.",
+        "examples": [
+          {
+            "en": "We need a university partner for the project.",
+            "es": "Necesitamos una universidad colaboradora para el proyecto.",
+            "note": "University starts with the consonant sound /j/, despite its first letter."
+          },
+          {
+            "en": "The interview lasted an hour.",
+            "es": "La entrevista duró una hora.",
+            "note": "The h in hour is silent, so its first sound is a vowel."
+          }
+        ]
+      },
+      {
+        "title": "Identify the intended thing",
+        "when": "Use the when context, shared knowledge or an identifying description makes the reference clear.",
+        "form": "The + singular, plural or uncountable noun.",
+        "why": "Previous mention is one way to identify a thing, but not the only way. A description must really identify it, not merely add any detail.",
+        "es": "The puede aparecer en la primera mención si el lector sabe a qué te refieres.",
+        "examples": [
+          {
+            "en": "I booked a room. The room overlooks the garden.",
+            "es": "Reservé una habitación. La habitación da al jardín.",
+            "note": "The second mention points back to the room already introduced."
+          },
+          {
+            "en": "Please leave the keys on the reception desk.",
+            "es": "Deje las llaves en el mostrador de recepción.",
+            "note": "In this accommodation, the intended keys and desk are known from the situation."
+          }
+        ]
+      },
+      {
+        "title": "Talk generally or about a specific group",
+        "when": "Use no article for general plural or uncountable nouns; use the for an identifiable group or amount.",
+        "form": "General: books / information. Specific: the books on this shelf / the information in your email.",
+        "why": "Changing the article changes the reference. My, this and similar determiners can also identify a noun, so do not add an article before them.",
+        "es": "Books se refiere a libros en general; the books señala un grupo identificable. My book ya tiene determinante.",
+        "examples": [
+          {
+            "en": "Public libraries provide access to information.",
+            "es": "Las bibliotecas públicas facilitan acceso a la información.",
+            "note": "Libraries and information are general here, so neither needs the."
+          },
+          {
+            "en": "The information in your email answers my question.",
+            "es": "La información de su correo responde a mi pregunta.",
+            "note": "In your email identifies the particular information."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Determiner",
+        "definition": "A word before a noun that helps identify it or show its amount: a, the, my, this, some.",
+        "es": "Determinante: palabra que presenta o delimita un sustantivo."
+      },
+      {
+        "term": "Identifiable",
+        "definition": "Clear enough for the reader to know which person, thing or group you mean.",
+        "es": "Identificable: el lector puede saber de qué elemento hablas."
+      }
+    ],
+    "takeaway": "Check countability, then decide whether the reader can identify the reference.",
+    "writingBridge": {
+      "prompt": "Write four sentences about a proposed community activity. Introduce one new resource, refer to it again, make one general statement, and mention an identifiable facility.",
+      "checklist": [
+        "A/an introduces a singular countable example and matches its next sound.",
+        "The points to something identifiable in the text or situation.",
+        "The general plural or uncountable noun has no unnecessary article."
+      ]
+    },
+    "sources": [
+      {
+        "title": "Cambridge: A/an and the",
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/a-an"
+      },
+      {
+        "title": "British Council: Articles",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2-grammar/articles-a-an-the"
+      }
+    ]
+  },
+  {
+    "skillId": "g-prepositions",
+    "title": "Connect time, place and meaning",
+    "goal": "Choose prepositions for the relationship you mean and learn useful combinations.",
+    "explanation": "A preposition connects a noun phrase to another part of the sentence. The same place can take different prepositions because the relationship changes: at the station treats it as a meeting point; in the station focuses on being inside. Time expressions also have common patterns, but they are not universal rules. We say on Monday, yet next Monday has no on. Some verbs and adjectives strongly prefer a particular preposition, such as apply for and interested in. Learn these combinations as small phrases with a useful example. When checking your writing, ask what relationship you want to express instead of translating a Spanish preposition word for word.",
+    "explanationEs": "La preposición expresa una relación, no una traducción fija. At puede tratar un lugar como punto; in, como interior. Aprende las combinaciones completas y las excepciones frecuentes de tiempo: on Monday, pero next Monday.",
+    "uses": [
+      {
+        "title": "Locate an event in time",
+        "when": "Use at for clock times, on for days and dates, and in for months, years and longer periods in common time expressions.",
+        "form": "At 9 a.m.; on Tuesday; in November; no preposition before next/last/this + time period.",
+        "why": "The size of the time unit helps, but expressions such as at night are fixed combinations to learn.",
+        "es": "Horas con at; días con on; meses/años con in. Next/last/this Monday no necesita preposición.",
+        "examples": [
+          {
+            "en": "The workshop starts at nine on Tuesday.",
+            "es": "El taller empieza a las nueve del martes.",
+            "note": "At marks the clock time; on introduces the day."
+          },
+          {
+            "en": "We moved here in September and will leave next March.",
+            "es": "Nos mudamos aquí en septiembre y nos iremos el próximo marzo.",
+            "note": "Use in with September, but no in before next March."
+          }
+        ]
+      },
+      {
+        "title": "Describe location and movement",
+        "when": "Use the preposition that matches a point, an interior, a surface or movement towards a destination.",
+        "form": "At a meeting point; in an enclosed space; on a surface; to a destination; into an interior.",
+        "why": "At and in can both describe a location but focus on different aspects. Into adds movement across a boundary.",
+        "es": "La elección depende de la relación. To expresa destino; into, entrada en un espacio.",
+        "examples": [
+          {
+            "en": "Meet me at the entrance; I will wait inside if it rains.",
+            "es": "Queda conmigo en la entrada; esperaré dentro si llueve.",
+            "note": "At treats the entrance as a meeting point."
+          },
+          {
+            "en": "She walked into the room and placed the forms on the desk.",
+            "es": "Entró en la sala y puso los formularios sobre el escritorio.",
+            "note": "Into shows entering; on shows contact with a surface."
+          }
+        ]
+      },
+      {
+        "title": "Learn complete combinations",
+        "when": "Use the preposition that belongs with the verb, adjective or noun in that meaning.",
+        "form": "Apply for a position; depend on a service; responsible for a task; interested in an activity.",
+        "why": "Similar Spanish translations can require different English combinations. Keep the preposition when the object changes.",
+        "es": "Aprende verbo/adjetivo + preposición + ejemplo, no la preposición aislada.",
+        "examples": [
+          {
+            "en": "I am interested in applying for the evening course.",
+            "es": "Me interesa solicitar plaza en el curso nocturno.",
+            "note": "Interested takes in; apply takes for when requesting a place."
+          },
+          {
+            "en": "The coordinator is responsible for checking the equipment.",
+            "es": "La coordinadora es responsable de comprobar el equipamiento.",
+            "note": "Responsible takes for, and the verb after this preposition uses -ing."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Preposition",
+        "definition": "A word such as in, on or for that shows a relationship.",
+        "es": "Preposición: conecta elementos y expresa su relación."
+      },
+      {
+        "term": "Fixed combination",
+        "definition": "Words commonly used together in a particular meaning.",
+        "es": "Combinación fija: palabras que se aprenden juntas para ese uso."
+      }
+    ],
+    "takeaway": "Choose the relationship first, and check the whole phrase rather than one isolated word.",
+    "writingBridge": {
+      "prompt": "Write four sentences arranging a workshop: give its date and time, a meeting point, directions into a room and one person's responsibility.",
+      "checklist": [
+        "Time prepositions match their expressions, including any next/last phrase.",
+        "Location and movement are distinguished.",
+        "A fixed combination keeps its correct preposition."
+      ]
+    },
+    "sources": [
+      {
+        "title": "British Council: Prepositions of time",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2-grammar/prepositions-of-time-at-in-on"
+      },
+      {
+        "title": "Cambridge: At, on and in for place",
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/at-on-and-in-place"
+      }
+    ]
+  },
+  {
+    "skillId": "g-modifiers",
+    "title": "Describe actions and compare choices",
+    "goal": "Use adjectives, adverbs and comparisons without changing the intended meaning.",
+    "explanation": "An adjective describes a noun or a subject after a linking verb such as be or seem. An adverb often describes how an action happens, although adverbs have other jobs too. Choose the form by its job, not just by its ending: fast can be an adjective or an adverb, and good changes to well when describing performance. Comparisons need a clear basis. Cheaper compares cost, while larger compares size; they do not mean the same thing. Use one comparative pattern, not two at once. A superlative places something at one end of a stated or understood group. Keep the comparison fair by comparing the same kind of thing.",
+    "explanationEs": "El adjetivo describe una entidad; el adverbio puede describir cómo ocurre una acción. Elige por función: a good explanation / explain well. Compara la misma característica y evita duplicar marcas, como more cheaper.",
+    "uses": [
+      {
+        "title": "Describe a noun or an action",
+        "when": "Use an adjective with a noun or after a linking verb; use an adverb for how an action is performed.",
+        "form": "Adjective + noun; be/seem + adjective; action verb + adverb.",
+        "why": "An -ly ending is useful but not a complete rule. Good/well and fast/fast need attention.",
+        "es": "Distingue qué describes: el objeto, el estado o la forma de actuar.",
+        "examples": [
+          {
+            "en": "The instructions are clear.",
+            "es": "Las instrucciones son claras.",
+            "note": "Clear describes the instructions after are."
+          },
+          {
+            "en": "The instructor explains the process clearly.",
+            "es": "El instructor explica el proceso con claridad.",
+            "note": "Clearly describes how the instructor explains."
+          }
+        ]
+      },
+      {
+        "title": "Compare two choices",
+        "when": "Use a comparative to show a difference and as…as to show equality in the selected quality.",
+        "form": "Short adjective + -er + than; more + longer adjective + than; as + adjective/adverb + as.",
+        "why": "Choose one comparative form. The comparison should specify a real quality, not imply that cheaper automatically means better.",
+        "es": "Usa cheaper o more expensive, sin duplicar. As…as compara igualdad en una característica.",
+        "examples": [
+          {
+            "en": "The morning session is cheaper than the evening session.",
+            "es": "La sesión de mañana es más barata que la de la tarde.",
+            "note": "Cheaper compares price; do not add more before it."
+          },
+          {
+            "en": "The online guide is as detailed as the printed guide.",
+            "es": "La guía en línea es tan detallada como la impresa.",
+            "note": "As detailed as says the level of detail is equal, not that everything is identical."
+          }
+        ]
+      },
+      {
+        "title": "Rank or qualify a comparison",
+        "when": "Use a superlative for an extreme within a group; add degree words when the size of the difference matters.",
+        "form": "The + adjective-est / most + adjective; much/slightly + comparative.",
+        "why": "State the comparison group when it may be unclear. Very does not normally modify a comparative in this way.",
+        "es": "Delimita el grupo del superlativo y usa much/slightly para precisar diferencias.",
+        "examples": [
+          {
+            "en": "This is the most convenient of the three locations.",
+            "es": "Esta es la más cómoda de las tres ubicaciones.",
+            "note": "The group is the three locations, so the ranking is clear."
+          },
+          {
+            "en": "The new room is slightly larger but much quieter.",
+            "es": "La nueva sala es un poco más grande, pero mucho más silenciosa.",
+            "note": "Slightly and much show different sizes of difference."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Modifier",
+        "definition": "A word or phrase that adds information about another word.",
+        "es": "Modificador: añade información a otra palabra."
+      },
+      {
+        "term": "Comparison basis",
+        "definition": "The quality or measure used to compare things, such as price or size.",
+        "es": "Base de comparación: característica que se está comparando."
+      }
+    ],
+    "takeaway": "Identify what you describe and the exact quality you compare.",
+    "writingBridge": {
+      "prompt": "Write four sentences comparing two possible study spaces. Describe one feature, explain how people work there, compare a measurable quality and give a qualified recommendation.",
+      "checklist": [
+        "Adjectives and adverbs match what they describe.",
+        "Comparatives use one form and compare the same quality.",
+        "Any ranking states a clear group; the recommendation follows from the comparison."
+      ]
+    },
+    "sources": [
+      {
+        "title": "British Council: Comparative and superlative adjectives",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/comparative-superlative-adjectives"
+      },
+      {
+        "title": "Cambridge: Adjectives and adverbs",
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/adjectives-and-adverbs"
+      }
+    ]
+  },
+  {
+    "skillId": "g-present",
+    "title": "Choose present simple or continuous",
+    "goal": "Distinguish routines, temporary activities and states.",
+    "explanation": "Present time is not a single meaning. The present simple describes routines, general facts and many states. The present continuous shows an activity in progress or a temporary situation around now; it does not require the action to be happening at the exact second you speak. Choose the meaning first and then build the form. Most state verbs, such as know or own, do not normally take a continuous form in that meaning. Some verbs have both state and activity meanings: think can mean believe or actively consider. A letter can naturally use both tenses when it contrasts a normal service with a temporary problem.",
+    "explanationEs": "El presente simple expresa hábitos, hechos y estados; el continuo, una actividad en curso o situación temporal. No basta con buscar now. Algunos verbos cambian de comportamiento según el significado: think como opinión o como proceso de considerar.",
+    "uses": [
+      {
+        "title": "Describe a routine or fact",
+        "when": "Use the present simple for repeated actions, stable arrangements and general facts.",
+        "form": "I/you/we/they + base verb; he/she/it + verb-s. Negatives use do/does not + base verb.",
+        "why": "The tense presents the situation as a routine or general fact rather than an activity currently unfolding.",
+        "es": "Presente simple para rutinas y hechos; recuerda la tercera persona y la base tras doesn't.",
+        "examples": [
+          {
+            "en": "The centre provides free advice every Friday.",
+            "es": "El centro ofrece asesoramiento gratuito todos los viernes.",
+            "note": "Every Friday makes this a routine; centre takes provides."
+          },
+          {
+            "en": "The service does not include home delivery.",
+            "es": "El servicio no incluye entrega a domicilio.",
+            "note": "Does not carries the negative form; include stays in the base form."
+          }
+        ]
+      },
+      {
+        "title": "Describe an activity or temporary change",
+        "when": "Use the present continuous for something in progress or temporarily different from normal.",
+        "form": "Am/is/are + verb-ing; question: am/is/are + subject + verb-ing?",
+        "why": "Be carries person and number. A temporary situation can cover days or weeks, not just this moment.",
+        "es": "Usa be + -ing para un proceso o cambio temporal, aunque abarque varias semanas.",
+        "examples": [
+          {
+            "en": "The team is repairing the entrance this week.",
+            "es": "El equipo está reparando la entrada esta semana.",
+            "note": "This is temporary work around now, not necessarily at the instant of writing."
+          },
+          {
+            "en": "We normally meet upstairs, but we are using the ground floor this month.",
+            "es": "Normalmente nos reunimos arriba, pero este mes usamos la planta baja.",
+            "note": "The simple describes the routine; the continuous describes its temporary replacement."
+          }
+        ]
+      },
+      {
+        "title": "Distinguish states from activities",
+        "when": "Use a simple form for states such as knowing or owning; check the meaning when a verb allows both forms.",
+        "form": "State: I know/own/think that…; activity: I am thinking about…",
+        "why": "The verb's meaning matters more than a time word. Think can express an opinion or an active process of considering.",
+        "es": "Los verbos de estado suelen ir en simple; algunos admiten continuo cuando cambian de significado.",
+        "examples": [
+          {
+            "en": "I think the proposed timetable is practical.",
+            "es": "Creo que el horario propuesto es práctico.",
+            "note": "Think expresses an opinion here."
+          },
+          {
+            "en": "We are thinking about adding an evening session.",
+            "es": "Estamos considerando añadir una sesión nocturna.",
+            "note": "Thinking describes an active decision process, not just a settled belief."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Routine",
+        "definition": "Something that happens repeatedly as part of a usual pattern.",
+        "es": "Rutina: acción habitual o repetida."
+      },
+      {
+        "term": "State verb",
+        "definition": "A verb meaning a condition, feeling, belief or possession rather than a developing action.",
+        "es": "Verbo de estado: expresa conocimiento, posesión, opinión u otra condición."
+      }
+    ],
+    "takeaway": "Ask whether you mean a routine, a developing activity or a state before choosing the tense.",
+    "writingBridge": {
+      "prompt": "Write four sentences to a facility manager contrasting the normal service with a temporary problem. Include a routine, a current activity, a temporary change and your opinion.",
+      "checklist": [
+        "The routine uses a correct present simple form.",
+        "Temporary actions use be + -ing.",
+        "A state or opinion uses the form appropriate to its meaning."
+      ]
+    },
+    "sources": [
+      {
+        "title": "British Council: Present simple",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/present-simple"
+      },
+      {
+        "title": "British Council: Stative verbs",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/stative-verbs"
+      }
+    ]
+  },
+  {
+    "skillId": "g-past",
+    "title": "Tell a clear story about the past",
+    "goal": "Separate completed events from background activities and make their order clear.",
+    "explanation": "When describing an incident, separate the main events from the background. The past simple presents completed events or past states and often moves the story forward. The past continuous shows what was in progress at a particular past moment. Combining them helps the reader understand what was already happening when a new event occurred. However, when does not automatically require a particular tense: the meaning decides. Build negatives and questions with did plus a base verb, not a second past form. Learn useful irregular forms such as went, sent and took in complete sentences. Time expressions and event order should agree with the tense choices throughout the account.",
+    "explanationEs": "Usa pasado simple para acontecimientos y continuo para lo que estaba en curso. When no decide el tiempo por sí solo. Con did/didn't, el verbo vuelve a la base. Los marcadores temporales deben hacer clara la secuencia.",
+    "uses": [
+      {
+        "title": "Report completed events",
+        "when": "Use past simple for completed actions and situations in a finished past period.",
+        "form": "Regular verb-ed or an irregular past form; did/didn't + base verb in questions and negatives.",
+        "why": "A stated date or a clear past story gives the time frame. Do not add -ed to an irregular past form.",
+        "es": "Narra hechos terminados con pasado simple; aprende los irregulares dentro de frases.",
+        "examples": [
+          {
+            "en": "I sent the form on Monday and received a reply on Wednesday.",
+            "es": "Envié el formulario el lunes y recibí respuesta el miércoles.",
+            "note": "Sent is irregular; received is regular. The dates establish the sequence."
+          },
+          {
+            "en": "The receptionist did not receive my message.",
+            "es": "La recepcionista no recibió mi mensaje.",
+            "note": "After did not, use receive, not received."
+          }
+        ]
+      },
+      {
+        "title": "Set the background",
+        "when": "Use past continuous for an activity that was in progress at a specific past time.",
+        "form": "Was/were + verb-ing.",
+        "why": "The continuous opens a view inside an activity. It does not by itself say when the activity started or finished.",
+        "es": "El continuo muestra una actividad en curso; no informa por sí solo de su inicio o final.",
+        "examples": [
+          {
+            "en": "At six o'clock, the staff were preparing the room.",
+            "es": "A las seis, el personal estaba preparando la sala.",
+            "note": "The preparation was in progress at that time."
+          },
+          {
+            "en": "While I was waiting outside, it was raining heavily.",
+            "es": "Mientras esperaba fuera, llovía intensamente.",
+            "note": "Both activities form the background and overlap."
+          }
+        ]
+      },
+      {
+        "title": "Combine background and events",
+        "when": "Use a continuous background with a simple event when that event happens during the activity.",
+        "form": "While + past continuous, past simple; past continuous + when + past simple.",
+        "why": "The combination explains the relationship between events. It does not always mean the longer activity stopped.",
+        "es": "Combina lo que estaba ocurriendo con lo que sucedió durante ese proceso; no presupongas siempre una interrupción definitiva.",
+        "examples": [
+          {
+            "en": "I was completing the payment when the website crashed.",
+            "es": "Estaba completando el pago cuando la web dejó de funcionar.",
+            "note": "The payment was in progress; the crash is the new event."
+          },
+          {
+            "en": "When the tutor arrived, we were discussing the first question.",
+            "es": "Cuando llegó el tutor, estábamos comentando la primera pregunta.",
+            "note": "The discussion had already started; the sentence does not say it stopped."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Background activity",
+        "definition": "An action already in progress when another event is described.",
+        "es": "Actividad de fondo: lo que ya estaba ocurriendo."
+      },
+      {
+        "term": "Irregular past form",
+        "definition": "A past form that is not made simply by adding -ed, such as sent.",
+        "es": "Pasado irregular: forma que no sigue la terminación regular -ed."
+      }
+    ],
+    "takeaway": "Use simple events to move the account forward and continuous forms to show what was in progress.",
+    "writingBridge": {
+      "prompt": "Write four sentences describing a fictional booking problem: state when it happened, set the background, describe the problem and report the next action.",
+      "checklist": [
+        "The main events use appropriate past forms, including any irregular verb.",
+        "A background activity uses was/were + -ing.",
+        "Did/didn't, if used, is followed by a base verb and the timeline is clear."
+      ]
+    },
+    "sources": [
+      {
+        "title": "British Council: Past continuous and past simple",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/past-continuous-past-simple"
+      }
+    ]
+  },
+  {
+    "skillId": "g-perfect",
+    "title": "Connect events across time",
+    "goal": "Choose a perfect form only when its time connection is clear.",
+    "explanation": "Perfect forms look back from a reference point. The present perfect looks back from now and connects a past event or continuing situation to the present. The past simple places an event in a finished past time, such as last Tuesday. The past perfect looks back from another past moment and can make an earlier event clear. Choose the reference point before choosing the form. For describes a duration, while since gives its starting point. The perfect simple often focuses on a result or completed amount; the perfect continuous often focuses on the activity or its duration. These are tendencies, not a rule that every long activity must use a continuous form.",
+    "explanationEs": "Los perfectos miran hacia atrás desde un punto de referencia: ahora o un momento pasado. Distingue resultado, actividad y periodo cerrado. For expresa duración; since, inicio. La duración por sí sola no obliga al continuo.",
+    "uses": [
+      {
+        "title": "Connect a past event to now",
+        "when": "Use present perfect for a relevant result, experience or continuing situation without placing that event in a finished past time.",
+        "form": "Have/has + past participle; contrast with past simple + finished past time.",
+        "why": "The same event can be described differently depending on whether you focus on its current result or its finished date.",
+        "es": "Present perfect conecta con ahora; past simple sitúa el hecho en un periodo pasado cerrado.",
+        "examples": [
+          {
+            "en": "I have lost the access card, so I cannot enter the building.",
+            "es": "He perdido la tarjeta de acceso, así que no puedo entrar en el edificio.",
+            "note": "The focus is the current result; no finished date is given."
+          },
+          {
+            "en": "I lost the access card yesterday.",
+            "es": "Perdí la tarjeta de acceso ayer.",
+            "note": "Yesterday places the event in a finished past period."
+          }
+        ]
+      },
+      {
+        "title": "Compare result and duration",
+        "when": "Use perfect simple to focus on a completed result or state; use perfect continuous to focus on an activity continuing or recently active.",
+        "form": "Have/has + participle; have/has been + verb-ing; for + duration; since + starting point.",
+        "why": "A number of completed items points to a result. A duration can occur with either form, depending on the verb and meaning.",
+        "es": "Compara resultado y proceso. Los estados pueden durar con perfecto simple: have known for years.",
+        "examples": [
+          {
+            "en": "I have written three applications this week.",
+            "es": "He escrito tres solicitudes esta semana.",
+            "note": "Three applications counts completed results within the current week."
+          },
+          {
+            "en": "I have been working on this application since Monday.",
+            "es": "Llevo trabajando en esta solicitud desde el lunes.",
+            "note": "The focus is the ongoing activity; since introduces its starting point."
+          }
+        ]
+      },
+      {
+        "title": "Show an earlier past event",
+        "when": "Use past perfect when you need to look back from a later past event.",
+        "form": "Had + past participle, with a later event often in past simple.",
+        "why": "Past perfect clarifies which event was already complete. Do not use it for every past event once the order is clear.",
+        "es": "Past perfect marca lo anterior a otro momento pasado, no simplemente un pasado lejano.",
+        "examples": [
+          {
+            "en": "When we reached the venue, the talk had already started.",
+            "es": "Cuando llegamos al lugar, la charla ya había empezado.",
+            "note": "The start happened before our arrival."
+          },
+          {
+            "en": "I realised that I had entered the wrong address.",
+            "es": "Me di cuenta de que había introducido la dirección equivocada.",
+            "note": "Entering the address came before the moment of realisation."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Reference point",
+        "definition": "The time from which you view another event, such as now or a past arrival.",
+        "es": "Punto de referencia: momento desde el que miras otro hecho."
+      },
+      {
+        "term": "Past participle",
+        "definition": "A verb form used after have in perfect tenses, such as written or completed.",
+        "es": "Participio pasado: forma usada en los perfectos y las pasivas."
+      }
+    ],
+    "takeaway": "Choose the reference time, then decide whether the focus is a date, a result or an activity.",
+    "writingBridge": {
+      "prompt": "Write four sentences about a delayed application: give a dated past action, a current result, the duration of an activity and something that had happened before a later event.",
+      "checklist": [
+        "A finished date uses past simple rather than present perfect.",
+        "For/since and the result/activity contrast match the intended meaning.",
+        "Past perfect has a clear later past reference point."
+      ]
+    },
+    "sources": [
+      {
+        "title": "British Council: Present perfect",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/present-perfect"
+      },
+      {
+        "title": "British Council: Present perfect simple and continuous",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/present-perfect-simple-continuous"
+      },
+      {
+        "title": "Cambridge: Have as an auxiliary",
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/have%3A"
+      }
+    ]
+  },
+  {
+    "skillId": "g-future",
+    "title": "Express plans, arrangements and predictions",
+    "goal": "Choose a future form that shows how you see the event.",
+    "explanation": "English has several ways to talk about the future. The choice often shows your view of the event: a decision made now, an earlier intention, a concrete arrangement or a prediction. Will is useful for offers, immediate decisions and many predictions. Be going to often presents a previous intention or a prediction supported by present evidence. The present continuous can describe an arrangement that is already organised. These forms sometimes overlap, so do not treat them as a mechanical timetable. Add a clear future time when needed. In ordinary future time and condition clauses, use a present form after when or if, even when the main clause uses will.",
+    "explanationEs": "La forma de futuro expresa cómo ves el hecho: decisión, intención, acuerdo o predicción. A veces hay más de una opción natural. En cláusulas temporales o condicionales de futuro, when/if suelen llevar presente, no will.",
+    "uses": [
+      {
+        "title": "Decide, offer or predict with will",
+        "when": "Use will for a decision at the moment of speaking, an offer or a prediction presented as your view.",
+        "form": "Will + base verb; negative: will not/won't + base verb.",
+        "why": "Will does not take -s and the following verb stays in its base form. Context tells the reader whether it is an offer or prediction.",
+        "es": "Will + base sirve para decidir, ofrecer o predecir; el contexto determina la función.",
+        "examples": [
+          {
+            "en": "The printer is not working? I will send you a digital copy.",
+            "es": "¿La impresora no funciona? Le enviaré una copia digital.",
+            "note": "The speaker offers a solution after hearing about the problem."
+          },
+          {
+            "en": "I think the new timetable will reduce waiting times.",
+            "es": "Creo que el nuevo horario reducirá los tiempos de espera.",
+            "note": "I think presents this as the writer's prediction, not a measured result."
+          }
+        ]
+      },
+      {
+        "title": "Express an intention or arrangement",
+        "when": "Use going to for an intention already formed, and present continuous for an organised future arrangement.",
+        "form": "Am/is/are going to + base verb; am/is/are + verb-ing + future context.",
+        "why": "An intention does not necessarily have a booking. An arrangement usually involves organised details such as a time or another person.",
+        "es": "Going to presenta una intención previa; el continuo puede indicar un acuerdo ya organizado.",
+        "examples": [
+          {
+            "en": "We are going to introduce a weekend service next year.",
+            "es": "Vamos a introducir un servicio de fin de semana el año que viene.",
+            "note": "This states an existing intention without specifying a confirmed appointment."
+          },
+          {
+            "en": "We are meeting the supplier at ten tomorrow; the appointment is confirmed.",
+            "es": "Nos reuniremos con el proveedor mañana a las diez; la cita está confirmada.",
+            "note": "The confirmed time supports the arrangement meaning."
+          }
+        ]
+      },
+      {
+        "title": "Express future conditions and timing",
+        "when": "Use a present form in ordinary if/when clauses referring to a future event.",
+        "form": "If/when + present, main clause with will or another appropriate future expression.",
+        "why": "If introduces a condition; when presents the event as expected. Avoid adding will mechanically to every future clause.",
+        "es": "If expresa condición y when sitúa un hecho esperado. En estas subordinadas normalmente se usa presente.",
+        "examples": [
+          {
+            "en": "If the replacement arrives tomorrow, I will collect it after work.",
+            "es": "Si el recambio llega mañana, lo recogeré después del trabajo.",
+            "note": "Its arrival is a condition, so the if-clause uses arrives."
+          },
+          {
+            "en": "I will contact you when the results are available.",
+            "es": "Me pondré en contacto con usted cuando estén disponibles los resultados.",
+            "note": "The time clause uses are even though it refers to the future."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Intention",
+        "definition": "Something you have decided you want to do.",
+        "es": "Intención: propósito que ya tienes."
+      },
+      {
+        "term": "Arrangement",
+        "definition": "A future event with organised or agreed details.",
+        "es": "Acuerdo organizado: plan concretado con detalles."
+      }
+    ],
+    "takeaway": "Choose the future meaning first, and check if/when clauses separately.",
+    "writingBridge": {
+      "prompt": "Write four sentences planning a community event: make an offer, describe an existing intention, state a confirmed arrangement and give a conditional next step.",
+      "checklist": [
+        "The chosen future form matches the purpose of each sentence.",
+        "The arrangement includes a clear future context.",
+        "The future if/when clause uses an appropriate present form."
+      ]
+    },
+    "sources": [
+      {
+        "title": "British Council: Future forms",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/future-forms-will-be-going-present-continuous"
+      }
+    ]
+  },
+  {
+    "skillId": "g-modals",
+    "title": "Express rules, advice and possibility",
+    "goal": "Choose modal language that matches the strength and purpose of your message.",
+    "explanation": "A modal changes how the reader understands an action: possible, necessary, advisable or permitted. Most core modals, such as can, should and might, take a base verb without to. They do not add -s for he or she. Have to expresses necessity too, but its form changes: she has to leave. The negative meanings need particular care. Must not prohibits an action; do not have to means it is optional. Could and would can soften a request, while may and might limit a claim to a possibility. Decide the meaning and strength before choosing the word. Using a stronger modal can accidentally turn advice into an obligation or a possibility into certainty.",
+    "explanationEs": "Primero decide si expresas permiso, obligación, consejo o posibilidad. Los modales centrales llevan verbo base sin to. Have to funciona de otra forma: has to leave. Mustn't prohíbe; don't have to elimina la obligación.",
+    "uses": [
+      {
+        "title": "Distinguish obligation, prohibition and choice",
+        "when": "Use must/have to for necessity, must not for prohibition and do not have to for something optional.",
+        "form": "Must + base verb; have/has to + base verb; must not + base verb; don't/doesn't have to + base verb.",
+        "why": "The negative of obligation is not always prohibition. Have to uses ordinary verb agreement and do-support.",
+        "es": "Mustn't y don't have to no son intercambiables. Después de have to va la base: make, no making.",
+        "examples": [
+          {
+            "en": "Visitors have to make a booking before entering the archive.",
+            "es": "Los visitantes deben reservar antes de entrar en el archivo.",
+            "note": "Have to is followed by make. The rule makes booking necessary."
+          },
+          {
+            "en": "You must not bring food, but you do not have to bring your own laptop.",
+            "es": "No puede traer comida, pero no tiene que traer su propio portátil.",
+            "note": "Food is prohibited; bringing a laptop is optional."
+          }
+        ]
+      },
+      {
+        "title": "Give advice and make a polite request",
+        "when": "Use should for a recommendation and could/would in common polite request patterns.",
+        "form": "Should + base verb; could you + base verb?; would you mind + verb-ing?",
+        "why": "A request asks another person to act. Would you mind has its own -ing pattern, unlike could you.",
+        "es": "Should aconseja. Could you lleva base; would you mind lleva -ing.",
+        "examples": [
+          {
+            "en": "You should keep a copy of the completed form.",
+            "es": "Debería guardar una copia del formulario cumplimentado.",
+            "note": "Should recommends an action without making it a formal rule."
+          },
+          {
+            "en": "Would you mind sending me the updated timetable?",
+            "es": "¿Le importaría enviarme el horario actualizado?",
+            "note": "The fixed request pattern is would you mind + sending."
+          }
+        ]
+      },
+      {
+        "title": "Express ability and limited certainty",
+        "when": "Use can for ability or general possibility; use may/might/could for a particular uncertain possibility.",
+        "form": "Can/may/might/could + base verb.",
+        "why": "A possible effect is not a guaranteed effect. Add conditions or reasons rather than using a modal as a substitute for evidence.",
+        "es": "Distingue capacidad o posibilidad general de una posibilidad concreta. Matizar no sustituye explicar.",
+        "examples": [
+          {
+            "en": "Members can access the digital library from home.",
+            "es": "Los socios pueden acceder a la biblioteca digital desde casa.",
+            "note": "Can describes an available capability or permission."
+          },
+          {
+            "en": "Longer opening hours might help residents who work late.",
+            "es": "Un horario más amplio podría ayudar a los vecinos que trabajan hasta tarde.",
+            "note": "Might presents a possible benefit and the relative clause identifies who may benefit."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Modal verb",
+        "definition": "A verb such as should or might that adds meaning like advice or possibility.",
+        "es": "Verbo modal: añade obligación, consejo, posibilidad u otro matiz."
+      },
+      {
+        "term": "Prohibition",
+        "definition": "A rule or instruction saying an action is not allowed.",
+        "es": "Prohibición: indicación de que algo no está permitido."
+      }
+    ],
+    "takeaway": "Check both the verb pattern and the strength of the meaning.",
+    "writingBridge": {
+      "prompt": "Write four sentences for new library members: one obligation, one prohibition, one optional action and one polite request or recommendation.",
+      "checklist": [
+        "Must not and do not have to express different meanings.",
+        "Core modals take a base verb; have to also has a base verb after to.",
+        "The request or advice has suitable strength and the correct pattern."
+      ]
+    },
+    "sources": [
+      {
+        "title": "British Council: Permission and obligation",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/modals-permission-obligation"
+      },
+      {
+        "title": "British Council: Modal verbs",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/modal-verbs"
+      }
+    ]
+  },
+  {
+    "skillId": "g-verb-patterns",
+    "title": "Choose -ing or an infinitive",
+    "goal": "Recognise the pattern required by the word before a second verb.",
+    "explanation": "When two verbs connect, the second verb does not simply copy the first verb's tense. Its form often depends on the word or structure before it. We decide to leave but avoid leaving. After a preposition, an action normally takes an -ing form. However, not every to is a preposition: to leave is an infinitive, while look forward to leaving contains a preposition. Learn useful patterns as complete chunks, and check new verbs in a dictionary. Some verbs allow both patterns with a change of meaning. Stop doing ends an activity, while stop to do pauses another activity for a purpose. Meaning and structure must be checked together.",
+    "explanationEs": "El segundo verbo depende del patrón anterior: decide to do, avoid doing. Distingue to del infinitivo y to preposición. Algunos cambios alteran el significado: stop doing termina la acción; stop to do interrumpe otra para hacerla.",
+    "uses": [
+      {
+        "title": "Follow the first verb's pattern",
+        "when": "Use the form required by the first verb, learning the two words together.",
+        "form": "Decide/hope/plan + to + base verb; avoid/enjoy/consider + verb-ing.",
+        "why": "There is no single rule that predicts every verb. A dictionary pattern is more reliable than translating from Spanish.",
+        "es": "Memoriza patrones completos y comprueba los verbos nuevos: decide to attend, consider attending.",
+        "examples": [
+          {
+            "en": "We decided to offer an evening session.",
+            "es": "Decidimos ofrecer una sesión nocturna.",
+            "note": "Decide is followed by a to-infinitive."
+          },
+          {
+            "en": "We considered offering an evening session.",
+            "es": "Consideramos ofrecer una sesión nocturna.",
+            "note": "Consider takes an -ing form; the proposal is being considered, not necessarily decided."
+          }
+        ]
+      },
+      {
+        "title": "Distinguish infinitive to from a preposition",
+        "when": "Use a base verb after infinitive to; use -ing when a verb follows a preposition.",
+        "form": "Have to + base verb; interested in + verb-ing; look forward to + verb-ing.",
+        "why": "The spelling to does not identify its grammatical job. In look forward to, a noun can follow: look forward to the visit.",
+        "es": "Have to make es infinitivo; look forward to hearing lleva to preposición y después -ing.",
+        "examples": [
+          {
+            "en": "Applicants have to provide a current address.",
+            "es": "Los solicitantes tienen que proporcionar una dirección actual.",
+            "note": "Have to is followed by the base form provide."
+          },
+          {
+            "en": "I look forward to hearing from you.",
+            "es": "Quedo a la espera de su respuesta.",
+            "note": "To belongs to look forward to, so the following action uses hearing."
+          }
+        ]
+      },
+      {
+        "title": "Notice a change of meaning",
+        "when": "Use the pattern that matches whether an action ends or gives the purpose of a pause.",
+        "form": "Stop + verb-ing; stop + to + base verb.",
+        "why": "Stop answering means the answering ends. Stop to answer means another activity pauses so that answering can happen.",
+        "es": "El patrón puede cambiar el mensaje, no solo la forma.",
+        "examples": [
+          {
+            "en": "The receptionist stopped answering calls at six.",
+            "es": "La recepcionista dejó de responder llamadas a las seis.",
+            "note": "Answering calls is the activity that ended."
+          },
+          {
+            "en": "The receptionist stopped to answer a visitor's question.",
+            "es": "La recepcionista se detuvo para responder la pregunta de un visitante.",
+            "note": "Another activity paused; answering the question was the purpose."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Infinitive",
+        "definition": "A verb's base form, often used with to: to write, to leave.",
+        "es": "Infinitivo: forma base, frecuentemente precedida de to."
+      },
+      {
+        "term": "Verb pattern",
+        "definition": "The structure a verb takes with the words that follow it.",
+        "es": "Patrón verbal: estructura que acompaña al verbo."
+      }
+    ],
+    "takeaway": "Read the word before the second verb, identify its pattern, and check the meaning.",
+    "writingBridge": {
+      "prompt": "Write four sentences about organising a class: say what you decided, what you considered, what participants have to do and what you look forward to.",
+      "checklist": [
+        "Decide and consider take their different correct patterns.",
+        "Have to is followed by a base verb, not -ing.",
+        "Look forward to is followed by a noun or an -ing form."
+      ]
+    },
+    "sources": [
+      {
+        "title": "Cambridge: Verb + infinitive or -ing",
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/verb-patterns-verb-ing-or-verb-to-infinitive"
+      },
+      {
+        "title": "British Council: Permission and obligation",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/modals-permission-obligation"
+      }
+    ]
+  },
+  {
+    "skillId": "g-passive",
+    "title": "Choose what comes first in a sentence",
+    "goal": "Use the passive to focus on an action or affected thing while keeping tense and responsibility clear.",
+    "explanation": "The active usually starts with the person or thing doing an action. The passive starts with the person or thing affected by it. This choice changes the focus, not the basic event. A passive needs be in the appropriate form plus a past participle. Changing tense changes the auxiliary group, while the participle keeps the same form. Use a passive when the affected thing is the topic or the agent is unknown or unimportant. If responsibility matters, keep the agent with by or use an active sentence. Passive writing is not automatically more formal or better. Choose the clearest sentence for the reader and the purpose.",
+    "explanationEs": "La pasiva cambia el foco hacia lo afectado: be + participio. El tiempo y la concordancia van en el grupo auxiliar. No ocultes al responsable cuando sea relevante; una activa puede ser más clara.",
+    "uses": [
+      {
+        "title": "Focus on an affected thing",
+        "when": "Use a passive when the object or result is the current topic and the agent is not central.",
+        "form": "Affected subject + be + past participle; optional by + agent.",
+        "why": "The new subject receives the action. Only verbs that can take an object normally form this type of passive.",
+        "es": "La entidad afectada pasa a ser sujeto; el agente puede omitirse si no aporta información necesaria.",
+        "examples": [
+          {
+            "en": "The booking was cancelled yesterday.",
+            "es": "La reserva fue cancelada ayer.",
+            "note": "The sentence focuses on the booking; it does not identify who cancelled it."
+          },
+          {
+            "en": "The organiser cancelled the booking yesterday.",
+            "es": "El organizador canceló la reserva ayer.",
+            "note": "The active makes the organiser and responsibility more prominent."
+          }
+        ]
+      },
+      {
+        "title": "Keep tense and agreement accurate",
+        "when": "Choose the correct form of be and keep the past participle appropriate to the main verb.",
+        "form": "Is/are + participle; was/were + participle; has/have been + participle.",
+        "why": "Number and time are carried in the auxiliary group. A perfect passive needs been, not just have + participle.",
+        "es": "Revisa tiempo y singular/plural en los auxiliares; el participio no recibe una -s de concordancia.",
+        "examples": [
+          {
+            "en": "The rooms are cleaned every morning.",
+            "es": "Las habitaciones se limpian cada mañana.",
+            "note": "Are agrees with rooms and expresses a routine passive."
+          },
+          {
+            "en": "The access code has been changed.",
+            "es": "Se ha cambiado el código de acceso.",
+            "note": "Has been changed is a present perfect passive with a current result."
+          }
+        ]
+      },
+      {
+        "title": "Express a requirement or future process",
+        "when": "Use a modal passive when a requirement or possibility applies to the affected thing.",
+        "form": "Modal + be + past participle; include by + agent if responsibility matters.",
+        "why": "The modal comes before be. Compare must be submitted with must submit: the latter needs the person submitting as its subject.",
+        "es": "Modal + be + participio permite expresar requisitos sobre documentos u objetos.",
+        "examples": [
+          {
+            "en": "Applications must be submitted by Friday.",
+            "es": "Las solicitudes deben presentarse antes de que termine el viernes.",
+            "note": "Must expresses the requirement; applications are what people submit."
+          },
+          {
+            "en": "The documents will be checked by the admissions team.",
+            "es": "El equipo de admisiones revisará los documentos.",
+            "note": "The passive keeps documents as the topic, while by names the responsible team."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Agent",
+        "definition": "The person or thing that performs an action.",
+        "es": "Agente: quien realiza la acción."
+      },
+      {
+        "term": "Passive voice",
+        "definition": "A structure that makes the affected person or thing the subject.",
+        "es": "Voz pasiva: estructura centrada en quien recibe la acción."
+      }
+    ],
+    "takeaway": "Choose the focus, build be + participle, and make responsibility clear when it matters.",
+    "writingBridge": {
+      "prompt": "Write four sentences explaining a registration process. Include a routine passive, a completed change, a requirement and one active sentence naming a responsible person.",
+      "checklist": [
+        "Every passive contains the correct auxiliary form and past participle.",
+        "Tense and singular/plural agreement match the subject and timeline.",
+        "The reader can identify responsibility where it is relevant."
+      ]
+    },
+    "sources": [
+      {
+        "title": "British Council: Passives",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/passives"
+      }
+    ]
+  },
+  {
+    "skillId": "g-conditionals",
+    "title": "Connect conditions to consequences",
+    "goal": "Distinguish practical conditions from imagined present and past situations.",
+    "explanation": "A conditional connects a condition with its consequence. First decide whether you mean a general relationship, a realistic future possibility, an imagined situation now or an alternative past. The verb forms help the reader understand that viewpoint. A past form in a second conditional often marks distance from reality, not past time. A third conditional looks at something that did not happen and imagines a different past result. These patterns are useful starting points, not the only possible conditionals. Choose the modal in the result to match certainty or possibility: would and might do not make the same claim. Keep the time relationship clear instead of choosing a pattern only from its label.",
+    "explanationEs": "Decide primero si hablas de regla general, futuro posible, hipótesis actual o pasado alternativo. El pasado del segundo condicional puede expresar distancia de la realidad, no tiempo pasado. Would y might cambian la certeza de la consecuencia.",
+    "uses": [
+      {
+        "title": "Describe a rule or realistic future condition",
+        "when": "Use present forms for a general relationship and present + will for a possible future outcome.",
+        "form": "General: if + present, present. Future possibility: if + present, will + base verb.",
+        "why": "The first pattern describes what regularly follows. The second predicts a future result if the condition is met.",
+        "es": "Distingue regla habitual y consecuencia futura concreta. En la if-clause normalmente no añadas will.",
+        "examples": [
+          {
+            "en": "If a card expires, the system blocks access.",
+            "es": "Si una tarjeta caduca, el sistema bloquea el acceso.",
+            "note": "This describes the system's general rule."
+          },
+          {
+            "en": "If you renew your card today, you will keep access next month.",
+            "es": "Si renueva su tarjeta hoy, mantendrá el acceso el mes próximo.",
+            "note": "This is a future consequence of a possible action."
+          }
+        ]
+      },
+      {
+        "title": "Imagine a different present or future",
+        "when": "Use the second conditional for an unreal or more remote situation and its imagined result.",
+        "form": "If + past form, would/could/might + base verb.",
+        "why": "The past form creates hypothetical distance. Were is a common formal choice for an unreal condition with be.",
+        "es": "El pasado presenta una hipótesis, no necesariamente un hecho pasado. Were es habitual en hipótesis formales.",
+        "examples": [
+          {
+            "en": "If the library opened later, more shift workers could use it.",
+            "es": "Si la biblioteca abriera más tarde, más trabajadores por turnos podrían utilizarla.",
+            "note": "The later opening is imagined; could expresses the resulting opportunity."
+          },
+          {
+            "en": "If I were responsible for the schedule, I would add a Saturday session.",
+            "es": "Si yo fuera responsable del horario, añadiría una sesión los sábados.",
+            "note": "The writer imagines a role they do not currently have."
+          }
+        ]
+      },
+      {
+        "title": "Imagine an alternative past",
+        "when": "Use the third conditional to imagine a different past condition and its result.",
+        "form": "If + had + past participle, would/could/might have + past participle.",
+        "why": "The situation is no longer changeable. Might have describes a possible result rather than guaranteeing it.",
+        "es": "El tercer condicional mira a un pasado que ya no cambia. El modal ajusta la fuerza de la conclusión.",
+        "examples": [
+          {
+            "en": "If we had received the notice earlier, we would have cancelled the booking.",
+            "es": "Si hubiéramos recibido el aviso antes, habríamos cancelado la reserva.",
+            "note": "The notice did not arrive early enough; the sentence imagines an alternative response."
+          },
+          {
+            "en": "If the team had checked the address, it might have avoided the delay.",
+            "es": "Si el equipo hubiera comprobado la dirección, quizá habría evitado el retraso.",
+            "note": "Might have keeps the alternative outcome uncertain."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Condition",
+        "definition": "The situation that must apply for a stated consequence.",
+        "es": "Condición: circunstancia de la que depende una consecuencia."
+      },
+      {
+        "term": "Hypothetical",
+        "definition": "Imagined rather than presented as an actual fact.",
+        "es": "Hipotético: planteado como posibilidad imaginada."
+      }
+    ],
+    "takeaway": "Choose reality and time first; the conditional pattern should express those choices.",
+    "writingBridge": {
+      "prompt": "Write four sentences proposing a change to a local service. Give a general rule, a realistic future condition, an imagined improvement and one alternative past outcome.",
+      "checklist": [
+        "Each conditional has a clear condition and consequence.",
+        "Verb forms distinguish real future, hypothetical present and alternative past meanings.",
+        "Would/could/might expresses the intended certainty or possibility."
+      ]
+    },
+    "sources": [
+      {
+        "title": "British Council: Zero, first and second conditionals",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/conditionals-zero-first-second"
+      },
+      {
+        "title": "British Council: Third and mixed conditionals",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/conditionals-third-mixed"
+      }
+    ]
+  },
+  {
+    "skillId": "g-relative-clauses",
+    "title": "Identify something or add a comment",
+    "goal": "Choose the right relative clause, pronoun and punctuation.",
+    "explanation": "A relative clause adds information about a noun. Sometimes that information is needed to identify which person or thing you mean. This defining clause stays attached without commas. Sometimes the noun is already identified and the clause adds a comment; this non-defining clause is separated with commas. The difference can change the message, not just the punctuation. Choose who for people and which for things; that can replace them in many defining clauses, but not in non-defining ones. You can omit an object relative pronoun in a defining clause, but not a subject relative pronoun. Find the subject inside the clause before deciding whether omission is possible.",
+    "explanationEs": "La relativa especificativa identifica y va sin comas; la explicativa añade información sobre algo ya identificado y se separa con comas. That no se usa en explicativas. Solo puedes omitir el relativo objeto en una especificativa.",
+    "uses": [
+      {
+        "title": "Identify which one you mean",
+        "when": "Use a defining relative clause when the detail selects a person, thing or group.",
+        "form": "Noun + who/which/that + clause, without separating commas.",
+        "why": "The relative clause limits the reference. Removing it can make the intended group unclear or broader.",
+        "es": "La información selecciona de qué persona o grupo hablas; no se separa con comas.",
+        "examples": [
+          {
+            "en": "The residents who work at night need daytime appointments.",
+            "es": "Los vecinos que trabajan de noche necesitan citas diurnas.",
+            "note": "The clause selects residents who work at night, not all residents."
+          },
+          {
+            "en": "The form that you need is on the reception desk.",
+            "es": "El formulario que necesita está en recepción.",
+            "note": "The clause identifies the particular form."
+          }
+        ]
+      },
+      {
+        "title": "Add information about an identified noun",
+        "when": "Use a non-defining clause when the reader already knows which person or thing you mean.",
+        "form": "Identified noun, who/which + clause, remaining sentence.",
+        "why": "Commas mark the added comment. Do not use that or omit the relative pronoun in this structure.",
+        "es": "Usa who/which y comas para información adicional; no that ni omisión.",
+        "examples": [
+          {
+            "en": "Our only meeting room, which seats twelve people, is upstairs.",
+            "es": "Nuestra única sala de reuniones, con capacidad para doce personas, está arriba.",
+            "note": "Only meeting room is already identified; the seating detail is additional."
+          },
+          {
+            "en": "Ms Green, who coordinates the volunteers, will contact you.",
+            "es": "La señora Green, que coordina al voluntariado, se pondrá en contacto con usted.",
+            "note": "The name identifies the person; the clause adds her role."
+          }
+        ]
+      },
+      {
+        "title": "Check whether the relative pronoun is subject or object",
+        "when": "Omit the pronoun only when it is the object of a defining clause.",
+        "form": "Object: the course (that) I chose. Subject: the course that starts tomorrow.",
+        "why": "Look for a separate subject after the pronoun. I chose has a subject; starts tomorrow needs that as its subject.",
+        "es": "Identifica quién realiza el verbo de la relativa antes de omitir nada.",
+        "examples": [
+          {
+            "en": "The course I chose includes individual feedback.",
+            "es": "El curso que elegí incluye comentarios individuales.",
+            "note": "I is the subject of chose; the omitted relative pronoun would be its object."
+          },
+          {
+            "en": "The course that starts tomorrow includes individual feedback.",
+            "es": "El curso que empieza mañana incluye comentarios individuales.",
+            "note": "That is the subject of starts, so it cannot be omitted."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Relative clause",
+        "definition": "A clause that adds information about a noun, often beginning with who, which or that.",
+        "es": "Cláusula relativa: añade información sobre un sustantivo."
+      },
+      {
+        "term": "Defining detail",
+        "definition": "Information needed to identify the intended person, thing or group.",
+        "es": "Detalle especificativo: información necesaria para identificar la referencia."
+      }
+    ],
+    "takeaway": "Decide whether the detail identifies or comments, then check the pronoun's job.",
+    "writingBridge": {
+      "prompt": "Write four sentences recommending a course. Identify a group of learners, add a comment about a named tutor, describe a course you selected and identify one that starts soon.",
+      "checklist": [
+        "Defining details have no separating commas.",
+        "Additional comments use commas and who/which, not that.",
+        "Any omitted relative pronoun is an object, not the clause's subject."
+      ]
+    },
+    "sources": [
+      {
+        "title": "British Council: Defining relative clauses",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/relative-clauses-defining-relative-clauses"
+      },
+      {
+        "title": "British Council: Relative pronouns and clauses",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/relative-pronouns-relative-clauses"
+      }
+    ]
+  },
+  {
+    "skillId": "g-subordination",
+    "title": "Explain reasons, contrasts and results",
+    "goal": "Choose a connector for the logical relationship and build a complete sentence.",
+    "explanation": "A connector tells the reader how ideas relate. Decide the relationship before choosing the word: is the second idea a reason, an unexpected contrast or a result? Then check the structure that follows. Because and although introduce clauses with a subject and verb. Because of and despite introduce a noun phrase or an -ing form. A longer connector does not automatically improve an argument. Therefore marks a result, but it does not join two complete sentences with a comma alone. Use a full stop or semicolon in that pattern. Finally, check the logic: grammatically correct sentences can still use because or therefore to suggest a connection the information does not support.",
+    "explanationEs": "Primero decide la relación entre ideas. Because/although llevan oración; because of/despite, nombre o -ing. Therefore necesita puntuación adecuada. Un conector correcto no convierte automáticamente una asociación en causa.",
+    "uses": [
+      {
+        "title": "Explain a reason",
+        "when": "Use because before a clause and because of before a noun phrase.",
+        "form": "Because + subject + verb; because of + noun phrase or verb-ing.",
+        "why": "The meaning is similar, but the grammar after each expression is different. An opening because-clause needs a main clause.",
+        "es": "Because lleva sujeto y verbo; because of lleva un grupo nominal. No dejes una subordinada aislada.",
+        "examples": [
+          {
+            "en": "The workshop was postponed because the tutor was ill.",
+            "es": "El taller se aplazó porque el tutor estaba enfermo.",
+            "note": "Because introduces the complete reason clause the tutor was ill."
+          },
+          {
+            "en": "The workshop was postponed because of the tutor's illness.",
+            "es": "El taller se aplazó debido a la enfermedad del tutor.",
+            "note": "Because of introduces the noun phrase the tutor's illness."
+          }
+        ]
+      },
+      {
+        "title": "Express an unexpected contrast",
+        "when": "Use although before a clause and despite before a noun phrase or an -ing form.",
+        "form": "Although + subject + verb; despite + noun/verb-ing; despite the fact that + clause.",
+        "why": "The main outcome is unexpected in light of the other information. Do not add but to the main clause after although.",
+        "es": "Although y despite contrastan con estructuras diferentes. Evita duplicar although…but.",
+        "examples": [
+          {
+            "en": "Although the room was small, everyone had a seat.",
+            "es": "Aunque la sala era pequeña, todos tenían asiento.",
+            "note": "The clause presents a contrast between limited size and enough seating."
+          },
+          {
+            "en": "Despite arriving early, we had to wait outside.",
+            "es": "A pesar de llegar temprano, tuvimos que esperar fuera.",
+            "note": "Despite takes arriving; we is the understood subject of both actions."
+          }
+        ]
+      },
+      {
+        "title": "Show a supported result",
+        "when": "Use so to coordinate a cause and result, or therefore with sentence boundaries that support it.",
+        "form": "Complete clause, so + complete clause; complete sentence. Therefore, complete sentence; or use a semicolon before therefore.",
+        "why": "Therefore is an adverb, not a coordinating conjunction. Also check whether the claimed result follows from the stated reason.",
+        "es": "So puede enlazar dos oraciones; therefore necesita punto o punto y coma antes en este patrón.",
+        "examples": [
+          {
+            "en": "The only entrance was blocked, so we could not enter.",
+            "es": "La única entrada estaba bloqueada, así que no pudimos entrar.",
+            "note": "The blocked only entrance directly explains the inability to enter."
+          },
+          {
+            "en": "No tutor is available on Friday. Therefore, we need to choose another day.",
+            "es": "No hay ningún tutor disponible el viernes. Por tanto, debemos elegir otro día.",
+            "note": "The full stop separates complete sentences; therefore signals the result."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Clause",
+        "definition": "A group of words built around a verb, usually with a subject.",
+        "es": "Cláusula: grupo estructurado alrededor de un verbo, normalmente con sujeto."
+      },
+      {
+        "term": "Noun phrase",
+        "definition": "A noun with any words that belong with it, such as the tutor's illness.",
+        "es": "Sintagma nominal: un sustantivo con sus acompañantes."
+      }
+    ],
+    "takeaway": "Check the relationship, the following structure and the sentence boundary.",
+    "writingBridge": {
+      "prompt": "Write a short paragraph of four sentences about changing a timetable. Explain a reason, acknowledge a difficulty and draw a practical conclusion.",
+      "checklist": [
+        "Each connector matches the actual relationship between ideas.",
+        "Because/although and because of/despite have the correct following structure.",
+        "The conclusion is supported and therefore does not create a comma splice."
+      ]
+    },
+    "sources": [
+      {
+        "title": "British Council: Contrasting ideas",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/contrasting-ideas-although-despite-others"
+      },
+      {
+        "title": "Cambridge: Punctuation",
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/commas"
+      }
+    ]
+  },
+  {
+    "skillId": "g-indirect-language",
+    "title": "Ask politely and report messages",
+    "goal": "Keep statement order inside indirect questions and adapt reported messages to their context.",
+    "explanation": "Indirect language lets you ask for information politely or report a message without quoting every word. These are related structures but different tasks. A present polite request does not automatically need a past tense: could you tell me where the room is asks about its current location. Inside the information clause, use statement order. For a reported message, consider who is speaking now, when the original message was spoken and whether it is still true. Past reporting often brings a tense shift, but it is not always necessary for information that remains true. Change pronouns and time expressions only when the new context requires it. Keep the original meaning, certainty and responsibility intact.",
+    "explanationEs": "Una petición indirecta actual no exige pasado: Could you tell me where the room is? Al contar un mensaje, adapta tiempos, pronombres y referencias según el contexto. No cambies todos los tiempos mecánicamente ni aumentes la certeza del original.",
+    "uses": [
+      {
+        "title": "Make a polite information request",
+        "when": "Put a direct question inside a polite opening while keeping statement order in the inner clause.",
+        "form": "Could you tell me + wh-word + subject + verb? Do you know + if/whether + subject + verb?",
+        "why": "The outer clause carries the question structure. The embedded clause does not repeat do-support or subject-verb inversion.",
+        "es": "La pregunta principal usa inversión; la parte interna mantiene sujeto + verbo.",
+        "examples": [
+          {
+            "en": "Could you tell me where the office is?",
+            "es": "¿Podría decirme dónde está la oficina?",
+            "note": "The office comes before is inside the request."
+          },
+          {
+            "en": "Do you know whether the fee includes materials?",
+            "es": "¿Sabe si la tarifa incluye los materiales?",
+            "note": "Whether introduces the original yes/no question; use includes, not does include."
+          }
+        ]
+      },
+      {
+        "title": "Report statements without changing their meaning",
+        "when": "Use a reporting verb and adapt time and pronouns to the reporting situation.",
+        "form": "Said (that) + clause; told + person + (that) + clause. Past reporting may shift the tense back.",
+        "why": "Tell normally needs a person in this reporting pattern; say does not take the person directly. Present tense can remain when the information is still true.",
+        "es": "Distingue said that y told me that. Cambia tiempos solo según la perspectiva temporal y la vigencia.",
+        "examples": [
+          {
+            "en": "The organiser told me that the workshop had been cancelled.",
+            "es": "El organizador me dijo que el taller se había cancelado.",
+            "note": "Told names the listener; had been cancelled places cancellation before the report."
+          },
+          {
+            "en": "The receptionist said that the office opens at nine; that is still its regular opening time.",
+            "es": "La recepcionista dijo que la oficina abre a las nueve; ese sigue siendo su horario habitual.",
+            "note": "Opens remains present because the reported timetable still applies."
+          }
+        ]
+      },
+      {
+        "title": "Report questions and requests",
+        "when": "Use statement order for a reported question and an object + to-infinitive for a reported request.",
+        "form": "Asked + person + if/wh-clause; asked/told + person + to + base verb; negative: not to + base verb.",
+        "why": "A report of a question is normally a statement, so it does not need a final question mark. A request reports an action someone should take.",
+        "es": "Las preguntas relatadas conservan orden afirmativo. Las peticiones usan asked someone to do o not to do.",
+        "examples": [
+          {
+            "en": "She asked me when I could attend.",
+            "es": "Me preguntó cuándo podía asistir.",
+            "note": "When I could attend uses statement order; the whole sentence reports a question."
+          },
+          {
+            "en": "The tutor asked us not to share the access link.",
+            "es": "El tutor nos pidió que no compartiéramos el enlace de acceso.",
+            "note": "Not comes before to share in this negative request."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Embedded question",
+        "definition": "A question used inside a larger clause, with statement word order.",
+        "es": "Pregunta integrada: pregunta dentro de otra estructura, con orden afirmativo."
+      },
+      {
+        "term": "Backshift",
+        "definition": "A move to an earlier verb tense when reporting from a later viewpoint.",
+        "es": "Cambio retrospectivo: desplazamiento verbal al contar desde otro momento."
+      }
+    ],
+    "takeaway": "Keep inner question clauses in statement order and adapt reported messages by context.",
+    "writingBridge": {
+      "prompt": "Write four sentences to a course coordinator: make a polite location question, ask whether materials are included, report one statement and report one request.",
+      "checklist": [
+        "Indirect questions use subject + verb in the inner clause.",
+        "Say/tell/ask patterns include any required person.",
+        "Reported tense, pronouns and certainty preserve the original meaning."
+      ]
+    },
+    "sources": [
+      {
+        "title": "Cambridge: Reported speech — indirect speech",
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-indirect-speech"
+      },
+      {
+        "title": "British Council: Reported questions",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/reported-speech-questions"
+      }
+    ]
+  },
+  {
+    "skillId": "g-punctuation",
+    "title": "Make sentence boundaries clear",
+    "goal": "Build complete sentences and use punctuation to show their structure.",
+    "explanation": "Punctuation helps the reader see where one complete thought ends and another begins. First find the subject and the main verb, then check whether the sentence can stand on its own. A clause beginning with because or although normally depends on another clause; leaving it alone can create a fragment in formal writing. Two complete sentences need more than a comma between them. Use a full stop, a suitable conjunction or a semicolon when the relationship is close. Apostrophes have different jobs: they can mark missing letters or possession, but they do not normally make a noun plural. Edit structure before adding commas, because commas cannot repair a missing main clause.",
+    "explanationEs": "Primero delimita las oraciones completas. Una subordinada aislada puede ser un fragmento; dos oraciones completas no se unen solo con coma. El apóstrofo marca posesión o contracción, no un plural normal.",
+    "uses": [
+      {
+        "title": "Complete a dependent thought",
+        "when": "Attach a dependent clause to a main clause in formal connected writing.",
+        "form": "Because/although + clause, main clause; or main clause + dependent clause.",
+        "why": "A dependent clause may contain a subject and verb but still leave the reader waiting for the main message.",
+        "es": "Tener sujeto y verbo no siempre basta: una subordinada necesita completar su relación con otra oración.",
+        "examples": [
+          {
+            "en": "Because the room was unavailable, we moved the meeting online.",
+            "es": "Como la sala no estaba disponible, trasladamos la reunión a internet.",
+            "note": "The main clause completes the reason introduced by because."
+          },
+          {
+            "en": "Although the course was useful, I needed more practice.",
+            "es": "Aunque el curso fue útil, necesitaba más práctica.",
+            "note": "The second clause supplies the contrasting main point."
+          }
+        ]
+      },
+      {
+        "title": "Separate complete sentences",
+        "when": "Use a full stop, a coordinating conjunction or a semicolon between independent clauses.",
+        "form": "Sentence. Sentence. / clause, but/so/and + clause / clause; clause.",
+        "why": "A comma alone is too weak to join two independent clauses in this formal writing pattern. A semicolon suits closely connected statements.",
+        "es": "Evita unir dos oraciones completas solo con coma. Elige punto, conjunción o punto y coma según la relación.",
+        "examples": [
+          {
+            "en": "The form was complete, but the signature was missing.",
+            "es": "El formulario estaba completo, pero faltaba la firma.",
+            "note": "But connects the two complete clauses and expresses contrast."
+          },
+          {
+            "en": "The reception desk was closed; the online service was still available.",
+            "es": "La recepción estaba cerrada; el servicio en línea seguía disponible.",
+            "note": "A semicolon links closely related complete clauses without a conjunction."
+          }
+        ]
+      },
+      {
+        "title": "Use apostrophes and capitals accurately",
+        "when": "Use apostrophes for contractions and noun possession, and capitals for sentence starts and proper names.",
+        "form": "It's = it is/it has; singular noun + 's; regular plural ending in s + '; ordinary plurals without apostrophes.",
+        "why": "Possessive its is an exception without an apostrophe. A capital letter signals a sentence start or a specific name, not general importance.",
+        "es": "Its no lleva apóstrofo. Distingue plural, posesión singular y posesión plural.",
+        "examples": [
+          {
+            "en": "The students' room is next to the tutor's office.",
+            "es": "La sala de los estudiantes está junto al despacho del tutor.",
+            "note": "Students' is plural possession; tutor's is singular possession."
+          },
+          {
+            "en": "The centre changed its hours. It's now open on Monday evenings.",
+            "es": "El centro cambió su horario. Ahora abre los lunes por la tarde.",
+            "note": "Its shows possession; it's means it is. Monday is capitalised."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Independent clause",
+        "definition": "A clause that can stand as a complete sentence.",
+        "es": "Cláusula independiente: puede funcionar como oración completa."
+      },
+      {
+        "term": "Comma splice",
+        "definition": "Two independent clauses joined by only a comma.",
+        "es": "Unión incorrecta por coma: dos oraciones completas enlazadas solo con coma."
+      }
+    ],
+    "takeaway": "Find complete clauses first; punctuation should make their relationship visible.",
+    "writingBridge": {
+      "prompt": "Write a four-sentence update about a rescheduled workshop. Include an opening because-clause, a contrast, two related independent clauses and a possessive noun.",
+      "checklist": [
+        "No dependent clause is left as an unintended fragment.",
+        "No two independent clauses are joined only by a comma.",
+        "Apostrophes and capital letters have a clear grammatical purpose."
+      ]
+    },
+    "sources": [
+      {
+        "title": "Cambridge: Punctuation",
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/commas"
+      }
+    ]
+  },
+  {
+    "skillId": "g-range-precision",
+    "title": "Add variety without losing precision",
+    "goal": "Use a range of structures to express accurate relationships, clear references and measured claims.",
+    "explanation": "Grammatical range means being able to choose different structures when the meaning needs them. It does not mean making every sentence long. A clear paragraph may combine a short claim, a longer explanation and a precise example. Check reference so that this, it and they have an obvious meaning. Keep items in lists parallel so the reader can compare them easily. Use language such as may, tends to and in some cases when the claim has limits, and explain those limits. More advanced structures, including participle clauses, are useful only when their subjects and meanings remain clear. The goal is controlled choice: each structure should help the reader follow the idea.",
+    "explanationEs": "La variedad consiste en elegir estructuras útiles, no en alargar todas las frases. Mantén referencias claras, listas paralelas y afirmaciones proporcionadas. Las estructuras avanzadas solo ayudan si conservan significado y control.",
+    "uses": [
+      {
+        "title": "Vary structure to explain a relationship",
+        "when": "Use a simple sentence for a direct point and a complex sentence when a reason, condition or contrast needs expressing.",
+        "form": "Clear main clause; main clause + a relevant subordinate clause.",
+        "why": "A subordinate clause earns its place by adding a useful relationship. Remove length that only repeats the same idea.",
+        "es": "Una subordinada debe aportar una relación concreta. Alterna estructuras según lo que necesites comunicar.",
+        "examples": [
+          {
+            "en": "The centre needs more evening appointments.",
+            "es": "El centro necesita más citas por la tarde.",
+            "note": "A simple sentence states the proposal directly."
+          },
+          {
+            "en": "More evening appointments would help residents who cannot leave work during the day.",
+            "es": "Más citas por la tarde ayudarían a los vecinos que no pueden dejar el trabajo durante el día.",
+            "note": "The relative clause identifies the group and explains the proposal's relevance."
+          }
+        ]
+      },
+      {
+        "title": "Keep references and lists clear",
+        "when": "Use a named reference when a pronoun is ambiguous, and keep coordinated items in matching forms.",
+        "form": "This + specific noun; parallel verb phrases or noun phrases in a list.",
+        "why": "Clear reference reduces guessing. Parallel structure lets the reader compare actions at the same grammatical level.",
+        "es": "Aclara this con un nombre y mantén la misma forma en los elementos de una lista.",
+        "examples": [
+          {
+            "en": "The service needs to reduce delays, improve access and publish clearer instructions.",
+            "es": "El servicio necesita reducir retrasos, mejorar el acceso y publicar instrucciones más claras.",
+            "note": "The three actions share the same base-verb structure after needs to."
+          },
+          {
+            "en": "The booking system lost several requests. This failure caused avoidable delays.",
+            "es": "El sistema de reservas perdió varias solicitudes. Este fallo causó retrasos evitables.",
+            "note": "This failure identifies exactly what the second sentence refers to."
+          }
+        ]
+      },
+      {
+        "title": "Limit claims and control advanced clauses",
+        "when": "Use qualified language when evidence supports a tendency, and participle clauses only with a clear shared subject.",
+        "form": "May + base verb; tend to + base verb; participle phrase, main clause with the same understood subject.",
+        "why": "A qualification should match a real limit. An opening participle phrase normally describes the main clause's subject, not a different person.",
+        "es": "Matiza cuando haya límites reales. En una cláusula de participio, comprueba que el sujeto implícito coincida con el de la principal.",
+        "examples": [
+          {
+            "en": "Flexible hours may improve access for people with irregular work schedules.",
+            "es": "Un horario flexible puede mejorar el acceso para quienes tienen horarios laborales irregulares.",
+            "note": "May avoids promising a universal effect, and the group is specified."
+          },
+          {
+            "en": "Having checked the timetable, the coordinator confirmed the appointment.",
+            "es": "Tras comprobar el horario, la coordinadora confirmó la cita.",
+            "note": "The coordinator both checked and confirmed; the earlier completed action uses having checked."
+          }
+        ]
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Parallel structure",
+        "definition": "Matching grammatical forms for items serving the same role in a list or comparison.",
+        "es": "Paralelismo: usar formas equivalentes en elementos de la misma lista o comparación."
+      },
+      {
+        "term": "Qualification",
+        "definition": "Language that limits the strength or scope of a claim.",
+        "es": "Matización: limitar la fuerza o el alcance de una afirmación."
+      }
+    ],
+    "takeaway": "Use variety to make the meaning clearer, then check reference, parallelism and claim strength.",
+    "writingBridge": {
+      "prompt": "Write a short paragraph of four or five sentences proposing a more accessible public service. Include a direct proposal, an explanation, a qualified benefit and a list of matching actions.",
+      "checklist": [
+        "Sentence structures serve distinct purposes instead of repeating the same point.",
+        "Pronouns or this + noun have clear references; listed actions are parallel.",
+        "The benefit is appropriately limited and any participle clause has a clear shared subject."
+      ]
+    },
+    "sources": [
+      {
+        "title": "British Council: Participle clauses",
+        "url": "https://learnenglish.britishcouncil.org/grammar/c1-grammar/participle-clauses"
+      },
+      {
+        "title": "Cambridge: Types of clauses",
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/clauses-and-sentences"
+      }
+    ]
+  }
+]

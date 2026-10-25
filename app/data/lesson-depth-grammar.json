@@ -1,0 +1,522 @@
+[
+  {
+    "skillId": "g-word-order",
+    "why": "En una consulta real, el orden también revela qué dato desconoces. Preguntar quién hizo algo no exige la misma estructura que preguntar a quién atendieron. Antes de redactar, marca el hueco de información y conserva los datos conocidos. Así puedes pedir responsabilidades y detalles concretos sin introducir auxiliares por reflejo ni ocultar tu petición dentro de una frase larga.",
+    "decisions": [
+      {"cue": "Conoces la acción, pero no la persona que la realizó.", "action": "Haz que who ocupe el lugar del sujeto, sin do auxiliar en una pregunta neutra.", "en": "Who approved the refund?", "reason": "La respuesta sustituirá a who: The manager approved the refund."},
+      {"cue": "Conoces al responsable y buscas el objeto de su decisión.", "action": "Mantén el sujeto conocido e introduce did antes de él.", "en": "Which refund did the manager approve?", "reason": "The manager sigue siendo sujeto; which refund representa lo aprobado y approve vuelve a la base."}
+    ],
+    "worked": {
+      "scenario": "Recibiste dos versiones de un horario. Sabes que una coordinadora las envió, pero no quién autorizó el cambio.",
+      "task": "Redacta un párrafo que aclare la diferencia y pregunte quién autorizó el cambio y cuál versión debes usar.",
+      "model": "I received two different timetables yesterday, and the later version includes an extra evening class. Who authorised this change? Could you tell me which version I should use? I usually finish work at six, so the additional class would be difficult for me to attend.",
+      "reasoning": [
+        {"quote": "Who authorised this change?", "explanation": "Who es el sujeto desconocido; no hace falta did y authorised conserva la forma pasada."},
+        {"quote": "which version I should use", "explanation": "Dentro de Could you tell me, la secuencia es sujeto I + modal should + verbo use; no vuelve a invertirse."},
+        {"quote": "I usually finish work at six", "explanation": "El adverbio describe la frecuencia de finish y queda antes del verbo principal, sin separar finish de work."}
+      ],
+      "alternative": {"text": "Which version should I use?", "why": "Como pregunta directa, should va antes de I. Es correcta y más breve; la versión indirecta suaviza la consulta al destinatario."}
+    },
+    "checks": [
+      {"id": "deepen-1", "type": "choice", "prompt": "Sabes que la devolución fue aprobada, pero desconoces al responsable. ¿Qué pregunta pide precisamente ese dato?", "options": ["Who approved the refund?", "Who did the manager approve?", "Which refund did the manager approve?"], "answer": 0, "explanation": "Who ocupa el puesto de quien aprobó. Las otras preguntas buscan una persona aprobada o una devolución concreta, no al responsable."},
+      {"id": "deepen-2", "type": "input", "prompt": "La pregunta directa es Which desk does Anna use? Completa SOLO el verbo: Could you tell me which desk Anna ___?", "accepted": ["uses"], "explanation": "La pregunta interna usa orden de afirmación y pierde does. Anna es tercera persona singular, por lo que uses recupera la s."},
+      {"id": "deepen-3", "type": "choice", "prompt": "Elige el orden neutro para decir que el conductor explicó las instrucciones claramente.", "options": ["The driver explained clearly the instructions.", "The driver explained the instructions clearly.", "The driver the instructions clearly explained."], "answer": 1, "explanation": "El objeto the instructions sigue directamente a explained; clearly describe cómo se explicó y puede colocarse después del objeto."}
+    ],
+    "retrieval": {"id": "stretch", "type": "open", "prompt": "En 3 frases, escribe al organizador de una excursión: di que normalmente trabajas los sábados, pregunta quién eligió la fecha y solicita de forma indirecta la hora de salida. No inventes una hora como respuesta.", "explanation": "Construye primero las dos preguntas directas. Después convierte solo la consulta sobre la hora en indirecta y revisa dónde queda el sujeto.", "model": "I usually work on Saturdays. Who chose the date for the trip? Could you tell me what time the coach leaves?", "checklist": ["La frecuencia se coloca de forma natural junto al verbo.", "Who pregunta por el sujeto sin did añadido.", "La consulta indirecta conserva the coach leaves, sin inversión interna."]},
+    "sources": [{"title": "Cambridge: Questions — wh-questions", "url": "https://dictionary.cambridge.org/us/grammar/british-grammar/wh-questions"}]
+  },
+  {
+    "skillId": "g-be-auxiliaries",
+    "why": "En un intercambio, la respuesta breve recupera el auxiliar de la pregunta y evita repetir toda la información. Ese auxiliar depende de la función del verbo, no de la palabra española equivalente. Además, presentar un problema con there y describirlo después con it permite pasar de la existencia al estado sin construir frases que parezcan traducciones literales.",
+    "decisions": [
+      {"cue": "Have expresa una instalación que posee un alojamiento.", "action": "Pregunta con does y responde con does; have sigue siendo el verbo principal.", "en": "Does the cabin have heating? Yes, it does.", "reason": "Se consulta una característica habitual, no una acción completada con present perfect."},
+      {"cue": "Have forma un tiempo perfecto sobre una comprobación ya realizada.", "action": "Conserva have en pregunta y respuesta breve.", "en": "Have they checked the heater? No, they haven't.", "reason": "Have acompaña al participio checked; añadir do rompería la estructura perfecta."}
+    ],
+    "worked": {
+      "scenario": "Un alojamiento tiene calefacción, pero ahora no funciona. El propietario aún no ha enviado al técnico.",
+      "task": "Explica las dos situaciones, consulta por la reparación e introduce una consecuencia concreta.",
+      "model": "The flat has central heating, but it is not working at present. There is a serious problem in the bedroom: it is too cold to use. Have you arranged a repair? If you have, could you let me know when the engineer is coming? We need an update before tonight.",
+      "reasoning": [
+        {"quote": "The flat has central heating", "explanation": "Has expresa posesión de una instalación. Para negarla haría falta does not have, no has not central heating."},
+        {"quote": "There is a serious problem", "explanation": "There introduce un problema nuevo; después it is too cold describe el dormitorio ya identificado."},
+        {"quote": "If you have", "explanation": "Have recupera have arranged a repair. Esta elipsis evita repetir el verbo y el objeto sin perder la referencia."}
+      ],
+      "alternative": {"text": "Does the heating work?", "why": "Work es aquí verbo principal en presente simple, por lo que aparece does. Is the heating working? presenta su funcionamiento en este momento."}
+    },
+    "checks": [
+      {"id": "deepen-1", "type": "choice", "prompt": "Responde afirmativamente a Does this room have a desk? sin repetir toda la oración.", "options": ["Yes, it has.", "Yes, it is.", "Yes, it does."], "answer": 2, "explanation": "La pregunta utiliza does porque have expresa posesión; la respuesta breve recupera does. Has correspondería a una pregunta con has auxiliar."},
+      {"id": "deepen-2", "type": "input", "prompt": "Completa SOLO el auxiliar: Has the manager signed the form? No, she ___. Usa una contracción.", "accepted": ["hasn't", "hasn’t"], "explanation": "Has signed es present perfect. La respuesta negativa mantiene has y añade not: hasn't."},
+      {"id": "deepen-3", "type": "choice", "prompt": "Introduces por primera vez dos fugas y después indicas su gravedad. ¿Qué opción mantiene existencia, número y referencia?", "options": ["There are two leaks. They are serious.", "It is two leaks. There are serious.", "There is two leaks. It is serious."], "answer": 0, "explanation": "There are presenta el plural leaks; they retoma esas fugas para describirlas. It no sustituye a un referente plural."}
+    ],
+    "retrieval": {"id": "stretch", "type": "open", "prompt": "Escribe 3 frases sobre una biblioteca: introduce dos ordenadores averiados, descríbelos como inutilizables y pregunta si el equipo técnico los ha revisado. Usa there, un pronombre plural y present perfect.", "explanation": "Comprueba por separado qué existe, a qué se refiere el pronombre y qué auxiliar pide la acción anterior relevante ahora.", "model": "There are two faulty computers in the library. They are unavailable to visitors. Has the technical team checked them?", "checklist": ["There are introduce un referente plural nuevo.", "They retoma los ordenadores de manera clara.", "Has + sujeto + participio pregunta por la revisión, sin do."]},
+    "sources": [{"title": "Cambridge: Verbs — types", "url": "https://dictionary.cambridge.org/us/grammar/british-grammar/verbs-types?q=linking+verbs"}]
+  },
+  {
+    "skillId": "g-agreement-pronouns",
+    "why": "Una frase puede tener concordancia correcta y aun así atribuir una decisión a la persona equivocada. Al revisar, separa dos preguntas: qué núcleo controla el verbo y qué antecedente recupera cada pronombre. Las instrucciones con each son especialmente útiles para practicarlo: cada destinatario es singular, aunque their permita evitar especificar género y they conserve su concordancia habitual.",
+    "decisions": [
+      {"cue": "Una lista de documentos es lo que falta, no varios documentos por separado.", "action": "Haz concordar el verbo con list y usa it al retomarla.", "en": "The list of required documents is missing. Please resend it.", "reason": "Documents pertenece a of required documents; no convierte list en plural."},
+      {"cue": "Las personas, y no la lista, deben realizar una acción individual.", "action": "Mantén each con verbo singular y recupera a la persona mediante their o they.", "en": "Each applicant checks their address before they submit the form.", "reason": "Checks concuerda con each applicant; they utiliza submit aunque su referente sea una persona."}
+    ],
+    "worked": {
+      "scenario": "Una coordinadora habló con una tutora. La tutora enviará los informes; la lista de participantes está incompleta.",
+      "task": "Redacta una actualización que identifique sin ambigüedad quién enviará los informes y qué debe comprobar cada participante.",
+      "model": "The list of participants is incomplete, so we cannot issue every certificate yet. The coordinator spoke to the tutor, and the tutor agreed to send the missing reports tomorrow. Each participant should check their personal details before they approve the final version. Please send any corrections directly to me.",
+      "reasoning": [
+        {"quote": "The list of participants is incomplete", "explanation": "List es el núcleo singular y exige is. Participants solo explica quién aparece en la lista."},
+        {"quote": "the tutor agreed", "explanation": "Repetir tutor evita un she ambiguo después de mencionar dos personas; la repetición aporta precisión."},
+        {"quote": "before they approve", "explanation": "They retoma de forma inclusiva a each participant, pero mantiene la forma approve, no approves."}
+      ],
+      "alternative": {"text": "Each participant should check their details before approving the final version.", "why": "Before approving elimina el segundo pronombre y mantiene el mismo agente. Funciona porque quien comprueba también aprueba."}
+    },
+    "checks": [
+      {"id": "deepen-1", "type": "choice", "prompt": "Eva habló con Lina. Lina prometió llamar. ¿Qué versión deja inequívocamente claro quién llamará?", "options": ["Eva spoke to Lina, and she promised to call.", "Eva spoke to Lina, and Lina promised to call.", "Eva spoke to Lina because they promised to call."], "answer": 1, "explanation": "Repetir Lina fija el referente. She podría recuperar a Eva o Lina, y they cambia o difumina el agente de la promesa."},
+      {"id": "deepen-2", "type": "input", "prompt": "Completa con is o are: The quality of these printed photographs ___ poor.", "accepted": ["is"], "explanation": "El núcleo quality es singular. These printed photographs está dentro del complemento con of y no controla el verbo."},
+      {"id": "deepen-3", "type": "choice", "prompt": "¿Qué frase usa correctamente singular they para una persona cuyo género no se especifica?", "options": ["Every volunteer keeps their badge because they needs it.", "Every volunteer keep their badge because they need it.", "Every volunteer keeps their badge because they need it."], "answer": 2, "explanation": "Every volunteer exige keeps, pero they conserva need. La referencia singular no convierte la concordancia de they en tercera persona singular."}
+    ],
+    "retrieval": {"id": "stretch", "type": "open", "prompt": "En 3 frases, informa de que el horario de los talleres ha cambiado, pide a cada voluntario que compruebe su turno y di que Omar, tras hablar con Pablo, enviará la versión nueva. Evita un pronombre ambiguo entre los dos nombres.", "explanation": "No reduzcas repeticiones a costa de perder al responsable. Revisa también schedule, aunque aparezca cerca del plural workshops.", "model": "The schedule of workshops has changed. Each volunteer should check their shift. Omar spoke to Pablo, and Omar will send the revised version this afternoon.", "checklist": ["El verbo concuerda con schedule.", "Cada voluntario tiene un posesivo claro y coherente.", "Queda explícito que Omar enviará la versión nueva."]},
+    "sources": [{"title": "Cambridge: Personal pronouns", "url": "https://dictionary.cambridge.org/us/grammar/british-grammar/pronouns-personal-i-me-you-him-it-they-"}]
+  },
+  {
+    "skillId": "g-countability",
+    "why": "La elección de cantidad puede cambiar la valoración de una situación: no equivale destacar que quedan algunas plazas a lamentar que quedan pocas. Primero clasifica el nombre y luego decide si la cantidad cumple la necesidad del contexto. Si necesitas un número exacto de objetos englobados en un incontable, cuenta las unidades adecuadas y haz concordar el verbo con esas unidades.",
+    "decisions": [
+      {"cue": "Quedan suficientes personas para empezar, aunque el grupo sea pequeño.", "action": "Presenta una cantidad positiva con a few más plural contable.", "en": "We have a few volunteers, so we can begin.", "reason": "A few destaca que contamos con algunas personas; el resultado confirma que bastan."},
+      {"cue": "La cantidad disponible no permite realizar la actividad prevista.", "action": "Destaca escasez con few o little según el tipo de nombre.", "en": "We have little equipment, so several activities are impossible.", "reason": "Equipment es incontable y little, sin a, enfoca la limitación para trabajar."}
+    ],
+    "worked": {
+      "scenario": "Abres un taller comunitario. Hay herramientas suficientes para empezar, pero solo quedan dos sillas libres y casi no hay espacio de almacenamiento.",
+      "task": "Describe el contraste, cuenta el equipo mediante unidades y pide información sobre almacenamiento.",
+      "model": "We have a few spare tools, so beginners can join the first session. Three pieces of equipment are already installed, but only two seats remain available. There is very little storage space for additional materials. Could you give us some information about using the cupboard next door before we buy anything else?",
+      "reasoning": [
+        {"quote": "a few spare tools", "explanation": "Tools es contable plural. A few muestra una reserva útil para aceptar principiantes."},
+        {"quote": "Three pieces of equipment are", "explanation": "Se cuentan pieces, no equipment. El núcleo plural pieces determina are aunque equipment permanezca singular."},
+        {"quote": "some information", "explanation": "Information es incontable; some es natural en una petición donde esperamos recibir información."}
+      ],
+      "alternative": {"text": "We have few spare tools, so we cannot accept more beginners.", "why": "Eliminar a cambia el enfoque hacia la insuficiencia. La consecuencia también debe cambiar para que la lógica del mensaje sea coherente."}
+    },
+    "checks": [
+      {"id": "deepen-1", "type": "choice", "prompt": "Necesitas cinco ayudantes y solo tienes uno. ¿Qué frase expresa escasez de forma coherente?", "options": ["We have few volunteers, so we need to recruit more.", "We have a few volunteers, so all five places are filled.", "We have little volunteers, so we need to recruit more."], "answer": 0, "explanation": "Few combina con volunteers y subraya que faltan personas. Little no se combina con este plural contable y la segunda opción contradice los datos."},
+      {"id": "deepen-2", "type": "input", "prompt": "Completa SOLO con is o are: Two items of furniture ___ damaged.", "accepted": ["are"], "explanation": "Items es el núcleo contable plural de la expresión. Furniture sigue siendo incontable, pero no determina aquí el número del verbo."},
+      {"id": "deepen-3", "type": "choice", "prompt": "Quieres pedir orientación a un asesor. ¿Qué opción usa naturalmente advice en una petición?", "options": ["Could you give me an advice?", "Could you give me some advice?", "Could you give me a few advices?"], "answer": 1, "explanation": "Advice es incontable y admite some en una petición. Para contar consejos necesitaríamos una unidad: two pieces of advice."}
+    ],
+    "retrieval": {"id": "stretch", "type": "open", "prompt": "Escribe 3 frases para abrir un laboratorio escolar: aún tienes algo de tiempo para prepararlo, hay muy poca información de seguridad y exactamente cuatro aparatos necesitan revisión. Usa a little, little y una unidad con equipment.", "explanation": "El artículo a modifica la valoración de la cantidad. Para contar aparatos mediante equipment, añade una unidad contable.", "model": "We still have a little time to prepare the laboratory. However, there is very little safety information for students. Four pieces of equipment need to be checked before the first lesson.", "checklist": ["A little time presenta tiempo disponible.", "Little information destaca la escasez sin pluralizar information.", "Four pieces permite contar equipment y exige concordancia plural."]},
+    "sources": [{"title": "British Council: Common problems with count and uncount nouns", "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/common-problems-count-uncount-nouns"}]
+  },
+  {
+    "skillId": "g-articles",
+    "why": "El lector puede identificar algo aunque no lo hayas nombrado antes: una reserva compartida o una descripción que señala una única oficina permite usar the. En cambio, una profesión o un ejemplo nuevo suele necesitar a o an. Para revisar artículos de forma útil, reconstruye lo que el destinatario sabe en cada punto, en lugar de contar únicamente primeras y segundas menciones.",
+    "decisions": [
+      {"cue": "Buscas cualquier establecimiento que cumpla una condición, sin tener uno concreto identificado.", "action": "Introduce un singular contable con a o an.", "en": "I need a hotel near the station.", "reason": "La condición reduce las opciones, pero no identifica necesariamente un hotel único."},
+      {"cue": "Tú y el destinatario conocéis el establecimiento de vuestra reserva.", "action": "Usa the aunque sea su primera mención en el mensaje.", "en": "The hotel has charged us twice.", "reason": "La reserva compartida hace identificable el hotel; no es obligatoria una mención anterior dentro de esa misma carta."}
+    ],
+    "worked": {
+      "scenario": "Escribes a una agencia sobre el alojamiento de una reserva que ambos conocéis. Una recepcionista te recomendó comprar un adaptador.",
+      "task": "Describe el problema distinguiendo el hotel conocido, la empleada nueva y el objeto que compraste.",
+      "model": "The hotel in our booking did not provide suitable charging facilities. A receptionist advised me to buy an adapter from a nearby shop. The adapter cost twelve pounds, and I have attached the receipt. Reliable electricity is essential for guests who need to work, so I would appreciate a refund of this expense.",
+      "reasoning": [
+        {"quote": "The hotel in our booking", "explanation": "La reserva compartida identifica el hotel desde su primera aparición en la carta."},
+        {"quote": "A receptionist", "explanation": "Se introduce a una empleada sin identificar cuál. No se presupone que el lector pueda reconocerla."},
+        {"quote": "The adapter cost twelve pounds", "explanation": "Ahora el adaptador ya se ha introducido; the recupera exactamente el que compraste."}
+      ],
+      "alternative": {"text": "I spoke to the receptionist who checked us in.", "why": "La relativa puede identificar a la recepcionista concreta. The no depende solo de haber mencionado receptionist antes, sino de que esa descripción permita reconocerla."}
+    },
+    "checks": [
+      {"id": "deepen-1", "type": "choice", "prompt": "Escribes por primera vez al hotel donde ya tienes una reserva confirmada. ¿Qué frase puede usar the correctamente por contexto compartido?", "options": ["The room in my booking needs an extra bed.", "The a room needs extra bed.", "Room in my booking needs the an extra bed."], "answer": 0, "explanation": "In my booking identifica la habitación para el destinatario. Extra bed es singular contable nuevo y necesita an; no se acumulan artículos."},
+      {"id": "deepen-2", "type": "input", "prompt": "Completa SOLO con a o an: We waited for ___ hour before speaking to an adviser.", "accepted": ["an"], "explanation": "Hour empieza con sonido vocálico porque la h no se pronuncia. La elección depende del sonido, no de la letra escrita."},
+      {"id": "deepen-3", "type": "choice", "prompt": "Quieres generalizar sobre todas las bibliotecas como tipo de servicio, sin señalar un grupo conocido. ¿Qué opción es la más adecuada?", "options": ["The libraries support the lifelong learning.", "Libraries support lifelong learning.", "A libraries support a lifelong learning."], "answer": 1, "explanation": "El plural libraries y el incontable lifelong learning presentan categorías generales y aquí no necesitan artículo. The introduciría referentes específicos."}
+    ],
+    "retrieval": {"id": "stretch", "type": "open", "prompt": "En 3 frases, cuenta que un vecino te recomendó un curso no mencionado antes, que ese curso incluye una entrevista y que la entrevista dura una hora. Controla a/an y las referencias posteriores con the.", "explanation": "Cada elemento pasa de ser nuevo a identificable en un momento distinto. Revisa el sonido inicial de interview y hour.", "model": "A neighbour recommended a course to me. The course includes an interview. The interview lasts an hour.", "checklist": ["Vecino y curso se introducen con a.", "The course y the interview recuperan el mismo referente ya introducido.", "Interview y hour llevan an por su sonido inicial."]},
+    "sources": [{"title": "British Council: Articles — a, an, the", "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2-grammar/articles-a-an-the"}]
+  },
+  {
+    "skillId": "g-prepositions",
+    "why": "En una carta, una preposición puede determinar qué acción esperas: terminar antes de una fecha o mantener algo disponible hasta ella. También puedes describir un mismo lugar como destino, punto de encuentro o interior. Elige la relación antes de traducir la palabra española y guarda las combinaciones que dependen del verbo como bloques completos que puedas recuperar al escribir.",
+    "decisions": [
+      {"cue": "Pides que una tarea esté terminada como máximo el viernes.", "action": "Usa by con el límite de finalización.", "en": "Please complete the inspection by Friday.", "reason": "La inspección puede terminar antes; viernes es el límite, no una duración de trabajo continuo."},
+      {"cue": "Pides conservar un servicio durante todo el periodo que acaba el viernes.", "action": "Usa until con el final de la continuidad.", "en": "Please keep the room available until Friday.", "reason": "La disponibilidad debe mantenerse; by Friday no expresaría esa continuidad."}
+    ],
+    "worked": {
+      "scenario": "Organizas una recogida. Necesitas la confirmación antes del jueves y que las cajas sigan en recepción hasta el viernes por la mañana.",
+      "task": "Escribe las instrucciones distinguiendo plazo, duración, día y punto de recogida.",
+      "model": "Please confirm the collection by Thursday afternoon and keep the boxes at reception until Friday morning. Our driver will arrive at the building at nine on Friday. He will wait in the entrance hall rather than outside. I am responsible for the arrangements, so please contact me if the collection point changes.",
+      "reasoning": [
+        {"quote": "by Thursday afternoon", "explanation": "By fija el plazo máximo para confirmar; no pide confirmar de manera continua hasta el jueves."},
+        {"quote": "until Friday morning", "explanation": "Until exige que las cajas permanezcan allí hasta el momento de recogida."},
+        {"quote": "arrive at the building at nine on Friday", "explanation": "Arrive at combina con el edificio como destino concreto; at marca la hora y on el día."}
+      ],
+      "alternative": {"text": "Our driver will be at the building at nine.", "why": "Be at sitúa al conductor en un punto. Arrive at comunica el momento de llegada; no debe transformarse en arrive to por analogía con go to."}
+    },
+    "checks": [
+      {"id": "deepen-1", "type": "choice", "prompt": "El acceso debe seguir activo todo el martes y finalizar al acabar ese día. ¿Qué instrucción expresa continuidad?", "options": ["Keep access active by the end of Tuesday.", "Keep access active until the end of Tuesday.", "Keep access active on the end of Tuesday."], "answer": 1, "explanation": "Until mantiene el estado hasta el límite indicado. By fija una fecha máxima para lograr un resultado y no garantiza continuidad."},
+      {"id": "deepen-2", "type": "input", "prompt": "Completa SOLO la preposición: The train arrives ___ Manchester at ten. Manchester es una ciudad.", "accepted": ["in"], "explanation": "Arrive in se usa normalmente con ciudades y países. Con un punto concreto como the station usaríamos arrive at."},
+      {"id": "deepen-3", "type": "choice", "prompt": "¿Qué combinación expresa correctamente la responsabilidad de una persona sobre una reserva?", "options": ["She is responsible of the booking.", "She is responsible to the booking.", "She is responsible for the booking."], "answer": 2, "explanation": "Responsible for + tarea expresa de qué se encarga. Conviene recuperar responsible for como bloque y no traducir la preposición española."}
+    ],
+    "retrieval": {"id": "stretch", "type": "open", "prompt": "En 3 frases, pide al organizador que confirme una reparación como máximo el lunes, que mantenga abierta una sala hasta el miércoles y di que llegarás a la estación el miércoles a las ocho. Usa los cinco datos temporales y de lugar sin confundir sus relaciones.", "explanation": "Marca primero qué es plazo, qué es continuidad, qué es lugar de llegada y qué es día u hora.", "model": "Please confirm the repair by Monday. Could you keep the room open until Wednesday? I will arrive at the station at eight on Wednesday.", "checklist": ["By fija el plazo de confirmación.", "Until expresa continuidad de la apertura.", "Arrive at, at eight y on Wednesday expresan lugar, hora y día."]},
+    "sources": [{"title": "British Council: Prepositions of time — at, in, on", "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2-grammar/prepositions-of-time-at-in-on"}]
+  },
+  {
+    "skillId": "g-modifiers",
+    "why": "Una comparación útil necesita un criterio y un grupo de referencia: la opción más barata puede resultar menos práctica para alguien con otro horario. Al desarrollar un argumento, separa precio, calidad y accesibilidad para no presentar better como una conclusión universal. Después decide si modificas una cualidad o la manera de realizar una acción; esa diferencia determina adjetivo o adverbio.",
+    "decisions": [
+      {"cue": "Evalúas una cualidad del servicio o de la persona.", "action": "Usa un adjetivo después de seem o be y precisa el criterio.", "en": "The new service seems reliable.", "reason": "Reliable describe el servicio; seem no describe una acción realizada de manera fiable."},
+      {"cue": "Evalúas cómo se realiza una tarea.", "action": "Usa un adverbio compatible con la acción.", "en": "The new operator handles complaints reliably.", "reason": "Reliably modifica handles. El sujeto no se transforma en reliably: lo que se valora es su actuación."}
+    ],
+    "worked": {
+      "scenario": "Comparas dos rutas al trabajo. El autobús cuesta algo menos, pero el tren tarda mucho menos y es la opción más rápida de las tres disponibles.",
+      "task": "Recomienda según un criterio explícito sin afirmar que una ruta es mejor en todos los aspectos.",
+      "model": "The bus is slightly cheaper than the train, but it takes much longer during rush hour. Of the three available routes, the train is the fastest. It is therefore more convenient for employees who start early. However, the bus may be the better option for people whose main priority is keeping travel costs low.",
+      "reasoning": [
+        {"quote": "slightly cheaper than the train", "explanation": "Slightly gradúa una diferencia pequeña. No se añade more a cheaper porque el comparativo ya está marcado."},
+        {"quote": "Of the three available routes", "explanation": "El superlativo the fastest tiene un grupo de referencia explícito; no se presenta como el más rápido en cualquier lugar."},
+        {"quote": "whose main priority is keeping travel costs low", "explanation": "El criterio económico limita la recomendación. Better pasa a tener un significado concreto para ese grupo de viajeros."}
+      ],
+      "alternative": {"text": "The bus is not as fast as the train.", "why": "Not as + adjetivo + as expresa inferioridad en velocidad. Mantiene el mismo criterio que slower than, aunque cambia la forma de presentarlo."}
+    },
+    "checks": [
+      {"id": "deepen-1", "type": "choice", "prompt": "Un abono cuesta 49 euros y otro 50. ¿Qué frase describe naturalmente una diferencia pequeña?", "options": ["The first pass is very cheaper.", "The first pass is slightly cheaper.", "The first pass is more cheaper."], "answer": 1, "explanation": "Slightly indica una diferencia pequeña y modifica correctamente el comparativo. Very no suele modificar cheaper y more duplicaría la comparación."},
+      {"id": "deepen-2", "type": "input", "prompt": "Completa SOLO con careful o carefully: The receptionist checked my details ___.", "accepted": ["carefully"], "explanation": "Se describe cómo comprobó los datos, no una cualidad del sustantivo receptionist. La acción checked pide el adverbio carefully."},
+      {"id": "deepen-3", "type": "choice", "prompt": "Las dos salas tienen exactamente el mismo tamaño físico. ¿Qué frase conserva esa igualdad?", "options": ["Room A is as large as Room B.", "Room A is larger than Room B.", "Room A is not as large as Room B."], "answer": 0, "explanation": "As large as expresa igualdad en tamaño. Larger than indica superioridad y not as large as inferioridad."}
+    ],
+    "retrieval": {"id": "stretch", "type": "open", "prompt": "Compara dos gimnasios en 3 frases: A cuesta bastante menos, B está más cerca de tu casa y A es tu recomendación para quien prioriza precio. Usa un modificador de comparativo y explica el criterio de la recomendación.", "explanation": "Separa las dos dimensiones para evitar que better parezca una valoración absoluta.", "model": "Gym A is much cheaper than Gym B. However, Gym B is closer to my home. Gym A is the better choice for someone whose main concern is the monthly fee.", "checklist": ["Much u otro modificador adecuado gradúa cheaper.", "La cercanía y el precio se comparan por separado.", "La recomendación menciona explícitamente la prioridad económica."]},
+    "sources": [{"title": "British Council: Comparative and superlative adjectives", "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/comparative-superlative-adjectives"}]
+  },
+  {
+    "skillId": "g-present",
+    "why": "Al reclamar un servicio, distinguir norma y excepción permite mostrar exactamente qué ha cambiado. El presente simple puede describir una promesa habitual, mientras el continuo presenta una situación temporal alrededor de ahora. No basta con localizar today: un estado sigue necesitando normalmente forma simple. Algunos verbos cambian de estructura cuando pasan de posesión u opinión a actividad o reflexión en curso.",
+    "decisions": [
+      {"cue": "Think introduce tu valoración actual, sin describir un proceso de deliberación.", "action": "Presenta la opinión con presente simple.", "en": "I think the new fee is unreasonable.", "reason": "Think significa creer u opinar; I am thinking the fee is unreasonable no es la opción neutra en este uso."},
+      {"cue": "Estás considerando una alternativa y aún no has decidido.", "action": "Usa continuo para la reflexión en desarrollo.", "en": "I am thinking about changing providers.", "reason": "Thinking about describe una actividad mental temporal, no una opinión expresada mediante that o una oración."}
+    ],
+    "worked": {
+      "scenario": "Tu curso normalmente incluye tutorías presenciales. Este mes las sustituyen temporalmente por llamadas y estás valorando cambiar de grupo.",
+      "task": "Distingue el servicio habitual, la excepción actual y tu opinión o deliberación.",
+      "model": "The course normally includes a weekly meeting with a tutor, but this month we are receiving only short telephone calls. I understand that the building needs repairs. However, I think the current arrangement provides too little support, and I am considering a different group until face-to-face meetings resume.",
+      "reasoning": [
+        {"quote": "normally includes", "explanation": "El presente simple establece la característica habitual con la que se compara el servicio actual."},
+        {"quote": "this month we are receiving", "explanation": "El continuo presenta una excepción temporal, aunque no haya una llamada sucediendo en este segundo."},
+        {"quote": "I think the current arrangement provides too little support", "explanation": "Think expresa opinión y provides describe una característica del acuerdo actual; ambos admiten simple aunque hablen del presente."}
+      ],
+      "alternative": {"text": "I am thinking about joining another group.", "why": "Esta versión describe la deliberación en curso. No implica que ya exista una decisión firme ni cambia think en una opinión introducida por una oración."}
+    },
+    "checks": [
+      {"id": "deepen-1", "type": "choice", "prompt": "Trabajas normalmente en una oficina; solo durante esta semana lo haces desde casa por una avería. ¿Qué frase distingue ambas perspectivas?", "options": ["I usually work in the office, but I am working from home this week.", "I am usually work in the office, but I work from home this week.", "I usually working in the office, but I am work from home this week."], "answer": 0, "explanation": "Work presenta la rutina y am working la excepción temporal. El continuo siempre necesita be + -ing, sin mezclar las formas."},
+      {"id": "deepen-2", "type": "input", "prompt": "Completa SOLO con know o am knowing: I ___ the access code, so I can open the door.", "accepted": ["know"], "explanation": "Know describe un estado de conocimiento, no una actividad en desarrollo. En este significado usamos presente simple."},
+      {"id": "deepen-3", "type": "choice", "prompt": "Todavía no has decidido; estás considerando una mudanza. ¿Qué opción comunica esa reflexión temporal?", "options": ["I am thinking about moving.", "I think that I moved last year.", "I am owning a new flat."], "answer": 0, "explanation": "Thinking about moving describe una reflexión actual. La segunda habla de una creencia sobre el pasado y own normalmente expresa un estado de posesión."}
+    ],
+    "retrieval": {"id": "stretch", "type": "open", "prompt": "Escribe 3 frases al encargado de un gimnasio: la piscina normalmente abre a las siete, esta semana abre a las nueve por obras y tú crees que deberían ofrecer otra opción. Usa simple para rutina y opinión, y continuo para la excepción.", "explanation": "El tiempo verbal debe reflejar tu perspectiva, no elegirse únicamente por la presencia de una expresión como this week.", "model": "The pool normally opens at seven. This week, it is opening at nine because of building work. I think members should be offered another option.", "checklist": ["La rutina usa presente simple con concordancia singular.", "La excepción usa is + -ing y un marco temporal.", "La opinión usa I think y no I am thinking that."]},
+    "sources": [{"title": "British Council: Stative verbs", "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/stative-verbs?page=1"}]
+  },
+  {
+    "skillId": "g-past",
+    "why": "Una narración de una incidencia debe permitir reconstruir cuándo empezó cada acción. Con when, dos pasados simples suelen presentar una secuencia; un continuo permite mostrar que una actividad ya estaba en marcha. Esa elección puede cambiar si estabas esperando antes de una llamada o empezaste a esperar después. Conserva además un hilo principal de hechos completos para que la descripción del contexto no esconda el problema.",
+    "decisions": [
+      {"cue": "La llamada ocurrió mientras ya comprobabas una reserva.", "action": "Usa continuo para la comprobación y simple para la llamada.", "en": "When the agent called, I was checking the booking.", "reason": "La comprobación estaba en curso en el momento de la llamada; no se afirma cuándo terminó."},
+      {"cue": "La llamada te llevó a empezar la comprobación.", "action": "Usa simple para presentar la comprobación como siguiente hecho.", "en": "When the agent called, I checked the booking.", "reason": "En esta lectura, la llamada precede o desencadena la comprobación, en vez de interrumpirla."}
+    ],
+    "worked": {
+      "scenario": "Esperabas un autobús cuando empezó a llover. Te refugiaste, llamaste a la oficina y luego llegó el vehículo.",
+      "task": "Narra la incidencia diferenciando el fondo de la secuencia de decisiones.",
+      "model": "I was waiting at the bus stop when it began to rain heavily. I moved under the shelter and called the transport office, but nobody answered. While I was trying a second number, the bus arrived. The driver explained that roadworks were causing delays, and I boarded immediately.",
+      "reasoning": [
+        {"quote": "I was waiting at the bus stop", "explanation": "Waiting establece una actividad en curso; began marca el hecho que surge dentro de ese contexto."},
+        {"quote": "I moved under the shelter and called", "explanation": "Los pasados simples hacen avanzar el relato mediante decisiones terminadas y consecutivas."},
+        {"quote": "While I was trying a second number", "explanation": "Esta actividad ya estaba en curso cuando llegó el autobús. El continuo no afirma que lograra hablar con alguien."}
+      ],
+      "alternative": {"text": "When the bus arrived, I called the office.", "why": "Cambia el orden interpretado: presenta la llamada al llegar el autobús. No equivale a estar llamando antes de su llegada."}
+    },
+    "checks": [
+      {"id": "deepen-1", "type": "choice", "prompt": "En When Sara arrived, I was cooking, ¿qué información está expresada?", "options": ["Empecé a cocinar necesariamente después de su llegada.", "Ya estaba cocinando en el momento de su llegada.", "Terminé de cocinar antes de que llegara."], "answer": 1, "explanation": "Was cooking muestra la actividad desde dentro en el momento en que Sara llegó. No establece que hubiera terminado ni que empezara después."},
+      {"id": "deepen-2", "type": "input", "prompt": "Completa SOLO la forma correcta de hear: I did not ___ the announcement because the room was noisy.", "accepted": ["hear"], "explanation": "Did ya marca el pasado. El verbo principal vuelve a hear; heard sería adecuado en una afirmativa sin did."},
+      {"id": "deepen-3", "type": "choice", "prompt": "Quieres presentar dos decisiones terminadas en orden: cerraste el ordenador y saliste. ¿Qué opción es más directa?", "options": ["I was closing my laptop and was leaving.", "I closed my laptop and left.", "I did closed my laptop and left."], "answer": 1, "explanation": "Closed y left presentan hechos completos que hacen avanzar la secuencia. Los continuos los mostrarían en desarrollo y did closed mezcla dos marcas de pasado."}
+    ],
+    "retrieval": {"id": "stretch", "type": "open", "prompt": "En 3 frases, explica una pérdida de conexión: estabas rellenando un formulario cuando falló internet; guardaste una copia y reiniciaste el equipo; no recibiste confirmación. Combina fondo, secuencia y negativa pasada.", "explanation": "Elige primero qué acción ya ocurría. Después narra las respuestas completas con pasado simple y revisa la forma posterior a did not.", "model": "I was completing the form when the internet connection failed. I saved a copy and restarted my computer. I did not receive a confirmation message.", "checklist": ["Was completing establece la actividad en curso.", "Saved y restarted narran acciones completas.", "Después de did not aparece receive, sin pasado duplicado."]},
+    "sources": [{"title": "British Council: Past continuous and past simple", "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/past-continuous-past-simple"}]
+  },
+  {
+    "skillId": "g-perfect",
+    "why": "El perfecto permite distinguir esfuerzo acumulado de resultado conseguido. Haber estado redactando no garantiza haber terminado el informe; haber escrito tres informes sí cuenta productos completos. En una actualización, esa diferencia evita prometer una entrega inexistente. Para los estados, como conocer a alguien, la duración suele expresarse con perfecto simple, aunque la relación continúe y lleve varios años en desarrollo.",
+    "decisions": [
+      {"cue": "Quieres destacar cuánto tiempo lleva una actividad que sigue pendiente.", "action": "Usa perfecto continuo y añade la duración pertinente.", "en": "I have been checking the records for two hours.", "reason": "Destaca el trabajo realizado durante ese periodo; no asegura que todos los registros estén revisados."},
+      {"cue": "Quieres informar de una cantidad ya completada.", "action": "Usa perfecto simple con el resultado contado.", "en": "I have checked twenty records.", "reason": "Twenty records mide unidades terminadas; la atención pasa del proceso al resultado acumulado."}
+    ],
+    "worked": {
+      "scenario": "Preparas un informe. Llevas toda la mañana trabajando, has completado tres apartados y descubriste ayer que faltaban datos solicitados antes de tu incorporación.",
+      "task": "Explica lo terminado y lo pendiente, y sitúa el descubrimiento en la secuencia pasada.",
+      "model": "I have been working on the report all morning and have completed three sections. The final section still needs figures from the accounts team. Yesterday, I discovered that the previous manager had requested those figures before I joined. I have sent a reminder, but I cannot finish the report without their response.",
+      "reasoning": [
+        {"quote": "have completed three sections", "explanation": "El perfecto simple cuenta tres resultados terminados; no afirma que todo el informe esté listo."},
+        {"quote": "Yesterday, I discovered", "explanation": "Yesterday sitúa el descubrimiento en un periodo cerrado, por lo que se usa pasado simple."},
+        {"quote": "had requested those figures before I joined", "explanation": "Had requested mira hacia una solicitud anterior desde la narración pasada. No implica que llegaran a recibir los datos."}
+      ],
+      "alternative": {"text": "I worked on the report yesterday morning.", "why": "El marco terminado yesterday morning pide pasado simple. Que el informe siga siendo importante hoy no elimina esa localización pasada explícita."}
+    },
+    "checks": [
+      {"id": "deepen-1", "type": "choice", "prompt": "¿Qué frase afirma que existen cuatro solicitudes ya terminadas, en lugar de destacar solo tiempo de trabajo?", "options": ["I have been preparing applications all day.", "I have prepared four applications.", "I was preparing applications when you called."], "answer": 1, "explanation": "Have prepared con una cantidad cuenta resultados completados. Las otras estructuras describen una actividad sin asegurar cuántas solicitudes están listas."},
+      {"id": "deepen-2", "type": "input", "prompt": "Completa con la forma correcta de know: I have ___ our neighbour for ten years.", "accepted": ["known"], "explanation": "Know expresa un estado y utiliza aquí perfecto simple. Have necesita el participio known, no knew ni been knowing."},
+      {"id": "deepen-3", "type": "choice", "prompt": "Llegaste a las diez; la tienda cerró a las nueve. ¿Qué frase conserva claramente esa anterioridad?", "options": ["The shop has closed when I arrived at ten.", "The shop was closing after I arrived at ten.", "The shop had closed before I arrived at ten."], "answer": 2, "explanation": "Had closed sitúa el cierre antes de la llegada pasada. Has closed cambia el punto de referencia a ahora y la segunda opción invierte el orden."}
+    ],
+    "retrieval": {"id": "stretch", "type": "open", "prompt": "En 3 frases, actualiza un proyecto: llevas dos horas llamando a proveedores, has recibido dos presupuestos y contactaste por primera vez con ellos el martes pasado. Distingue proceso, resultado y hecho fechado.", "explanation": "La duración, la cantidad completada y la fecha cerrada cumplen funciones diferentes y deben poder reconocerse en el texto.", "model": "I have been calling suppliers for two hours. I have received two quotations so far. I first contacted these companies last Tuesday.", "checklist": ["El proceso usa have been + -ing y for.", "La cantidad conseguida usa perfecto simple.", "Last Tuesday sitúa el primer contacto en pasado simple."]},
+    "sources": [{"title": "British Council: Present perfect", "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/present-perfect"}]
+  },
+  {
+    "skillId": "g-future",
+    "why": "Una confirmación de viaje puede combinar un horario publicado, una cita acordada y una promesa personal. Las formas futuras comunican esas diferencias, aunque varias sean posibles en otros contextos. Para revisar when, identifica su función: puede indicar cuándo harás algo o introducir el dato que desconoces. Solo la primera relación es una subordinada temporal que normalmente usa presente para el futuro.",
+    "decisions": [
+      {"cue": "La llegada desencadenará tu llamada.", "action": "Usa presente en la subordinada temporal con when.", "en": "I will call when the train arrives.", "reason": "La oración principal promete llamar y when fija la circunstancia futura que activa esa acción."},
+      {"cue": "No conoces la hora futura de llegada.", "action": "Puedes mantener will dentro de la pregunta indirecta.", "en": "I do not know when the train will arrive.", "reason": "When introduce la información desconocida; no significa que harás algo al llegar el tren."}
+    ],
+    "worked": {
+      "scenario": "Viajas a una entrevista. El tren tiene horario publicado, has acordado reunirte con la orientadora y prometes avisar si hay retraso.",
+      "task": "Confirma el plan y distingue el horario, la cita y el compromiso condicionado.",
+      "model": "My train leaves at eight tomorrow, and I am meeting the careers adviser at ten. I am going to review my notes during the journey. If the service is delayed, I will contact the office immediately. I will also send a message when I reach the station, so you can update the adviser.",
+      "reasoning": [
+        {"quote": "My train leaves at eight tomorrow", "explanation": "El presente simple presenta un horario establecido; tomorrow aclara la referencia futura."},
+        {"quote": "I am meeting the careers adviser at ten", "explanation": "El continuo comunica una cita concreta ya acordada, con una persona y una hora."},
+        {"quote": "when I reach the station", "explanation": "Reach está en presente porque la llegada es la circunstancia futura que desencadenará el mensaje prometido."}
+      ],
+      "alternative": {"text": "Could you confirm when the interview will finish?", "why": "Esta consulta pide conocer una hora futura. When forma parte de una pregunta indirecta, por lo que will es posible y no infringe la regla de las subordinadas temporales."}
+    },
+    "checks": [
+      {"id": "deepen-1", "type": "choice", "prompt": "¿En qué frase when introduce una información desconocida y permite will?", "options": ["I will email you when I will arrive.", "I do not know when the inspector will arrive.", "I will open the door when the inspector will arrive."], "answer": 1, "explanation": "La segunda frase desconoce la hora de llegada. En las otras, when establece cuándo ocurrirá la acción principal y debe ir normalmente con presente."},
+      {"id": "deepen-2", "type": "input", "prompt": "Completa SOLO la forma de start: I will take notes as soon as the presentation ___.", "accepted": ["starts"], "explanation": "As soon as introduce la circunstancia futura que activa la toma de notas. Se usa presente simple y presentation exige starts."},
+      {"id": "deepen-3", "type": "choice", "prompt": "Te avisan ahora de que falta una silla y decides ofrecer ayuda en ese momento. ¿Qué respuesta expresa esa decisión inmediata?", "options": ["I will bring one from the next room.", "I brought one yesterday.", "I am bringing one every Monday."], "answer": 0, "explanation": "Will puede presentar un ofrecimiento decidido al responder. Las otras frases sitúan la acción en el pasado o mezclan continuo con una rutina sin contexto."}
+    ],
+    "retrieval": {"id": "stretch", "type": "open", "prompt": "En 3 frases, confirma que mañana has quedado con el casero a las once, promete enviar las fotos cuando llegues y pregunta indirectamente a qué hora terminará la inspección. Distingue los dos usos de when.", "explanation": "La promesa usa when como circunstancia; la última frase pide una hora que no conoces.", "model": "I am meeting the landlord at eleven tomorrow. I will send the photos when I arrive. Could you tell me when the inspection will finish?", "checklist": ["La cita acordada tiene referencia futura clara.", "La llegada usa presente dentro de la subordinada temporal.", "La consulta por la hora conserva orden de afirmación dentro y puede usar will."]},
+    "sources": [{"title": "British Council: Future forms", "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/future-forms-will-be-going-present-continuous"}]
+  },
+  {
+    "skillId": "g-modals",
+    "why": "El modal elegido determina qué puede hacer el destinatario y cuánta certeza atribuyes a una afirmación. En una recomendación, should deja margen; en una norma, must exige cumplimiento. Para una reclamación, separa hechos observados de explicaciones posibles: puedes afirmar que un aparato se apaga y plantear con might una causa que aún no ha sido comprobada por un técnico.",
+    "decisions": [
+      {"cue": "Has observado el efecto, pero no conoces la causa.", "action": "Presenta la explicación con might o may y conserva el hecho como hecho.", "en": "The screen switches off unexpectedly. The battery might be faulty.", "reason": "La avería de batería es una hipótesis, no una conclusión demostrada por observar la pantalla."},
+      {"cue": "Transmitirás una regla explícita del establecimiento.", "action": "Usa una obligación clara en lugar de una recomendación débil.", "en": "Visitors must wear the protective glasses provided.", "reason": "Must expresa un requisito de la actividad; should podría interpretarse como consejo que se puede ignorar."}
+    ],
+    "worked": {
+      "scenario": "Un portátil prestado se apaga solo. Desconoces la causa y necesitas que lo revise el servicio técnico. La funda es opcional, pero devolver el cargador es obligatorio.",
+      "task": "Describe el hecho, plantea una causa como posibilidad y separa solicitud, obligación y opción.",
+      "model": "The laptop switches off after a few minutes, even when it is plugged in. The battery might be faulty, but I cannot confirm the cause. Could you arrange a technical inspection? I understand that I must return the charger with the laptop, although I do not have to bring the optional carrying case.",
+      "reasoning": [
+        {"quote": "The battery might be faulty", "explanation": "Might conserva la incertidumbre sobre la causa; no convierte una sospecha en un diagnóstico."},
+        {"quote": "Could you arrange a technical inspection?", "explanation": "Could formula una petición dirigida a otra persona, no una afirmación de capacidad pasada."},
+        {"quote": "I do not have to bring", "explanation": "La funda es opcional. Do not have to deja abierta la posibilidad de llevarla, en lugar de prohibirlo."}
+      ],
+      "alternative": {"text": "You should check the battery first.", "why": "Should expresa un consejo sobre el siguiente paso. No equivale a exigir una revisión ni demuestra que la batería sea la causa del fallo."}
+    },
+    "checks": [
+      {"id": "deepen-1", "type": "choice", "prompt": "Una conexión falla y todavía no sabes por qué. ¿Qué frase distingue una causa posible de una causa demostrada?", "options": ["The router must be replaced immediately because I know nothing about the cause.", "The router might be faulty; a technician needs to check it.", "The router is definitely faulty because the cause has not been checked."], "answer": 1, "explanation": "Might presenta una hipótesis compatible con la falta de comprobación. Definitely afirmaría una certeza que el contexto no justifica."},
+      {"id": "deepen-2", "type": "input", "prompt": "Completa SOLO con mustn't o don't have to: Printing the ticket is optional, so you ___ print it.", "accepted": ["don't have to", "don’t have to"], "explanation": "Una opción voluntaria requiere ausencia de obligación. Mustn't prohibiría imprimir, cambiando la instrucción."},
+      {"id": "deepen-3", "type": "choice", "prompt": "El reglamento exige casco a todos los participantes. ¿Qué opción comunica el requisito con claridad?", "options": ["Participants might wear helmets.", "Participants should perhaps wear helmets.", "Participants must wear helmets."], "answer": 2, "explanation": "Must expresa cumplimiento obligatorio. Might habla de posibilidad y should perhaps presenta una recomendación atenuada, insuficiente para esta regla."}
+    ],
+    "retrieval": {"id": "stretch", "type": "open", "prompt": "Escribe 4 frases sobre un alquiler: el inquilino debe pagar la fianza, imprimir el contrato es opcional, aconsejas fotografiar el inventario y pides al casero confirmar la recogida de llaves. Cada frase debe tener una fuerza distinta.", "explanation": "Comprueba qué haría un lector después de cada frase: obligación, elección, consejo o respuesta a tu solicitud.", "model": "The tenant must pay the deposit before moving in. You do not have to print the contract. You should photograph the items in the inventory. Could you confirm when I can collect the keys?", "checklist": ["Must expresa la obligación real.", "Do not have to conserva la opción de imprimir.", "Should da consejo y Could you pide una acción con cortesía."]},
+    "sources": [{"title": "British Council: Modals — permission and obligation", "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/modals-permission-obligation"}]
+  },
+  {
+    "skillId": "g-verb-patterns",
+    "why": "Los patrones verbales pueden ordenar acontecimientos y revelar si una acción sigue pendiente. Remember to send señala una tarea que debes cumplir; remember sending describe un recuerdo de algo ya realizado. Esa diferencia importa al confirmar compromisos en una carta. Comprueba también quién ejecuta el segundo verbo: ask someone to call identifica a la persona encargada, mientras un patrón sin objeto puede perderla.",
+    "decisions": [
+      {"cue": "La acción todavía debe realizarse y quieres evitar que se olvide.", "action": "Usa remember + to + verbo.", "en": "Please remember to lock the cupboard.", "reason": "La instrucción apunta a una acción futura pendiente; no describe un recuerdo."},
+      {"cue": "La acción ya ocurrió y afirmas recordarla.", "action": "Usa remember + -ing.", "en": "I remember locking the cupboard before I left.", "reason": "La persona recuerda el acto pasado; no está diciendo que aún deba hacerlo."}
+    ],
+    "worked": {
+      "scenario": "Cierras un local. Recuerdas haber comprobado las ventanas; detuviste otra tarea para atender una llamada y pediste al compañero apagar las luces.",
+      "task": "Explica el cierre sin confundir acciones recordadas, interrupciones y tareas asignadas.",
+      "model": "I remember checking the windows before I left the centre. While I was tidying the kitchen, I stopped to answer a call from reception. I then asked Daniel to switch off the lights and reminded him to lock the main door. I look forward to hearing whether everything was secure when you arrived.",
+      "reasoning": [
+        {"quote": "remember checking the windows", "explanation": "Checking señala una acción realizada que ahora recuerdas; no una tarea futura olvidable."},
+        {"quote": "stopped to answer a call", "explanation": "To answer expresa para qué interrumpiste la limpieza. Stopped answering significaría dejar de contestar llamadas."},
+        {"quote": "asked Daniel to switch off the lights", "explanation": "Daniel es el objeto de asked y el agente de switch off. Ask + persona + to + verbo conserva esa asignación."}
+      ],
+      "alternative": {"text": "Please remember to check the windows tonight.", "why": "El infinitivo apunta a una comprobación pendiente. Cambiar checking por to check sin ajustar el contexto transformaría un recuerdo en una tarea."}
+    },
+    "checks": [
+      {"id": "deepen-1", "type": "choice", "prompt": "Dejaste de caminar un momento para leer un aviso. ¿Qué opción expresa esa finalidad de la pausa?", "options": ["I stopped reading the notice.", "I stopped to read the notice.", "I avoided to read the notice."], "answer": 1, "explanation": "Stopped to read indica que pausaste otra actividad para leer. Stopped reading significaría que terminaste o interrumpiste la lectura misma."},
+      {"id": "deepen-2", "type": "input", "prompt": "Completa SOLO la forma de receive: We look forward to ___ your revised proposal.", "accepted": ["receiving"], "explanation": "To pertenece a look forward to y funciona como preposición. El verbo posterior toma -ing: receiving, no receive."},
+      {"id": "deepen-3", "type": "choice", "prompt": "Quieres indicar que Ana, no tú, debe llamar al proveedor. ¿Qué frase asigna correctamente esa acción?", "options": ["I asked Ana to call the supplier.", "I asked to Ana call the supplier.", "I asked Ana calling the supplier."], "answer": 0, "explanation": "Ask + persona + to + verbo identifica a quien debe actuar. La preposición to forma parte del infinitivo call, no precede al nombre Ana."}
+    ],
+    "retrieval": {"id": "stretch", "type": "open", "prompt": "En 3 frases, explica que recuerdas haber guardado un recibo, pide a un compañero que recuerde enviarlo mañana y expresa que esperas recibir su confirmación usando look forward to. Distingue recuerdo y tarea pendiente.", "explanation": "No traduzcas las dos apariciones de recordar con el mismo patrón: cada una mira en una dirección temporal distinta.", "model": "I remember saving the receipt. Please remember to send it tomorrow. I look forward to receiving your confirmation.", "checklist": ["Remember + -ing describe el acto ya realizado.", "Remember + to + verbo expresa la tarea pendiente.", "Look forward to va seguido de receiving o una forma -ing equivalente."]},
+    "sources": [{"title": "British Council: Patterns with reporting verbs", "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/c1/patterns-reporting-verbs"}]
+  },
+  {
+    "skillId": "g-passive",
+    "why": "Al informar del estado de un servicio, be no solo crea la pasiva: sitúa la acción como habitual, en curso o terminada. Un documento que está siendo revisado aún puede no estar aprobado. Además, omitir al agente es útil si se desconoce, pero puede ocultar a quien prometió actuar. Alterna el estado del trámite con compromisos activos cuando necesites pedir responsabilidades concretas.",
+    "decisions": [
+      {"cue": "La revisión ocurre ahora y todavía no hay resultado final.", "action": "Usa be + being + participio para presentar el proceso.", "en": "The application is being reviewed.", "reason": "La revisión está en curso; no autoriza a afirmar que la solicitud ya está aprobada."},
+      {"cue": "La revisión ya está terminada y su resultado importa ahora.", "action": "Usa have/has + been + participio.", "en": "The application has been reviewed.", "reason": "La estructura indica revisión completada, aunque reviewed tampoco significa necesariamente approved."}
+    ],
+    "worked": {
+      "scenario": "La empresa recibió tu solicitud la semana pasada. Ahora la revisan; la encargada prometió enviarte una decisión el viernes.",
+      "task": "Solicita una actualización distinguiendo recepción, revisión en curso y compromiso de una persona identificada.",
+      "model": "My application was received last week, and I understand that it is being reviewed now. Ms Lewis promised to send a decision by Friday, but I have not received an update. Could you confirm whether any further documents are required? I would appreciate a clear date for the final decision.",
+      "reasoning": [
+        {"quote": "was received last week", "explanation": "Was + participio coloca la recepción en un pasado fechado. La solicitud es el tema, sin necesidad de identificar al receptor individual."},
+        {"quote": "it is being reviewed now", "explanation": "Is being reviewed mantiene visible que la revisión está en curso. Is reviewed puede describir un procedimiento habitual."},
+        {"quote": "Ms Lewis promised", "explanation": "La activa identifica quién asumió el compromiso. Una pasiva sin agente perdería información útil para el seguimiento."}
+      ],
+      "alternative": {"text": "The decision has been sent.", "why": "Esta pasiva perfecta afirma que el envío está completado. No equivale a is being prepared, que describe preparación en curso sin asegurar envío."}
+    },
+    "checks": [
+      {"id": "deepen-1", "type": "choice", "prompt": "El técnico está reparando una impresora ahora mismo. ¿Qué frase indica proceso en curso?", "options": ["The printer has been repaired.", "The printer is being repaired.", "The printer was repaired last year."], "answer": 1, "explanation": "Is being repaired presenta la reparación en desarrollo. Has been repaired comunica un resultado completado y was repaired sitúa otro hecho pasado."},
+      {"id": "deepen-2", "type": "input", "prompt": "Completa SOLO el participio de write: The instructions were ___ by the course tutor.", "accepted": ["written"], "explanation": "La pasiva necesita be + participio: were written. Wrote es pasado simple activo, no participio."},
+      {"id": "deepen-3", "type": "choice", "prompt": "Necesitas dejar claro que Ahmed prometió el reembolso. ¿Qué frase conserva explícitamente al responsable?", "options": ["A refund was promised.", "There was a promise.", "Ahmed promised a refund."], "answer": 2, "explanation": "La activa presenta directamente a Ahmed como autor de la promesa. Las otras versiones omiten quién asumió el compromiso."}
+    ],
+    "retrieval": {"id": "stretch", "type": "open", "prompt": "Escribe 3 frases sobre una bicicleta: fue entregada ayer, ahora la están inspeccionando y el mecánico Rosa prometió llamar mañana. Usa dos pasivas con tiempos distintos y una activa que identifique a Rosa.", "explanation": "No sacrifiques la cronología para usar más pasivas. Separa hecho terminado, proceso actual y compromiso identificado.", "model": "The bicycle was delivered yesterday. It is being inspected now. Rosa promised to call me tomorrow.", "checklist": ["La entrega fechada usa was + participio.", "La inspección en curso usa is being + participio.", "La activa deja claro que Rosa prometió llamar."]},
+    "sources": [{"title": "British Council: Passives", "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/passives"}]
+  },
+  {
+    "skillId": "g-conditionals",
+    "why": "Antes de elegir una fórmula condicional, localiza dos momentos: el de la condición y el de su consecuencia. Una decisión equivocada del pasado puede explicar una dificultad actual; ese significado exige combinar tiempos en lugar de trasladar todo al pasado. Revisa además qué ocurrió realmente: una hipótesis contraria a los hechos debe permitir reconstruir la situación real sin invertir por accidente una negativa.",
+    "decisions": [
+      {"cue": "Imaginas una decisión pasada distinta y un resultado también terminado.", "action": "Usa had + participio y would have + participio.", "en": "If I had booked earlier, I would have paid less.", "reason": "Tanto la reserva como el pago pertenecen al pasado que ya no puedes cambiar."},
+      {"cue": "La decisión imaginada es pasada, pero su consecuencia sigue siendo actual.", "action": "Combina had + participio con would + verbo base para el resultado presente.", "en": "If I had kept the receipt, I would have proof now.", "reason": "Have es aquí verbo base de posesión: tendría prueba ahora. No es would have + participio de un resultado pasado."}
+    ],
+    "worked": {
+      "scenario": "Perdiste un recibo el mes pasado y hoy no puedes demostrar el pago. Aún es posible obtener un duplicado del vendedor.",
+      "task": "Explica la consecuencia actual de la decisión pasada y propone un paso futuro posible.",
+      "model": "If I had kept the original receipt, I would have proof of payment now. Unfortunately, I threw it away when I cleared my desk last month. If the seller sends a duplicate, I will attach it to my claim. Without that document, I may need to use my bank statement instead.",
+      "reasoning": [
+        {"quote": "If I had kept the original receipt", "explanation": "Had kept imagina un pasado contrario a lo ocurrido: en realidad no conservaste el recibo."},
+        {"quote": "I would have proof of payment now", "explanation": "La consecuencia es una posesión presente, marcada por now. Have no introduce un participio aquí."},
+        {"quote": "If the seller sends a duplicate, I will attach it", "explanation": "Este paso todavía es posible. La condición futura usa presente y el resultado usa will."}
+      ],
+      "alternative": {"text": "If I had kept the receipt, I would have submitted the claim last week.", "why": "Ahora la consecuencia también está en el pasado: would have submitted. Last week cambia el objetivo temporal respecto a tener una prueba ahora."}
+    },
+    "checks": [
+      {"id": "deepen-1", "type": "choice", "prompt": "En If I had accepted that job, I would live closer to my family now, ¿qué combinación temporal aparece?", "options": ["Una condición futura y un resultado pasado.", "Una condición pasada imaginada y un resultado presente imaginado.", "Dos hechos presentes confirmados."], "answer": 1, "explanation": "Had accepted mira a una decisión pasada distinta; would live y now presentan su consecuencia hipotética actual."},
+      {"id": "deepen-2", "type": "input", "prompt": "Completa SOLO la forma de check: If I had ___ the postcode, I would have avoided the mistake.", "accepted": ["checked"], "explanation": "Had necesita participio. La hipótesis imagina una comprobación anterior que no se realizó y una equivocación pasada que se habría evitado."},
+      {"id": "deepen-3", "type": "choice", "prompt": "Solo reclamarás si no hay respuesta. ¿Qué frase conserva esa condición?", "options": ["I will complain unless they reply.", "I will complain if they reply.", "I will complain unless they do not reply."], "answer": 0, "explanation": "Unless they reply equivale aquí a if they do not reply. Añadir not después de unless invierte el desencadenante de la reclamación."}
+    ],
+    "retrieval": {"id": "stretch", "type": "open", "prompt": "En 3 frases, explica que no renovaste un abono y ahora no tienes acceso. Imagina con un condicional mixto qué ocurriría ahora si lo hubieras renovado. Añade que, si recepción acepta el pago hoy, podrás entrar mañana.", "explanation": "La primera hipótesis mira desde el pasado hacia ahora; el último paso es una posibilidad futura todavía abierta.", "model": "I did not renew my membership, so I have no access now. If I had renewed it, I would be able to use the gym today. If reception accepts my payment today, I will be able to enter tomorrow.", "checklist": ["Se explicita la situación real para comprobar la lógica.", "Had renewed enlaza una condición pasada con un resultado presente.", "La posibilidad abierta usa if + presente y resultado con will."]},
+    "sources": [{"title": "British Council: Conditionals — third and mixed", "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/conditionals-third-mixed"}]
+  },
+  {
+    "skillId": "g-relative-clauses",
+    "why": "Las relativas permiten delimitar a quién afecta una norma sin convertir cada detalle en otra oración. La puntuación puede cambiar su alcance: una restricción sin comas selecciona un subconjunto, mientras una explicación entre comas comenta un grupo ya identificado. Antes de acortar una relativa, localiza su sujeto y su objeto para evitar eliminar una pieza necesaria o repetirla mediante otro pronombre.",
+    "decisions": [
+      {"cue": "Solo deben responder los clientes con una reserva cancelada.", "action": "Usa una relativa especificativa sin comas para seleccionar el grupo.", "en": "Customers whose bookings were cancelled should contact us.", "reason": "Whose bookings were cancelled define qué clientes; no se exige que todos los clientes respondan."},
+      {"cue": "Un grupo ya identificado tuvo todas sus reservas canceladas y añades ese dato.", "action": "Delimita la información adicional con comas.", "en": "These customers, whose bookings were cancelled, should contact us.", "reason": "These customers ya identifica el grupo y la relativa comenta a todos sus miembros en este contexto."}
+    ],
+    "worked": {
+      "scenario": "Un edificio tiene muchos vecinos, pero solo quienes guardan bicicletas en el sótano deben moverlas. El administrador, Omar, coordina el traslado.",
+      "task": "Redacta un aviso que limite la obligación al grupo afectado y añada información sobre Omar.",
+      "model": "Residents who keep bicycles in the basement must move them by Thursday. Omar, who manages the building, will unlock the temporary storage room at six. Please label each bicycle with your flat number. The space we have reserved is secure, but it will only be available during the repair work.",
+      "reasoning": [
+        {"quote": "Residents who keep bicycles in the basement", "explanation": "Sin comas, la relativa selecciona a los vecinos afectados. No extiende la obligación a todo el edificio."},
+        {"quote": "Omar, who manages the building,", "explanation": "Omar ya está identificado; la función del administrador es información adicional y queda entre comas."},
+        {"quote": "The space we have reserved", "explanation": "We es sujeto de have reserved. El relativo sería objeto y puede omitirse; no hace falta añadir it después de reserved."}
+      ],
+      "alternative": {"text": "The space that we have reserved is secure.", "why": "Mantener that también es correcto en esta especificativa de objeto. La omisión es una opción, no una mejora obligatoria ni una regla para todas las relativas."}
+    },
+    "checks": [
+      {"id": "deepen-1", "type": "choice", "prompt": "Solo los empleados que trabajan de noche necesitan tarjeta especial. ¿Qué frase limita la norma a ese grupo?", "options": ["Employees, who work at night, need special cards.", "Employees who work at night need special cards.", "Employees need special cards, which work at night."], "answer": 1, "explanation": "La relativa sin comas identifica el subconjunto. Las comas presentarían work at night como dato adicional sobre el grupo de empleados mencionado."},
+      {"id": "deepen-2", "type": "input", "prompt": "Completa SOLO con who, whose o which: I contacted the tenant ___ window was broken.", "accepted": ["whose"], "explanation": "Whose vincula tenant con su window. Después aparece el nombre poseído; who requeriría otra estructura y no expresa esa posesión."},
+      {"id": "deepen-3", "type": "choice", "prompt": "¿En qué frase puedes eliminar that sin dejar la relativa sin sujeto?", "options": ["The train that leaves at six is full.", "The course that starts tomorrow is free.", "The parcel that I collected is damaged."], "answer": 2, "explanation": "En I collected, I ya es el sujeto y that representa el objeto. En las otras, that es el sujeto de leaves o starts y no puede desaparecer."}
+    ],
+    "retrieval": {"id": "stretch", "type": "open", "prompt": "Escribe 3 frases para un club: solo los socios con entradas del viernes deben pedir un cambio; tu directora Aisha, ya identificada por su nombre, ayudará; describe como gratuito el taller que reservaste, usando una relativa de objeto sin pronombre.", "explanation": "Cada relativa cumple una función distinta: seleccionar, comentar o recuperar un objeto. Revisa qué cambia al añadir comas.", "model": "Members who have tickets for Friday should request a change. Aisha, who runs the club, will help them. The workshop I booked is free.", "checklist": ["La restricción sobre miembros no lleva comas.", "La información adicional sobre Aisha queda entre dos comas.", "La relativa de objeto conserva I booked y omite solo el objeto relativo."]},
+    "sources": [{"title": "British Council: Defining relative clauses", "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/relative-clauses-defining-relative-clauses"}, {"title": "British Council: Relative pronouns and relative clauses", "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/relative-pronouns-relative-clauses?page=2"}]
+  },
+  {
+    "skillId": "g-subordination",
+    "why": "Un conector no demuestra por sí solo que exista una relación causal o un contraste. Primero comprueba qué resultado cabría esperar y si el segundo hecho lo confirma o lo contradice. Después elige una estructura compatible con lo que sigue. En una reclamación, esa revisión evita que un resultado positivo parezca provocado por una dificultad cuando solo ocurrió a pesar de ella.",
+    "decisions": [
+      {"cue": "La falta de personal explica directamente la reducción del horario.", "action": "Presenta la causa con because y una oración completa.", "en": "The centre closed early because two staff members were absent.", "reason": "La ausencia explica el cierre; no se está presentando un resultado contrario a lo esperado."},
+      {"cue": "El servicio se mantuvo a pesar de la falta de personal.", "action": "Presenta una concesión con although o despite y adapta la estructura.", "en": "Although two staff members were absent, the centre stayed open.", "reason": "La apertura contradice la expectativa de que la ausencia dificultaría mantener el servicio."}
+    ],
+    "worked": {
+      "scenario": "Llovió y el acceso exterior quedó cerrado. Aun así, el taller empezó puntual porque se abrió una entrada cubierta.",
+      "task": "Explica causa, solución y resultado sin confundir la lluvia con la razón de la puntualidad.",
+      "model": "The outdoor entrance was closed because of heavy rain. However, staff opened a covered route through the main building. Although several visitors had to walk farther, the workshop started on time. This arrangement kept everyone dry, so I suggest using the same entrance whenever severe weather makes the usual route unsafe.",
+      "reasoning": [
+        {"quote": "because of heavy rain", "explanation": "Heavy rain es un sintagma nominal; because of encaja sin necesitar un sujeto y verbo posteriores."},
+        {"quote": "Although several visitors had to walk farther", "explanation": "La distancia extra es una dificultad que no impidió la puntualidad. Although introduce una oración completa."},
+        {"quote": "This arrangement kept everyone dry, so I suggest", "explanation": "So introduce la consecuencia argumentativa: el buen resultado motiva repetir la solución."}
+      ],
+      "alternative": {"text": "Despite the longer walk, the workshop started on time.", "why": "Despite admite el sintagma nominal the longer walk. Conserva la concesión, pero no puede ir seguido directamente de several visitors had to walk farther."}
+    },
+    "checks": [
+      {"id": "deepen-1", "type": "choice", "prompt": "El billete era caro, pero lo compraste. ¿Qué relación expresa Although the ticket was expensive, I bought it?", "options": ["El precio alto fue la razón directa de la compra.", "La compra ocurrió a pesar de una posible dificultad.", "La compra provocó el precio alto."], "answer": 1, "explanation": "Although presenta un obstáculo que no impidió la acción principal. No afirma que el precio alto causara la compra."},
+      {"id": "deepen-2", "type": "input", "prompt": "Completa SOLO con because o because of: The service stopped ___ a power cut.", "accepted": ["because of"], "explanation": "A power cut es un grupo nominal sin verbo. Because necesitaría una oración, por ejemplo because the power failed."},
+      {"id": "deepen-3", "type": "choice", "prompt": "¿Qué versión une correctamente dos hechos mediante however?", "options": ["The venue was small, however it was suitable.", "The venue was small. However, it was suitable.", "Although the venue was small, however it was suitable."], "answer": 1, "explanation": "However inicia aquí una oración independiente después de un punto. Una coma sola no une las dos y although ya aporta el contraste sin duplicarlo."}
+    ],
+    "retrieval": {"id": "stretch", "type": "open", "prompt": "En 3 frases, cuenta que una reunión se trasladó por obras y empezó puntualmente a pesar del cambio. Explica que un aviso previo ayudó a los participantes a encontrar la sala y que por ese resultado recomiendas avisar con antelación en futuras ocasiones. Usa causa, concesión y consecuencia con estructuras correctas.", "explanation": "Cada relación debe añadir información lógica. Revisa si después del conector escribes una oración o un grupo nominal.", "model": "The meeting moved to another room because of building work. Although the location changed, it started on time. Clear advance notice helped participants find the room, so I recommend sending similar updates in future.", "checklist": ["Because of introduce un nombre o se usa because con oración completa.", "Although o despite presenta una dificultad que no impidió el resultado.", "So o therefore expresa una consecuencia con puntuación válida."]},
+    "sources": [{"title": "British Council: Contrasting ideas — although, despite and others", "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/contrasting-ideas-although-despite-others"}, {"title": "Cambridge: Punctuation", "url": "https://dictionary.cambridge.org/grammar/british-grammar/commas"}]
+  },
+  {
+    "skillId": "g-indirect-language",
+    "why": "Al transmitir una conversación, la precisión depende de conservar quién habló, a quién se dirigió y desde qué día se cuenta ahora. Tomorrow no siempre sigue siendo mañana para el nuevo lector. En una carta, combina una referencia temporal explícita con un verbo de comunicación adecuado y transforma las preguntas sin mantener la inversión que pertenecía a la pregunta original.",
+    "decisions": [
+      {"cue": "Repites el martes una promesa hecha el lunes con tomorrow.", "action": "Sustituye la referencia relativa por Tuesday o the following day, según el relato.", "en": "On Monday, she said she would call on Tuesday.", "reason": "Tomorrow significaba martes para quien habló el lunes; repetirlo el martes podría desplazar erróneamente la llamada al miércoles."},
+      {"cue": "Transmites una pregunta de sí o no dirigida a ti.", "action": "Usa asked + persona + if/whether y orden de afirmación.", "en": "She asked me whether I could attend.", "reason": "Whether conserva la consulta de sí/no; I could no mantiene la inversión de Could you attend?"}
+    ],
+    "worked": {
+      "scenario": "El lunes la encargada te dijo: I will call you tomorrow. También preguntó: Can you attend on Friday? Escribes el miércoles, sin haber recibido llamada.",
+      "task": "Comunica ambos mensajes con fechas claras y pide confirmar el horario del viernes.",
+      "model": "When we spoke on Monday, you said that you would call me on Tuesday, but I have not heard from you. You also asked whether I could attend on Friday. I am available that day. Could you confirm what time the meeting starts and whether I need to bring any documents?",
+      "reasoning": [
+        {"quote": "you would call me on Tuesday", "explanation": "Would presenta el futuro desde la conversación pasada. On Tuesday conserva el día que significaba tomorrow el lunes."},
+        {"quote": "whether I could attend on Friday", "explanation": "La pregunta de sí/no se transmite con whether. El destinatario original you pasa a I en la narración del usuario."},
+        {"quote": "what time the meeting starts", "explanation": "La consulta interna conserva sujeto the meeting + verbo starts. La inversión aparece solo en Could you confirm?"}
+      ],
+      "alternative": {"text": "On Monday, the manager told me that she would call the following day.", "why": "Told me incluye al receptor y the following day conserva el martes dentro del relato. No se puede sustituir told por said manteniendo me como objeto directo."}
+    },
+    "checks": [
+      {"id": "deepen-1", "type": "choice", "prompt": "El jueves recuerdas que el martes Ana dijo I will email tomorrow. ¿Qué versión fija correctamente el día prometido?", "options": ["On Tuesday, Ana said she would email on Wednesday.", "On Tuesday, Ana said she would email tomorrow, meaning Friday.", "On Tuesday, Ana said she had emailed next Monday."], "answer": 0, "explanation": "Tomorrow, visto desde el martes original, era miércoles. Una fecha explícita evita que el lector lo interprete desde el jueves actual."},
+      {"id": "deepen-2", "type": "input", "prompt": "Completa SOLO con said o told: The organiser ___ us that the venue had changed.", "accepted": ["told"], "explanation": "Tell lleva aquí el receptor us como objeto directo. Con say sería said to us, no said us."},
+      {"id": "deepen-3", "type": "choice", "prompt": "Transforma Did you pay the deposit? en una pregunta referida a mí, usando He asked me...", "options": ["He asked me did I pay the deposit.", "He asked me whether I had paid the deposit.", "He asked me whether had I paid the deposit."], "answer": 1, "explanation": "Whether introduce la consulta de sí/no y la parte interna lleva I had paid. No conserva did ni la inversión had I de una pregunta directa."}
+    ],
+    "retrieval": {"id": "stretch", "type": "open", "prompt": "Hoy es viernes. En 3 frases, informa de que el miércoles la recepcionista prometió enviar el formulario al día siguiente, di que aún no lo tienes y pide indirectamente saber dónde puedes descargarlo. Conserva el jueves como fecha prometida.", "explanation": "Revisa las referencias desde el día de la conversación original y desde el día actual antes de redactar.", "model": "On Wednesday, the receptionist said that she would send the form on Thursday. I have not received it yet. Could you tell me where I can download it?", "checklist": ["La promesa original queda localizada en jueves.", "Say o tell usa el patrón correcto y la persona apropiada.", "La pregunta indirecta usa I can download, sin inversión interna."]},
+    "sources": [{"title": "British Council: Reported speech — questions", "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/reported-speech-questions"}, {"title": "British Council: Patterns with reporting verbs", "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/c1/patterns-reporting-verbs"}]
+  },
+  {
+    "skillId": "g-punctuation",
+    "why": "Revisar puntuación consiste en encontrar unidades de significado completas antes de decidir dónde respirar. Un sujeto largo sigue unido a su verbo, y una subordinada inicial necesita una principal que complete la idea. Cuando tienes dos afirmaciones independientes, elige un límite o una conjunción real. Después revisa los apóstrofos según posesión singular o plural, sin confundirlos con la simple marca de varios objetos.",
+    "decisions": [
+      {"cue": "Las dos partes tienen sujeto y verbo y podrían funcionar como oraciones completas.", "action": "Sepáralas con punto o añade una conjunción que exprese su relación.", "en": "The doors were locked, so we waited outside.", "reason": "So crea una unión gramatical y expresa consecuencia; una coma sola dejaría dos independientes unidas incorrectamente."},
+      {"cue": "La primera parte empieza por because y aún falta su resultado.", "action": "Conserva la subordinada unida a una principal.", "en": "Because the doors were locked, we waited outside.", "reason": "La causa inicial no puede quedar como fragmento en esta prosa; we waited outside completa la estructura."}
+    ],
+    "worked": {
+      "scenario": "Una reunión de varios vecinos cambió de sala. El aviso se envió tarde y algunos visitantes fueron primero al lugar anterior.",
+      "task": "Redacta una explicación clara con una subordinada inicial, un límite entre independientes y posesión plural.",
+      "model": "Because the original room was unavailable, the residents' meeting moved upstairs. The notice explaining the change reached some visitors too late. They went to the old room first. However, a volunteer redirected them, so everyone eventually found the meeting. Please send future updates at least one day in advance.",
+      "reasoning": [
+        {"quote": "Because the original room was unavailable,", "explanation": "La subordinada inicial termina con coma y queda unida al resultado: el traslado de la reunión."},
+        {"quote": "the residents' meeting", "explanation": "Residents es plural y la reunión pertenece al conjunto de vecinos. El apóstrofo va después de la s."},
+        {"quote": "The notice explaining the change reached some visitors too late.", "explanation": "El sujeto largo The notice explaining the change no lleva una coma antes de reached; la longitud no rompe esa unión."}
+      ],
+      "alternative": {"text": "They went to the old room first; however, a volunteer redirected them.", "why": "El punto y coma puede separar las dos independientes relacionadas. However sigue siendo un conector discursivo y no permite unirlas únicamente con coma."}
+    },
+    "checks": [
+      {"id": "deepen-1", "type": "choice", "prompt": "¿Qué opción contiene una causa y una principal completas, sin fragmento ni coma entre independientes?", "options": ["Because the office was closed.", "The office was closed, I returned home.", "Because the office was closed, I returned home."], "answer": 2, "explanation": "La última opción completa la causa con su resultado. La primera queda pendiente y la segunda necesita una conjunción o un límite de oración."},
+      {"id": "deepen-2", "type": "input", "prompt": "Escribe SOLO el posesivo plural de tenants para completar: The ___ keys were left at reception. Las llaves pertenecen a varios inquilinos.", "accepted": ["tenants'", "tenants’"], "explanation": "El plural tenants ya termina en s y añade el apóstrofo al final. Tenant's señalaría un único inquilino."},
+      {"id": "deepen-3", "type": "choice", "prompt": "¿Qué frase evita separar un sujeto largo de su verbo?", "options": ["The instructions on the back of the form, explain the process.", "The instructions on the back of the form explain the process.", "The instructions, on the back of the form explain the process."], "answer": 1, "explanation": "El sujeto completo es The instructions on the back of the form. No necesita una coma antes de explain por ser largo."}
+    ],
+    "retrieval": {"id": "stretch", "type": "open", "prompt": "Escribe 3 frases sobre un curso: empieza la primera con Although e indica una dificultad que no impidió asistir; usa However al inicio de la segunda con puntuación válida; en la tercera menciona el horario que pertenece a varios tutores con posesivo plural.", "explanation": "Identifica primero las principales. Después comprueba el límite de However y si el apóstrofo corresponde a uno o varios tutores.", "model": "Although the journey was long, I attended the first session. However, I arrived ten minutes late. The tutors' schedule includes an earlier session that I could attend next week.", "checklist": ["Although queda unido a una principal y lleva coma tras la subordinada inicial.", "However empieza una oración completa tras un punto.", "Tutors' expresa posesión plural; el verbo concuerda con el núcleo singular schedule."]},
+    "sources": [{"title": "Cambridge: Punctuation", "url": "https://dictionary.cambridge.org/grammar/british-grammar/commas"}]
+  },
+  {
+    "skillId": "g-range-precision",
+    "why": "La precisión exige que cada ampliación haga un trabajo reconocible: limitar una conclusión, identificar un referente o ordenar una relación. Si this puede apuntar a dos ideas, añade un nombre que aclare cuál retomas. Si una cláusula inicial omite su sujeto, comprueba quién realiza esa acción. La variedad útil surge de estas decisiones y de comparar elementos equivalentes, no de sustituir palabras mecánicamente.",
+    "decisions": [
+      {"cue": "Una frase anterior menciona tanto una reducción de tarifas como horarios más largos.", "action": "Añade un nombre después de this para indicar qué efecto desarrollas.", "en": "This reduction may help residents on low incomes.", "reason": "Reduction señala las tarifas; this solo podría recuperar cualquiera de los cambios o el conjunto."},
+      {"cue": "El beneficio depende del grupo y de una condición concreta.", "action": "Limita el alcance e indica el mecanismo que hace posible el efecto.", "en": "For workers with long commutes, remote access may save time by removing some journeys.", "reason": "El grupo, may y la explicación causal evitan convertir un efecto posible en una garantía universal."}
+    ],
+    "worked": {
+      "scenario": "Un ayuntamiento propone bajar las tarifas de un centro y ampliar su horario. Debes apoyar la propuesta sin afirmar que todos se beneficiarán igual.",
+      "task": "Explica un beneficio concreto y una limitación; mantén paralelismo y referencias claras.",
+      "model": "Lowering fees and extending opening hours may make the centre more accessible. The fee reduction could particularly help residents on low incomes, while the later closing time may suit shift workers. However, these changes will have limited value for people without reliable transport. Access therefore depends partly on how easily residents can reach the building.",
+      "reasoning": [
+        {"quote": "Lowering fees and extending opening hours", "explanation": "Las dos acciones coordinadas usan -ing; se conserva el paralelismo dentro del sujeto."},
+        {"quote": "The fee reduction", "explanation": "El nombre reduction selecciona el cambio de precio y permite explicar un efecto distinto del horario."},
+        {"quote": "people without reliable transport", "explanation": "La limitación identifica un grupo para el que los cambios pueden no bastar. El argumento no promete accesibilidad universal."}
+      ],
+      "alternative": {"text": "Having reviewed the transport options, the council should adjust the bus timetable as well.", "why": "The council realiza tanto reviewed como should adjust. La cláusula inicial comparte sujeto y añade un paso previo relevante, en lugar de atribuir la revisión a un objeto inanimado."}
+    },
+    "checks": [
+      {"id": "deepen-1", "type": "choice", "prompt": "La frase anterior menciona tarifas más bajas y horarios más largos. Quieres desarrollar solo el precio. ¿Qué inicio fija ese referente?", "options": ["This may be useful because this is better.", "This reduction in fees may help families with limited incomes.", "They may be useful because it improves them."], "answer": 1, "explanation": "Reduction in fees nombra explícitamente el cambio económico. Los otros pronombres no permiten reconocer qué idea se desarrolla."},
+      {"id": "deepen-2", "type": "input", "prompt": "Completa SOLO la forma de extend para mantener paralelismo: The proposal focuses on reducing fees and ___ opening hours.", "accepted": ["extending"], "explanation": "Reducing y extending coordinan dos acciones después de focuses on. Extend rompería el patrón compartido con reducing."},
+      {"id": "deepen-3", "type": "choice", "prompt": "Los empleados revisaron el horario y después reservaron billetes. ¿Qué cláusula inicial tiene el agente correcto?", "options": ["Having checked the timetable, the employees booked their tickets.", "Having checked the timetable, the tickets were booked by the employees.", "Having checked the timetable, the price was reasonable."], "answer": 0, "explanation": "La cláusula inicial comparte sujeto con la principal: employees comprobaron y reservaron. Tickets y price no pueden realizar la comprobación."}
+    ],
+    "retrieval": {"id": "stretch", "type": "open", "prompt": "Escribe un párrafo de 3–4 frases sobre ofrecer consultas en línea y reducir el precio de un servicio. Explica a qué grupo ayuda cada cambio, retoma uno con this + nombre e incluye una limitación para personas sin internet. No prometas un beneficio universal.", "explanation": "La precisión se verá en los referentes, grupos y condiciones. Usa complejidad solo donde aclare una relación.", "model": "Offering online appointments may help people who live far from the office. Lower fees could benefit families with limited incomes. This reduction would make regular advice more affordable, but online access would still be difficult for people without a reliable internet connection.", "checklist": ["Cada cambio se asocia a un grupo concreto.", "This + nombre identifica un referente inequívoco.", "May o could limita la certeza de los beneficios.", "La falta de internet aparece como una limitación desarrollada y coherente."]},
+    "sources": [{"title": "British Council: Participle clauses", "url": "https://learnenglish.britishcouncil.org/grammar/c1-grammar/participle-clauses"}]
+  }
+]

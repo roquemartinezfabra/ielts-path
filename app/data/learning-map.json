@@ -1,0 +1,1156 @@
+[
+  {
+    "skillId": "g-word-order",
+    "title": "Orden de la oración",
+    "group": "grammar",
+    "layer": "L1",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "mensajes_parrafos_y_Writing_nuevo",
+    "initialFocus": true
+  },
+  {
+    "skillId": "g-be-auxiliaries",
+    "title": "Be, have y do",
+    "group": "grammar",
+    "layer": "L1",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "g-word-order"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "preguntas_negacion_y_Writing_nuevo",
+    "initialFocus": true
+  },
+  {
+    "skillId": "g-agreement-pronouns",
+    "title": "Concordancia y pronombres",
+    "group": "grammar",
+    "layer": "L1",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "g-word-order",
+      "g-be-auxiliaries"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "referentes_y_oraciones_en_Writing_nuevo",
+    "initialFocus": true
+  },
+  {
+    "skillId": "g-countability",
+    "title": "Contables y cuantificadores",
+    "group": "grammar",
+    "layer": "L1",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "g-word-order"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "cantidades_y_necesidades_en_carta_o_argumento",
+    "initialFocus": false
+  },
+  {
+    "skillId": "g-articles",
+    "title": "Artículos y determinantes",
+    "group": "grammar",
+    "layer": "L1",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "g-countability"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "referencia_nueva_y_conocida_en_Writing_nuevo",
+    "initialFocus": true
+  },
+  {
+    "skillId": "g-prepositions",
+    "title": "Preposiciones y combinaciones fijas",
+    "group": "grammar",
+    "layer": "L1",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "relaciones_tiempo_lugar_y_combinaciones_en_Writing",
+    "initialFocus": true
+  },
+  {
+    "skillId": "g-modifiers",
+    "title": "Adjetivos, adverbios y comparaciones",
+    "group": "grammar",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "g-countability"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "comparar_y_matizar_en_texto_nuevo",
+    "initialFocus": false
+  },
+  {
+    "skillId": "g-present",
+    "title": "Presente simple y continuo",
+    "group": "grammar",
+    "layer": "L1",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "g-be-auxiliaries",
+      "g-agreement-pronouns"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "habitos_situaciones_y_argumentos_actuales",
+    "initialFocus": false
+  },
+  {
+    "skillId": "g-past",
+    "title": "Pasado y secuencia de acontecimientos",
+    "group": "grammar",
+    "layer": "L1",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "g-be-auxiliaries"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "incidente_y_ejemplo_en_nueva_carta_ensayo",
+    "initialFocus": true
+  },
+  {
+    "skillId": "g-perfect",
+    "title": "Tiempos perfectos y contraste temporal",
+    "group": "grammar",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "g-past",
+      "g-be-auxiliaries"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "conectar_hecho_pasado_y_situacion_actual",
+    "initialFocus": true
+  },
+  {
+    "skillId": "g-future",
+    "title": "Planes, predicciones y futuro",
+    "group": "grammar",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "g-be-auxiliaries",
+      "g-present"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "planes_predicciones_y_medidas",
+    "initialFocus": false
+  },
+  {
+    "skillId": "g-modals",
+    "title": "Modales y cortesía",
+    "group": "grammar",
+    "layer": "L1",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "g-be-auxiliaries"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "peticion_obligacion_y_probabilidad",
+    "initialFocus": false
+  },
+  {
+    "skillId": "g-verb-patterns",
+    "title": "Gerundios e infinitivos",
+    "group": "grammar",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "g-word-order"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "acciones_intenciones_y_razones_en_Writing",
+    "initialFocus": false
+  },
+  {
+    "skillId": "g-passive",
+    "title": "Voz pasiva",
+    "group": "grammar",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "g-be-auxiliaries",
+      "g-past"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "cambiar_foco_sin_perder_significado",
+    "initialFocus": false
+  },
+  {
+    "skillId": "g-conditionals",
+    "title": "Condiciones e hipótesis",
+    "group": "grammar",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "g-present",
+      "g-past",
+      "g-modals"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "condiciones_y_consecuencias_sin_invertir_intencion",
+    "initialFocus": true
+  },
+  {
+    "skillId": "g-relative-clauses",
+    "title": "Cláusulas relativas",
+    "group": "grammar",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "g-agreement-pronouns"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "identificar_y_ampliar_referentes_en_parrafos",
+    "initialFocus": false
+  },
+  {
+    "skillId": "g-subordination",
+    "title": "Causa, contraste y consecuencia",
+    "group": "grammar",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "g-punctuation"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "causa_contraste_y_consecuencia_en_argumento",
+    "initialFocus": false
+  },
+  {
+    "skillId": "g-indirect-language",
+    "title": "Preguntas y estilo indirectos",
+    "group": "grammar",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "g-word-order",
+      "g-be-auxiliaries"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "preguntas_corteses_y_atribucion_de_mensajes",
+    "initialFocus": false
+  },
+  {
+    "skillId": "g-punctuation",
+    "title": "Puntuación y límites de oración",
+    "group": "grammar",
+    "layer": "L1",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "g-word-order"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "limites_de_oracion_y_parrafos_legibles",
+    "initialFocus": false
+  },
+  {
+    "skillId": "g-range-precision",
+    "title": "Variedad, referencia y matices",
+    "group": "grammar",
+    "layer": "L3",
+    "layers": [
+      "L0",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "g-subordination",
+      "g-relative-clauses",
+      "g-modifiers"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-WRITE",
+    "transferTarget": "elecciones_flexibles_precisas_en_texto_completo",
+    "initialFocus": false
+  },
+  {
+    "skillId": "v-collocations",
+    "title": "Colocaciones naturales",
+    "group": "vocab",
+    "layer": "L1",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "combinaciones_naturales_en_parrafo_nuevo",
+    "initialFocus": false
+  },
+  {
+    "skillId": "v-word-families",
+    "title": "Familias de palabras",
+    "group": "vocab",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "g-word-order"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "forma_lexica_adecuada_a_funcion",
+    "initialFocus": false
+  },
+  {
+    "skillId": "v-patterns",
+    "title": "Palabra y patrón gramatical",
+    "group": "vocab",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "g-verb-patterns",
+      "v-collocations"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "palabra_y_complemento_en_produccion_nueva",
+    "initialFocus": false
+  },
+  {
+    "skillId": "v-paraphrase",
+    "title": "Paráfrasis fiel",
+    "group": "vocab",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "v-collocations"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "reformular_sin_cambiar_alcance_o_certeza",
+    "initialFocus": false
+  },
+  {
+    "skillId": "v-register",
+    "title": "Registro y elección de palabras",
+    "group": "vocab",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-WRITE",
+    "transferTarget": "eleccion_adecuada_al_lector_y_genero",
+    "initialFocus": false
+  },
+  {
+    "skillId": "v-everyday",
+    "title": "Vocabulario cotidiano de General Training",
+    "group": "vocab",
+    "layer": "L1",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "avisos_y_necesidades_cotidianas_GT",
+    "initialFocus": false
+  },
+  {
+    "skillId": "v-workplace",
+    "title": "Vocabulario laboral",
+    "group": "vocab",
+    "layer": "L1",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "documentos_y_mensajes_laborales_GT",
+    "initialFocus": false
+  },
+  {
+    "skillId": "v-essay-topics",
+    "title": "Vocabulario temático para ensayos",
+    "group": "vocab",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-WRITE",
+    "transferTarget": "razones_y_ejemplos_de_temas_nuevos",
+    "initialFocus": false
+  },
+  {
+    "skillId": "v-accuracy",
+    "title": "Falsos amigos, ortografía y precisión",
+    "group": "vocab",
+    "layer": "L1",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-LANG",
+    "transferTarget": "precision_ortografia_y_falsos_amigos_en_contexto",
+    "initialFocus": false
+  },
+  {
+    "skillId": "r-skimming",
+    "title": "Lectura global: skimming",
+    "group": "reading",
+    "layer": "L1",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-READ",
+    "transferTarget": "proposito_y_organizacion_de_textos_no_vistos",
+    "initialFocus": false
+  },
+  {
+    "skillId": "r-scanning",
+    "title": "Búsqueda rápida: scanning",
+    "group": "reading",
+    "layer": "L1",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-READ",
+    "transferTarget": "localizar_datos_y_condiciones_en_textos_nuevos",
+    "initialFocus": false
+  },
+  {
+    "skillId": "r-main-ideas",
+    "title": "Idea principal y detalles",
+    "group": "reading",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "r-skimming"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-READ",
+    "transferTarget": "idea_global_y_detalle_en_texto_largo",
+    "initialFocus": true
+  },
+  {
+    "skillId": "r-paraphrase",
+    "title": "Reconocer reformulaciones en Reading",
+    "group": "reading",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-READ",
+    "transferTarget": "equivalencia_y_alcance_de_evidencia",
+    "initialFocus": true
+  },
+  {
+    "skillId": "r-inference",
+    "title": "Referentes, opiniones e inferencias",
+    "group": "reading",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "r-main-ideas",
+      "r-paraphrase"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-READ",
+    "transferTarget": "atribucion_de_voces_y_referentes_S3",
+    "initialFocus": true
+  },
+  {
+    "skillId": "r-true-false-ng",
+    "title": "True / False / Not Given",
+    "group": "reading",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "r-paraphrase"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-READ",
+    "transferTarget": "confirmacion_contradiccion_y_ausencia_en_texto_nuevo",
+    "initialFocus": true
+  },
+  {
+    "skillId": "r-yes-no-ng",
+    "title": "Yes / No / Not Given",
+    "group": "reading",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "r-inference",
+      "r-paraphrase"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-READ",
+    "transferTarget": "afirmaciones_y_opiniones_del_autor_en_texto_nuevo",
+    "initialFocus": false
+  },
+  {
+    "skillId": "r-multiple-choice",
+    "title": "Elección múltiple y distractores",
+    "group": "reading",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "r-main-ideas",
+      "r-paraphrase"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-READ",
+    "transferTarget": "descartar_distractores_por_evidencia",
+    "initialFocus": false
+  },
+  {
+    "skillId": "r-matching",
+    "title": "Emparejar títulos, información, personas y finales",
+    "group": "reading",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "r-main-ideas",
+      "r-scanning"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-READ",
+    "transferTarget": "headings_information_features_endings_en_conjunto",
+    "initialFocus": true
+  },
+  {
+    "skillId": "r-completion",
+    "title": "Completar frases, resúmenes y tablas",
+    "group": "reading",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "r-scanning",
+      "r-paraphrase"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-READ",
+    "transferTarget": "sentence_summary_note_table_flow_chart_nuevos",
+    "initialFocus": false
+  },
+  {
+    "skillId": "r-diagrams-short",
+    "title": "Diagramas y respuestas cortas",
+    "group": "reading",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "r-scanning"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-READ",
+    "transferTarget": "diagrama_y_respuesta_corta_con_evidencia",
+    "initialFocus": false
+  },
+  {
+    "skillId": "r-time-instructions",
+    "title": "Tiempo, instrucciones y comprobación",
+    "group": "reading",
+    "layer": "L1",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-READ",
+    "transferTarget": "ejecucion_de_consignas_y_tiempo_en_prueba_nueva",
+    "initialFocus": true
+  },
+  {
+    "skillId": "t1-purpose",
+    "title": "Propósito y destinatario de la carta",
+    "group": "task1",
+    "layer": "L1",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-WRITE",
+    "transferTarget": "proposito_y_accion_esperada_en_carta_nueva",
+    "initialFocus": true
+  },
+  {
+    "skillId": "t1-tone",
+    "title": "Tono formal, semiformal e informal",
+    "group": "task1",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "t1-purpose",
+      "v-register"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-WRITE",
+    "transferTarget": "tono_consistente_segun_destinatario",
+    "initialFocus": false
+  },
+  {
+    "skillId": "t1-bullet-development",
+    "title": "Desarrollar los tres puntos",
+    "group": "task1",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "t1-purpose"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-WRITE",
+    "transferTarget": "tres_puntos_desarrollados_en_carta_nueva",
+    "initialFocus": true
+  },
+  {
+    "skillId": "t1-paragraphs",
+    "title": "Párrafos funcionales en cartas",
+    "group": "task1",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "t1-purpose",
+      "t1-bullet-development"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-WRITE",
+    "transferTarget": "progresion_funcional_y_referencia_de_carta",
+    "initialFocus": false
+  },
+  {
+    "skillId": "t1-open-close",
+    "title": "Saludos, aperturas y cierres",
+    "group": "task1",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "t1-purpose",
+      "t1-tone"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-WRITE",
+    "transferTarget": "apertura_y_cierre_al_servicio_del_proposito",
+    "initialFocus": false
+  },
+  {
+    "skillId": "t1-time-review",
+    "title": "Planificar y revisar Task 1",
+    "group": "task1",
+    "layer": "L3",
+    "layers": [
+      "L0",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "t1-purpose",
+      "t1-bullet-development"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-WRITE",
+    "transferTarget": "carta_nueva_150_mas_en_aproximadamente_20_minutos",
+    "initialFocus": false
+  },
+  {
+    "skillId": "t2-question",
+    "title": "Analizar el enunciado del ensayo",
+    "group": "task2",
+    "layer": "L1",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-WRITE",
+    "transferTarget": "obligaciones_y_alcance_de_un_enunciado_nuevo",
+    "initialFocus": false
+  },
+  {
+    "skillId": "t2-position",
+    "title": "Postura clara y consistente",
+    "group": "task2",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "t2-question"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-WRITE",
+    "transferTarget": "postura_clara_y_consistente_en_nuevo_ensayo",
+    "initialFocus": false
+  },
+  {
+    "skillId": "t2-paragraph",
+    "title": "Desarrollo de párrafos",
+    "group": "task2",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "t2-question",
+      "t2-position"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-WRITE",
+    "transferTarget": "idea_explicacion_y_apoyo_en_parrafo_nuevo",
+    "initialFocus": false
+  },
+  {
+    "skillId": "t2-support",
+    "title": "Ejemplos y razonamiento",
+    "group": "task2",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "t2-paragraph"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-WRITE",
+    "transferTarget": "razonamiento_ejemplo_y_limites_pertinentes",
+    "initialFocus": false
+  },
+  {
+    "skillId": "t2-structure",
+    "title": "Introducción, cohesión y conclusión",
+    "group": "task2",
+    "layer": "L3",
+    "layers": [
+      "L0",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "t2-position",
+      "t2-paragraph"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-WRITE",
+    "transferTarget": "progresion_entre_parrafos_y_conclusion",
+    "initialFocus": false
+  },
+  {
+    "skillId": "t2-opinion-discussion",
+    "title": "Opinión y discusión de posturas",
+    "group": "task2",
+    "layer": "L3",
+    "layers": [
+      "L0",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "t2-question",
+      "t2-position"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-WRITE",
+    "transferTarget": "responder_obligaciones_de_opinion_y_discusion",
+    "initialFocus": false
+  },
+  {
+    "skillId": "t2-evaluation-problems",
+    "title": "Ventajas, problemas y preguntas dobles",
+    "group": "task2",
+    "layer": "L3",
+    "layers": [
+      "L0",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "t2-question",
+      "t2-support"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-WRITE",
+    "transferTarget": "evaluar_balance_y_relacion_problema_medida",
+    "initialFocus": false
+  },
+  {
+    "skillId": "t2-plan-revision",
+    "title": "Plan y revisión de Task 2",
+    "group": "task2",
+    "layer": "L3",
+    "layers": [
+      "L0",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "t2-question",
+      "t2-position",
+      "t2-paragraph"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-WRITE",
+    "transferTarget": "ensayo_nuevo_250_mas_con_plan_y_revision_dentro_de_40_minutos",
+    "initialFocus": false
+  },
+  {
+    "skillId": "t2-assessment-evidence",
+    "title": "Evaluar Writing con evidencia: de 7 hacia 8",
+    "group": "task2",
+    "layer": "L2",
+    "layers": [
+      "L0",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-WRITE",
+    "transferTarget": "juicios_por_cuatro_criterios_con_evidencia_sin_banda_automatica",
+    "initialFocus": false
+  },
+  {
+    "skillId": "t1-integrated-letter",
+    "title": "Task 1: de la consigna a una carta completa",
+    "group": "task1",
+    "layer": "L3",
+    "layers": [
+      "L0",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "t1-purpose",
+      "t1-bullet-development",
+      "t1-paragraphs",
+      "t1-time-review"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-WRITE",
+    "transferTarget": "carta_completa_nueva_y_transferencia_diferida",
+    "initialFocus": false
+  },
+  {
+    "skillId": "t2-integrated-essay",
+    "title": "Task 2: de la postura al ensayo completo",
+    "group": "task2",
+    "layer": "L3",
+    "layers": [
+      "L0",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "prerequisiteSkillIds": [
+      "t2-question",
+      "t2-position",
+      "t2-paragraph",
+      "t2-support",
+      "t2-plan-revision"
+    ],
+    "prerequisitePolicy": "conditional_support_not_access_lock",
+    "gateProfile": "GP-WRITE",
+    "transferTarget": "ensayo_completo_nuevo_y_transferencia_diferida",
+    "initialFocus": false
+  }
+]

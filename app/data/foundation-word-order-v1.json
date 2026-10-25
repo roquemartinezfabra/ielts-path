@@ -1,0 +1,414 @@
+{
+  "version": 1,
+  "skillId": "g-word-order",
+  "diagnostic": [
+    {
+      "id": "d-order",
+      "type": "choice",
+      "prompt": "Ask a neutral question about the cost of a course.",
+      "options": [
+        "How much does the course cost?",
+        "How much the course costs?",
+        "How much does the course costs?"
+      ],
+      "answer": 0,
+      "explanation": "Does comes before the subject; cost stays in its base form.",
+      "feedback": [
+        "Does comes before the subject; cost stays in its base form.",
+        "This is statement order. A direct neutral question needs does before the subject.",
+        "Does already marks third person. Do not add -s to cost."
+      ],
+      "hints": [],
+      "followup": null
+    },
+    {
+      "id": "d-who",
+      "type": "choice",
+      "prompt": "You know a tutor prepared the notes, but you do not know which tutor. Ask who did the action.",
+      "options": [
+        "Who did prepared the notes?",
+        "Who prepared the notes?",
+        "Which notes did the tutor prepare?"
+      ],
+      "answer": 1,
+      "explanation": "Who replaces the unknown subject. Prepared carries the past tense.",
+      "feedback": [
+        "With did, the main verb would have to be prepare. For this neutral subject question, use Who prepared the notes?",
+        "Who replaces the unknown subject. Prepared carries the past tense.",
+        "This asks which notes, not which tutor performed the action."
+      ],
+      "hints": [],
+      "followup": null
+    },
+    {
+      "id": "d-indirect",
+      "type": "choice",
+      "prompt": "Complete: Could you tell me where ___?",
+      "options": [
+        "does the workshop take place",
+        "is the workshop",
+        "the workshop is"
+      ],
+      "answer": 2,
+      "explanation": "The inner clause keeps subject + verb: the workshop is.",
+      "feedback": [
+        "After tell me where, use statement order: the workshop takes place.",
+        "This inversion belongs in Where is the workshop?, a direct question.",
+        "The inner clause keeps subject + verb: the workshop is."
+      ],
+      "hints": [],
+      "followup": null
+    }
+  ],
+  "banks": [
+    {
+      "id": "word-order-a-v1",
+      "title": "A new cooking course",
+      "checks": [
+        {
+          "id": "wo-a-frequency",
+          "type": "choice",
+          "prompt": "Describe the chef's usual routine.",
+          "options": [
+            "The chef explains usually the recipe.",
+            "The chef usually explains the recipe.",
+            "The chef explains the recipe usually."
+          ],
+          "answer": 1,
+          "explanation": "Usually is before explains; the verb and its object remain together.",
+          "feedback": [
+            "Usually normally goes before the main verb, not between it and its object.",
+            "Usually is before explains; the verb and its object remain together.",
+            "End position can occur, but this is not the neutral routine pattern requested. Put usually before explains."
+          ],
+          "hints": [
+            "Find the main verb and its object.",
+            "Keep explains the recipe together; place the frequency word before the verb."
+          ],
+          "followup": {
+            "prompt": "Put usually in the neutral position: The teacher is patient. Write the whole sentence.",
+            "accepted": [
+              "The teacher is usually patient."
+            ],
+            "explanation": "With be, the frequency adverb normally follows be."
+          }
+        },
+        {
+          "id": "wo-a-do",
+          "type": "choice",
+          "prompt": "Ask a neutral yes/no question: you want to know if the class provides ingredients.",
+          "options": [
+            "Does the class provide ingredients?",
+            "Does the class provides ingredients?",
+            "The class does provide ingredients?"
+          ],
+          "answer": 0,
+          "explanation": "Does + subject + base verb: provide.",
+          "feedback": [
+            "Does + subject + base verb: provide.",
+            "Does carries the third-person ending, so provides becomes provide.",
+            "Statement-order questions can request confirmation; the task asks for a neutral auxiliary-first question."
+          ],
+          "hints": [
+            "Which word carries the third-person ending?",
+            "After does, use the base form of the main verb."
+          ],
+          "followup": {
+            "prompt": "Complete with the correct form of include: Does the price ___ lunch? Write only the verb.",
+            "accepted": [
+              "include"
+            ],
+            "explanation": "Does already marks third person."
+          }
+        },
+        {
+          "id": "wo-a-who",
+          "type": "choice",
+          "prompt": "The cake is ready. You do not know which person baked it. Ask for that person.",
+          "options": [
+            "Who did baked the cake?",
+            "Which cake did the baker bake?",
+            "Who baked the cake?"
+          ],
+          "answer": 2,
+          "explanation": "Who is the unknown subject, so no did is needed in this neutral subject question.",
+          "feedback": [
+            "Did cannot be followed by baked. For the neutral subject question requested, use Who baked the cake?",
+            "This asks which cake; it assumes the baker is already known.",
+            "Who is the unknown subject, so no did is needed in this neutral subject question."
+          ],
+          "hints": [
+            "What information is missing: the person doing the action or the object?",
+            "Replace the unknown person in Someone baked the cake."
+          ],
+          "followup": {
+            "prompt": "Complete with the correct form of teach: Who ___ this class every Monday? Write only the verb.",
+            "accepted": [
+              "teaches"
+            ],
+            "explanation": "Who is the subject; present-simple third-person teaches is used here."
+          }
+        },
+        {
+          "id": "wo-a-indirect",
+          "type": "choice",
+          "prompt": "Complete the polite request: Could you tell me when ___?",
+          "options": [
+            "does the class start",
+            "the class starts",
+            "starts the class"
+          ],
+          "answer": 1,
+          "explanation": "The inner clause uses subject + verb: the class starts.",
+          "feedback": [
+            "The inner clause is not another direct question: remove does and use starts.",
+            "The inner clause uses subject + verb: the class starts.",
+            "Keep the subject the class before the verb starts."
+          ],
+          "hints": [
+            "The sentence already has a question frame: Could you tell meâ€¦?",
+            "Inside when, keep the order of a statement."
+          ],
+          "followup": {
+            "prompt": "Complete: Do you know where ___? Order only kitchen / the / is.",
+            "accepted": [
+              "the kitchen is"
+            ],
+            "explanation": "The indirect clause keeps the kitchen before is."
+          }
+        },
+        {
+          "id": "wo-a-object",
+          "type": "choice",
+          "prompt": "Choose the neutral order for a statement about how the tutor explained the instructions.",
+          "options": [
+            "The tutor explained the instructions carefully.",
+            "The tutor explained carefully the instructions.",
+            "The tutor the instructions explained carefully."
+          ],
+          "answer": 0,
+          "explanation": "The object follows explained; carefully describes the action after the object.",
+          "feedback": [
+            "The object follows explained; carefully describes the action after the object.",
+            "In neutral order, do not place this manner adverb between the verb and its direct object.",
+            "The subject precedes the verb, and the object follows it."
+          ],
+          "hints": [
+            "Identify who, action and object.",
+            "Keep explained the instructions together."
+          ],
+          "followup": {
+            "prompt": "Order these words into a neutral statement: clearly / explained / the guide / the route.",
+            "accepted": [
+              "The guide explained the route clearly.",
+              "The guide clearly explained the route."
+            ],
+            "explanation": "Subject + verb + object + manner."
+          }
+        }
+      ],
+      "applications": [
+        {
+          "id": "apply",
+          "type": "open",
+          "prompt": "Explain the difference between 'Who teaches the class?' and 'Who does the teacher help?' Identify the subject in each question. Use your own words.",
+          "model": "In the first question, who is the unknown subject: we want the teacher's identity. In the second, the teacher is the known subject and who is the person receiving help. Does belongs before the known subject, and help is in the base form.",
+          "checklist": [
+            "I identify who performs each action.",
+            "I explain why only the second question uses does.",
+            "I distinguish the person doing the action from the person receiving it."
+          ],
+          "explanation": "A correct label is not enough: connect the structure to the information requested."
+        },
+        {
+          "id": "stretch",
+          "type": "open",
+          "prompt": "Write four sentences to a cooking-course organiser: say what you usually cook, ask a direct question with does about equipment, and politely ask where the course takes place. Include a subject question with who about the person teaching it.",
+          "model": "I usually cook simple vegetarian dishes. Does the kitchen provide all the equipment? Could you tell me where the course takes place? Who teaches the course?",
+          "checklist": [
+            "Usually has a natural position.",
+            "Does is followed by a subject and a base verb.",
+            "The indirect question keeps subject before verb.",
+            "Who asks for the unknown subject."
+          ],
+          "explanation": "This is short writing practice, not a complete IELTS letter. Check the four structures before adding extra detail."
+        }
+      ]
+    },
+    {
+      "id": "word-order-b-v1",
+      "title": "A neighbourhood repair workshop",
+      "checks": [
+        {
+          "id": "wo-b-frequency",
+          "type": "choice",
+          "prompt": "Describe the receptionist's normal availability using neutral word order.",
+          "options": [
+            "The receptionist usually is available.",
+            "The receptionist is available usually.",
+            "The receptionist is usually available."
+          ],
+          "answer": 2,
+          "explanation": "With main-verb be, usually normally follows the verb.",
+          "feedback": [
+            "Usually can precede be with special emphasis, but the neutral pattern here is is usually.",
+            "End position is less neutral for this description; normally put usually after is.",
+            "With main-verb be, usually normally follows the verb."
+          ],
+          "hints": [
+            "Is is the main verb here.",
+            "Frequency words normally follow main-verb be."
+          ],
+          "followup": {
+            "prompt": "Insert often immediately before the main verb: Volunteers repair bicycles. Write the sentence.",
+            "accepted": [
+              "Volunteers often repair bicycles."
+            ],
+            "explanation": "With a lexical main verb, often usually precedes it."
+          }
+        },
+        {
+          "id": "wo-b-do",
+          "type": "choice",
+          "prompt": "Ask a neutral yes/no question about whether one repair service accepts cash.",
+          "options": [
+            "Does the service accepts cash?",
+            "Does the service accept cash?",
+            "The service does accept cash?"
+          ],
+          "answer": 1,
+          "explanation": "Does + the service + accept forms the neutral direct question.",
+          "feedback": [
+            "Does carries the third-person ending; use accept.",
+            "Does + the service + accept forms the neutral direct question.",
+            "This can seek confirmation, but does must precede the subject for the neutral structure requested."
+          ],
+          "hints": [
+            "Locate the auxiliary.",
+            "Use one third-person marker: does, not accepts as well."
+          ],
+          "followup": {
+            "prompt": "Complete: When does the shop ___? Use the correct form of close; write only the verb.",
+            "accepted": [
+              "close"
+            ],
+            "explanation": "Use the base verb after does."
+          }
+        },
+        {
+          "id": "wo-b-who",
+          "type": "choice",
+          "prompt": "Someone repaired the bicycle. Ask for the identity of that person.",
+          "options": [
+            "Who repaired the bicycle?",
+            "Who did repaired the bicycle?",
+            "Which bicycle did the mechanic repair?"
+          ],
+          "answer": 0,
+          "explanation": "Who replaces the subject; repaired remains past tense.",
+          "feedback": [
+            "Who replaces the subject; repaired remains past tense.",
+            "Did requires a base verb; repaired is past. In this neutral subject question, no did is needed.",
+            "This asks about the bicycle, not who repaired it."
+          ],
+          "hints": [
+            "Start from Someone repaired the bicycle.",
+            "Replace Someone with the question word; keep the past-tense verb."
+          ],
+          "followup": {
+            "prompt": "Complete with the correct form of organise: Who ___ the meetings every Friday? Write only the verb.",
+            "accepted": [
+              "organises",
+              "organizes"
+            ],
+            "explanation": "The unknown subject takes the singular present form in this question."
+          }
+        },
+        {
+          "id": "wo-b-indirect",
+          "type": "choice",
+          "prompt": "Complete: Do you know what time ___?",
+          "options": [
+            "does the repair shop open",
+            "opens the repair shop",
+            "the repair shop opens"
+          ],
+          "answer": 2,
+          "explanation": "The inner clause keeps statement order and third-person -s.",
+          "feedback": [
+            "Do you know already forms the outer question. The inner clause uses the repair shop opens.",
+            "The subject belongs before opens inside the clause.",
+            "The inner clause keeps statement order and third-person -s."
+          ],
+          "hints": [
+            "Separate the outer question from its inner clause.",
+            "Inside what time, place the subject before the verb."
+          ],
+          "followup": {
+            "prompt": "Complete: Could you tell me where ___? Order only tools / are / the.",
+            "accepted": [
+              "the tools are"
+            ],
+            "explanation": "The tools is the subject; are follows it."
+          }
+        },
+        {
+          "id": "wo-b-object",
+          "type": "choice",
+          "prompt": "Choose a neutral statement about how the volunteer checked the bicycle.",
+          "options": [
+            "The volunteer checked carefully the bicycle.",
+            "The volunteer checked the bicycle carefully.",
+            "The volunteer the bicycle carefully checked."
+          ],
+          "answer": 1,
+          "explanation": "Subject + verb + object + manner keeps the action clear.",
+          "feedback": [
+            "Keep the verb and its direct object together in the neutral order requested.",
+            "Subject + verb + object + manner keeps the action clear.",
+            "The object should follow checked, not come before the main verb."
+          ],
+          "hints": [
+            "Find the action and what receives it.",
+            "Keep checked the bicycle together."
+          ],
+          "followup": {
+            "prompt": "Order into a neutral statement: politely / answered / the assistant / my question.",
+            "accepted": [
+              "The assistant answered my question politely.",
+              "The assistant politely answered my question."
+            ],
+            "explanation": "Manner follows the direct object in this neutral pattern."
+          }
+        }
+      ],
+      "applications": [
+        {
+          "id": "apply",
+          "type": "open",
+          "prompt": "Compare 'When does the shop open?' and 'Do you know when the shop opens?' Explain what information both ask for, then explain why the order and verb form are different.",
+          "model": "Both questions ask for the opening time. The first is direct: does comes before the subject, and open is in the base form. The second has Do you know as its outer question frame. Inside it, the shop comes before opens. There is no does in the inner clause, so opens carries the third-person ending.",
+          "checklist": [
+            "I explain that both ask for an opening time.",
+            "I identify the direct question and the outer question frame.",
+            "I explain the different position of the subject and the forms open/opens."
+          ],
+          "explanation": "Explain meaning as well as form; both matter when asking for useful information."
+        },
+        {
+          "id": "stretch",
+          "type": "open",
+          "prompt": "Write to a repair-workshop organiser. In four short sentences, describe something you usually repair, ask with does whether the workshop provides tools, ask who leads the session, and politely ask when it finishes. Use your own wording.",
+          "model": "I usually repair small household items. Does the workshop provide tools? Who leads the session? Could you tell me when it finishes?",
+          "checklist": [
+            "My routine uses a natural frequency position.",
+            "My does question has a base verb.",
+            "My who question asks for the subject.",
+            "My indirect question keeps statement order."
+          ],
+          "explanation": "Use a new situation to check the same underlying structures. Clear short sentences are sufficient."
+        }
+      ]
+    }
+  ]
+}

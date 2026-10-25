@@ -1,0 +1,474 @@
+[
+  {
+    "skillId": "v-collocations",
+    "title": "Learn words that work together",
+    "goal": "Choose natural word combinations and explain how the choice changes your message.",
+    "explanation": "A collocation is a group of words that people commonly use together. Knowing a noun is not enough: you also need to know which verbs, adjectives and prepositions fit it. Learn make a decision as one useful unit, then change the subject or tense to express your own idea. Similar words are not always interchangeable. Meet a deadline means finish on time; extend a deadline means allow more time. Both combinations are natural, but they describe different actions. When you check a phrase, ask two questions: does this combination sound natural, and does it express the action I mean? Keep a short situation with the phrase so that you can use it accurately later.",
+    "explanationEs": "Aprende las combinaciones completas y su significado. Una colocación natural puede ser incorrecta para tu intención: cumplir un plazo y ampliarlo son acciones distintas.",
+    "uses": [
+      {
+        "title": "A verb gives a noun its action",
+        "when": "Use a verb–noun combination to say what someone does with a decision, complaint or arrangement.",
+        "form": "make a decision; make a complaint; reach an agreement. Change the verb tense when the time changes.",
+        "why": "The noun names the idea, while the verb identifies the action. Translating each word separately can produce an unnatural phrase.",
+        "es": "Memoriza el verbo y el sustantivo juntos. No todos los usos españoles de hacer se traducen con do.",
+        "examples": [
+          {"en": "We made a decision after comparing the two training courses.", "es": "Tomamos una decisión después de comparar los dos cursos de formación.", "note": "Made a decision names the act of choosing; the past form matches the completed discussion."},
+          {"en": "The tenant and landlord reached an agreement about the repair date.", "es": "El inquilino y el propietario llegaron a un acuerdo sobre la fecha de reparación.", "note": "Reached an agreement means that their discussion produced an accepted arrangement."}
+        ]
+      },
+      {
+        "title": "Choose the action, not just a natural phrase",
+        "when": "Use precise combinations when reporting progress, asking for time or explaining a responsibility.",
+        "form": "meet / miss / extend a deadline; take responsibility for + noun or -ing form.",
+        "why": "These verbs cannot replace each other without changing the event. A correct combination still needs the right meaning.",
+        "es": "Primero decide qué ocurrió. Meet es cumplir, miss es incumplir y extend es ampliar el plazo.",
+        "examples": [
+          {"en": "We met the deadline by sending the report on Thursday.", "es": "Cumplimos el plazo enviando el informe el jueves.", "note": "The report arrived in time. Extended the deadline would describe changing the permitted date."},
+          {"en": "Could you extend the deadline until Monday so that we can check the figures?", "es": "¿Podría ampliar el plazo hasta el lunes para que podamos comprobar las cifras?", "note": "The writer requests more time; they are not claiming that the work is already complete."}
+        ]
+      },
+      {
+        "title": "Describe degree without exaggerating",
+        "when": "Use adjective–noun combinations to describe how large, serious or useful something is.",
+        "form": "a minor delay; a significant improvement; a serious concern. Keep the adjective consistent with the facts.",
+        "why": "An adjective adds a judgement about degree. Choosing a stronger word can make an accurate sentence misleading.",
+        "es": "El adjetivo indica intensidad. No uses una expresión más fuerte solo porque parezca más avanzada.",
+        "examples": [
+          {"en": "There was a minor delay of three minutes before the workshop began.", "es": "Hubo un pequeño retraso de tres minutos antes de que empezara el taller.", "note": "Minor matches a small delay in this situation; serious would need a different context or effect."},
+          {"en": "Reducing the waiting time from an hour to ten minutes was a significant improvement.", "es": "Reducir la espera de una hora a diez minutos supuso una mejora importante.", "note": "The numerical comparison explains why significant is a reasonable description."}
+        ]
+      }
+    ],
+    "glossary": [
+      {"term": "collocation", "definition": "Words that are commonly used together to express a particular idea.", "es": "Combinación habitual de palabras."},
+      {"term": "degree", "definition": "How much or how strongly something is true.", "es": "Grado o intensidad."}
+    ],
+    "takeaway": "Learn the combination with its meaning, then check that it fits the action and degree you intend.",
+    "writingBridge": {"prompt": "Write four sentences to your course organiser. Explain a small delay, say whether you can meet a deadline, request an extension if necessary, and propose an agreement. Use three combinations from this lesson.", "checklist": ["My verbs describe the actions I actually mean.", "I changed verb forms to match the time.", "My adjectives match the size or seriousness of the problem.", "I can explain why each combination fits its sentence."]},
+    "sources": [
+      {"title": "Oxford Learner’s Dictionaries: using collocations", "url": "https://www.oxfordlearnersdictionaries.com/about/collocations/introduction.html"},
+      {"title": "Cambridge: collocation learning resource", "url": "https://www.cambridge.org/elt/dictionaries/pdfs/8087_collocation_together.pdf"}
+    ]
+  },
+  {
+    "skillId": "v-word-families",
+    "title": "Choose the word form your sentence needs",
+    "goal": "Use related nouns, verbs, adjectives and adverbs without losing the meaning or sentence structure.",
+    "explanation": "A word family contains related forms, such as improve and improvement, or clear and clearly. These forms share an idea, but they do different jobs in a sentence. A verb expresses an action or state; a noun names something; an adjective describes a noun; an adverb can describe how an action happens. Before choosing an ending, look at the position and meaning of the missing word. Then check the whole phrase, because changing a verb into a noun may require an article or a preposition. Endings such as -ment and -ly offer clues, not complete rules. Some forms change spelling, and some possible-looking words do not exist. Check uncertain forms in a learner’s dictionary.",
+    "explanationEs": "Elige primero la función que necesita la frase. Cambiar la terminación también puede exigir un artículo, una preposición o un cambio ortográfico.",
+    "uses": [
+      {
+        "title": "Name an action or perform it",
+        "when": "Use a verb for what happens; use a related noun when the action or result becomes the subject or object.",
+        "form": "improve + object → an improvement in + area; decide + to-infinitive → a decision to + infinitive.",
+        "why": "The word family remains related, but the new noun needs its own surrounding structure.",
+        "es": "No sustituyas improve por improvement sin adaptar la frase: el nombre puede necesitar an y una preposición.",
+        "examples": [
+          {"en": "The new timetable improved attendance at the evening class.", "es": "El nuevo horario mejoró la asistencia a la clase nocturna.", "note": "Improved is the main verb, and attendance is what changed."},
+          {"en": "There was an improvement in attendance after the timetable changed.", "es": "Hubo una mejora en la asistencia después de cambiar el horario.", "note": "Improvement names the result. An introduces one improvement, and in introduces the area that improved."}
+        ]
+      },
+      {
+        "title": "Describe a thing or how someone acts",
+        "when": "Use an adjective to describe a person or thing, and an adverb to describe how an action is done.",
+        "form": "a clear explanation / the explanation is clear; explain something clearly. Many, but not all, adverbs end in -ly.",
+        "why": "Choosing the word form tells the reader what you are describing. An adjective after be does not become an adverb.",
+        "es": "Clear describe la explicación; clearly describe cómo se explica. Tras be, usa aquí el adjetivo.",
+        "examples": [
+          {"en": "The booking instructions are clear and easy to follow.", "es": "Las instrucciones de reserva son claras y fáciles de seguir.", "note": "Clear describes the instructions, so it is an adjective even though it comes after are."},
+          {"en": "The receptionist explained the cancellation rules clearly.", "es": "La recepcionista explicó con claridad las normas de cancelación.", "note": "Clearly describes the way she explained the rules, not the rules themselves."}
+        ]
+      },
+      {
+        "title": "Check endings and the intended meaning",
+        "when": "Use a known family to build a word, then check whether its spelling and positive or negative meaning fit.",
+        "form": "reliable → reliability; possible → possibility; responsible → responsibility. Learn each complete form.",
+        "why": "A suffix can change the original spelling. Adding un-, in- or another prefix without checking may create the wrong word.",
+        "es": "Las terminaciones ayudan a reconocer la categoría, pero no permiten inventar cualquier forma. Comprueba la palabra completa.",
+        "examples": [
+          {"en": "A reliable bus service helps workers arrive on time.", "es": "Un servicio de autobuses fiable ayuda a los trabajadores a llegar puntuales.", "note": "Reliable describes the service. It focuses on whether people can depend on it."},
+          {"en": "The reliability of the bus service improved after the route changed.", "es": "La fiabilidad del servicio de autobuses mejoró después de cambiar la ruta.", "note": "Reliability is the noun. The ending is -ability, so simply adding -ity to reliable would miss the spelling change."}
+        ]
+      }
+    ],
+    "glossary": [
+      {"term": "word class", "definition": "A group such as noun, verb, adjective or adverb, based on how a word works.", "es": "Categoría gramatical."},
+      {"term": "suffix", "definition": "Letters added to the end of a word to form another word or form.", "es": "Sufijo: terminación añadida a una palabra."}
+    ],
+    "takeaway": "Choose the job first, the word form second, and then rebuild the complete phrase.",
+    "writingBridge": {"prompt": "Write four sentences about a change to a local service. Use improve and improvement in separate sentences, then describe the service with an adjective and describe an action with an adverb.", "checklist": ["Each word has the right job in its sentence.", "My noun phrases include any necessary articles and prepositions.", "I checked the spelling of changed endings.", "The four sentences describe one consistent situation."]},
+    "sources": [
+      {"title": "British Council: word formation", "url": "https://learnenglishteens.britishcouncil.org/exams/grammar-vocabulary-exams/word-formation"},
+      {"title": "Cambridge: suffixes", "url": "https://dictionary.cambridge.org/grammar/british-grammar/suffixes"}
+    ]
+  },
+  {
+    "skillId": "v-patterns",
+    "title": "Learn what follows a word",
+    "goal": "Use a word with the preposition or verb structure that completes its meaning.",
+    "explanation": "A vocabulary item includes more than its translation. You also need its pattern: the words or structures that can follow it. We say interested in learning, but want to learn. Both sentences concern an activity, yet the first uses a preposition and an -ing form, while the second uses a to-infinitive. Similar verbs can also take different patterns: suggest changing the date and advise someone to change the date. Notice whether you need to name the person who will act. When learning a word, keep one complete phrase and one original sentence. If you replace that word, check the structure again. A correct synonym does not automatically fit the same space.",
+    "explanationEs": "Aprende cada palabra con su construcción. Dos verbos de significado parecido pueden necesitar complementos distintos; cambiar el verbo obliga a revisar toda la frase.",
+    "uses": [
+      {
+        "title": "Keep a preposition with its word",
+        "when": "Use a fixed preposition to connect a verb, adjective or noun to the topic or object it needs.",
+        "form": "depend on + noun; interested in + noun / -ing; access to + noun. Here, to is a preposition.",
+        "why": "The preposition is part of the learned expression. A direct translation from Spanish may select a different preposition.",
+        "es": "Guarda expresiones como depend on y interested in completas. No elijas la preposición traduciendo desde el español.",
+        "examples": [
+          {"en": "The starting date depends on the number of applicants.", "es": "La fecha de inicio depende del número de solicitantes.", "note": "On links depends to the factor that controls the date; depends of does not fit this meaning."},
+          {"en": "I am interested in attending the weekend workshop.", "es": "Me interesa asistir al taller del fin de semana.", "note": "In is followed by attending. The phrase is interested in, not interested to for this meaning."}
+        ]
+      },
+      {
+        "title": "Suggest an action",
+        "when": "Use suggest when you put forward an idea rather than give an instruction.",
+        "form": "suggest + -ing; suggest that + subject + verb. Do not use suggest someone to do something.",
+        "why": "The -ing pattern names the proposal. A that-clause can make the person who should act explicit.",
+        "es": "Suggest changing propone la acción; suggest that we change indica además quién debe realizarla.",
+        "examples": [
+          {"en": "I suggest moving the training session to Friday.", "es": "Sugiero trasladar la sesión de formación al viernes.", "note": "Moving names the proposed action. Suggest to move is not the pattern needed here."},
+          {"en": "I suggest that the organiser contact everyone before changing the date.", "es": "Sugiero que el organizador contacte con todos antes de cambiar la fecha.", "note": "The that-clause names the organiser as the person who should contact the group."}
+        ]
+      },
+      {
+        "title": "Name the person who receives advice",
+        "when": "Use advise with a person when you recommend an action to that person.",
+        "form": "advise + person + to-infinitive; advise + person + not to-infinitive.",
+        "why": "The person is an object of advise and the doer of the later action. Keep both roles clear.",
+        "es": "En advise someone to, someone recibe el consejo y realiza la acción del infinitivo. La negación va antes de to.",
+        "examples": [
+          {"en": "The tutor advised me to check each paragraph for one clear main idea.", "es": "El tutor me aconsejó comprobar que cada párrafo tuviera una idea principal clara.", "note": "Me identifies who receives the advice and who should do the checking."},
+          {"en": "The organiser advised participants not to book travel before confirmation.", "es": "El organizador aconsejó a los participantes no reservar el viaje antes de recibir la confirmación.", "note": "Not to book gives negative advice. This is different from saying that no advice was given."}
+        ]
+      }
+    ],
+    "glossary": [
+      {"term": "pattern", "definition": "The usual structure used with a particular word.", "es": "Construcción habitual de una palabra."},
+      {"term": "to-infinitive", "definition": "To followed by a verb’s base form, such as to check.", "es": "Infinitivo con to: to más la forma base."}
+    ],
+    "takeaway": "Learn the word and its following structure together; recheck the pattern whenever you change the word.",
+    "writingBridge": {"prompt": "Write four sentences to someone joining a course. Say what you are interested in, explain what the start date depends on, suggest one useful action, and advise the reader to do something before the first class.", "checklist": ["I used the prepositions belonging to my expressions.", "My suggest sentence has an -ing form or a complete that-clause.", "My advise sentence names the person before to.", "Every recommendation has a clear purpose in the situation."]},
+    "sources": [
+      {"title": "Cambridge: suggest", "url": "https://dictionary.cambridge.org/grammar/british-grammar/suggest"},
+      {"title": "Cambridge: word patterns with interested", "url": "https://dictionary.cambridge.org/us/grammar/british-grammar/word-patterns-interested"},
+      {"title": "Collins: advice and advise", "url": "https://blog.collinsdictionary.com/language-learners/learning-english/whats-the-difference-between-advice-and-advise/"}
+    ]
+  },
+  {
+    "skillId": "v-paraphrase",
+    "title": "Change the wording, keep the message",
+    "goal": "Restate an idea without changing its people, quantities, certainty or conditions.",
+    "explanation": "A paraphrase expresses the same message in a different way. It is not a task of replacing every word with a synonym. First identify who does what, when it happens, how many people are involved and how certain the claim is. Then change a structure or a suitable phrase while keeping those details. Some employees cannot become all employees, and may improve cannot become will improve. Conditions need particular care: only if marks a requirement, not a guarantee that the result will follow. After rewriting, compare the two versions in both directions. Could one sentence be true while the other is false? If so, your new wording may have changed the message.",
+    "explanationEs": "Una paráfrasis mantiene el significado, incluidos cantidad, certeza y condiciones. No consiste en sustituir todas las palabras ni en hacer una afirmación más fuerte.",
+    "uses": [
+      {
+        "title": "Change the structure, keep the event",
+        "when": "Use a different grammatical structure when the same action, people and time remain clear.",
+        "form": "Active: person + verb + object. Passive: object + be + past participle + by person, when the person matters.",
+        "why": "Changing the focus can produce a useful paraphrase, but removing a person may remove information the task requires.",
+        "es": "La pasiva cambia el foco. Conserva quién realizó la acción si ese dato forma parte del mensaje que debes mantener.",
+        "examples": [
+          {"en": "The organiser moved the workshop to Monday. → The workshop was moved to Monday by the organiser.", "es": "El organizador trasladó el taller al lunes. → El taller fue trasladado al lunes por el organizador.", "note": "The actor, action and new day remain the same; only the focus changes."},
+          {"en": "The course fee includes all materials. → All materials are included in the course fee.", "es": "El precio del curso incluye todos los materiales. → Todos los materiales están incluidos en el precio del curso.", "note": "Both versions include all materials. Replacing all with some would change the coverage."}
+        ]
+      },
+      {
+        "title": "Keep the strength of a claim",
+        "when": "Restate a claim that limits its certainty, frequency or the group it describes.",
+        "form": "may → it is possible that; not all → some do not. Keep quantifiers and modal meanings.",
+        "why": "A small word can carry a large part of the meaning. A stronger statement needs stronger evidence.",
+        "es": "Conserva palabras como may, some y not all. Quitarlas puede convertir una posibilidad en certeza o una parte en el total.",
+        "examples": [
+          {"en": "Flexible hours may reduce travel stress. → It is possible that flexible hours will reduce travel stress.", "es": "El horario flexible puede reducir el estrés del desplazamiento. → Es posible que lo reduzca.", "note": "Both versions express possibility. Flexible hours eliminate stress would claim much more."},
+          {"en": "Not all staff work remotely. → Some staff do not work remotely.", "es": "No todo el personal trabaja a distancia. → Parte del personal no trabaja a distancia.", "note": "The statements preserve the exception. Neither tells us the exact percentage working remotely."}
+        ]
+      },
+      {
+        "title": "Protect a necessary condition",
+        "when": "Restate a rule saying that something is required before an action is permitted or a result is possible.",
+        "form": "You can do X only if Y → Y is necessary to do X. Keep other requirements open unless the text rules them out.",
+        "why": "Meeting one necessary condition may not be enough. Do not turn a requirement into a promise of success.",
+        "es": "Only if introduce una condición necesaria. Cumplirla no garantiza el resultado si puede haber otros requisitos.",
+        "examples": [
+          {"en": "You may enter the laboratory only if a supervisor is present. → A supervisor must be present for you to enter the laboratory.", "es": "Solo puedes entrar al laboratorio si hay un supervisor. → Es necesario que haya un supervisor para entrar.", "note": "The requirement is preserved; the rewrite does not claim that a supervisor’s presence removes all other rules."},
+          {"en": "A receipt is required for a refund. → You cannot obtain a refund without a receipt.", "es": "Se exige un recibo para obtener un reembolso. → No puedes obtenerlo sin recibo.", "note": "Both versions make the receipt necessary. They do not say that every purchase with a receipt must be refunded."}
+        ]
+      }
+    ],
+    "glossary": [
+      {"term": "paraphrase", "definition": "A different wording that keeps the original meaning.", "es": "Reformulación que conserva el significado."},
+      {"term": "necessary condition", "definition": "Something that must be true for another thing to happen or be allowed.", "es": "Requisito necesario, que puede no ser suficiente."}
+    ],
+    "takeaway": "Preserve the facts and limits before trying to make the wording different.",
+    "writingBridge": {"prompt": "Rewrite these three messages in your own words: ‘Not all evening classes are online.’ ‘Extra practice may improve accuracy.’ ‘You may join the advanced group only if you complete the entry task.’ Add one sentence explaining a meaning you deliberately kept.", "checklist": ["I kept the same group and quantity.", "A possibility remained a possibility.", "The entry task remained a requirement, without becoming a guarantee.", "I changed wording or structure without adding unsupported facts."]},
+    "sources": [
+      {"title": "Cambridge: if and only if", "url": "https://dictionary.cambridge.org/grammar/british-grammar/if"},
+      {"title": "Cambridge: active and passive voice", "url": "https://dictionary.cambridge.org/grammar/british-grammar/active-and-passive-voice"}
+    ]
+  },
+  {
+    "skillId": "v-register",
+    "title": "Match your language to your reader",
+    "goal": "Choose a clear, consistent tone for friends, service providers and professional contacts.",
+    "explanation": "Register is the kind of language you choose for a reader and situation. A message to a close friend can sound different from a complaint to a company, even when both messages discuss the same problem. Start with your relationship and purpose: are you sharing news, requesting help or reporting a fault? Neutral language is useful in many situations. Formal writing does not require the longest possible words, and politeness does not require a vague request. State the relevant facts, explain the effect and ask for a clear action. Keep the tone consistent across the opening, body and ending. Check dictionary labels before using a new expression that may be very informal, technical or old-fashioned.",
+    "explanationEs": "El registro depende del destinatario y del propósito. Ser formal no equivale a usar palabras difíciles; una petición puede ser cortés y concreta.",
+    "uses": [
+      {
+        "title": "Write naturally to someone you know",
+        "when": "Use a friendly tone when writing to a close friend about plans, news or a small favour.",
+        "form": "Friendly opening + direct explanation; contractions such as I’m or I’d can fit the relationship.",
+        "why": "Your language should reflect real familiarity. Highly ceremonial phrases can make a personal message sound distant.",
+        "es": "Con un amigo puedes usar contracciones y expresiones cercanas, manteniendo frases claras y completas.",
+        "examples": [
+          {"en": "I’m really glad you can visit next month. Shall we book a table for Saturday?", "es": "Me alegra mucho que puedas venir el mes que viene. ¿Reservamos una mesa para el sábado?", "note": "The contraction and shared suggestion fit a friendly relationship."},
+          {"en": "Could you look after my plants while I’m away? I’ll leave the key with Ana.", "es": "¿Podrías cuidar mis plantas mientras estoy fuera? Dejaré la llave a Ana.", "note": "The request is warm and clear; politeness is also useful between friends."}
+        ]
+      },
+      {
+        "title": "Make a professional request clear",
+        "when": "Ask a service provider or professional contact for information or a specific action.",
+        "form": "Could you + base verb...? / I would appreciate it if you could + base verb... Follow with the needed detail.",
+        "why": "A polite structure softens the request, while a named action and date help the reader respond.",
+        "es": "Combina una fórmula cortés con una acción y datos concretos. No acumules fórmulas que oculten lo que necesitas.",
+        "examples": [
+          {"en": "Could you confirm by Friday whether the course fee includes the examination?", "es": "¿Podría confirmar como muy tarde el viernes si el precio del curso incluye el examen?", "note": "Confirm identifies the action, and by Friday states when the information is needed."},
+          {"en": "I would appreciate it if you could send me a copy of the updated timetable.", "es": "Le agradecería que me enviara una copia del horario actualizado.", "note": "The wording is polite, but the requested document remains easy to identify."}
+        ]
+      },
+      {
+        "title": "Be firm without becoming personal",
+        "when": "Explain a problem to someone who can resolve it, especially in a complaint or request for a remedy.",
+        "form": "Fact → effect → requested action. Use measured descriptions that you can support.",
+        "why": "A factual explanation gives the reader something to investigate. Insults and exaggerated claims can distract from the remedy.",
+        "es": "Expón el hecho, su consecuencia y la solución que pides. Un tono firme no exige acusaciones personales.",
+        "examples": [
+          {"en": "The replacement charger arrived with a damaged cable, so I have been unable to use it.", "es": "El cargador de sustitución llegó con el cable dañado, por lo que no he podido usarlo.", "note": "The sentence identifies the product and its condition, then explains the practical effect."},
+          {"en": "Please arrange a working replacement or explain how I can return the charger for a refund.", "es": "Por favor, gestione una sustitución que funcione o explíqueme cómo devolver el cargador para obtener un reembolso.", "note": "The request is direct and professional; it offers clear actions rather than expressing anger alone."}
+        ]
+      }
+    ],
+    "glossary": [
+      {"term": "register", "definition": "The level and style of language suited to a person, purpose and situation.", "es": "Registro: estilo adecuado al contexto."},
+      {"term": "tone", "definition": "The attitude your choice of words communicates to the reader.", "es": "Tono: actitud que percibe el lector."}
+    ],
+    "takeaway": "Match the relationship, state your purpose clearly and keep the tone consistent.",
+    "writingBridge": {"prompt": "Write two sentences to a friend about a cancelled class, then two sentences to the course office requesting a replacement session. Keep the facts the same while changing the tone.", "checklist": ["The personal message sounds appropriate for a friend.", "The office message makes a specific, polite request.", "I kept the cancellation facts unchanged.", "I did not use difficult vocabulary simply to sound formal."]},
+    "sources": [
+      {"title": "Cambridge: formal and informal language", "url": "https://dictionary.cambridge.org/grammar/british-grammar/formal-language"}
+    ]
+  },
+  {
+    "skillId": "v-everyday",
+    "title": "Read everyday information precisely",
+    "goal": "Distinguish common terms in housing, purchases and travel so that you request the right thing.",
+    "explanation": "Everyday vocabulary often tells you what you are paying for, what you can request and what happens next. Words from the same topic are not always alternatives. Rent is a payment for using a property; a deposit may be an advance payment or money held as security, depending on the context. A refund returns money, while a replacement supplies another item. When reading a notice or booking page, connect each word to a practical question: who pays, what is included, when is it due and what conditions apply? Do not assume that a familiar word guarantees a particular policy. Use the stated terms, and ask for clarification when a detail is missing.",
+    "explanationEs": "Relaciona cada término con una operación concreta. Depósito, alquiler, reembolso y sustitución no son equivalentes; las condiciones dependen del texto.",
+    "uses": [
+      {
+        "title": "Separate regular costs from deposits",
+        "when": "Read accommodation descriptions or ask a landlord to clarify the payments needed.",
+        "form": "monthly rent; a security deposit; bills included / excluded; pay a deposit of + amount.",
+        "why": "Different payments have different purposes. The word deposit alone does not tell you every condition for getting money back.",
+        "es": "Identifica para qué sirve cada pago. Comprueba además si el precio incluye facturas y qué condiciones tiene el depósito.",
+        "examples": [
+          {"en": "The monthly rent is £680, and electricity bills are paid separately.", "es": "El alquiler mensual es de 680 libras y la electricidad se paga por separado.", "note": "The regular housing cost is not the complete monthly cost because electricity is excluded."},
+          {"en": "Could you explain the conditions for returning the security deposit?", "es": "¿Podría explicar las condiciones para devolver la fianza?", "note": "Security deposit identifies money held as protection; the question asks about its particular return conditions."}
+        ]
+      },
+      {
+        "title": "Request the right remedy",
+        "when": "Describe a faulty purchase or choose between the solutions stated by a shop.",
+        "form": "request a refund; receive a replacement; repair a faulty item. Say which outcome you want.",
+        "why": "These solutions produce different results: returned money, another item or a repaired original item.",
+        "es": "Refund devuelve dinero; replacement aporta otro producto; repair arregla el original. Pide el resultado que necesitas.",
+        "examples": [
+          {"en": "I would prefer a refund because I no longer need the printer.", "es": "Preferiría un reembolso porque ya no necesito la impresora.", "note": "The reason supports returning the money rather than receiving another printer."},
+          {"en": "The shop offered a replacement, but I asked whether they could repair my original watch.", "es": "La tienda ofreció una sustitución, pero pregunté si podían reparar mi reloj original.", "note": "Replacement and repair are deliberately contrasted; they do not describe the same solution."}
+        ]
+      },
+      {
+        "title": "Check the details of a journey",
+        "when": "Read a ticket description or ask about a change to travel arrangements.",
+        "form": "departure / arrival time; a return ticket; change a booking; a cancellation fee.",
+        "why": "A journey has different stages, and a permission to change a booking does not automatically mean that the change is free.",
+        "es": "Distingue salida y llegada. Poder cambiar o cancelar una reserva no significa que no exista una comisión.",
+        "examples": [
+          {"en": "The departure time is 08:40, but passengers should reach the platform earlier.", "es": "La salida es a las 08:40, pero los pasajeros deben llegar al andén antes.", "note": "Departure is when the train leaves; it is not the recommended time to arrive at the station."},
+          {"en": "The booking can be cancelled, but a £12 cancellation fee will be charged.", "es": "La reserva se puede cancelar, pero se cobrará una comisión de 12 libras.", "note": "The permission and the cost are both part of the message. Ignoring but would lose an important condition."}
+        ]
+      }
+    ],
+    "glossary": [
+      {"term": "fee", "definition": "Money charged for a service or a particular action.", "es": "Tarifa, tasa o comisión según el contexto."},
+      {"term": "condition", "definition": "A rule or requirement that affects what is allowed or provided.", "es": "Condición o requisito."}
+    ],
+    "takeaway": "Turn the vocabulary into practical details: payment, action, time and conditions.",
+    "writingBridge": {"prompt": "Write four sentences asking about a flat advertised at £680 per month. Ask whether bills are included, ask about the security deposit, explain your intended moving date, and request written confirmation of the costs.", "checklist": ["I distinguished monthly rent from the deposit.", "I asked about missing information rather than inventing it.", "My questions identify the exact costs I need to know.", "My message has a clear practical purpose."]},
+    "sources": [
+      {"title": "Cambridge: deposit", "url": "https://dictionary.cambridge.org/dictionary/english/deposit"},
+      {"title": "Cambridge: refund", "url": "https://dictionary.cambridge.org/dictionary/english/refund"},
+      {"title": "British Council: everyday vocabulary topics", "url": "https://learnenglish.britishcouncil.org/free-resources/vocabulary/b1-b2"}
+    ]
+  },
+  {
+    "skillId": "v-workplace",
+    "title": "Understand work roles, duties and decisions",
+    "goal": "Read job and workplace messages without confusing a request, requirement or approved action.",
+    "explanation": "Workplace vocabulary helps you follow a process as well as describe a job. An applicant is someone seeking a position; an employee already works for an organisation. Responsibilities describe duties, while qualifications describe knowledge or achievements needed for a role. In workplace messages, pay close attention to the stage of a decision. Submitting a request means asking for something; approval means that permission has been given. Pending means the matter is still waiting to be decided or completed. Also identify who must act and by when. When writing, choose verbs that show the true status of your task so that a colleague does not mistake an intention for a completed action.",
+    "explanationEs": "El vocabulario laboral identifica funciones y fases de un proceso. Una solicitud enviada todavía puede estar pendiente: no equivale a una autorización.",
+    "uses": [
+      {
+        "title": "Read what a job requires",
+        "when": "Compare your experience with a job advertisement or explain why you are applying.",
+        "form": "apply for a position; experience in + field / -ing; responsible for + noun / -ing; required qualifications.",
+        "why": "An advertisement separates what the person will do from what they need to know before joining.",
+        "es": "Diferencia las responsabilidades del puesto de la experiencia o formación exigida al candidato.",
+        "examples": [
+          {"en": "Applicants need experience in handling customer enquiries.", "es": "Los candidatos necesitan experiencia atendiendo consultas de clientes.", "note": "This describes a requirement for applicants, not a promise that the employer will provide training."},
+          {"en": "The successful applicant will be responsible for updating the booking records.", "es": "La persona seleccionada será responsable de actualizar los registros de reservas.", "note": "Responsible for introduces a future duty. Updating follows the preposition for."}
+        ]
+      },
+      {
+        "title": "Track a request accurately",
+        "when": "Ask for leave, training or equipment and explain whether a decision has been made.",
+        "form": "submit a request; a request is pending; approve / reject a request; notify someone of a decision.",
+        "why": "These expressions describe different stages. Only an actual approval allows you to report that permission has been granted.",
+        "es": "Sigue el estado del trámite: enviar, esperar decisión, aprobar o rechazar y comunicar el resultado.",
+        "examples": [
+          {"en": "I submitted my leave request on Tuesday, but it is still pending.", "es": "Envié mi solicitud de vacaciones el martes, pero sigue pendiente.", "note": "Submitted confirms that the request was sent. Pending confirms that a decision is still awaited."},
+          {"en": "My manager approved the request and notified me by email.", "es": "Mi responsable aprobó la solicitud y me lo comunicó por correo.", "note": "Approval and notification are separate actions, and this sentence states that both happened."}
+        ]
+      },
+      {
+        "title": "Report progress and deadlines",
+        "when": "Update a colleague about completed work, remaining work and the next expected action.",
+        "form": "complete a task; work on a draft; submit by + deadline; be due on + date.",
+        "why": "A useful update tells the reader both the current state and the next step. Working on is not the same as completing.",
+        "es": "Indica qué está acabado, qué está en proceso y cuándo se entrega. By marca el límite, no necesariamente el día exacto de entrega.",
+        "examples": [
+          {"en": "I have completed the customer summary and am now checking the figures.", "es": "He terminado el resumen de clientes y ahora estoy comprobando las cifras.", "note": "The two verb forms separate finished work from work currently in progress."},
+          {"en": "Please submit the final report by Thursday so that we can review it on Friday.", "es": "Envía el informe final como muy tarde el jueves para que podamos revisarlo el viernes.", "note": "By Thursday sets the latest acceptable day; an earlier submission also meets that instruction."}
+        ]
+      }
+    ],
+    "glossary": [
+      {"term": "pending", "definition": "Still waiting for a decision or for the next required event.", "es": "Pendiente de resolución o de un paso necesario."},
+      {"term": "responsibility", "definition": "A duty or task that a person is expected to carry out.", "es": "Responsabilidad o función asignada."}
+    ],
+    "takeaway": "Name the person, the duty, the current status and the next required action.",
+    "writingBridge": {"prompt": "Write four sentences to your manager. Say that you submitted a training request, explain that it is still pending, connect the training to one responsibility, and ask when you can expect a decision.", "checklist": ["I did not describe a pending request as approved.", "I identified the relevant work responsibility.", "My status verbs match what has actually happened.", "The manager can identify the response I need."]},
+    "sources": [
+      {"title": "Cambridge: approve", "url": "https://dictionary.cambridge.org/dictionary/english/approve"},
+      {"title": "Cambridge: pending", "url": "https://dictionary.cambridge.org/us/dictionary/english/pending"}
+    ]
+  },
+  {
+    "skillId": "v-essay-topics",
+    "title": "Use topic vocabulary to explain an argument",
+    "goal": "Choose precise topic words and connect a problem, a possible action and its likely effect.",
+    "explanation": "Topic vocabulary becomes useful when it helps you explain an idea, not when it makes a paragraph sound complicated. Start with the problem and the people affected. Then name the barrier: perhaps a service is too expensive, too far away or not available at the required time. Affordable, accessible and available describe related but different issues. Next explain how a proposed action could change that problem. A list of benefits does not show the reader how the result happens. Finally, match the strength of the language to your evidence: may reduce is safer than eliminate when other causes remain. Build small groups of words around education, work, technology or public services, and practise them in connected sentences.",
+    "explanationEs": "Usa el vocabulario temático para explicar el problema, la medida y su efecto. Distingue las barreras y evita presentar una posibilidad como una solución garantizada.",
+    "uses": [
+      {
+        "title": "Identify the actual barrier",
+        "when": "Explain why a group cannot use a service, course or opportunity.",
+        "form": "affordable for + group; accessible to + group; available at + time / in + place.",
+        "why": "A price problem needs a different response from a location, access or supply problem.",
+        "es": "Affordable se centra en poder pagarlo; accessible, en poder acceder o usarlo; available, en que exista o esté disponible.",
+        "examples": [
+          {"en": "The course is available online, but its high fee makes it unaffordable for many students.", "es": "El curso está disponible en línea, pero su precio elevado impide que muchos estudiantes puedan pagarlo.", "note": "Availability does not solve the price barrier. The contrast identifies the problem precisely."},
+          {"en": "A ramp would make the community centre more accessible to wheelchair users.", "es": "Una rampa facilitaría el acceso al centro comunitario a las personas que usan silla de ruedas.", "note": "The action addresses physical access. Making admission cheaper would address a different barrier."}
+        ]
+      },
+      {
+        "title": "Show how the effect happens",
+        "when": "Develop a paragraph beyond a general claim that something is good or bad.",
+        "form": "action → immediate change → possible result; because / by + -ing / which means that.",
+        "why": "A mechanism connects the proposal to its result. The reader should not have to invent the missing step.",
+        "es": "Explica el paso intermedio: qué cambia la medida y por qué ese cambio podría producir el beneficio.",
+        "examples": [
+          {"en": "Evening courses allow employees to study after work, which can help them develop new skills without leaving their jobs.", "es": "Los cursos nocturnos permiten estudiar después del trabajo y pueden ayudar a adquirir habilidades sin abandonar el empleo.", "note": "The timetable is the mechanism connecting the course to continued study while employed."},
+          {"en": "By reducing the number of forms, the council could shorten application times and free staff to answer complex enquiries.", "es": "Reduciendo los formularios, el ayuntamiento podría acortar los trámites y liberar al personal para consultas complejas.", "note": "The sentence explains a possible chain of effects rather than simply calling the change efficient."}
+        ]
+      },
+      {
+        "title": "Limit a claim honestly",
+        "when": "Discuss a likely benefit or drawback when the result depends on other circumstances.",
+        "form": "may / could + base verb; help reduce; be likely to; for some groups / in certain circumstances.",
+        "why": "Qualified wording makes the scope clear. It avoids claiming that one measure works for everybody in every situation.",
+        "es": "Delimitar una afirmación mejora su precisión. Señala a quién puede ayudar y qué condiciones pueden limitar el resultado.",
+        "examples": [
+          {"en": "Remote work may reduce commuting costs for employees whose tasks can be completed online.", "es": "El trabajo a distancia puede reducir los gastos de desplazamiento de empleados cuyas tareas se realizan en línea.", "note": "May limits certainty, and the relative clause limits the group covered by the claim."},
+          {"en": "Subsidised bus fares could improve access to training, although limited evening services would remain a problem.", "es": "Las tarifas de autobús subvencionadas podrían facilitar el acceso a la formación, aunque seguirían faltando servicios nocturnos.", "note": "The sentence acknowledges a remaining barrier instead of suggesting that lower prices solve everything."}
+        ]
+      }
+    ],
+    "glossary": [
+      {"term": "barrier", "definition": "Something that makes an action or opportunity difficult to access.", "es": "Barrera u obstáculo."},
+      {"term": "qualified claim", "definition": "A statement whose wording shows limits, conditions or uncertainty.", "es": "Afirmación matizada y delimitada."}
+    ],
+    "takeaway": "Choose words that identify the barrier, explain the mechanism and limit the claim appropriately.",
+    "writingBridge": {"prompt": "Write one short paragraph of four or five sentences proposing a way to help adults attend training. Identify one barrier, explain a measure and how it could help, then mention one remaining limitation.", "checklist": ["My vocabulary distinguishes cost, access and availability.", "I explained the step linking my proposal to its benefit.", "I identified the people affected.", "I used cautious language where the outcome is uncertain.", "My limitation is relevant to the proposal."]},
+    "sources": [
+      {"title": "Cambridge: affordable", "url": "https://dictionary.cambridge.org/dictionary/english/affordable"},
+      {"title": "Cambridge: accessible", "url": "https://dictionary.cambridge.org/dictionary/english/accessible"},
+      {"title": "Cambridge: available", "url": "https://dictionary.cambridge.org/dictionary/english/available"},
+      {"title": "British Council: vocabulary organised by topic", "url": "https://learnenglish.britishcouncil.org/free-resources/vocabulary/b1-b2"}
+    ]
+  },
+  {
+    "skillId": "v-accuracy",
+    "title": "Check meaning, word form and spelling",
+    "goal": "Find misleading translations and similar-looking forms before they change your message.",
+    "explanation": "An accurate word must have the right meaning, grammatical job and spelling. Similar appearance is not enough. Actually normally introduces a fact, correction or contrast; it does not simply mean currently. Advice is a noun, while advise is a verb, so changing one letter also changes the sentence structure. When reviewing your writing, work in separate passes. First ask whether each important word means what you intend. Next check its word class and the words around it. Finally check spelling, especially repeated errors from your own writing. A spellchecker may accept a real word that is wrong in context. Keep a short personal record showing the incorrect form, the corrected sentence and the reason for the change.",
+    "explanationEs": "Revisa por separado significado, función y ortografía. El corrector puede aceptar una palabra existente que no expresa tu intención o no encaja en la frase.",
+    "uses": [
+      {
+        "title": "Avoid a familiar-looking false friend",
+        "when": "Choose between a word that states the present time and one that corrects or contrasts information.",
+        "form": "currently = at the present time; actually = in fact, often with a contrast or correction.",
+        "why": "English actually does not translate Spanish actualmente. The wrong choice can change the purpose of the sentence.",
+        "es": "Actualmente suele ser currently o at present. Actually significa en realidad o de hecho, según el contexto.",
+        "examples": [
+          {"en": "I am currently taking an evening course in business English.", "es": "Actualmente estoy haciendo un curso nocturno de inglés empresarial.", "note": "Currently places the activity in the present period; no correction of someone else’s belief is intended."},
+          {"en": "The course looks expensive, but it is actually free for local residents.", "es": "El curso parece caro, pero en realidad es gratuito para los residentes locales.", "note": "Actually corrects the impression created by looks expensive. It does not locate the course in time."}
+        ]
+      },
+      {
+        "title": "Check both the spelling and the word’s job",
+        "when": "Choose between closely related words such as advice and advise.",
+        "form": "some advice / a piece of advice; advise + person + to-infinitive. Advice is normally uncountable.",
+        "why": "The noun names the guidance and the verb expresses giving it. A spelling correction alone may leave the surrounding grammar wrong.",
+        "es": "Advice es el consejo y advise es aconsejar. Usa some advice o a piece of advice, no an advice ni advices.",
+        "examples": [
+          {"en": "The tutor gave me useful advice about organising my paragraphs.", "es": "El tutor me dio consejos útiles sobre cómo organizar mis párrafos.", "note": "Advice is a noun after gave me. It stays uncountable even when the guidance contains several suggestions."},
+          {"en": "The tutor advised me to explain the reason before giving an example.", "es": "El tutor me aconsejó explicar el motivo antes de dar un ejemplo.", "note": "Advised is a past-tense verb. Me and to explain complete the advice pattern."}
+        ]
+      },
+      {
+        "title": "Check spelling in the words you actually use",
+        "when": "Review important words in an application, booking enquiry or other practical message.",
+        "form": "accommodation: double c and double m; necessary: one c and double s. Check the complete word after adding endings.",
+        "why": "A small personal list is useful when it targets real repeated errors. Reading only for meaning can hide a spelling mistake.",
+        "es": "Centra la revisión en tus errores reales. Accommodation lleva cc y mm; necessary lleva una c y ss.",
+        "examples": [
+          {"en": "Could you send me details of the accommodation near the training centre?", "es": "¿Podría enviarme información sobre el alojamiento cercano al centro de formación?", "note": "Check both doubled consonants in accommodation. Here, accommodation is used as an uncountable noun."},
+          {"en": "Please tell me whether previous experience is necessary for this position.", "es": "Indíqueme si se necesita experiencia previa para este puesto.", "note": "Necessary is an adjective after is. Check one c and two s letters before checking the rest of the sentence."}
+        ]
+      }
+    ],
+    "glossary": [
+      {"term": "false friend", "definition": "A word that resembles one in another language but has a different meaning.", "es": "Falso amigo: palabra parecida con otro significado."},
+      {"term": "proofread", "definition": "Read a finished text carefully to find and correct mistakes.", "es": "Revisar un texto para corregir errores."}
+    ],
+    "takeaway": "Ask three separate questions: is the meaning right, is the form right, and is the spelling right?",
+    "writingBridge": {"prompt": "Write four sentences to a course tutor: describe what you are currently studying, ask for advice, ask whether prior experience is necessary, and ask about accommodation. Then check meaning, grammar and spelling in separate passes.", "checklist": ["Currently expresses present time; I did not use actually for that purpose.", "Advice is a noun and has no incorrect plural or article.", "Necessary and accommodation are spelled correctly.", "I checked each sentence’s meaning as well as individual words."]},
+    "sources": [
+      {"title": "Cambridge: actual and actually", "url": "https://dictionary.cambridge.org/grammar/british-grammar/actual-and-actually"},
+      {"title": "Cambridge: advice or advise", "url": "https://dictionary.cambridge.org/grammar/british-grammar/advice-or-advise"},
+      {"title": "British Council: vocabulary meaning, pronunciation and spelling", "url": "https://learnenglish.britishcouncil.org/free-resources/vocabulary/b1-b2"}
+    ]
+  }
+]
