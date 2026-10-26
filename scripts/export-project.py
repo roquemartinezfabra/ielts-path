@@ -15,6 +15,7 @@ def main():
   if p.exists():
    text=p.read_text(encoding='utf-8-sig')
    for a,b in GUIDES.items():text=text.replace(']('+a+')',']('+b+')')
+   text=text.replace('](../LICENSE)','](licencia.txt)')
    (OUT.parent/dst).write_text(text,encoding='utf-8')
  (OUT.parent/'licencia.txt').write_bytes((ROOT/'LICENSE').read_bytes())
  entries={}

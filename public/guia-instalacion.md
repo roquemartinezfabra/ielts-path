@@ -2,6 +2,8 @@
 
 Esta versión funciona fuera de ChatGPT Sites. El código se puede compartir en GitHub; la aplicación y su base de datos se ejecutan en Cloudflare Workers y D1. No requiere una suscripción de IA para estudiar o realizar ejercicios cerrados.
 
+**Aplicación publicada:** [Abrir IELTS Path](https://ielts-path.roquemartinezfabra.workers.dev). **Código:** [roquemartinezfabra/ielts-path](https://github.com/roquemartinezfabra/ielts-path). Para probarla, pulsa **Probar como invitado**; tu espacio es individual. El acceso con GitHub es opcional y todavía no está activado en esta publicación. Si vienes del Site original, consulta el apartado 4 para trasladar tus respaldos.
+
 ## 1. Probar en tu ordenador
 
 Instala **Node.js 22.13 o posterior**, npm y **Python 3.9 o posterior**. La orden `python --version` debe funcionar; Python genera la descarga del código. Descarga el repositorio o ZIP, abre una terminal en su carpeta y ejecuta:
@@ -32,7 +34,7 @@ Necesitas una cuenta de Cloudflare. Revisa sus condiciones, cuotas y precios; la
 
 1. Ejecuta `npx wrangler login` en la carpeta del proyecto y autoriza en el navegador el acceso a **tu** cuenta.
 2. Crea la base: `npx wrangler d1 create ielts-path`.
-3. En `wrangler.json`, sustituye el `database_id` de ejemplo por el identificador devuelto. Conserva `"binding": "DB"`. Si eliges otro nombre de base, actualiza `database_name`. El nombre del Worker puede cambiarse en `name`.
+3. En `wrangler.json`, sustituye el `database_id` por el identificador de **tu propia base**. El repositorio identifica la instalación publicada del autor; el ZIP descargable usa un identificador de ejemplo. Conserva `"binding": "DB"`. Si eliges otro nombre de base, actualiza `database_name`. El nombre del Worker puede cambiarse en `name`.
 4. Aplica las migraciones a esa base nueva y publica:
 
    ```sh
@@ -124,6 +126,6 @@ La sesión de invitado dura como máximo 30 días y depende de su cookie. Antes 
 
 `npm run build` regenera `public/ielts-path-source.zip`. Excluye dependencias, compilaciones, bases locales, secretos y la identidad de hosting original; el identificador de D1 se sustituye por un ejemplo. No adjunta respaldos personales ni mazos privados. Revisa los recursos que añadas antes de redistribuirlos.
 
-Las aportaciones originales se ofrecen bajo [MIT](../LICENSE). Conserva las licencias de terceros. Enlazar material oficial no concede permiso para redistribuirlo. IELTS Path no está avalado por los organismos examinadores y no garantiza una puntuación.
+Las aportaciones originales se ofrecen bajo [MIT](licencia.txt). Conserva las licencias de terceros. Enlazar material oficial no concede permiso para redistribuirlo. IELTS Path no está avalado por los organismos examinadores y no garantiza una puntuación.
 
 Consulta [METODOLOGIA.md](metodologia.md), [INVESTIGACION.md](investigacion.md) y [RESULTADOS-Y-LINKEDIN.md](resultados-y-linkedin.md) para interpretar y presentar resultados reales.

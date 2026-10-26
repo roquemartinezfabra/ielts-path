@@ -1,5 +1,7 @@
 # IELTS Path
 
+[Open IELTS Path](https://ielts-path.roquemartinezfabra.workers.dev) · [Installation guide](docs/GUIA-INSTALACION.md)
+
 An independent study application for **IELTS General Training**: learn the foundations, practise Reading and Writing, review mistakes and track progress. Theory is in English with Spanish support. The interface is primarily Spanish.
 
 The study target is **7.5 or higher in each skill**. Practice scores and tutor estimates are not official IELTS results or a guarantee of a particular band.
@@ -38,6 +40,8 @@ Stop the development server before starting the preview on the same port. The pr
 ## Host your own copy
 
 This server application uses **Cloudflare Workers and D1**. GitHub stores the source; GitHub Pages alone cannot run its database and account routes.
+
+The public app is available at **https://ielts-path.roquemartinezfabra.workers.dev**. Choose **Probar como invitado** to start in your own space. Guest progress is tied to that browser session; export a backup before it expires or before clearing cookies. GitHub sign-in is optional and is not enabled on this deployment.
 
 The [installation guide](docs/GUIA-INSTALACION.md) covers Cloudflare setup, database migrations, deployment, optional GitHub login and moving your own progress from the original Site. You will need your own hosting account. Check the provider's current limits and pricing before enabling paid services.
 
