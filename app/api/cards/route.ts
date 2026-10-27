@@ -1,6 +1,7 @@
 import {requestUser} from "../../lib/storage";
 import {categories,validCardId,validateCardBackup,validateCardContent,validateCardSettings,validateTransfer} from "../../lib/cards-domain";
 import {CardsError,readCardBackup,readCardLibrary,readCardsOverview,restoreCardBackup,reviewCard,saveCardSettings,saveCardTransfer,suspendCard,upsertCardContents} from "../../lib/cards-storage";
+import {installOxfordPart,readOxfordStatus} from "../../lib/oxford-pack";
 
 const json=(value:unknown,status=200)=>Response.json(value,{status,headers:{"Cache-Control":"private, no-store"}});
 const revision=(value:unknown)=>Number.isSafeInteger(value) && (value as number)>=0 && (value as number)<1000000;
@@ -10,6 +11,7 @@ export async function GET(request:Request){
  try{
   const url=new URL(request.url),action=url.searchParams.get("action");
   if(action==="backup")return json(await readCardBackup(user));
+  if(action==="oxford")return json(await readOxfordStatus(user));
   if(action==="library"){
    const category=url.searchParams.get("category")||"",q=url.searchParams.get("q")||"",deck=url.searchParams.get("deck")||"",offset=Number(url.searchParams.get("offset")||0),limit=Number(url.searchParams.get("limit")||30);
    if(category && !categories.includes(category as any) || q.length>300 || deck.length>160 || !Number.isSafeInteger(offset) || offset<0 || !Number.isSafeInteger(limit) || limit<1 || limit>100)return json({error:"Filtro de biblioteca no válido."},400);
@@ -27,6 +29,7 @@ export async function POST(request:Request){
  if(!body || typeof body!=="object" || Array.isArray(body))return json({error:"Datos no válidos."},400);
  try{
   switch(body.action){
+   case "install-oxford":return json(await installOxfordPart(user,body.version,body.part));
    case "settings":if(!revision(body.revision)||!validateCardSettings(body.settings))return json({error:"Configuración no válida: el reparto debe sumar las tarjetas nuevas diarias."},400);return json(await saveCardSettings(user,body.settings,body.revision));
    case "seed":case "create":case "update":case "import":{
     const cards=body.cards || (body.card?[body.card]:null);if(!Array.isArray(cards)||!cards.length||cards.length>100||!cards.every(validateCardContent)||new Set(cards.map(card=>card.id)).size!==cards.length)return json({error:"Envía de 1 a 100 tarjetas válidas con identidades únicas por lote."},400);

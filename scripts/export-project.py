@@ -8,6 +8,7 @@ DIRS={'app','components','db','drizzle','hooks','lib','scripts','public','docs',
 FILES={'README.md','LICENSE','package.json','package-lock.json','vite.config.ts','worker.ts','wrangler.json','tsconfig.json','cloudflare-env.d.ts','next.config.ts','postcss.config.mjs','eslint.config.mjs','components.json','.gitignore','.npmrc','.dev.vars.example','drizzle.config.ts'}
 SKIP={'node_modules','.git','.wrangler','.sites-runtime','dist','.next','.vinext','outputs','__pycache__'}
 GUIDES={'GUIA-INSTALACION.md':'guia-instalacion.md','METODOLOGIA.md':'metodologia.md','RESULTADOS-Y-LINKEDIN.md':'resultados-y-linkedin.md','INVESTIGACION.md':'investigacion.md','PRONUNCIACION-ED.md':'pronunciacion-ed.md','ALINEACION-IELTS.md':'alineacion-ielts.md'}
+GUIDES['OXFORD-MAZO.md']='oxford-mazo.md'
 def main():
  OUT.parent.mkdir(exist_ok=True)
  for src,dst in GUIDES.items():

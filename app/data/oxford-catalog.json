@@ -1,0 +1,155 @@
+{
+  "id": "oxford-5000",
+  "version": "2026-10-27-v1",
+  "title": "Oxford 3000 + Oxford 5000",
+  "total": 5535,
+  "levels": {
+    "A1": 927,
+    "A2": 912,
+    "B1": 840,
+    "B2": 1488,
+    "C1": 1368
+  },
+  "parts": [
+    {
+      "file": "part-000.json",
+      "count": 200,
+      "sha256": "5c2e44a6bb1ec1b8f7cf0061bc81c197eebcf8edbb1172f358124801641b63f5"
+    },
+    {
+      "file": "part-001.json",
+      "count": 200,
+      "sha256": "c96f40eb8002d1e1e9f3286aa2bc2fcba37de682db9d2d0353bf3b9333e419ab"
+    },
+    {
+      "file": "part-002.json",
+      "count": 200,
+      "sha256": "4f7a9f253424ac696b3c469e8ef748b495b6b0061bf390535db225b5bf1d97a3"
+    },
+    {
+      "file": "part-003.json",
+      "count": 200,
+      "sha256": "6d0d781654211fdb3ff0fa29b992e5be0b128f01f35381fc4bf9a25505087702"
+    },
+    {
+      "file": "part-004.json",
+      "count": 200,
+      "sha256": "2a889c02f4dd19a573cf0600d31b84d2d3f8da9a758052148ccce2303cec2401"
+    },
+    {
+      "file": "part-005.json",
+      "count": 200,
+      "sha256": "8aa33634b6080e5ca8437ef51f6b5913308ef520f9223a5a61277363384c914e"
+    },
+    {
+      "file": "part-006.json",
+      "count": 200,
+      "sha256": "7f1c8fa99accfd21c8f6aad4857dbf2d12ee3ae360d300287d457d477e425350"
+    },
+    {
+      "file": "part-007.json",
+      "count": 200,
+      "sha256": "d73c0119915cdba0d5c97a770b0d2d992d8e65c76b064d9ae238d3a5ff5f1a77"
+    },
+    {
+      "file": "part-008.json",
+      "count": 200,
+      "sha256": "b645f87fcecd1709c063e0778636b4a9c748a564afc9f3d9e287c6564c871311"
+    },
+    {
+      "file": "part-009.json",
+      "count": 200,
+      "sha256": "96ecdc5894fc62215132ae175573a9cc340761528fb5f4402cc9724ad9a19191"
+    },
+    {
+      "file": "part-010.json",
+      "count": 200,
+      "sha256": "7e1d5d6f6f8891a0cedf3366b210b94329136fa0f17561b40c48ea5d6dea3226"
+    },
+    {
+      "file": "part-011.json",
+      "count": 200,
+      "sha256": "ef1f3ebcce4a4ffd101a16e9052336b6f6af9b0f1a25f331fc01b3de3f0e3a3f"
+    },
+    {
+      "file": "part-012.json",
+      "count": 200,
+      "sha256": "51de2d9a3e992e86a59b3d7b800e9121d7a75237926bf409e8949c6e4bfb712d"
+    },
+    {
+      "file": "part-013.json",
+      "count": 200,
+      "sha256": "fe061e6d8b5bfa7d27159586b01322e5143a1ff41283f6fbb96be054d4ae2b8d"
+    },
+    {
+      "file": "part-014.json",
+      "count": 200,
+      "sha256": "e43692b88ea08ffbc9944660de2a5357dae72275f7e6eee2ede3b107aaf93a68"
+    },
+    {
+      "file": "part-015.json",
+      "count": 200,
+      "sha256": "75afef1c4154e5f90047a3252b073135b61fa0916c2819d3c14dbc686face27a"
+    },
+    {
+      "file": "part-016.json",
+      "count": 200,
+      "sha256": "6e522f08d17f6efca14200e6fde9450ac98737e9db1e638cade4ad64bac6117e"
+    },
+    {
+      "file": "part-017.json",
+      "count": 200,
+      "sha256": "8dccdd2a70e0d2569b82e5252384a5d364d0ffa7b5e363e5ea03c2e33563ee60"
+    },
+    {
+      "file": "part-018.json",
+      "count": 200,
+      "sha256": "98d7cb9b732af02db3f2cb1e6954a981cffb39ff68cd26bcc763bb4aef72677b"
+    },
+    {
+      "file": "part-019.json",
+      "count": 200,
+      "sha256": "93ec8531a28a4c501864661dc3c859f6096206ee8bed972255f93ba80a94fa28"
+    },
+    {
+      "file": "part-020.json",
+      "count": 200,
+      "sha256": "4599c0d40f515031adf422df595395ad8fe28ff6b4ca148432faa0a4f810771b"
+    },
+    {
+      "file": "part-021.json",
+      "count": 200,
+      "sha256": "12c97337b046da377bffe234d3708bc5c4fd1c092ddf908f3fa135d2f5bbf208"
+    },
+    {
+      "file": "part-022.json",
+      "count": 200,
+      "sha256": "61e5deb13dac9e6a6f06d0c14d17ae87dfa52ff2478ef7bb0b265770b8429c92"
+    },
+    {
+      "file": "part-023.json",
+      "count": 200,
+      "sha256": "b12539a05c38623cd288ce3afd16b30107315f768f44f5738767f99d26180b32"
+    },
+    {
+      "file": "part-024.json",
+      "count": 200,
+      "sha256": "ab5553f36d7df21af7ec13a0bf0ecbf23ec96c45b1d47994e8cea063f691fc37"
+    },
+    {
+      "file": "part-025.json",
+      "count": 200,
+      "sha256": "31682bb2160d38ef9ea4d7c4055544f6ea2bf157ea5ee5faca19ef889cbc30a1"
+    },
+    {
+      "file": "part-026.json",
+      "count": 200,
+      "sha256": "4a2998a9ca2fd43662516987db1a46ae412b441485ef8b6cfba5e1ddc643893c"
+    },
+    {
+      "file": "part-027.json",
+      "count": 135,
+      "sha256": "1b21bba4054afa4fdbc123fff4a999bb798352aaa78dca3401a145aa0ae64266"
+    }
+  ]
+}

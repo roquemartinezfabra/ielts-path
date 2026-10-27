@@ -23,11 +23,24 @@ export async function saveCardSettings(userId:string,settings:CardSettings,revis
  return {revision:revision+1};
 }
 export async function readCards(userId:string):Promise<StudyCard[]>{const result=await db().prepare("SELECT content,schedule,revision,suspended,created_at,updated_at FROM flashcards WHERE user_id=? ORDER BY created_at,id").bind(userId).all<CardRow>();return result.results.map(cardFromRow);}
+async function readSchedulingCards(userId:string):Promise<StudyCard[]>{
+ // The scheduler needs identity, family and dates, not thousands of definitions.
+ // Hydrate the small visible queue afterwards; backups still contain every field.
+ const result=await db().prepare("SELECT id,deck,category,mode,lemma,json_extract(content,'$.prompt') AS prompt,schedule,revision,suspended,created_at,updated_at FROM flashcards WHERE user_id=? ORDER BY created_at,id").bind(userId).all<Omit<CardRow,"content">&Pick<CardContent,"id"|"deck"|"category"|"mode"|"lemma"|"prompt">>();
+ return result.results.map(row=>({id:row.id,deck:row.deck,category:row.category,mode:row.mode,lemma:row.lemma,prompt:row.prompt,answer:"",explanation:"",example:"",ipa:"",skillId:"",source:"",sourceUrl:"",schedule:JSON.parse(row.schedule),revision:row.revision,suspended:!!row.suspended,createdAt:row.created_at,updatedAt:row.updated_at}));
+}
+async function readSelectedCards(userId:string,ids:string[]):Promise<StudyCard[]>{
+ if(!ids.length)return [];
+ const result=await db().prepare("SELECT content,schedule,revision,suspended,created_at,updated_at FROM flashcards WHERE user_id=? AND id IN (SELECT value FROM json_each(?))").bind(userId,JSON.stringify(ids)).all<CardRow>();
+ const cards=new Map(result.results.map(row=>{const card=cardFromRow(row);return [card.id,card];}));
+ return ids.map(id=>cards.get(id)).filter((card):card is StudyCard=>!!card);
+}
 export async function readCardReviews(userId:string):Promise<CardReview[]>{const result=await db().prepare("SELECT payload FROM flashcard_reviews WHERE user_id=? ORDER BY reviewed_at").bind(userId).all<{payload:string}>();return result.results.map(row=>JSON.parse(row.payload));}
 export async function readCardsOverview(userId:string){
- const [{settings,revision},cards,reviews,transfers,transferCount]=await Promise.all([readCardSettings(userId),readCards(userId),readCardReviews(userId),db().prepare("SELECT payload FROM flashcard_transfers WHERE user_id=? ORDER BY recorded_at DESC LIMIT 20").bind(userId).all<{payload:string}>(),db().prepare("SELECT COUNT(*) AS n FROM flashcard_transfers WHERE user_id=?").bind(userId).first<{n:number}>()]),now=new Date();
+ const [{settings,revision},cards,reviews,transfers,transferCount]=await Promise.all([readCardSettings(userId),readSchedulingCards(userId),readCardReviews(userId),db().prepare("SELECT payload FROM flashcard_transfers WHERE user_id=? ORDER BY recorded_at DESC LIMIT 20").bind(userId).all<{payload:string}>(),db().prepare("SELECT COUNT(*) AS n FROM flashcard_transfers WHERE user_id=?").bind(userId).first<{n:number}>()]),now=new Date();
  const deckCounts=new Map<string,number>();for(const card of cards)deckCounts.set(card.deck,(deckCounts.get(card.deck)||0)+1);
- return {settings,revision,summary:cardSummary(cards,reviews,settings,now),queue:buildCardQueue(cards,reviews,settings,now),decks:[...deckCounts].map(([name,count])=>({name,count})),recentTransfers:transfers.results.map(row=>JSON.parse(row.payload) as CardTransfer),transferCount:transferCount?.n||0};
+ const queue=await readSelectedCards(userId,buildCardQueue(cards,reviews,settings,now).map(card=>card.id));
+ return {settings,revision,summary:cardSummary(cards,reviews,settings,now),queue,decks:[...deckCounts].map(([name,count])=>({name,count})),recentTransfers:transfers.results.map(row=>JSON.parse(row.payload) as CardTransfer),transferCount:transferCount?.n||0};
 }
 export async function readCardBackup(userId:string):Promise<CardBackup>{
  const [{settings},cards,reviews,result]=await Promise.all([readCardSettings(userId),readCards(userId),readCardReviews(userId),db().prepare("SELECT payload FROM flashcard_transfers WHERE user_id=? ORDER BY recorded_at").bind(userId).all<{payload:string}>()]);
@@ -55,7 +68,7 @@ export async function upsertCardContents(userId:string,contents:CardContent[]){
 export async function reviewCard(userId:string,input:{cardId:string;revision:number;eventId:string;rating:1|2|3|4;elapsedSeconds:number}){
  const prior=await db().prepare("SELECT payload FROM flashcard_reviews WHERE user_id=? AND id=?").bind(userId,input.eventId).first<{payload:string}>();
  if(prior){const review=JSON.parse(prior.payload) as CardReview;if(review.cardId!==input.cardId || review.rating!==input.rating)throw new CardsError("Este identificador de repaso ya pertenece a otra respuesta.",409);return {review,duplicate:true};}
- const [{settings},cards,reviews]=await Promise.all([readCardSettings(userId),readCards(userId),readCardReviews(userId)]),card=cards.find(card=>card.id===input.cardId),now=new Date();
+ const [{settings},cards,reviews,[card]]=await Promise.all([readCardSettings(userId),readSchedulingCards(userId),readCardReviews(userId),readSelectedCards(userId,[input.cardId])]),now=new Date();
  if(!card)throw new CardsError("No se encuentra esta tarjeta.",404);
  if(card.revision!==input.revision)throw new CardsError("Esta tarjeta cambió en otra ventana. Recarga la cola.",409);
  if(!buildCardQueue(cards,reviews,settings,now).some(item=>item.id===card.id))throw new CardsError("Esta tarjeta ya no está disponible en la cola de hoy. Recarga los repasos.",409);

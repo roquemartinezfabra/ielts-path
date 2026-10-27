@@ -4,14 +4,19 @@ import {resolve} from "node:path";
 import {pathToFileURL} from "node:url";
 import ts from "typescript";
 import {DatabaseSync} from "node:sqlite";
+import {createHash} from "node:crypto";
 
 // Transpile the actual application modules; no second implementation of the
 // scheduler or persistence rules is used by these tests.
 const out=resolve(".sites-runtime/cards-tests");await mkdir(out,{recursive:true});
 const sourceFiles={domain:"app/lib/cards-domain.ts",csv:"app/lib/cards-csv.ts",storage:"app/lib/cards-storage.ts",route:"app/api/cards/route.ts",study:"app/lib/domain.ts",planning:"app/lib/planning.ts",legacy:"app/lib/storage.ts",mcp:"app/mcp/route.ts",attempts:"app/lib/attempts.ts",lessons:"app/lib/lesson-practice.ts",writingResources:"app/lib/writing-resources.ts",learningPlan:"app/lib/learning-plan.ts"};
+sourceFiles.oxford="app/lib/oxford-pack.ts";
+const oxfordCatalog=JSON.parse(await readFile("app/data/oxford-catalog.json","utf8"));
+await writeFile(resolve(out,"oxford-catalog.mjs"),"export default "+JSON.stringify(oxfordCatalog));
 for(const name of ["curriculum","reading","lesson-archive","learning-map","lesson-archive-v2","lesson-depth-grammar","lesson-depth-reading-vocab","lesson-depth-writing","foundation-word-order-v1"])await writeFile(resolve(out,name+".mjs"),"export default "+(await readFile("app/data/"+name+".json","utf8")).replace(/^\uFEFF/,""));
 for(const [name,path] of Object.entries(sourceFiles)){
  let source=await readFile(path,"utf8");
+ source=source.replaceAll('"../data/oxford-catalog.json"','"./oxford-catalog.mjs"').replaceAll('"./cards-storage"','"./storage.mjs"').replaceAll('"../../lib/oxford-pack"','"./oxford.mjs"');
  source=source.replaceAll('export {requestUser} from \"./auth\";', 'export const requestUser = request => request.headers.get(\"oai-authenticated-user-id\");').replaceAll('"../data/lesson-archive-v2.json"','"./lesson-archive-v2.mjs"').replaceAll('"../data/lesson-depth-grammar.json"','"./lesson-depth-grammar.mjs"').replaceAll('"../data/lesson-depth-reading-vocab.json"','"./lesson-depth-reading-vocab.mjs"').replaceAll('"../data/lesson-depth-writing.json"','"./lesson-depth-writing.mjs"').replaceAll('"../data/foundation-word-order-v1.json"','"./foundation-word-order-v1.mjs"').replaceAll('"./writing-resources"','"./writingResources.mjs"').replaceAll('"./learning-plan"','"./learningPlan.mjs"').replaceAll('"../lib/learning-plan"','"./learningPlan.mjs"').replaceAll('"../data/learning-map.json"','"./learning-map.mjs"').replaceAll('"./lesson-practice"','"./lessons.mjs"').replaceAll('"../lib/attempts"','"./attempts.mjs"').replaceAll('"cloudflare:workers"','"./env.mjs"').replaceAll('"./cards-domain"','"./domain.mjs"').replaceAll('"../../lib/cards-domain"','"./domain.mjs"').replaceAll('"../../lib/cards-storage"','"./storage.mjs"').replaceAll('"../../lib/storage"','"./auth.mjs"').replaceAll('"./domain"','"./study.mjs"').replaceAll('"../lib/domain"','"./study.mjs"').replaceAll('"../lib/storage"','"./legacy.mjs"').replaceAll('"../lib/cards-storage"','"./storage.mjs"').replaceAll('"../lib/planning"','"./planning.mjs"').replaceAll('"../data/curriculum.json"','"./curriculum.mjs"').replaceAll('"../data/reading.json"','"./reading.mjs"').replaceAll('"../data/lesson-archive.json"','"./lesson-archive.mjs"');
  await writeFile(resolve(out,name+".mjs"),ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText);
 }
@@ -29,6 +34,7 @@ class Statement {
  async all(){return {success:true,results:sql.prepare(this.query).all(...this.args)};}
 }
 globalThis.__cardsTestEnvironment={DB:{prepare(query){return new Statement(query);},async batch(statements){sql.exec("BEGIN");try{const values=statements.map(statement=>statement.execute());sql.exec("COMMIT");return values;}catch(error){sql.exec("ROLLBACK");throw error;}}}};
+globalThis.__cardsTestEnvironment.ASSETS={async fetch(request){const pathname=new URL(request.url).pathname;assert(pathname.startsWith('/decks/oxford-5000/'+oxfordCatalog.version+'/part-'));return new Response(await readFile(resolve('public'+pathname)),{headers:{'Content-Type':'application/json'}});}};
 const load=name=>import(pathToFileURL(resolve(out,name+".mjs")).href);
 const d=await load("domain"),csv=await load("csv"),storage=await load("storage"),api=await load("route"),study=await load("study"),planning=await load("planning"),legacy=await load("legacy"),mcp=await load("mcp");
 const content=(id,extra={})=>({id,deck:"Original",category:"vocabulary",mode:"production",prompt:"Complete: We ___ a decision.",answer:"made",explanation:"make a decision",example:"We made a decision.",ipa:"",lemma:id,skillId:"",sourceUrl:"",source:"Original",...extra});
@@ -165,5 +171,50 @@ await test("new Writing pairs use unexposed prompts and remain valid through pau
  await legacy.writeState("pair-owner",state,0);const result=await callAttemptTool("get_attempt",{attemptId:"paired-writing"},"pair-owner");assert.equal(result.error,false);assert.equal(result.value.tasks.length,2);assert.equal(result.value.attempt.conditions.exposure,"unseen");
  assert.equal(resources.writingTasksForResource("writing-pair:missing:missing").length,0);
  const plan=await callAttemptTool("get_learning_plan",{},"pair-owner");assert.equal(plan.error,false);assert.equal(plan.value.profile.examDate,"2027-01-15");assert.equal(plan.value.overview.activated,false);
+});
+const oxford=await load("oxford");
+const oxfordCards=[];
+await test("bundled Oxford deck has all 5,535 valid vocabulary identities, examples and verified assets",async()=>{
+ for(const part of oxfordCatalog.parts){const bytes=await readFile(`public/decks/oxford-5000/${oxfordCatalog.version}/${part.file}`);assert.equal(createHash('sha256').update(bytes).digest('hex'),part.sha256);const cards=JSON.parse(bytes);assert.equal(cards.length,part.count);oxfordCards.push(...cards);}
+ assert.equal(oxfordCards.length,5535);assert.equal(new Set(oxfordCards.map(card=>card.id)).size,5535);
+ const levels={};for(const card of oxfordCards){assert(d.validateCardContent(card));assert.equal(card.category,'vocabulary');assert.equal(card.mode,'recognition');assert(card.example&&card.lemma);assert(!('schedule' in card));assert(!('reviews' in card));assert(!card.source.includes('Archivo personal'));const level=card.source.match(/Nivel::(A1|A2|B1|B2|C1)\b/)[1];levels[level]=(levels[level]||0)+1;}
+ assert.deepEqual(levels,oxfordCatalog.levels);
+});
+await test("Oxford installation resumes by part, is idempotent, and preserves separate learner histories",async()=>{
+ const user='oxford-new';assert.equal((await oxford.readOxfordStatus(user)).installed,0);
+ let status=await oxford.installOxfordPart(user,oxfordCatalog.version,0);assert.equal(status.installed,200);
+ assert.equal((await oxford.installOxfordPart(user,oxfordCatalog.version,0)).added,0);
+ for(let part=1;part<oxfordCatalog.parts.length;part++)status=await oxford.installOxfordPart(user,oxfordCatalog.version,part);
+ assert.equal(status.installed,5535);assert.equal((await storage.readCards('oxford-other')).length,0);
+ const overview=await storage.readCardsOverview(user),backup=await storage.readCardBackup(user);
+ assert.equal(overview.summary.total,5535);assert.equal(overview.settings.newPerDay,6);assert.deepEqual(overview.settings.allocations,{vocabulary:6,grammar:0,pronunciation:0});assert.equal(overview.settings.retention,.9);assert.equal(overview.settings.budgetMinutes,20);assert.equal(overview.queue.length,6);
+ assert(overview.queue.every(d.validateStudyCard));assert(d.validateCardBackup(backup));assert.equal(backup.reviews.length,0);
+ assert.deepEqual(overview.queue,d.buildCardQueue(backup.cards,backup.reviews,backup.settings));
+ const card=overview.queue[0];await storage.reviewCard(user,{cardId:card.id,revision:card.revision,eventId:'oxford-review-1',rating:3,elapsedSeconds:12});
+ assert.equal((await storage.readCardReviews(user)).length,1);assert.equal((await storage.readCardReviews('oxford-other')).length,0);
+ await oxford.installOxfordPart('oxford-other',oxfordCatalog.version,0);assert.equal((await storage.readCardsOverview('oxford-other')).summary.today.reviews,0);
+ assert.equal((await storage.readCardsOverview(user)).summary.today.newCount,1);
+});
+await test("adding Oxford keeps existing card edits, suspensions, schedules and personal settings",async()=>{
+ const user='oxford-existing',original=oxfordCards[0],edited={...original,answer:'My own remembered meaning'};
+ await storage.upsertCardContents(user,[edited]);const personal={...settings,newPerDay:3,allocations:{vocabulary:3,grammar:0,pronunciation:0},budgetMinutes:15};await storage.saveCardSettings(user,personal,0);
+ const before=(await storage.readCards(user))[0];await storage.reviewCard(user,{cardId:before.id,revision:before.revision,eventId:'oxford-kept-review',rating:3,elapsedSeconds:8});
+ const reviewed=(await storage.readCards(user))[0];await storage.suspendCard(user,reviewed.id,true,reviewed.revision);const preserved=(await storage.readCards(user))[0];
+ await oxford.installOxfordPart(user,oxfordCatalog.version,0);await oxford.installOxfordPart(user,oxfordCatalog.version,0);
+ assert.deepEqual((await storage.readCards(user)).find(card=>card.id===preserved.id),preserved);
+ assert.deepEqual((await storage.readCardSettings(user)).settings,personal);assert.equal((await storage.readCardReviews(user)).length,1);
+ assert.equal((await storage.readCards(user)).length,200);
+});
+await test("Oxford validates version, integrity, user authentication and same-origin writes before installation",async()=>{
+ const user='oxford-invalid',send=(body,origin='https://site.test')=>api.POST(new Request('https://site.test/api/cards',{method:'POST',headers:{Origin:origin,'Content-Type':'application/json','oai-authenticated-user-id':user},body:JSON.stringify(body)}));
+ assert.equal((await api.GET(new Request('https://site.test/api/cards?action=oxford'))).status,401);
+ assert.equal((await send({action:'install-oxford',version:'old',part:0})).status,409);
+ assert.equal((await send({action:'install-oxford',version:oxfordCatalog.version,part:-1})).status,400);
+ assert.equal((await send({action:'install-oxford',version:oxfordCatalog.version,part:0},'https://other.test')).status,403);
+ const realAssets=globalThis.__cardsTestEnvironment.ASSETS;globalThis.__cardsTestEnvironment.ASSETS={fetch:async()=>new Response('[]')};
+ try{assert.equal((await send({action:'install-oxford',version:oxfordCatalog.version,part:0})).status,503);}finally{globalThis.__cardsTestEnvironment.ASSETS=realAssets;}
+ assert.equal((await oxford.readOxfordStatus(user)).installed,0);assert.equal((await storage.readCards(user)).length,0);
+ assert.equal((await send({action:'install-oxford',version:oxfordCatalog.version,part:0})).status,200);
+ const get=await api.GET(new Request('https://site.test/api/cards?action=oxford',{headers:{'oai-authenticated-user-id':user}}));assert.equal((await get.json()).installed,200);
 });
 sql.close();process.stdout.write(`Completed ${checks} meaningful card, learning and attempt checks.\n`);

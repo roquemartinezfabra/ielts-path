@@ -16,7 +16,7 @@ npm run dev
 
 Abre **http://127.0.0.1:5174/** y pulsa **Probar como invitado**. El inicio de sesión local no necesita una cuenta externa. No introduzcas contraseñas en archivos de configuración.
 
-`db:local` aplica las migraciones pendientes de `drizzle/` y recuerda cuáles se han aplicado. Las tres iniciales crean historial, tarjetas y sesiones independientes. No repitas el SQL manualmente. Los datos locales se guardan en `.wrangler/state/`; conserva esa carpeta y exporta respaldos desde la aplicación.
+`db:local` aplica las migraciones pendientes de `drizzle/` y recuerda cuáles se han aplicado. Crean historial, tarjetas, sesiones independientes y el registro de incorporación del mazo Oxford. No repitas el SQL manualmente. Los datos locales se guardan en `.wrangler/state/`; conserva esa carpeta y exporta respaldos desde la aplicación.
 
 Para comprobar el proyecto y probar la compilación final:
 
@@ -113,7 +113,9 @@ Esto no registra automáticamente una aplicación en ChatGPT ni cambia la conexi
 
 ## 6. Tarjetas, exportaciones y sesiones
 
-El módulo de tarjetas conserva su contenido, importador y programación. Importa CSV mediante la vista previa y conserva identificadores para actualizar contenido sin reiniciar repasos. Un respaldo JSON restaura también la programación; un CSV de contenido no lo sustituye.
+El módulo incluye el mazo **Oxford 3000 + Oxford 5000**, con 5.535 tarjetas de vocabulario y ejemplos. En **Tarjetas → Estudiar**, pulsa **Añadir Oxford 5000 a mis tarjetas**. Puedes pausar o reanudar sin duplicados. Para bibliotecas nuevas se aplican 6 nuevas de vocabulario/día, 20 minutos y retención objetivo del 90 %; se mantienen los ajustes y repasos de bibliotecas existentes. Consulta [OXFORD-MAZO.md](oxford-mazo.md).
+
+El importador y el programador existentes se conservan. Importa CSV mediante la vista previa y conserva identificadores para actualizar contenido sin reiniciar repasos. Un respaldo JSON restaura también la programación; un CSV de contenido no lo sustituye.
 
 - **Progreso → JSON:** perfil, intentos, correcciones y ruta.
 - **Tarjetas → respaldo JSON:** tarjetas, configuración y repasos.
@@ -124,7 +126,7 @@ La sesión de invitado dura como máximo 30 días y depende de su cookie. Antes 
 
 ## 7. Reutilización y límites
 
-`npm run build` regenera `public/ielts-path-source.zip`. Excluye dependencias, compilaciones, bases locales, secretos y la identidad de hosting original; el identificador de D1 se sustituye por un ejemplo. No adjunta respaldos personales ni mazos privados. Revisa los recursos que añadas antes de redistribuirlos.
+`npm run build` regenera `public/ielts-path-source.zip`. Excluye dependencias, compilaciones, bases locales, secretos y la identidad de hosting original; el identificador de D1 se sustituye por un ejemplo. Incluye el mazo Oxford compartido, sin programación ni respuestas personales. No adjunta respaldos personales ni ejercicios privados. Revisa los recursos que añadas antes de redistribuirlos.
 
 Las aportaciones originales se ofrecen bajo [MIT](licencia.txt). Conserva las licencias de terceros. Enlazar material oficial no concede permiso para redistribuirlo. IELTS Path no está avalado por los organismos examinadores y no garantiza una puntuación.
 

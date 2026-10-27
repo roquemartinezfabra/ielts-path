@@ -1,12 +1,13 @@
 "use client";
 import {useEffect,useRef,useState} from "react";
 import {BookOpen,Check,Download,Layers,Plus,RefreshCw,Upload} from "lucide-react";
-import examples from "./data/flashcard-examples.json";
+import oxfordCatalog from "./data/oxford-catalog.json";
 import evidence from "./data/evidence.json";
 import {categories,defaultCardSettings,validateCardBackup,validateCardContent,type CardBackup,type CardCategory,type CardContent,type CardSettings,type CardSummary,type CardTransfer,type StudyCard} from "./lib/cards-domain";
 import {parseCSV,previewCSV,type ParsedCSV,type CardCSVMapping,type CardCSVDefaults} from "./lib/cards-csv";
 
 export type CardsOverview={settings:CardSettings;revision:number;summary:CardSummary;queue:StudyCard[];decks:{name:string;count:number}[];recentTransfers?:CardTransfer[];transferCount?:number};
+type OxfordStatus={version:string;total:number;parts:number;installedParts:number[];installed:number};
 const labels:Record<CardCategory,string>={vocabulary:"Vocabulario",grammar:"Gramática",pronunciation:"Pronunciación"};
 const modes={production:"Producir",recognition:"Reconocer"};
 const emptyContent=():CardContent=>({id:crypto.randomUUID(),deck:"Mis errores",category:"grammar",mode:"production",prompt:"",answer:"",explanation:"",example:"",ipa:"",lemma:"",skillId:"",sourceUrl:"",source:"Creación propia"});
@@ -20,6 +21,7 @@ export function FlashcardsPanel({draft,onDraftConsumed,onOverview}:{draft?:Parti
  const [settings,setSettings]=useState<CardSettings>(defaultCardSettings),[library,setLibrary]=useState<{cards:StudyCard[];total:number}>({cards:[],total:0}),[search,setSearch]=useState(""),[category,setCategory]=useState(""),[offset,setOffset]=useState(0),[editor,setEditor]=useState<CardContent|null>(null);
  const [csv,setCSV]=useState<ParsedCSV|null>(null),[mapping,setMapping]=useState<CardCSVMapping>({}),[defaults,setDefaults]=useState<CardCSVDefaults>({deck:"Mi vocabulario",category:"vocabulary",mode:"production"}),[preview,setPreview]=useState<Awaited<ReturnType<typeof previewCSV>>|null>(null),[importProgress,setImportProgress]=useState("");
  const [restore,setRestore]=useState<CardBackup|null>(null),[transfer,setTransfer]=useState(""),[transferCategory,setTransferCategory]=useState<CardCategory>("vocabulary"),[transferOK,setTransferOK]=useState(false),[transferCard,setTransferCard]=useState<StudyCard|null>(null);
+ const [oxford,setOxford]=useState<OxfordStatus|null>(null),[installingOxford,setInstallingOxford]=useState(false),packMounted=useRef(true),pausePack=useRef(false);
  const onOverviewRef=useRef(onOverview),lastInteraction=useRef(Date.now()),elapsed=useRef(0),pendingEvent=useRef<{id:string;cardId:string;rating:number;elapsedSeconds:number}|null>(null),lock=useRef(false);
  onOverviewRef.current=onOverview;
  const select=(card:StudyCard|null)=>{setActive(card);setAnswer("");setRevealed(false);setOral(false);setSeconds(0);elapsed.current=0;lastInteraction.current=Date.now();pendingEvent.current=null;};
@@ -27,11 +29,25 @@ export function FlashcardsPanel({draft,onDraftConsumed,onOverview}:{draft?:Parti
  async function loadLibrary(){setLibrary(await api(undefined,"?action=library&limit=30&offset="+offset+"&q="+encodeURIComponent(search)+"&category="+category));}
  async function run(action:()=>Promise<void>){if(lock.current)return;lock.current=true;setBusy(true);setError("");try{await action();}catch(e){setError(e instanceof Error?e.message:"No se pudo completar la acción.");}finally{lock.current=false;setBusy(false);}}
  useEffect(()=>{let current=true;api().then(value=>{if(!current)return;setData(value);setSettings(value.settings);onOverviewRef.current?.(value);select(value.queue[0]||null);}).catch(e=>current&&setError(e.message));return()=>{current=false;};},[]);
+ useEffect(()=>{packMounted.current=true;api(undefined,"?action=oxford").then(value=>{if(packMounted.current)setOxford(value);}).catch(e=>{if(packMounted.current)setError(e.message);});return()=>{packMounted.current=false;pausePack.current=true;};},[]);
  useEffect(()=>{if(draft){setEditor({...emptyContent(),...draft});setTab("library");onDraftConsumed?.();}},[draft,onDraftConsumed]);
  useEffect(()=>{if(tab!=="library")return;let current=true;const timeout=setTimeout(()=>{api(undefined,"?action=library&limit=30&offset="+offset+"&q="+encodeURIComponent(search)+"&category="+category).then(value=>current&&setLibrary(value)).catch(e=>current&&setError(e.message));},200);return()=>{current=false;clearTimeout(timeout);};},[tab,search,category,offset,data?.summary.total]);
  useEffect(()=>{if(tab!=="study"||!active)return;const interact=()=>{lastInteraction.current=Date.now();};window.addEventListener("keydown",interact);window.addEventListener("pointerdown",interact);const timer=setInterval(()=>{if(!document.hidden&&Date.now()-lastInteraction.current<120000&&!lock.current&&elapsed.current<600){elapsed.current++;setSeconds(elapsed.current);}},1000);return()=>{clearInterval(timer);window.removeEventListener("keydown",interact);window.removeEventListener("pointerdown",interact);};},[active?.id,tab]);
  async function rate(rating:1|2|3|4){if(!active)return;await run(async()=>{if(!pendingEvent.current)pendingEvent.current={id:crypto.randomUUID(),cardId:active.id,rating,elapsedSeconds:elapsed.current};const event=pendingEvent.current;const result=await api({action:"review",cardId:event.cardId,revision:active.revision,eventId:event.id,rating:event.rating,elapsedSeconds:event.elapsedSeconds});setNotice("Repaso guardado. Próxima fecha: "+date(result.review.nextDue));await refresh(true);});}
  async function importCards(cards:CardContent[]){for(let i=0;i<cards.length;i+=100){await api({action:"import",cards:cards.slice(i,i+100)});setImportProgress(Math.min(i+100,cards.length)+" / "+cards.length);}await refresh(true);setNotice(cards.length+" tarjetas incorporadas. Se conserva la programación de las que ya existían.");}
+ async function addOxford(){
+  pausePack.current=false;setInstallingOxford(true);setNotice("");
+  try{
+   let status:OxfordStatus=await api(undefined,"?action=oxford");if(packMounted.current)setOxford(status);
+   for(let part=0;part<status.parts;part++){
+    if(pausePack.current||!packMounted.current)break;
+    if(status.installedParts.includes(part))continue;
+    status=await api({action:"install-oxford",version:status.version,part});
+    if(packMounted.current)setOxford(status);
+   }
+   if(packMounted.current){await refresh(true);setNotice(status.installed===status.total?"Oxford 5000 incorporado. Cada repaso se guarda solo en tu cuenta. Empieza con la primera tarjeta.":"Incorporación pausada. Puedes reanudar sin duplicar tarjetas ni reiniciar repasos.");}
+  }finally{if(packMounted.current)setInstallingOxford(false);}
+ }
  const fields:[keyof CardContent,string][]=[["prompt","Pregunta *"],["answer","Respuesta *"],["id","Identificador estable"],["deck","Mazo"],["category","Categoría"],["mode","Modo"],["explanation","Explicación"],["example","Ejemplo"],["ipa","IPA"],["lemma","Palabra o familia"],["skillId","Contenido asociado"],["sourceUrl","Enlace de la fuente"],["source","Fuente / licencia"],["audioUrl","Audio HTTPS"],["audioLicense","Licencia del audio"]];
  const summary=data?.summary;
  return <div className="flashcards">
@@ -41,6 +57,14 @@ export function FlashcardsPanel({draft,onDraftConsumed,onOverview}:{draft?:Parti
   {notice&&<div className="fc-notice" role="status"><Check size={16}/><span>{notice}</span><button className="text-button" onClick={()=>setNotice("")}>Cerrar</button></div>}
   {!data&&!error&&<p>Cargando tus tarjetas…</p>}
   {summary&&<div className="stats four"><div><span>Repasos pendientes</span><strong>{summary.dueCount}<small>{summary.overdueCount} con ≥ 1 día de retraso</small></strong></div><div><span>Nuevas hoy</span><strong>{summary.today.newCount}<small>/ {settings.newPerDay} como máximo</small></strong></div><div><span>Tiempo hoy</span><strong>{Math.round(summary.today.seconds/60)}<small>/ {settings.budgetMinutes} min</small></strong></div><div><span>Recuerdo diferido · 14 días</span><strong>{pct(summary.delayed.rate)}<small>{summary.delayed.total} respuestas · {summary.delayed.distinctCards} tarjetas</small></strong></div></div>}
+  {data&&oxford&&(tab==="study"||tab==="library")&&<section className={"card fc-oxford"+(oxford.installed===oxford.total?" fc-oxford-ready":"")} aria-label="Mazo Oxford 5000">
+   <div className="row"><span className="eyebrow">MAZO INCLUIDO · A1–C1</span><span className="badge green">{oxford.installed===oxford.total?"Listo para estudiar":"Sin subir archivos"}</span></div>
+   <h2>Oxford 3000 + Oxford 5000</h2>
+   <p><strong>5.535 tarjetas de vocabulario</strong> con significado en español, ejemplo en inglés y enlace de consulta. Se mantienen los usos y variantes de la colección; el número de tarjetas no equivale a palabras únicas.</p>
+   {oxford.installed!==oxford.total&&<><p>Activa tu copia y estudia con repetición espaciada: intenta recordar, muestra la respuesta y elige Otra vez, Difícil, Bien o Fácil.</p><p className="note">Al empezar sin tarjetas: 6 nuevas de vocabulario al día, 20 minutos y objetivo de retención del 90 %. Si ya tienes tarjetas o ajustes, se conservan. Los repasos vencidos van primero; con atraso se pausan las nuevas.</p><div className="action-bar"><button className="button" disabled={busy} onClick={()=>run(addOxford)}>{installingOxford?"Incorporando Oxford…":oxford.installed?"Continuar incorporación de Oxford":"Añadir Oxford 5000 a mis tarjetas"}</button>{installingOxford&&<button className="text-button" onClick={()=>{pausePack.current=true;}}>Pausar incorporación</button>}</div>{(oxford.installed>0||installingOxford)&&<div className="fc-pack-progress" role="status"><progress aria-label="Incorporación de Oxford 5000" max={oxford.total} value={oxford.installed}/><span>{oxford.installed.toLocaleString("es-ES")} / {oxford.total.toLocaleString("es-ES")} tarjetas preparadas</span></div>}<p className="note">Puedes pausar o salir y continuar después. Reanudar conserva respuestas, cambios e intervalos de las tarjetas existentes.</p></>}
+   {oxford.installed===oxford.total&&<p className="note">Tu historial es individual. {settings.allocations.vocabulary} nuevas de vocabulario/día como máximo · {settings.budgetMinutes} min · objetivo {Math.round(settings.retention*100)} %. Consulta o ajusta la carga en Configuración. Busca palabras o «Nivel::B2», por ejemplo, en Mazos.</p>}
+   <details><summary>Contenido y funcionamiento</summary><p>{Object.entries(oxfordCatalog.levels).map(([level,count])=>`${level}: ${count.toLocaleString("es-ES")}`).join(" · ")}.</p><p>Se conserva el contenido del mazo aportado al proyecto. Las tarjetas trabajan el recuerdo del significado; usa «Aplicar» para escribir una frase nueva. Aprender tarjetas no demuestra por sí solo una banda IELTS. Es una adaptación independiente, no una aplicación oficial de Oxford ni de Anki.</p></details>
+  </section>}
   {tab==="study"&&data&&<>
    {(summary?.newPaused||summary?.budgetReached)&&<div className="callout"><p>{summary.newPaused?"Nuevas en pausa: primero recupera los repasos con un día o más de retraso.":"Has alcanzado tu tiempo diario. No se añaden nuevas; puedes cerrar la sesión o terminar los repasos pendientes."}</p></div>}
    {active?<div className="card fc-study" key={active.id}>
@@ -53,7 +77,7 @@ export function FlashcardsPanel({draft,onDraftConsumed,onOverview}:{draft?:Parti
      <div className="fc-ratings">{([[1,"Otra vez","No la recordé"],[2,"Difícil","Correcta con esfuerzo"],[3,"Bien","Correcta sin ayuda"],[4,"Fácil","Correcta de inmediato"]] as const).map(([rating,label,hint])=><button key={rating} disabled={busy||!!pendingEvent.current&&pendingEvent.current.rating!==rating} onClick={()=>rate(rating)}><strong>{label}</strong><small>{hint}</small></button>)}</div>
      <button className="text-button" disabled={busy} onClick={()=>{setTransferCard(active);setTransferCategory(active.category);setTab("transfer");}}>Aplicar esta tarjeta en una frase nueva</button>
     </>}
-   </div>:<div className="card fc-empty"><BookOpen size={36}/><h2>{data.summary.total?"Tu cola está al día por ahora.":"Empieza con un mazo pequeño."}</h2><p>{data.summary.total?"Los repasos reaparecen cuando vencen. Las nuevas respetan el límite por categoría; las tarjetas de la misma palabra se separan hasta otro día.":"Hay 20 ejemplos originales: vocabulario, gramática y pronunciación de -ed. Tus CSV se incorporarán cuando los facilites."}</p><div className="action-bar">{!data.summary.total&&<button className="button" disabled={busy} onClick={()=>run(async()=>{await importCards(examples.map(card=>({...emptyContent(),...card}) as CardContent));})}>Añadir 20 ejemplos</button>}<button className="button secondary" disabled={busy} onClick={()=>run(()=>refresh(true).then(()=>{}))}><RefreshCw size={14}/>Actualizar repasos</button><button className="text-button" onClick={()=>setTab("import")}>Importar mi CSV</button></div></div>}
+   </div>:data.summary.total>0?<div className="card fc-empty"><BookOpen size={36}/><h2>Tu cola está al día por ahora.</h2><p>Los repasos reaparecen cuando vencen. Las nuevas respetan el límite por categoría; las tarjetas de la misma palabra se separan hasta otro día.</p><div className="action-bar"><button className="button secondary" disabled={busy} onClick={()=>run(()=>refresh(true).then(()=>{}))}><RefreshCw size={14}/>Actualizar repasos</button><button className="text-button" onClick={()=>setTab("import")}>Importar mi CSV</button></div></div>:null}
    <div className="two-columns"><div className="card"><h3>Una rutina breve</h3><ol><li>Recupera la respuesta sin consultar.</li><li>Compara y corrige con la explicación.</li><li>Valora el recuerdo y deja programado el repaso.</li><li>Aplica lo aprendido en una tarea nueva.</li></ol><p className="note">El reloj cuenta mientras esta pestaña está visible y hay actividad en los últimos 2 minutos; cada tarjeta registra como máximo 10 minutos. Es una aproximación al tiempo activo.</p></div><div className="card tinted"><h3>Tu carga se revisa con datos</h3><p>{summary?.suggestion.text}</p><p className="note">La sugerencia no modifica tus límites automáticamente. La cola puede mezclar gramática y vocabulario; primero completa los repasos vencidos.</p><button className="text-button" onClick={()=>setTab("settings")}>Ver configuración y métricas →</button></div></div>
   </>}
   {tab==="library"&&<>

@@ -11,7 +11,7 @@ The study target is **7.5 or higher in each skill**. Practice scores and tutor e
 - Follow a foundation course, lesson by lesson: theory, uses, examples, guided practice, checks and a short application.
 - Practise Reading and Writing with timers, explicit submission, drafts and an option to leave without saving.
 - Keep original answers, feedback, rewrites and dated reports with links back to the relevant theory.
-- Use the existing flashcard module with CSV import, FSRS scheduling and a separate backup.
+- Activate the included Oxford 3000/5000 vocabulary collection (5,535 cards with Spanish meanings and English examples), with individual FSRS reviews and a separate backup. CSV import remains available. See the [deck guide](docs/OXFORD-MAZO.md).
 - Export attempts for a tutor, then import structured feedback in **Informes**. Closed exercises are marked automatically; open writing needs a tutor or a compatible AI service.
 - Export personal backups, results and a clean source archive. Each learner has separate server-side storage.
 
@@ -49,7 +49,7 @@ The [installation guide](docs/GUIA-INSTALACION.md) covers Cloudflare setup, data
 - **GitHub login (optional):** stable account identity across devices. Configure your own OAuth application. No repository or email permissions are requested.
 - **Tutor connection (optional):** a revocable, short-lived token for compatible MCP clients. It does not automatically connect this application to a ChatGPT conversation. Export/import works without that integration.
 
-No personal learning records or original hosting identity are included. Importing a backup is an explicit action. The original Site and this deployment have separate databases.
+No personal learning records or original hosting identity are included. The shared vocabulary collection is included as content, with no learner schedules or reviews. Importing a personal backup is an explicit action. The original Site and this deployment have separate databases.
 
 ## Implementation and checks
 
